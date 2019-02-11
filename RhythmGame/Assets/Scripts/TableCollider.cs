@@ -25,7 +25,7 @@ public class TableCollider : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			RhythmController.chopEnabled += 1;
+			//RhythmController.chopEnabled += 1;
 		}
 		
 	}
@@ -34,7 +34,7 @@ public class TableCollider : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			RhythmController.chopEnabled -= 1;
+			//RhythmController.chopEnabled -= 1;
 		}
 		
 	}

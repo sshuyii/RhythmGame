@@ -22,6 +22,12 @@ public class BeatFalling : MonoBehaviour
 		position.y -= speed;
 		transform.position = position;
 
+		//if beat go below the floor, destroy it
+		if (gameObject.transform.position.y < 0)
+		{
+			Destroy(gameObject);
+		}
+
 	}
 
 	

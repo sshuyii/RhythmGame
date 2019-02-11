@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class RhythmController : MonoBehaviour
 {
-	public int chopEnabled = 0;
-	public bool beatWithinRange = false;
-	public bool playerInPlace = false;
+	//public int chopEnabled = 0;
+	public bool beatWithinRange;
+	public bool playerInPlace;
 
 	public List<GameObject> ToBeDestroyed;//创建一个待摧毁列表（关联Script：BeatWithinRange）
 	
@@ -18,16 +18,44 @@ public class RhythmController : MonoBehaviour
 		beat = GetComponent<AudioSource>();
 	}
 	
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.gameObject.CompareTag("Player"))
+		{
+			playerInPlace = true;
+		}
+		
+		if (other.gameObject.CompareTag("Beat"))
+		{
+			beatWithinRange = true;
+			ToBeDestroyed.Add(other.gameObject);
+		}
+	}
+	
+	void OnTriggerExit(Collider other)
+	{
+		if (other.gameObject.CompareTag("Player"))
+		{
+			playerInPlace = false;
+		}
+		
+		if (other.gameObject.CompareTag("Beat"))
+		{
+			beatWithinRange = false;
+			ToBeDestroyed.Remove(other.gameObject);
+		}
+	}
+	
 	// Update is called once per frame
 	void Update ()
 	{
 
-		print(chopEnabled);
+		//print(chopEnabled);
 		
 		
 		
 		
-		if (chopEnabled == 2)
+		if (playerInPlace && beatWithinRange)
 		{
 			if (Input.GetKeyDown("space"))
 			{
@@ -40,7 +68,8 @@ public class RhythmController : MonoBehaviour
 				{
 					Destroy(ToBeDestroyed[i]);
 					ToBeDestroyed.Remove(ToBeDestroyed[i]);
-					chopEnabled--;
+					beatWithinRange = false;
+					//chopEnabled--;
 				}//摧毁待摧列表里所有的beat
 			}
 		}

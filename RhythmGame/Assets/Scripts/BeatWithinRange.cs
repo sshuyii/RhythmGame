@@ -24,7 +24,7 @@ public class BeatWithinRange : MonoBehaviour {
 	{
 		if (other.gameObject.CompareTag("Beat"))
 		{
-			RhythmController.chopEnabled += 1;
+			//RhythmController.chopEnabled += 1;
 			
 			RhythmController.ToBeDestroyed.Add(other.gameObject);//将进入范围的Beat标记添加到待摧毁列表（关联Script：RhythmController）
 		}
@@ -34,7 +34,7 @@ public class BeatWithinRange : MonoBehaviour {
 	{
 		if (other.gameObject.CompareTag("Beat"))
 		{
-			RhythmController.chopEnabled -= 1;
+			//RhythmController.chopEnabled -= 1;
 			
 			RhythmController.ToBeDestroyed.Remove(other.gameObject);//将离开范围的Beat标记从待摧毁列表中移除
 		}
