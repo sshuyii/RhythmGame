@@ -288,6 +288,7 @@ GameObject:
   - component: {fileID: 188785617}
   - component: {fileID: 188785616}
   - component: {fileID: 188785615}
+  - component: {fileID: 188785622}
   - component: {fileID: 188785614}
   m_Layer: 0
   m_Name: Table2
@@ -399,7 +400,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188785613}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0797b4ed7231b4edbaa0411c14641c21, type: 3}
   m_Name: 
@@ -511,6 +512,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &188785622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188785613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb40f5f67a3c0b4eafd0f1ab3d55aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beatWithinRange: 0
+  playerInPlace: 0
+  Timetoplay: 0
+  ToBeDestroyed: []
 --- !u!1 &272455214
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,6 +590,7 @@ GameObject:
   - component: {fileID: 290618232}
   - component: {fileID: 290618231}
   - component: {fileID: 290618230}
+  - component: {fileID: 290618237}
   - component: {fileID: 290618229}
   m_Layer: 0
   m_Name: Table3
@@ -684,7 +702,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 290618228}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0797b4ed7231b4edbaa0411c14641c21, type: 3}
   m_Name: 
@@ -796,6 +814,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &290618237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290618228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb40f5f67a3c0b4eafd0f1ab3d55aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beatWithinRange: 0
+  playerInPlace: 0
+  Timetoplay: 0
+  ToBeDestroyed: []
 --- !u!1 &380548611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1789,6 +1823,7 @@ GameObject:
   - component: {fileID: 1483886863}
   - component: {fileID: 1483886864}
   - component: {fileID: 1483886865}
+  - component: {fileID: 1483886867}
   - component: {fileID: 1483886866}
   m_Layer: 0
   m_Name: Table1
@@ -1908,7 +1943,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1483886858}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0797b4ed7231b4edbaa0411c14641c21, type: 3}
   m_Name: 
@@ -2012,6 +2047,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1483886867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483886858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb40f5f67a3c0b4eafd0f1ab3d55aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beatWithinRange: 0
+  playerInPlace: 0
+  Timetoplay: 0
+  ToBeDestroyed: []
 --- !u!1 &1523854202
 GameObject:
   m_ObjectHideFlags: 0
