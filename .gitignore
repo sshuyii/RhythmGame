@@ -91,16 +91,49 @@ ExportedObj/
 *.booproj
 *.svd
 *.pdb
+*.mdb
 *.opendb
 *.VC.db
+*Resharper*
+*ReSharper*
+*.orig
+*.orig.*
 
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
+*.mdb.meta
 
-# Unity3D Generated File On Crash Reports
+# Unity3D generated file on crash reports
 sysinfo.txt
 
 # Builds
 *.apk
+*.apk.meta
 *.unitypackage
+*.unitypackage.meta
+
+# Crashlytics generated file
+crashlytics-build.properties
+
+# Audio waveform preview files
+*.reapeaks
+*.reapeaks.meta
+*.pk
+*.pk.meta
+*.pkf
+*.pkf.meta
+*.asd
+*.asd.meta
+
+# OS generated
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+Local/*
