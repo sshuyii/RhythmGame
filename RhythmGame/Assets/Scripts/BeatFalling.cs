@@ -7,7 +7,6 @@ public class BeatFalling : MonoBehaviour
 
 	public float speed;
 	
-
 	private Vector3 position;
 	
 	// Use this for initialization
