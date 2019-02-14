@@ -12,7 +12,10 @@ public class BeatLevelManager : MonoBehaviour
 
     [FormerlySerializedAs("KitchenTable")] [Header("Public References")] 
     public GameObject DinnerTable;
+
+    public GameObject Chair;
     public GameObject BeatType1;
+    public GameObject BeatType2;
     public Vector3 Beat;
 
     private Vector3 BeatPlace;
@@ -77,6 +80,12 @@ public class BeatLevelManager : MonoBehaviour
                     DinnerTable.transform.position.y + 8,
                     DinnerTable.transform.position.z);
         }
+        else if (beatList[i].x == 2)
+        {
+            BeatPlace.Set(Chair.transform.position.x, 
+                Chair.transform.position.y + 8,
+                Chair.transform.position.z);
+        }
 
         return BeatPlace;
     }
@@ -87,6 +96,10 @@ public class BeatLevelManager : MonoBehaviour
         if (beatList[i].z == 1)
         {
             ThisBeatType = BeatType1;
+        }
+        else if (beatList[i].z == 2)
+        {
+            ThisBeatType = BeatType2;
         }
 
         return ThisBeatType;

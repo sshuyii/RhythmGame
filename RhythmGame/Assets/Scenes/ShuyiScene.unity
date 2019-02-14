@@ -551,7 +551,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272455214}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abeb70a9bf64249539f59ae8528b53df, type: 3}
   m_Name: 
@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 290618230}
   - component: {fileID: 290618229}
   m_Layer: 0
-  m_Name: Table3
+  m_Name: Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -591,7 +591,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4f331af6b7856f441a5c8a61ca7f8adc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9a864df2eb4200e44807423306a4b3fd, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -810,7 +810,7 @@ GameObject:
   - component: {fileID: 380548614}
   - component: {fileID: 380548613}
   m_Layer: 0
-  m_Name: Range
+  m_Name: RangeChair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1281,7 +1281,7 @@ GameObject:
   - component: {fileID: 691862514}
   - component: {fileID: 691862515}
   m_Layer: 0
-  m_Name: Rhythm
+  m_Name: RhythmChair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1299,7 +1299,6 @@ Transform:
   m_LocalScale: {x: 0.6666667, y: 0.5, z: 0.25}
   m_Children:
   - {fileID: 380548612}
-  - {fileID: 946340358}
   m_Father: {fileID: 290618236}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1310,7 +1309,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691862513}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abeb70a9bf64249539f59ae8528b53df, type: 3}
   m_Name: 
@@ -1408,12 +1407,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733457529}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &946340358 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4124551921280666, guid: e7bdccd200d694df9ad22ab15a3ddea6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1643891397}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &962653498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,20 +1436,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469f009f2dfc546faa76d312dfafebe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DinnerTable: {fileID: 482667122}
+  DinnerTable: {fileID: 380548611}
+  Chair: {fileID: 290618228}
   BeatType1: {fileID: 1732512177278464, guid: e7bdccd200d694df9ad22ab15a3ddea6, type: 3}
-  Beat: {x: 1, y: 18, z: 1}
+  BeatType2: {fileID: 6022959927095440439, guid: 8cf3e1867be9746cf994dcfee32be8c0,
+    type: 3}
+  Beat: {x: 2, y: 7.25, z: 2}
   beatList:
   - {x: 1, y: 3, z: 1}
   - {x: 1, y: 6, z: 1}
   - {x: 1, y: 7, z: 1}
+  - {x: 2, y: 7.25, z: 2}
+  - {x: 2, y: 7.5, z: 2}
+  - {x: 2, y: 8.5, z: 2}
+  - {x: 2, y: 8.75, z: 2}
+  - {x: 2, y: 9, z: 2}
+  - {x: 2, y: 9.25, z: 2}
+  - {x: 2, y: 9.5, z: 2}
   - {x: 1, y: 10, z: 1}
   - {x: 1, y: 11, z: 1}
-  - {x: 1, y: 14, z: 1}
-  - {x: 1, y: 16, z: 1}
-  - {x: 1, y: 18, z: 1}
-  - {x: 1, y: 12, z: 1}
-  - {x: 1, y: 26, z: 1}
+  - {x: 2, y: 11.25, z: 2}
+  - {x: 2, y: 11.5, z: 2}
+  - {x: 2, y: 12.25, z: 2}
+  - {x: 2, y: 12.5, z: 2}
+  - {x: 2, y: 12.75, z: 2}
+  - {x: 2, y: 13, z: 2}
 --- !u!4 &962653500
 Transform:
   m_ObjectHideFlags: 0
@@ -2067,7 +2071,6 @@ GameObject:
   - component: {fileID: 1483886861}
   - component: {fileID: 1483886860}
   - component: {fileID: 1483886859}
-  - component: {fileID: 1483886863}
   - component: {fileID: 1483886864}
   - component: {fileID: 1483886865}
   - component: {fileID: 1483886866}
@@ -2152,20 +2155,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1483886863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483886858}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 348a3fffd0b6b413388d2c86f53cf57f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Father: {fileID: 1107340098}
-  RhythmController: {fileID: 1107340106}
 --- !u!54 &1483886864
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2339,56 +2328,6 @@ Transform:
   m_Father: {fileID: 1483886862}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1643891397
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 691862514}
-    m_Modifications:
-    - target: {fileID: 1732512177278464, guid: e7bdccd200d694df9ad22ab15a3ddea6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124551921280666, guid: e7bdccd200d694df9ad22ab15a3ddea6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124551921280666, guid: e7bdccd200d694df9ad22ab15a3ddea6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124551921280666, guid: e7bdccd200d694df9ad22ab15a3ddea6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124551921280666, guid: e7bdccd200d694df9ad22ab15a3ddea6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124551921280666, guid: e7bdccd200d694df9ad22ab15a3ddea6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124551921280666, guid: e7bdccd200d694df9ad22ab15a3ddea6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124551921280666, guid: e7bdccd200d694df9ad22ab15a3ddea6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124551921280666, guid: e7bdccd200d694df9ad22ab15a3ddea6, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114905281166904664, guid: e7bdccd200d694df9ad22ab15a3ddea6,
-        type: 3}
-      propertyPath: RhythmController
-      value: 
-      objectReference: {fileID: 1107340106}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e7bdccd200d694df9ad22ab15a3ddea6, type: 3}
 --- !u!1001 &1813450496
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -24,8 +24,8 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate ()
     {
         // Store the input axes.
-        float h = Input.GetAxisRaw ("Horizontal");
-        float v = Input.GetAxisRaw ("Vertical");
+        float h = Input.GetAxis ("Horizontal");
+        float v = Input.GetAxis ("Vertical");
 
         // Move the player around the scene.
         Move (h, v);
