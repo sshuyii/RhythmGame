@@ -57,7 +57,7 @@ public class RhythmController : MonoBehaviour
 		
 		if (playerInPlace && beatWithinRange)
 		{
-			if (Input.GetKeyDown("joystick button 0"))
+			if (Input.GetKeyDown("joystick button 0") || Input.GetKeyDown("space"))
 			{
 				print("square key was pressed");
 				beat.Play();

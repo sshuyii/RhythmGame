@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6318825580581624439}
   - component: {fileID: 6318825580581624432}
   - component: {fileID: 6318825580581624433}
-  - component: {fileID: 6318825580581624442}
   - component: {fileID: 6318825580581624443}
   m_Layer: 0
   m_Name: Player1
@@ -126,21 +125,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   playerNum: 0
---- !u!114 &6318825580581624442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6318825580581624434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0797b4ed7231b4edbaa0411c14641c21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  beatWithinRange: 0
-  playerInPlace: 0
-  ToBeDestroyed: []
 --- !u!82 &6318825580581624443
 AudioSource:
   m_ObjectHideFlags: 0
