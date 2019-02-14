@@ -59,7 +59,7 @@ public class RhythmController : MonoBehaviour
 		{
 			if (Input.GetKeyDown("joystick button 0"))
 			{
-				print("space key was pressed");
+				print("square key was pressed");
 				beat.Play();
 				//chopEnabled += 1;
                 

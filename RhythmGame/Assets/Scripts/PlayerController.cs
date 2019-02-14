@@ -19,10 +19,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float x = Input.GetAxisRaw("Horizontal" + playerNum) * speed;
+        float x = Input.GetAxis("Horizontal" + playerNum) * speed;
         //print("Got x input" + x);
-        float z = Input.GetAxisRaw("Vertical" + playerNum) * speed;
+        float z = Input.GetAxis("Vertical" + playerNum) * speed;
         //print("Got y input");
-        playerRb.velocity = new Vector3(x, 0, z);
+        playerRb.velocity = new Vector3(x, 0, -z);
     }
 }
