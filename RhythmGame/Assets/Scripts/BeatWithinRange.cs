@@ -7,11 +7,14 @@ using UnityEngine;
 public class BeatWithinRange : MonoBehaviour {
 
 	public RhythmController RhythmController;
+	public float beatHeight = 8;
+	public float selfHeight = 4;
 	
 	// Use this for initialization
-	void Start () {
-		
-		
+	void Start ()
+	{
+
+		selfHeight = transform.position.y;
 
 	}
 	
@@ -20,7 +23,7 @@ public class BeatWithinRange : MonoBehaviour {
 		
 	}
 	
-	private void OnTriggerEnter(Collider other)
+	/*private void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject.CompareTag("Beat"))
 		{
@@ -38,7 +41,7 @@ public class BeatWithinRange : MonoBehaviour {
 			
 			RhythmController.ToBeDestroyed.Remove(other.gameObject);//将离开范围的Beat标记从待摧毁列表中移除
 		}
-	}
+	}*/
 	
 	
 }

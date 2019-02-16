@@ -8,6 +8,8 @@ public class RhythmController : MonoBehaviour
 	public bool beatWithinRange;
 	public bool playerInPlace;
 
+	public bool snap;
+
 	public List<GameObject> ToBeDestroyed;//创建一个待摧毁列表（关联Script：BeatWithinRange）
 	
 	private AudioSource beat;
