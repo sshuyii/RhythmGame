@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class RhythmControllerSnap : MonoBehaviour
 {
@@ -8,6 +9,13 @@ public class RhythmControllerSnap : MonoBehaviour
 	//在inspector里勾选snap将开启snap模式，否则还是正常模式
 	
 	//public int chopEnabled = 0;
+	[FormerlySerializedAs("beatPoint")] [Header("Preset Variables")]
+	public float FallingHeight;
+	public float BeatPointHeight;
+	public bool snap;
+
+	[Header("In Game Variables")] 
+	public float BallGeneratedHeight;
 	public bool beatWithinRange;
 	public bool playerInPlace;
 	public bool Timetoplay;
@@ -16,17 +24,18 @@ public class RhythmControllerSnap : MonoBehaviour
 
 	public GameObject beater;
 	public GameObject empty;
-	public float beatPoint;
-	public bool snap;
+
 	
 	private AudioSource beat;
+	//private Renderer rd;
 	
 	// Use this for initialization
 	void Start ()
 	{
+		BallGeneratedHeight = FallingHeight + BeatPointHeight;
 		beat = GetComponent<AudioSource>();
-		beatPoint = 4;
-		print("Beat Point:" + beatPoint);
+		BeatPointHeight = transform.Find(name + "BeatRange").transform.position.y;
+		//print("Beat Point:" + BeatPointHeight);
 	}
 	
 	void OnTriggerEnter(Collider other)
@@ -40,6 +49,7 @@ public class RhythmControllerSnap : MonoBehaviour
 		{
 			beatWithinRange = true;
 			beater = other.gameObject;
+			//rd = beater.GetComponent<MeshRenderer>();
 			//ToBeDestroyed.Add(other.gameObject);
 			Timetoplay = false;
 		}
@@ -69,7 +79,9 @@ public class RhythmControllerSnap : MonoBehaviour
                     else
                     {
 	                    beat.Play();
-	                    beater.GetComponent<MeshRenderer>().enabled = false;	                    
+	                    Destroy(beater);
+	                    beater = empty;
+	                    beatWithinRange = false;
                     }
 
     				//beat.Play();
@@ -77,11 +89,13 @@ public class RhythmControllerSnap : MonoBehaviour
     			}
     		}
 
-            if (beater.transform.position.y <= beatPoint && Timetoplay)
+            if (beater.transform.position.y <= BeatPointHeight && Timetoplay)
             {
 				beat.Play();
 				Timetoplay = false;
-				beater.GetComponent<MeshRenderer>().enabled = false;
+	            Destroy(beater);
+	            beater = empty;
+	            beatWithinRange = false;
             }
     	}
 		

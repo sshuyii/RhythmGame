@@ -8,13 +8,13 @@ public class BeatWithinRange : MonoBehaviour {
 
 	public RhythmController RhythmController;
 	public float beatHeight = 8;
-	public float selfHeight = 4;
+	//public float selfHeight = 4;
 	
 	// Use this for initialization
 	void Start ()
 	{
 
-		selfHeight = transform.position.y;
+		//selfHeight = transform.position.y;
 
 	}
 	

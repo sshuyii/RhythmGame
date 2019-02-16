@@ -7,7 +7,7 @@ public class BeatFalling : MonoBehaviour
 {
 
 	public float speed;
-	public int FallingTime;
+	//public int FallingTime;
 	
 	private Vector3 position;
 	
@@ -20,7 +20,7 @@ public class BeatFalling : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		FallingTime++;
+		//FallingTime++;
 		position.y -= speed;
 		transform.position = position;
 
