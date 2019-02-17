@@ -11,11 +11,11 @@ public class RhythmControllerSnap : MonoBehaviour
 	//public int chopEnabled = 0;
 	[FormerlySerializedAs("beatPoint")] [Header("Preset Variables")]
 	public float FallingHeight;
-	public float BeatPointHeight;
 	public bool snap;
 
 	[Header("In Game Variables")] 
 	public float BallGeneratedHeight;
+	public float BeatPointHeight;
 	public bool beatWithinRange;
 	public bool playerInPlace;
 	public bool Timetoplay;
@@ -36,9 +36,9 @@ public class RhythmControllerSnap : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		BeatPointHeight = transform.Find("BeatRange").transform.position.y;
 		BallGeneratedHeight = FallingHeight + BeatPointHeight;
 		beat = GetComponent<AudioSource>();
-		BeatPointHeight = transform.Find(name + "BeatRange").transform.position.y;
 		//print("Beat Point:" + BeatPointHeight);
 	}
 	
