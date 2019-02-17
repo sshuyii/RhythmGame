@@ -25,6 +25,10 @@ public class RhythmControllerSnap : MonoBehaviour
 	public GameObject beater;
 	public GameObject empty;
 
+	[Header("Statics")] 
+	public static int Perfect;
+	public static int Miss;
+
 	
 	private AudioSource beat;
 	//private Renderer rd;
@@ -80,6 +84,7 @@ public class RhythmControllerSnap : MonoBehaviour
                     {
 	                    beat.Play();
 	                    Destroy(beater);
+	                    Perfect++;
 	                    beater = empty;
 	                    beatWithinRange = false;
                     }
@@ -94,6 +99,7 @@ public class RhythmControllerSnap : MonoBehaviour
 				beat.Play();
 				Timetoplay = false;
 	            Destroy(beater);
+	            Perfect++;
 	            beater = empty;
 	            beatWithinRange = false;
             }
@@ -110,6 +116,7 @@ public class RhythmControllerSnap : MonoBehaviour
 		{
 			beatWithinRange = false;
 			beater = empty;
+			Miss++;
 		}
 			/*else
 			{
