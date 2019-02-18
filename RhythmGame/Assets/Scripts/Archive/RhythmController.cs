@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+//using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class RhythmController : MonoBehaviour
@@ -9,12 +10,16 @@ public class RhythmController : MonoBehaviour
 	public bool playerInPlace;
 
 	public bool snap;
-
+	public GameObject BeatStop;
 	public List<GameObject> ToBeDestroyed;//创建一个待摧毁列表（关联Script：BeatWithinRange）
 	
 	private AudioSource beat;
+	private bool beatStop = false;
+	private GameObject beatStopObject;
+	private float stopMoving;
 	
-	// Use this for initialization
+	
+	
 	void Start ()
 	{
 		beat = GetComponent<AudioSource>();
@@ -32,6 +37,16 @@ public class RhythmController : MonoBehaviour
 			beatWithinRange = true;
 			ToBeDestroyed.Add(other.gameObject);
 		}
+		
+		else if(other.gameObject.CompareTag("BeatStop"))
+		{
+			beatWithinRange = true;
+			beatStop = true;
+			print("beat should stop");
+			beatStopObject = other.gameObject;
+			stopMoving = other.gameObject.GetComponent<BeatFalling>().speed;
+
+		}
 	}
 	
 	void OnTriggerExit(Collider other)
@@ -46,6 +61,7 @@ public class RhythmController : MonoBehaviour
 			beatWithinRange = false;
 			ToBeDestroyed.Remove(other.gameObject);
 		}
+		
 	}
 	
 	// Update is called once per frame
@@ -53,8 +69,11 @@ public class RhythmController : MonoBehaviour
 	{
 
 		//print(chopEnabled);
-		
-		
+
+		if (beatStop)
+		{
+			stopMoving = 0;
+		}
 		
 		
 		if (playerInPlace && beatWithinRange)
@@ -62,9 +81,21 @@ public class RhythmController : MonoBehaviour
 			if (Input.GetKeyDown("joystick button 0") || Input.GetKeyDown("space") || Input.GetKeyDown(KeyCode.E))
 			{
 				print("square key was pressed");
-				beat.Play();
-				//chopEnabled += 1;
-                
+				if (beatStop == true)
+				{
+					beat.Stop();
+					ToBeDestroyed.Add(beatStopObject);
+
+				}
+				else
+				{
+					beat.Play();
+					//chopEnabled += 1;
+				}
+				
+
+				
+				
 				//下面几行都是新加的
 				for (int i = 0; i < ToBeDestroyed.Count; i++)
 				{

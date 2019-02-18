@@ -47,14 +47,6 @@ public class BeatLevelManager : MonoBehaviour
             print("beatTimeList[0] = " + beatTimeList[0]);
         }
         
-        //is there a need to build another list??? not sure right now
-//        int beatIndex = 0;
-//        for (int i = 0; i < beatList.Count; i++)
-//        {
-//            nextBeat.Add(beatIndex);
-//            beatIndex++;
-//        }
-        
     }
 
 
@@ -76,7 +68,7 @@ public class BeatLevelManager : MonoBehaviour
     
     private Vector3 DecipherBeatPlace(int i)
     {
-        //这里有一个问题，产生球的地方是物体上方，真正合在节奏上的时间比产生的时间要玩（加上了掉下来的时间）
+        //这里有一个问题，产生球的地方是物体上方，真正合在节奏上的时间比产生的时间要晚（加上了掉下来的时间）
         //现在是判定范围的transform.y + 8,速度为0.2，因此在instantiate的时候减少了了8/0.2 = 40帧
         //the exact place to generate the beat
         /*if (beatList[i].x == 1)
@@ -104,7 +96,7 @@ public class BeatLevelManager : MonoBehaviour
     {
         //what types of beat to generate
         /*if (beatList[i].z == 1)
-        {
+        { 
             ThisBeatType = BeatType1;
         }
         else if (beatList[i].z == 2)
@@ -112,7 +104,7 @@ public class BeatLevelManager : MonoBehaviour
             ThisBeatType = BeatType2;
         }*/
 
-        GameObject ThisBeatType = BallList[(int) (beatList[i].x - 1f)];//从小球列表中获取此时nextBeat所对应小球类型
+        GameObject ThisBeatType = BallList[(int) (beatList[i].z - 1f)];//从小球列表中获取此时nextBeat所对应小球类型
 
         return ThisBeatType;
     }
