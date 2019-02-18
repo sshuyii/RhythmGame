@@ -30,9 +30,9 @@ public class BeatLevelManager : MonoBehaviour
     //private int i = 0;
     //private List<int> nextBeat = new List<int>();
 
+    public List<float> HeightList;
 
 
-       
     [Header("My List of Beats")]
     public List<Vector3> beatList = new List<Vector3>();
     
@@ -46,6 +46,12 @@ public class BeatLevelManager : MonoBehaviour
 
             print("beatTimeList[0] = " + beatTimeList[0]);
         }
+
+        //recording a list of beat generated height with the same index of the furniture list
+        for (int i = 0; i < FurnitureList.Count; i++)
+        {
+            HeightList.Add(FurnitureList[i].GetComponent<RhythmControllerSnap>().BallGeneratedHeight);
+        }
         
     }
 
@@ -54,13 +60,21 @@ public class BeatLevelManager : MonoBehaviour
     void Update()
     {
         Timer += 1;
-        print(beatList[0]);
+        //print(beatList.Count);
+        //print(nextBeat);
         
             if (Timer == beatTimeList[nextBeat])
             {    
                 Instantiate(DecipherBeatType(nextBeat), DecipherBeatPlace(nextBeat), Quaternion.identity);
                 print("Update is generating beats.");
-                nextBeat++;
+                if (nextBeat < beatTimeList.Count - 1)
+                {
+                    nextBeat++;                    
+                }
+                else
+                {
+                    print("Level Clear");
+                }
             }
         
     }
@@ -83,9 +97,10 @@ public class BeatLevelManager : MonoBehaviour
                 Chair.transform.position.y + BeatHeight,
                 Chair.transform.position.z);
         }*/
-        
-        GameObject furniture = FurnitureList[(int) (beatList[i].x - 1f)];//从家具列表中取得此时nextBeat所对应的家具
-        float heightadjust = furniture.GetComponent<RhythmControllerSnap>().BallGeneratedHeight;//从该家具所附脚本中取得小球该生成的高度
+
+        int index = (int) (beatList[i].x - 1f);
+        GameObject furniture = FurnitureList[index];//从家具列表中取得此时nextBeat所对应的家具
+        float heightadjust = HeightList[index];//从高度列表中取得此时nextBeat所对应的小球生成高度
         BeatPlace.Set(furniture.transform.position.x, heightadjust, furniture.transform.position.z);//设定小球生成位置
         
 
@@ -104,7 +119,7 @@ public class BeatLevelManager : MonoBehaviour
             ThisBeatType = BeatType2;
         }*/
 
-        GameObject ThisBeatType = BallList[(int) (beatList[i].z - 1f)];//从小球列表中获取此时nextBeat所对应小球类型
+        ThisBeatType = BallList[(int) (beatList[i].z - 1f)];//从小球列表中获取此时nextBeat所对应小球类型
 
         return ThisBeatType;
     }

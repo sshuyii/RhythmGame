@@ -23,6 +23,11 @@ public class BeatFalling : MonoBehaviour
 
 		position.y -= speed;
 		transform.position = position;
+
+		if (transform.position.y < 0)
+		{
+			Destroy(gameObject);
+		}
 	}
 
 }

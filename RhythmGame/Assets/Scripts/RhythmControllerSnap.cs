@@ -143,24 +143,27 @@ public class RhythmControllerSnap : MonoBehaviour
 	            }
     		}
 
-            if (beater.transform.position.y <= BeatPointHeight && Timetoplay)
-            {
-	            if (beatStop)
-	            {
-		            beat.Stop();
-	            }
-	            else
-	            {
-		            beat.Play();
-	            }
-
-	            Timetoplay = false;
-		        Destroy(beater);
-		        Perfect++;
-		        beater = empty;
-		        beatWithinRange = false;
-	          
-            }
+		    if (beater != null)
+		    {
+	            if (beater.transform.position.y <= BeatPointHeight && Timetoplay)
+                {
+    	            if (beatStop)
+    	            {
+    		            beat.Stop();
+    	            }
+    	            else
+    	            {
+    		            beat.Play();
+    	            }
+    
+    	            Timetoplay = false;
+    		        Destroy(beater);
+    		        Perfect++;
+    		        beater = empty;
+    		        beatWithinRange = false;
+    	          
+                }		    
+		    }
     	}
 
 
