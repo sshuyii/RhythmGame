@@ -17,6 +17,7 @@ public class BeatLevelManager : MonoBehaviour
     //public GameObject BeatType2;
     public Vector3 Beat;
 
+    public int RemoveBeatNumber;
     public List<GameObject> FurnitureList;//创建一个家具列表
     public List<GameObject> BallList;//创建一个小球列表
     
@@ -59,6 +60,7 @@ public class BeatLevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //print("Frame = " + 1/Time.deltaTime);
         Timer += 1;
         //print(beatList.Count);
         //print(nextBeat);
