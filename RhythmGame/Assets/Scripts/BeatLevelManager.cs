@@ -43,7 +43,7 @@ public class BeatLevelManager : MonoBehaviour
         //recording a list of the exact time to generate the beats
         for (int i = 0; i < beatList.Count; i++)
         {
-            beatTimeList.Add(beatList[i].y * 60f);
+            beatTimeList.Add(beatList[i].y * 60f - 40f);
 
             print("beatTimeList[0] = " + beatTimeList[0]);
         }

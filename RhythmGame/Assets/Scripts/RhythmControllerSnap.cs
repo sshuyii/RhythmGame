@@ -135,7 +135,7 @@ public class RhythmControllerSnap : MonoBehaviour
                 
 	            if (Player2Enabled)
 	            {
-		            if(Input.GetKeyDown("joystick button 0") || Input.GetKeyDown(KeyCode.M))
+		            if(Input.GetKeyDown("joystick button 0") || Input.GetKeyDown(KeyCode.RightShift))
 			      
 			        GenerateBeat();
 		            print("space key was pressed");
