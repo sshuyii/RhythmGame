@@ -12,18 +12,17 @@ public class ButtonForBLM : Editor
       BeatLevelManager _myBeatLevelManager = (BeatLevelManager) target;
       DrawDefaultInspector();
 
+      List<Vector3> list = _myBeatLevelManager.beatList;
+
       if (GUILayout.Button("Add new beat"))
       {
          Debug.Log("Button pressed.");
-         //Vector2 newBeat = _myBeatLevelManager.targetObject.gameObject.AddComponent<Vector2>();
-         
-         //_myBeatLevelManager.beatList.Add(_myBeatLevelManager.Beat);
          
          //以下为新增
-         List<Vector3> list = _myBeatLevelManager.beatList;
          list.Add(_myBeatLevelManager.Beat);
          int max = list.Count - 1;
          //Debug.Log(max);
+         
          Vector3 x = new Vector3();
          
          
@@ -41,9 +40,15 @@ public class ButtonForBLM : Editor
                break;
             }
             
-            _myBeatLevelManager.beatList = list;
+            //_myBeatLevelManager.beatList = list;
          }
-      } 
+      }
+
+      if (GUILayout.Button("Delete beat"))
+      {
+         list.Remove(list[_myBeatLevelManager.RemoveBeatNumber]);
+
+      }
       
    }
 }

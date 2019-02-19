@@ -92,10 +92,17 @@ public class RhythmControllerSnap : MonoBehaviour
     	{
     
 	        //把停止的节奏球限制在range的正中间
-	        if (beatStop && beater.transform.position.y < BeatPointHeight)
-	        {
-		        BeatFalling.speed = 0;
-	        }
+		    if (beater)
+		    {
+			    if (beatStop && beater.transform.position.y < BeatPointHeight)
+			    {
+				    if (BeatFalling)
+				    {
+					    BeatFalling.speed = 0;
+				    }
+			    }
+		    }
+	       
 	        
     		//print(chopEnabled);	
     		
@@ -128,9 +135,9 @@ public class RhythmControllerSnap : MonoBehaviour
                 
 	            if (Player2Enabled)
 	            {
-		            if(Input.GetKeyDown("joystick button 0") || Input.GetKeyDown("shift"))
+		            if(Input.GetKeyDown("joystick button 0") || Input.GetKeyDown(KeyCode.M))
 			      
-			            GenerateBeat();
+			        GenerateBeat();
 		            print("space key was pressed");
 	            }
 	            
@@ -150,7 +157,8 @@ public class RhythmControllerSnap : MonoBehaviour
     	            if (beatStop)
     	            {
     		            beat.Stop();
-    	            }
+		                beatStop = false;
+	                }
     	            else
     	            {
     		            beat.Play();
@@ -176,7 +184,10 @@ public class RhythmControllerSnap : MonoBehaviour
 			else
 			{
 				if (beatStop)
-				{beat.Stop();}
+				{
+					beat.Stop();
+					beatStop = false;
+				}
 				else{beat.Play();}
 	                    
 				Destroy(beater);
