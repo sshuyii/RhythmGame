@@ -1629,6 +1629,7 @@ GameObject:
   - component: {fileID: 377229456}
   - component: {fileID: 377229455}
   - component: {fileID: 377229454}
+  - component: {fileID: 377229457}
   m_Layer: 0
   m_Name: Isomenic
   m_TagString: Untagged
@@ -1700,6 +1701,19 @@ Transform:
   m_Father: {fileID: 2075702394}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 29.336, y: 133.832, z: -2.391}
+--- !u!114 &377229457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377229453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f545cfd75b82745d4ae079bc795ac2c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraRotationLimit: 2
 --- !u!1001 &428866394
 PrefabInstance:
   m_ObjectHideFlags: 0
