@@ -13,6 +13,7 @@ public class CameraMovement : MonoBehaviour
     private float CameraRotationYSum = 0;
     private float CameraRotationY = 0;
     private bool MoveLeft = true;
+    private Transform CameraPivotTransform;
     
     private CameraStates _currentState;
     public enum CameraStates {MoveLeft, MoveRight, StayStill}
@@ -21,7 +22,13 @@ public class CameraMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        transform.position = CameraPivotTransform.position;
+    }
+
+    void Awake()
+    {
+        CameraPivotTransform = GameObject.Find("CameraPivot").transform;
     }
 
     // Update is called once per frame
@@ -63,11 +70,13 @@ public class CameraMovement : MonoBehaviour
 
         if (_currentState == CameraStates.MoveLeft)
         {
+
+
             CameraRotationY = -Time.deltaTime;
         }
         else if(_currentState == CameraStates.MoveRight)
         {
-            CameraRotationY = +Time.deltaTime;
+            CameraRotationY = Time.deltaTime;
         }
         else if (_currentState == CameraStates.StayStill)
         {

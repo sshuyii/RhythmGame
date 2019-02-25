@@ -214,6 +214,7 @@ public class RhythmControllerSnap : MonoBehaviour
 			beatWithinRange = false;
 			beater = empty;
 			Miss++;
+
 		}
 			/*else
 			{
