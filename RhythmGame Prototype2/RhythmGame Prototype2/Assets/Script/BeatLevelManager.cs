@@ -52,7 +52,7 @@ public class BeatLevelManager : MonoBehaviour
         //recording a list of the exact time to generate the beats
         for (int i = 0; i < beatList.Count; i++)
         {
-            beatTimeList.Add(beatList[i].x * 60f - 20f);//这里提前给了20帧用来当缓冲
+            beatTimeList.Add(beatList[i].x * 60f - 120f);//这里提前给了120帧用来当提醒，因为collider是120帧就自行销毁的
             //产生之后等20帧就自行销毁，写在collider本身的script中了
 
             print("beatTimeList[0] = " + beatTimeList[0]);
