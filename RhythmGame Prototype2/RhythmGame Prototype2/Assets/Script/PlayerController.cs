@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public int playerNum;
     public bool Keypressed;
     public float Threshold = 0.5f;
+    public bool Moving;
 
     public static int Score;
 
@@ -27,18 +28,20 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal" + playerNum);
         float z = Input.GetAxisRaw("Vertical" + playerNum);
         
-        if (Mathf.Abs(x) >= Threshold && Keypressed == false)
+        if (Mathf.Abs(x) >= Threshold && Keypressed == false && !Moving)
         {
             playerRb.velocity = new Vector3(Mathf.Sign(x)*speed, 0, 0);
             Invoke("Stop", 1f/speed);
             Keypressed = true;
+            Moving = true;
         }
         
-        if (Mathf.Abs(z) >= Threshold && Keypressed == false)
+        if (Mathf.Abs(z) >= Threshold && Keypressed == false && !Moving)
         {
             playerRb.velocity = new Vector3(0, 0, Mathf.Sign(z)*speed);
             Invoke("Stop", 1f/speed);
             Keypressed = true;
+            Moving = true;
         }
 
 
@@ -53,6 +56,7 @@ public class PlayerController : MonoBehaviour
     void Stop()
     {
         playerRb.velocity = new Vector3(0, 0, 0);
+        Moving = false;
     }
     
 }

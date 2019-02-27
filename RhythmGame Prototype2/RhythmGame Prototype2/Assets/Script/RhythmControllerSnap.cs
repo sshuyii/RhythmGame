@@ -7,10 +7,15 @@ using UnityEngine.Serialization;
 public class RhythmControllerSnap : MonoBehaviour
 {
 	private AudioSource AudioSource;
+	private MeshRenderer rd;
+
+	public static int Perfect;
+	public static int Miss;
 	
 	private void Start()
 	{
 		AudioSource = GetComponent<AudioSource>();
+		rd = GetComponent<MeshRenderer>();
 
 	}
 
@@ -24,7 +29,14 @@ public class RhythmControllerSnap : MonoBehaviour
 	{
 		if (other.CompareTag("Player"))
 		{
-			AudioSource.Play();
+			if (true)
+			{
+				AudioSource.Play();
+    			rd.enabled = false;
+                Perfect++;
+                //Destroy(gameObject);			
+			}
+
 		}
 	}
 }
