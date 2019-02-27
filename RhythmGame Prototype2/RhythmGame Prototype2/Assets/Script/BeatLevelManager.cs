@@ -15,7 +15,7 @@ public class BeatLevelManager : MonoBehaviour
     //public GameObject Chair;
     //public GameObject BeatType1;
     //public GameObject BeatType2;
-    public Vector3 Beat;
+    public Vector4 Beat;
 
     public GameObject ColliderPrefab;
 
@@ -37,7 +37,7 @@ public class BeatLevelManager : MonoBehaviour
 
 
     [Header("My List of Beats")]
-    public List<Vector3> beatList = new List<Vector3>();
+    public List<Vector4> beatList = new List<Vector4>();
 
 
     private void Awake()
@@ -55,7 +55,7 @@ public class BeatLevelManager : MonoBehaviour
             beatTimeList.Add(beatList[i].x * 60f - 120f);//这里提前给了120帧用来当提醒，因为collider是120帧就自行销毁的
             //产生之后等20帧就自行销毁，写在collider本身的script中了
 
-            print("beatTimeList[0] = " + beatTimeList[0]);
+            //print("beatTimeList[0] = " + beatTimeList[0]);
         }
 
         //recording a list of beat generated height with the same index of the furniture list
@@ -79,7 +79,7 @@ public class BeatLevelManager : MonoBehaviour
             if (Timer == beatTimeList[nextBeat])
             {    
                 Instantiate(ColliderPrefab, DecipherBeatPlace(nextBeat), Quaternion.identity);
-                print("Update is generating beats.");
+                //print("Update is generating beats.");
                 if (nextBeat < beatTimeList.Count - 1)
                 {
                     nextBeat++;                    

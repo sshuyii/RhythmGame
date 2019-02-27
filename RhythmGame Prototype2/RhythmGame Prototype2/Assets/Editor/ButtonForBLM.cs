@@ -12,7 +12,7 @@ public class ButtonForBLM : Editor
       BeatLevelManager _myBeatLevelManager = (BeatLevelManager) target;
       DrawDefaultInspector();
 
-      List<Vector3> list = _myBeatLevelManager.beatList;
+      List<Vector4> list = _myBeatLevelManager.beatList;
 
       if (GUILayout.Button("Add new beat"))
       {
