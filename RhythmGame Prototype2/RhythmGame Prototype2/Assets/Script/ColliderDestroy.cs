@@ -48,7 +48,7 @@ public class ColliderDestroy : MonoBehaviour
         if (Timer > 140)
         {
             Koreographer.Instance.UnregisterForAllEvents(GetComponent<RhythmControllerSnap>());
-            Destroy(gameObject);
+            //Destroy(gameObject);
             rd.enabled = false;
         }
     }

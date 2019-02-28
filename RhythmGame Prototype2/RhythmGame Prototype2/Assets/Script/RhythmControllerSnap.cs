@@ -103,6 +103,9 @@ public class RhythmControllerSnap : MonoBehaviour
 				AudioSource.Play();
     			rd.enabled = false;
                 Perfect++;
+                NewspaperEnable = false;
+                GlassEnable = false;
+                ChoppingEnable = false;
                 //Destroy(gameObject);			
 			}
 			else
