@@ -30,18 +30,18 @@ public class PlayerController : MonoBehaviour
         
         if (Mathf.Abs(x) >= Threshold && Keypressed == false && !Moving)
         {
-            playerRb.velocity = new Vector3(Mathf.Sign(x)*speed, 0, 0);
-            Invoke("Stop", 1f/speed);
+            transform.position += new Vector3(Mathf.Sign(x)*speed, 0, 0);
+            //Invoke("Stop", 1f/speed);
             Keypressed = true;
-            Moving = true;
+            //Moving = true;
         }
         
         if (Mathf.Abs(z) >= Threshold && Keypressed == false && !Moving)
         {
-            playerRb.velocity = new Vector3(0, 0, Mathf.Sign(z)*speed);
-            Invoke("Stop", 1f/speed);
+            transform.position += new Vector3(0, 0, Mathf.Sign(z)*speed);
+            //Invoke("Stop", 1f/speed);
             Keypressed = true;
-            Moving = true;
+            //Moving = true;
         }
 
 
@@ -53,10 +53,10 @@ public class PlayerController : MonoBehaviour
                         
     }
 
-    void Stop()
+    /*void Stop()
     {
         playerRb.velocity = new Vector3(0, 0, 0);
         Moving = false;
-    }
+    }*/
     
 }
