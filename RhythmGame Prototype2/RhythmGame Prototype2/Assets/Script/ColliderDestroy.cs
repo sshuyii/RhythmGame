@@ -7,11 +7,14 @@ public class ColliderDestroy : MonoBehaviour
 {
     private float Timer;
     private MeshRenderer rd;
+    private bool alreadySteppedHere;
+    
     // Start is called before the first frame update
     void Start()
     {
         transform.localScale = new Vector3(0.2f, 1f, 0.2f);
         rd = GetComponent<MeshRenderer>();
+        alreadySteppedHere = GetComponent<RhythmControllerSnap>().AlreadyStepped;
     }
 
     // Update is called once per frame
@@ -45,11 +48,13 @@ public class ColliderDestroy : MonoBehaviour
         }
 
         
-        if (Timer > 140)
+        if (Timer > 120)
         {
-            Koreographer.Instance.UnregisterForAllEvents(GetComponent<RhythmControllerSnap>());
+            //Koreographer.Instance.UnregisterForAllEvents(GetComponent<RhythmControllerSnap>());
             //Destroy(gameObject);
+            alreadySteppedHere = true;
             rd.enabled = false;
+            print("boom");
         }
     }
 }

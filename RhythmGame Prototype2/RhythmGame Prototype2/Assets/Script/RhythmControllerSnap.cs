@@ -13,23 +13,25 @@ public class RhythmControllerSnap : MonoBehaviour
 	public static int Perfect;
 	public static int Miss;
 
-	public bool NewspaperEnable;
-	public bool GlassEnable;
-	public bool ChoppingEnable;
+	public bool AlreadyStepped;
+
+	//public bool NewspaperEnable;
+	//public bool GlassEnable;
+	//public bool ChoppingEnable;
 	
 	private void Start()
 	{
 		AudioSource = GetComponent<AudioSource>();
 		rd = GetComponent<MeshRenderer>();
-		Koreographer.Instance.RegisterForEvents("NewspaperEventID", NewspaperStart);
-		Koreographer.Instance.RegisterForEvents("NewspaperEndEventID", NewspaperEnd);
-		Koreographer.Instance.RegisterForEvents("GlassEventID", GlassStart);
-		Koreographer.Instance.RegisterForEvents("GlassEndEventID", GlassEnd);
-		Koreographer.Instance.RegisterForEvents("ChoppingEventID", ChoppingStart);
-		Koreographer.Instance.RegisterForEvents("ChoppingEndEventID", ChoppingEnd);
+		//Koreographer.Instance.RegisterForEvents("NewspaperEventID", NewspaperStart);
+		//Koreographer.Instance.RegisterForEvents("NewspaperEndEventID", NewspaperEnd);
+		//Koreographer.Instance.RegisterForEvents("GlassEventID", GlassStart);
+		//Koreographer.Instance.RegisterForEvents("GlassEndEventID", GlassEnd);
+		//Koreographer.Instance.RegisterForEvents("ChoppingEventID", ChoppingStart);
+		//Koreographer.Instance.RegisterForEvents("ChoppingEndEventID", ChoppingEnd);
 	}
 
-	void NewspaperStart(KoreographyEvent evt)
+/*	void NewspaperStart(KoreographyEvent evt)
 	{
 	    //print("NewspaperEnable");		
 		if (name == "TurningPageCollider(Clone)")
@@ -85,7 +87,7 @@ public class RhythmControllerSnap : MonoBehaviour
 			ChoppingEnable = false;
 			print("ChoppingEnd");
 		}
-	}
+	}*/
 
 	private void Update()
 	{
@@ -97,24 +99,24 @@ public class RhythmControllerSnap : MonoBehaviour
 	{
 		if (other.CompareTag("Player"))
 		{
-			Koreographer.Instance.UnregisterForAllEvents(this);			
-			if (NewspaperEnable || GlassEnable || ChoppingEnable)
+	        rd.enabled = false;		
+			if (!AlreadyStepped)
 			{
-				AudioSource.Play();
-    			rd.enabled = false;
-                Perfect++;
-                NewspaperEnable = false;
-                GlassEnable = false;
-                ChoppingEnable = false;
-                //Destroy(gameObject);			
+				AlreadyStepped = true;			
+    			if ((name == "TurningPageCollider(Clone)" && KoreoToBool.NewspaperEnable) || 
+                    (name == "TappingOnGlassCollider(Clone)" && KoreoToBool.GlassEnable) ||
+                    (name == "ChoppingCollider(Clone)" && KoreoToBool.ChoppingEnable))
+    			{
+    				AudioSource.Play();
+                    Perfect++;
+                    //Destroy(gameObject);			
+			    }
+				else
+    			{
+    				//Destroy(gameObject);
+    				Miss++;
+    			}		
 			}
-			else
-			{
-				//Destroy(gameObject);
-				rd.enabled = false;
-				Miss++;
-			}
-
 		}
 	}
 }
