@@ -35,6 +35,7 @@ namespace SonicBloom.Koreo.Demos
 		{
 			if (evt.HasCurvePayload())
 			{
+				print("Scale Start");
 				// Get the value of the curve at the current audio position.  This will be a
 				//  value between [0, 1] and will be used, below, to interpolate between
 				//  minScale and maxScale.
