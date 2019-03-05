@@ -5,8 +5,11 @@ using UnityEngine;
 public class UpAndDown : MonoBehaviour
 {
     //这个script要放在player下面
-    public GameObject TopTrigger;
-    public GameObject BottomTrigger;
+    public GameObject TopTrigger1;
+    public GameObject BottomTrigger1;
+    public GameObject TopTrigger2;
+    public GameObject BottomTrigger2;
+    
 
     private int _transport = 0;
    
@@ -35,12 +38,25 @@ public class UpAndDown : MonoBehaviour
             {
                 if (Other.CompareTag("UpStairs"))
                 {
-                    transform.position = BottomTrigger.transform.position;
-
+                    if(Other.gameObject == BottomTrigger1)
+                    {
+                        transform.position = TopTrigger1.transform.position;
+                    }
+                    else if(Other.gameObject == BottomTrigger2)
+                    {
+                        transform.position = TopTrigger2.transform.position;
+                    }
                 }
                 else if (Other.CompareTag("DownStairs"))
                 {
-                    transform.position = TopTrigger.transform.position;
+                    if(Other.gameObject == TopTrigger1)
+                    {
+                        transform.position = BottomTrigger1.transform.position;
+                    }
+                    else if(Other.gameObject == TopTrigger2)
+                    {
+                        transform.position = BottomTrigger2.transform.position;
+                    }
  
                 }
                 
