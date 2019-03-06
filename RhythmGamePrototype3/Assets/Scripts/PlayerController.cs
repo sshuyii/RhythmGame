@@ -13,20 +13,24 @@ public class PlayerController : MonoBehaviour
     public int playerNum;
     public KeyCode interaction;
     
-    [Header("Anime")]
+    [Header("Animation")]
     public float ShrinkDepth;
     public float RecoverRate;
-    public Material Normal;
-    public Material Perfect;
-    public Material Miss;
+    public Material NormalMat;
+    public Material PerfectMat;
+    public Material MissMat;
 
     [Header("Koreo")] 
     public string EventIDOpen;
     public string EventIDClose;
+
+    [Header("In Game Stat")] 
+    public FurnitureInteractor furniture;
     
     private Rigidbody playerRb;
     private Vector3 originalScale;
     private bool beatable;
+    private bool alreadybeat;
     private MeshRenderer rd;
 
     // Start is called before the first frame update
@@ -52,32 +56,60 @@ public class PlayerController : MonoBehaviour
     
     // Update is called once per frame
     void Update()
-    {         
+    {
+        //Reset Interaction signal
+        
         transform.rotation = new Quaternion (0,  0, 0, 0);
-
+        
+        //Movement
         float x = Input.GetAxisRaw("Horizontal" + playerNum) * speed;
         float z = Input.GetAxisRaw("Vertical" + playerNum) * speed;
         playerRb.velocity = new Vector3(x, 0, -z);
-
+        
+        //Interaction
         if (Input.GetKeyDown(interaction))
         {
-            if (beatable)
+            if (beatable && !alreadybeat)
             {
                transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
-               rd.material = Perfect;
+               rd.material = PerfectMat;
+               alreadybeat = true;
+               if (furniture != null && furniture.Checking)
+               {
+                   if (furniture.BeatLoop[(furniture.BeatCount + furniture.BeatLoop.Count - 1) % furniture.BeatLoop.Count])
+                   {
+                       furniture.perfect++;
+                       furniture.perfectText.text = "Perfect: " + furniture.perfect;                   
+                   }
+                   else
+                   {
+                       furniture.miss++;
+                       furniture.missText.text = "Miss: " + furniture.miss;
+                       rd.material = MissMat;
+                   }
+               }
             }
             else
             {
-               rd.material = Miss;
+               rd.material = MissMat;
+               if (furniture != null && furniture.Checking)
+               {
+                   furniture.miss++;
+                   furniture.missText.text = "Miss: " + furniture.miss;
+               }
             }
-            
-            Invoke("Recover", RecoverRate); 
-        }    
+            Invoke("Recover", RecoverRate);    
+        }
+        
+        if (!beatable && alreadybeat)
+        {
+            alreadybeat = false;
+        }                 
     }
     
     void Recover()
     {
         transform.localScale = originalScale;
-        rd.material = Normal;
+        rd.material = NormalMat;
     }    
 }
