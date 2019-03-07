@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using SonicBloom.Koreo;
+using UnityEngine.Serialization;
 
 //Usage: Control players that uses Unity Input manager.
 //Intent: The controller can be used on multiple players.
@@ -24,14 +25,17 @@ public class PlayerController : MonoBehaviour
     public string EventIDOpen;
     public string EventIDClose;
 
-    [Header("In Game Stat")] 
-    public FurnitureInteractor furniture;
+    [FormerlySerializedAs("furniture")] [Header("In Game Stat")] 
+    public FurnitureInteractor furnitureInteractor;
+    public GameObject furniture;//后加的
+    
     
     private Rigidbody playerRb;
     private Vector3 originalScale;
     private bool beatable;
     private bool alreadybeat;
     private MeshRenderer rd;
+    private AudioSource _audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +46,7 @@ public class PlayerController : MonoBehaviour
         playerRb = GetComponent<Rigidbody>();
         originalScale = transform.localScale;
         rd = GetComponent<MeshRenderer>();
+        _audioSource = furniture.GetComponent<AudioSource>();
     }
 
     void BeatReady(KoreographyEvent evt)
@@ -69,22 +74,26 @@ public class PlayerController : MonoBehaviour
         //Interaction
         if (Input.GetKeyDown(interaction))
         {
+            _audioSource.Play();//后加的
+
             if (beatable && !alreadybeat)
             {
                transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
                rd.material = PerfectMat;
                alreadybeat = true;
-               if (furniture != null && furniture.Checking)
+
+               
+               if (furnitureInteractor != null && furnitureInteractor.Checking)
                {
-                   if (furniture.BeatLoop[(furniture.BeatCount + furniture.BeatLoop.Count - 1) % furniture.BeatLoop.Count])
+                   if (furnitureInteractor.BeatLoop[(furnitureInteractor.BeatCount + furnitureInteractor.BeatLoop.Count - 1) % furnitureInteractor.BeatLoop.Count])
                    {
-                       furniture.perfect++;
-                       furniture.perfectText.text = "Perfect: " + furniture.perfect;                   
+                       furnitureInteractor.perfect++;
+                       furnitureInteractor.perfectText.text = "Perfect: " + furnitureInteractor.perfect;
                    }
                    else
                    {
-                       furniture.miss++;
-                       furniture.missText.text = "Miss: " + furniture.miss;
+                       furnitureInteractor.miss++;
+                       furnitureInteractor.missText.text = "Miss: " + furnitureInteractor.miss;
                        rd.material = MissMat;
                    }
                }
@@ -92,10 +101,10 @@ public class PlayerController : MonoBehaviour
             else
             {
                rd.material = MissMat;
-               if (furniture != null && furniture.Checking)
+               if (furnitureInteractor != null && furnitureInteractor.Checking)
                {
-                   furniture.miss++;
-                   furniture.missText.text = "Miss: " + furniture.miss;
+                   furnitureInteractor.miss++;
+                   furnitureInteractor.missText.text = "Miss: " + furnitureInteractor.miss;
                }
             }
             Invoke("Recover", RecoverRate);    

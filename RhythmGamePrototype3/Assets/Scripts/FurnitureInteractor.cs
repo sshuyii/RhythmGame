@@ -14,7 +14,8 @@ public class FurnitureInteractor : MonoBehaviour
     [Header("Animation")]
     public float ShrinkDepth;
     public float RecoverRate;
-
+    public GameObject Furniture;
+    
     [Header("In Game Situation")] 
     public bool PlayerInPlace;
     public bool Resting = true;
@@ -27,6 +28,11 @@ public class FurnitureInteractor : MonoBehaviour
     public Material CheckingMat;
     public bool Activated;
     public Material ActivatedMat;
+
+    //以下是新加的
+    public GameObject _light;
+    private AudioSource _audioSource;
+    
 
     [Header("Checking")] 
     public int perfect;
@@ -45,7 +51,12 @@ public class FurnitureInteractor : MonoBehaviour
     {
         Koreographer.Instance.RegisterForEvents(EventID,BeatAnime);
 
+        //rd = Furniture.GetComponent<MeshRenderer>();
+       
         rd = transform.Find("Substance").GetComponent<MeshRenderer>();
+        //新加
+        _audioSource = transform.Find("Substance").GetComponent<AudioSource>();
+            
         originalScale = transform.localScale;
         scoring = transform.Find("Scoring").gameObject;
 
@@ -60,7 +71,9 @@ public class FurnitureInteractor : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerInPlace = true;
-            other.GetComponent<PlayerController>().furniture = this;
+            other.GetComponent<PlayerController>().furnitureInteractor = this;
+            _light.SetActive(true);
+
             if (Resting)
             {
                 rd.material = WaitingMat;                
@@ -73,7 +86,8 @@ public class FurnitureInteractor : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerInPlace = false;
-            other.GetComponent<PlayerController>().furniture = null;
+            other.GetComponent<PlayerController>().furnitureInteractor = null;
+            _light.SetActive(false);
         }
     }
 
@@ -145,6 +159,8 @@ public class FurnitureInteractor : MonoBehaviour
         if (BeatLoop[BeatCount] && (Demonstrating || Activated))
         {
             transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
+            _audioSource.Play();
+
             Invoke("Recover", RecoverRate);
         }
         

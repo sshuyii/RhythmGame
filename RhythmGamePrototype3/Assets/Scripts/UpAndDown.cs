@@ -41,6 +41,8 @@ public class UpAndDown : MonoBehaviour
                     if(Other.gameObject == BottomTrigger1)
                     {
                         transform.position = TopTrigger1.transform.position;
+                        print("OnTriggerEnterrrrrrrrrrr");
+
                     }
                     else if(Other.gameObject == BottomTrigger2)
                     {
