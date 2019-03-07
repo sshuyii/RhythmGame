@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
     [FormerlySerializedAs("furniture")] [Header("In Game Stat")] 
     public FurnitureInteractor furnitureInteractor;
-    public GameObject furniture;//后加的
+    //public GameObject furniture;//后加的,但是现在player发出的声音是一样的
     
     
     private Rigidbody playerRb;
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         playerRb = GetComponent<Rigidbody>();
         originalScale = transform.localScale;
         rd = GetComponent<MeshRenderer>();
-        _audioSource = furniture.GetComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void BeatReady(KoreographyEvent evt)
