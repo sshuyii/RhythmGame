@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using SonicBloom.Koreo;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 //Usage: Control players that uses Unity Input manager.
 //Intent: The controller can be used on multiple players.
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 6;
     public int playerNum;
     public KeyCode interaction;
+    public GameObject UI;
     
     [Header("Animation")]
     public float ShrinkDepth;
@@ -25,6 +27,12 @@ public class PlayerController : MonoBehaviour
     public string EventIDOpen;
     public string EventIDClose;
 
+    [Header("UI")] 
+    public Sprite Chopping;
+    public Sprite ChoppingWrong;
+    public Sprite ChoppingRight;
+    
+
     [FormerlySerializedAs("furniture")] [Header("In Game Stat")] 
     public FurnitureInteractor furnitureInteractor;
     //public GameObject furniture;//后加的,但是现在player发出的声音是一样的
@@ -36,12 +44,15 @@ public class PlayerController : MonoBehaviour
     private bool alreadybeat;
     private MeshRenderer rd;
     private AudioSource _audioSource;
+    private Image imageUI;
 
     // Start is called before the first frame update
     void Start()
     {
         Koreographer.Instance.RegisterForEvents(EventIDOpen,BeatReady);
         Koreographer.Instance.RegisterForEvents(EventIDClose,BeatExpire);
+        imageUI = UI.GetComponent<Image>();
+        
         
         playerRb = GetComponent<Rigidbody>();
         originalScale = transform.localScale;
@@ -71,6 +82,8 @@ public class PlayerController : MonoBehaviour
         float z = Input.GetAxisRaw("Vertical" + playerNum) * speed;
         playerRb.velocity = new Vector3(x, 0, -z);
         
+        //imageUI.sprite = Chopping;
+
         //Interaction
         if (Input.GetKeyDown(interaction))
         {
@@ -89,12 +102,15 @@ public class PlayerController : MonoBehaviour
                    {
                        furnitureInteractor.perfect++;
                        furnitureInteractor.perfectText.text = "Perfect: " + furnitureInteractor.perfect;
+                       imageUI.sprite = ChoppingRight;
                    }
                    else
                    {
                        furnitureInteractor.miss++;
                        furnitureInteractor.missText.text = "Miss: " + furnitureInteractor.miss;
                        rd.material = MissMat;
+                       imageUI.sprite = ChoppingWrong;
+
                    }
                }
             }
@@ -105,6 +121,8 @@ public class PlayerController : MonoBehaviour
                {
                    furnitureInteractor.miss++;
                    furnitureInteractor.missText.text = "Miss: " + furnitureInteractor.miss;
+                   imageUI.sprite = ChoppingWrong;
+
                }
             }
             Invoke("Recover", RecoverRate);    

@@ -135,7 +135,8 @@ public class FurnitureInteractor : MonoBehaviour
                     if (perfect == RequiredPerfect && miss == 0)
                     {
                         Activated = true;
-                        rd.material = ActivatedMat;                        
+                        rd.material = ActivatedMat;    
+                        
                     }
                     else
                     {
