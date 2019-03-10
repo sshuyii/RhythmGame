@@ -87,14 +87,14 @@ public class PlayerController : MonoBehaviour
         //Interaction
         if (Input.GetKeyDown(interaction))
         {
-            _audioSource.Play();//后加的
+            
 
             if (beatable && !alreadybeat)
             {
                transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
                rd.material = PerfectMat;
                alreadybeat = true;
-
+               _audioSource.Play();//后加的
                
                if (furnitureInteractor != null && furnitureInteractor.Checking)
                {
