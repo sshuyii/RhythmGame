@@ -15,6 +15,7 @@ public class FurnitureInteractor : MonoBehaviour
     public float ShrinkDepth;
     public float RecoverRate;
     public GameObject Furniture;
+    private Animator _anim;
     
     [Header("In Game Situation")] 
     public bool PlayerInPlace;
@@ -57,6 +58,8 @@ public class FurnitureInteractor : MonoBehaviour
         rd = transform.Find("Substance").GetComponent<MeshRenderer>();
         //新加
         _audioSource = transform.Find("Substance").GetComponent<AudioSource>();
+        _anim = Furniture.GetComponent<Animator>();
+        
         
 
             
@@ -89,7 +92,10 @@ public class FurnitureInteractor : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerInPlace = false;
+            _anim.SetBool("IsRotating", false);
+
             other.GetComponent<PlayerController>().furnitureInteractor = null;
+
             //_light.SetActive(false);
         }
     }
@@ -108,6 +114,7 @@ public class FurnitureInteractor : MonoBehaviour
                     Resting = false;
                     Demonstrating = true;
                     rd.material = DemonstratingMat;
+                    _anim.SetBool("IsRotating", true);
                     
                 }
                 else
