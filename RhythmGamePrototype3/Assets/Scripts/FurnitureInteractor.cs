@@ -30,7 +30,7 @@ public class FurnitureInteractor : MonoBehaviour
     public Material ActivatedMat;
 
     //以下是新加的
-    public GameObject _light;
+    //public GameObject _light;
     private AudioSource _audioSource;
     
 
@@ -45,6 +45,7 @@ public class FurnitureInteractor : MonoBehaviour
     private MeshRenderer rd;
     private Vector3 originalScale;
     private GameObject scoring;
+    //public GameObject _collider;//设为通用的，在awake function里自行寻找
     
     // Start is called before the first frame update
     void Start()
@@ -56,6 +57,8 @@ public class FurnitureInteractor : MonoBehaviour
         rd = transform.Find("Substance").GetComponent<MeshRenderer>();
         //新加
         _audioSource = transform.Find("Substance").GetComponent<AudioSource>();
+        
+
             
         originalScale = transform.localScale;
         scoring = transform.Find("Scoring").gameObject;
@@ -72,7 +75,7 @@ public class FurnitureInteractor : MonoBehaviour
         {
             PlayerInPlace = true;
             other.GetComponent<PlayerController>().furnitureInteractor = this;
-            _light.SetActive(true);
+            //_light.SetActive(true);
 
             if (Resting)
             {
@@ -87,7 +90,7 @@ public class FurnitureInteractor : MonoBehaviour
         {
             PlayerInPlace = false;
             other.GetComponent<PlayerController>().furnitureInteractor = null;
-            _light.SetActive(false);
+            //_light.SetActive(false);
         }
     }
 
@@ -105,6 +108,7 @@ public class FurnitureInteractor : MonoBehaviour
                     Resting = false;
                     Demonstrating = true;
                     rd.material = DemonstratingMat;
+                    
                 }
                 else
                 {
@@ -119,6 +123,7 @@ public class FurnitureInteractor : MonoBehaviour
                     Checking = true;
                     rd.material = CheckingMat;
                     scoring.SetActive(true);
+
                 }
                 else
                 {
@@ -129,6 +134,7 @@ public class FurnitureInteractor : MonoBehaviour
             else if (Checking)
             {
                 scoring.SetActive(false);
+
                 Checking = false;
                 if (PlayerInPlace)
                 {
@@ -159,7 +165,12 @@ public class FurnitureInteractor : MonoBehaviour
         //Beat Demonstration
         if (BeatLoop[BeatCount] && (Demonstrating || Activated))
         {
-            transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
+            //transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
+            //用animation取代
+            
+            
+            
+            
             _audioSource.Play();
 
             Invoke("Recover", RecoverRate);

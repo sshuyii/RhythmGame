@@ -45,6 +45,26 @@ public class PlayerController : MonoBehaviour
     private MeshRenderer rd;
     private AudioSource _audioSource;
     private Image imageUI;
+    
+    // Reference to the animator component
+    private Animator anim;                     
+    private Vector3 movement;
+    
+    float smooth = 45.0f;
+    float tiltAngle = 90.0f;
+    Quaternion target;
+
+
+    void Awake()
+    {
+        // Set up references.
+        anim = GetComponent <Animator> ();
+        
+        playerRb = GetComponent<Rigidbody>();
+        originalScale = transform.localScale;
+        rd = GetComponent<MeshRenderer>();
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -53,11 +73,7 @@ public class PlayerController : MonoBehaviour
         Koreographer.Instance.RegisterForEvents(EventIDClose,BeatExpire);
         imageUI = UI.GetComponent<Image>();
         
-        
-        playerRb = GetComponent<Rigidbody>();
-        originalScale = transform.localScale;
-        rd = GetComponent<MeshRenderer>();
-        _audioSource = GetComponent<AudioSource>();
+       
     }
 
     void BeatReady(KoreographyEvent evt)
@@ -69,18 +85,86 @@ public class PlayerController : MonoBehaviour
     {
         beatable = false;
     }
+
+    private void _animating(float h, float v)
+    {
+        // Create a boolean that is true if either of the input axes is non-zero.
+        bool walking = h != 0f || v != 0f;
+
+        // Tell the animator whether or not the player is walking.
+        anim.SetBool ("IsWalking", walking);
+    }
+
+
+    private float _rotate;
+    private float _rotation;
     
     // Update is called once per frame
     void Update()
     {
         //Reset Interaction signal
+        //transform.Rotate(0, _rotate, 0,Space.World);
+        Quaternion target = Quaternion.Euler(0, _rotation, 0);
+
+        transform.rotation = target;
         
-        transform.rotation = new Quaternion (0,  0, 0, 0);
+        //transform.rotation = new Quaternion (0,  0, 0, 0);
         
         //Movement
         float x = Input.GetAxisRaw("Horizontal" + playerNum) * speed;
         float z = Input.GetAxisRaw("Vertical" + playerNum) * speed;
-        playerRb.velocity = new Vector3(x, 0, -z);
+        //playerRb.velocity = new Vector3(x, 0, -z);
+        
+        // Set the movement vector based on the axis input.
+        movement.Set (x, 0f, z);
+        
+        // Normalise the movement vector and make it proportional to the speed per second.
+        movement = movement.normalized * speed * Time.deltaTime;
+
+        // Move the player to it's current position plus the movement.
+        playerRb.MovePosition (transform.position + movement);
+
+        //控制player的朝向
+        // Smoothly tilts a transform towards a target rotation.
+//        float tiltAroundZ = Input.GetAxis("Horizontal" + playerNum) * tiltAngle;
+//        float tiltAroundX = Input.GetAxis("Vertical" + playerNum) * tiltAngle;
+  
+        
+        if(x > 0)
+        {
+            transform.Rotate(0, 45, 0,Space.World);
+            _rotation = transform.rotation.y;
+
+
+        }
+        else if (x < 0)
+        {
+            transform.Rotate(0, -125, 0,Space.World);
+            _rotation = transform.rotation.y;
+
+        }
+        
+        if(z > 0)
+        { 
+            transform.Rotate(0, -45, 0,Space.World);
+            _rotation = transform.rotation.y;
+
+           
+        }
+        else if (z < 0)
+        {
+            transform.Rotate(0, 125, 0,Space.World);
+            _rotation = transform.rotation.y;
+
+        }
+       
+
+        // Dampen towards the target rotation
+        //transform.rotation = Quaternion.Slerp(transform.rotation, target,  Time.deltaTime * smooth);
+
+        
+        
+        _animating(x, z);
         
         //imageUI.sprite = Chopping;
 
