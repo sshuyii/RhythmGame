@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a59e338-f684-452a-8be6-010462c33a0c" name="Default Changelist" comment="Asset ajusted">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RhythmGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RhythmGame/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RhythmGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RhythmGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RhythmGamePrototype3/Assets/Scenes/AmberScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/RhythmGamePrototype3/Assets/Scenes/AmberScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RhythmGamePrototype3/Assets/Scenes/ShuyiScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/RhythmGamePrototype3/Assets/Scenes/ShuyiScene.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,10 +15,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/RhythmGamePrototype3/Assets/Scripts/PlayerController.cs">
+        <entry file="file://$PROJECT_DIR$/RhythmGame/Assets/Scripts/PlayerMovement.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-508">
-              <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -28,15 +29,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/RhythmGamePrototype3/Assets/Scripts/FurnitureInteractor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/RhythmGamePrototype3/Assets/PolygonTown/Prefabs/Environment/SM_Env_Fence_White_Straight_01.prefab" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/RhythmGame/Assets/Scenes/AmberScene.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/RhythmGame/Assets/Scripts/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RhythmGamePrototype3/Assets/PolygonTown/Prefabs/Props/SM_Prop_Streetlamp_01.prefab.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/RhythmGamePrototype3/Assets/Scenes/AmberScene.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/RhythmGame/Assets/Scenes/MainScene.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RhythmGame/Assets/Scenes/AmberScene.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RhythmGamePrototype3/Assets/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RhythmGamePrototype3/Assets/Scripts/UpAndDown.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RhythmGame/Assets/Scenes/MainScene.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RhythmGamePrototype3/Assets/Scripts/FurnitureInteractor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RhythmGamePrototype3/Assets/Scenes/ShuyiScene.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RhythmGame/Assets/Scripts/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RhythmGamePrototype3/Assets/Scenes/AmberScene.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RhythmGamePrototype3/Assets/PolygonTown/Prefabs/Environment/SM_Env_Fence_White_Straight_01.prefab" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -46,7 +48,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="y" value="13" />
     <option name="width" value="1344" />
     <option name="height" value="823" />
   </component>
@@ -132,7 +134,7 @@
       <workItem from="1551885431477" duration="34000" />
       <workItem from="1551902809498" duration="391000" />
       <workItem from="1551903800592" duration="599000" />
-      <workItem from="1552314036720" duration="13000" />
+      <workItem from="1552359252090" duration="1376000" />
     </task>
     <task id="LOCAL-00001" summary="Start of the project.">
       <created>1549573594851</created>
@@ -169,11 +171,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550550390462</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added some furniture in AmberScene.&#10;Added the stairs in AmberScene.">
+      <created>1552368829456</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1552368829456</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16880000" />
+    <option name="totallyTimeSpent" value="19484000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -185,9 +194,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1344" height="823" extended-state="0" />
+    <frame x="0" y="13" width="1344" height="823" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17127496" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16900311" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -201,7 +211,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="NuGet" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.49731904" visible="true" weight="0.16415869" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.49731904" visible="true" weight="0.16255443" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" order="11" />
       <window_info anchor="bottom" id="Terminal" order="12" />
@@ -243,7 +253,8 @@
     <MESSAGE value="Adjusted the position of camera." />
     <MESSAGE value="Adjusted lights in AmberScene." />
     <MESSAGE value="Adjusted the position of camera(forgot to save last time)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjusted the position of camera(forgot to save last time)." />
+    <MESSAGE value="Added some furniture in AmberScene.&#10;Added the stairs in AmberScene." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some furniture in AmberScene.&#10;Added the stairs in AmberScene." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -257,13 +268,19 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/RhythmGame/Assets/Materials/Wall_translucent.mat" />
-    <entry file="file://$PROJECT_DIR$/RhythmGame/Assets/Scripts/PlayerMovement.cs" />
     <entry file="file://$PROJECT_DIR$/RhythmGamePrototype3/Assets/Scripts/FurnitureInteractor.cs" />
     <entry file="file://$PROJECT_DIR$/RhythmGamePrototype3/Assets/Scripts/UpAndDown.cs" />
     <entry file="file://$PROJECT_DIR$/RhythmGamePrototype3/Assets/Scripts/PlayerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-508">
-          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+        <state relative-caret-position="242">
+          <caret line="76" column="24" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RhythmGame/Assets/Scripts/PlayerMovement.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
