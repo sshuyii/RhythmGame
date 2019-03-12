@@ -104,9 +104,9 @@ public class PlayerController : MonoBehaviour
     {
         //Reset Interaction signal
         //transform.Rotate(0, _rotate, 0,Space.World);
-        Quaternion target = Quaternion.Euler(0, _rotation, 0);
+        //Vector3 target = new Vector3(0, _rotation, 0);
 
-        transform.rotation = target;
+        //transform.rotation = target;
         
         //transform.rotation = new Quaternion (0,  0, 0, 0);
         
@@ -132,29 +132,37 @@ public class PlayerController : MonoBehaviour
         
         if(x > 0)
         {
-            transform.Rotate(0, 45, 0,Space.World);
-            _rotation = transform.rotation.y;
+            /*transform.Rotate(0, 45, 0,Space.World);
+            _rotation = transform.rotation.y;*/
+            
+            transform.localEulerAngles = new Vector3(0,45,0);
 
 
         }
         else if (x < 0)
         {
-            transform.Rotate(0, -125, 0,Space.World);
-            _rotation = transform.rotation.y;
+            /*transform.Rotate(0, -125, 0,Space.World);
+            _rotation = transform.rotation.y;*/
+            
+            transform.localEulerAngles = new Vector3(0,-135,0);
 
         }
         
         if(z > 0)
         { 
-            transform.Rotate(0, -45, 0,Space.World);
-            _rotation = transform.rotation.y;
+            /*transform.Rotate(0, -45, 0,Space.World);
+            _rotation = transform.rotation.y;*/
+            
+            transform.localEulerAngles = new Vector3(0, -45, 0);
 
            
         }
         else if (z < 0)
         {
-            transform.Rotate(0, 125, 0,Space.World);
-            _rotation = transform.rotation.y;
+            /*transform.Rotate(0, 125, 0,Space.World);
+            _rotation = transform.rotation.y;*/
+            
+            transform.localEulerAngles = new Vector3(0, 135, 0);
 
         }
        
