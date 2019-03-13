@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using SonicBloom.Koreo;
+using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
     public Sprite Chopping;
     public Sprite ChoppingWrong;
     public Sprite ChoppingRight;
+    public GameObject spotLight;
     
 
     [FormerlySerializedAs("furniture")] [Header("In Game Stat")] 
@@ -64,6 +66,7 @@ public class PlayerController : MonoBehaviour
         originalScale = transform.localScale;
         rd = GetComponent<MeshRenderer>();
         _audioSource = GetComponent<AudioSource>();
+        spotLight = transform.Find("SpotLight").gameObject;
     }
 
     // Start is called before the first frame update
@@ -223,13 +226,11 @@ public class PlayerController : MonoBehaviour
         {
             alreadybeat = false;
         }
-        
-        //聚光灯
     }
     
-    void Recover()
+    /*void Recover()
     {
         transform.localScale = originalScale;
         //rd.material = NormalMat;
-    }    
+    }*/    
 }
