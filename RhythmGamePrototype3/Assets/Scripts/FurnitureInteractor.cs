@@ -180,6 +180,10 @@ public class FurnitureInteractor : MonoBehaviour
                     //rd.material = RestingMat;
                 }
             }
+            else if (Activated)
+            {
+                _anim.SetBool("IsMoving", true);//播放家具动画
+            }
         }
         
         
