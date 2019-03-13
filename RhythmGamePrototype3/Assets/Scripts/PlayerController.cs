@@ -226,29 +226,11 @@ public class PlayerController : MonoBehaviour
         {
             alreadybeat = false;
         }
-        
-        //聚光灯
-/*        if (furnitureInteractor != null)
-        {
-            if (furnitureInteractor.yourTurn)
-            {
-                spotLight.SetActive(true);
-                furnitureInteractor.yourTurn = false;
-                furnitureInteractor.playerSpotLightOn = true;
-            }
-    
-            if (furnitureInteractor.myTurn)
-            {
-                spotLight.SetActive(false);
-                furnitureInteractor.myTurn = false;
-            }        
-        }*/
-
     }
     
-    void Recover()
+    /*void Recover()
     {
         transform.localScale = originalScale;
         //rd.material = NormalMat;
-    }    
+    }*/    
 }

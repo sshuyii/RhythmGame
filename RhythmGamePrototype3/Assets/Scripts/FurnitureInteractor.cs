@@ -32,9 +32,6 @@ public class FurnitureInteractor : MonoBehaviour
     //public Material ActivatedMat;
     public GameObject spotLight;
     public GameObject player1SpotLight;
-    public bool yourTurn;
-    public bool myTurn;
-    public bool playerSpotLightOn;
 
     //以下是新加的
     //public GameObject _light;
@@ -50,7 +47,7 @@ public class FurnitureInteractor : MonoBehaviour
     public int BeatCount;
     
     private MeshRenderer rd;
-    private Vector3 originalScale;
+    //private Vector3 originalScale;
     private GameObject scoring;
     
     //public GameObject _collider;//设为通用的，在awake function里自行寻找
@@ -70,7 +67,7 @@ public class FurnitureInteractor : MonoBehaviour
         
 
             
-        originalScale = transform.localScale;
+        //originalScale = transform.localScale;
         scoring = transform.Find("Scoring").gameObject;
 
         foreach (var Beat in BeatLoop)
@@ -85,7 +82,7 @@ public class FurnitureInteractor : MonoBehaviour
         {
             PlayerInPlace = true;
             other.GetComponent<PlayerController>().furnitureInteractor = this;
-            player1SpotLight = other.transform.Find("SpotLight").gameObject;
+            if(other.name == "Player1")player1SpotLight = other.transform.Find("SpotLight").gameObject;
             //_light.SetActive(true);
 
             if (Resting)
@@ -101,7 +98,6 @@ public class FurnitureInteractor : MonoBehaviour
         {
             PlayerInPlace = false;
             _anim.SetBool("IsMoving", false);
-            //player1SpotLight = null;
             other.GetComponent<PlayerController>().furnitureInteractor = null;
 
             //_light.SetActive(false);
@@ -113,34 +109,7 @@ public class FurnitureInteractor : MonoBehaviour
         //print("Beat " + BeatCount + " " + BeatLoop[BeatCount]);
         
         
-        //聚光灯效果
-        if (BeatCount == 7)
-        {
-            if (PlayerInPlace)
-            {
-                if (Demonstrating)
-                {
-                    spotLight.SetActive(false);
-                    if(player1SpotLight)player1SpotLight.SetActive(true);
-                }
-                else if (Resting)
-                {
-                    spotLight.SetActive(true);
-                    if(player1SpotLight)player1SpotLight.SetActive(false);
-                }
-                else if (Checking)
-                {
-                    spotLight.SetActive(true);
-                    if(player1SpotLight)player1SpotLight.SetActive(false);
-                }            
-            }
-            else
-            {
-                spotLight.SetActive(false);
-                if(player1SpotLight)player1SpotLight.SetActive(false);
-            }
-
-        }
+        
         
         //Status check
         if (BeatCount == 0)
@@ -150,10 +119,11 @@ public class FurnitureInteractor : MonoBehaviour
                 if (PlayerInPlace)
                 {
                     Resting = false;
-                    Demonstrating = true;
+                    Demonstrating = true;                                        
+                    //打开家具聚光灯并开始动画
+                    spotLight.SetActive(true);
                     //rd.material = DemonstratingMat;
-                    _anim.SetBool("IsMoving", true);
-                    
+                    _anim.SetBool("IsMoving", true);                    
                 }
                 else
                 {
@@ -163,12 +133,15 @@ public class FurnitureInteractor : MonoBehaviour
             else if (Demonstrating)
             {
                 Demonstrating = false;
+                //关闭家具聚光灯并停止动画
+                spotLight.SetActive(false);                
+                _anim.SetBool("IsMoving", false);                
                 if (PlayerInPlace)
                 {
-                    Checking = true;
+                    Checking = true;                    
+                    scoring.SetActive(true);                    
+                    player1SpotLight.SetActive(true);//打开玩家聚光灯
                     //rd.material = CheckingMat;
-                    scoring.SetActive(true);
-
                 }
                 else
                 {
@@ -179,15 +152,17 @@ public class FurnitureInteractor : MonoBehaviour
             else if (Checking)
             {
                 scoring.SetActive(false);
-
+                player1SpotLight.SetActive(false);//关闭玩家聚光灯
                 Checking = false;
                 if (PlayerInPlace)
                 {
+                    //打开家具聚光灯并开始动画
+                    spotLight.SetActive(true);
+                    _anim.SetBool("IsMoving", true);
                     if (perfect == RequiredPerfect && miss == 0)
                     {
                         Activated = true;
-                        //rd.material = ActivatedMat;    
-                        
+                        //rd.material = ActivatedMat;                        
                     }
                     else
                     {
@@ -207,28 +182,27 @@ public class FurnitureInteractor : MonoBehaviour
             }
         }
         
+        
+        
+        
         //Beat Demonstration
         if (BeatLoop[BeatCount] && (Demonstrating || Activated))
         {
             //transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
-            //用animation取代
-            
-            
-            
+            //Invoke("Recover", RecoverRate);            
+            //以上用animation取代
             
             _audioSource.Play();
-
-            //Invoke("Recover", RecoverRate);
         }
         
         //To next beat
         BeatCount = (BeatCount + 1) % BeatLoop.Count;
     }
 
-    void Recover()
+    /*void Recover()
     {
         transform.localScale = originalScale;
-    }
+    }*/
     
     // Update is called once per frame
     void Update()

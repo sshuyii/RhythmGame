@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5574493493278090136}
   - component: {fileID: 5574493493278090137}
   m_Layer: 0
-  m_Name: FridgePrefab
+  m_Name: FurniturePrefab
   m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,6 +56,8 @@ MonoBehaviour:
   Demonstrating: 0
   Checking: 0
   Activated: 0
+  spotLight: {fileID: 0}
+  player1SpotLight: {fileID: 0}
   perfect: 0
   miss: 0
   perfectText: {fileID: 5574493494760250157}
@@ -273,7 +275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5574493494557677883
 Transform:
   m_ObjectHideFlags: 0
