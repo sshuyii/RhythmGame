@@ -92,7 +92,7 @@ public class FurnitureInteractor : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerInPlace = false;
-            _anim.SetBool("IsRotating", false);
+            _anim.SetBool("IsMoving", false);
 
             other.GetComponent<PlayerController>().furnitureInteractor = null;
 
@@ -114,7 +114,7 @@ public class FurnitureInteractor : MonoBehaviour
                     Resting = false;
                     Demonstrating = true;
                     rd.material = DemonstratingMat;
-                    _anim.SetBool("IsRotating", true);
+                    _anim.SetBool("IsMoving", true);
                     
                 }
                 else
