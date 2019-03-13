@@ -31,6 +31,7 @@ public class FurnitureInteractor : MonoBehaviour
     public bool Activated;
     //public Material ActivatedMat;
     public GameObject spotLight;
+    public GameObject player1SpotLight;
     public bool yourTurn;
     public bool myTurn;
     public bool playerSpotLightOn;
@@ -84,6 +85,7 @@ public class FurnitureInteractor : MonoBehaviour
         {
             PlayerInPlace = true;
             other.GetComponent<PlayerController>().furnitureInteractor = this;
+            player1SpotLight = other.transform.Find("SpotLight").gameObject;
             //_light.SetActive(true);
 
             if (Resting)
@@ -99,13 +101,8 @@ public class FurnitureInteractor : MonoBehaviour
         {
             PlayerInPlace = false;
             _anim.SetBool("IsMoving", false);
-
+            //player1SpotLight = null;
             other.GetComponent<PlayerController>().furnitureInteractor = null;
-            
-            if (playerSpotLightOn)//如果玩家头上的聚光灯是亮的
-            {
-                other.transform.Find("SpotLight").gameObject.SetActive(false);//关掉玩家头上的聚光灯
-            }
 
             //_light.SetActive(false);
         }
@@ -121,25 +118,26 @@ public class FurnitureInteractor : MonoBehaviour
         {
             if (PlayerInPlace)
             {
-                if (Demonstrating && PlayerInPlace)
+                if (Demonstrating)
                 {
                     spotLight.SetActive(false);
-                    yourTurn = true;
+                    if(player1SpotLight)player1SpotLight.SetActive(true);
                 }
-                else if (Resting && PlayerInPlace)
+                else if (Resting)
                 {
                     spotLight.SetActive(true);
-                    myTurn = true;
+                    if(player1SpotLight)player1SpotLight.SetActive(false);
                 }
-                else if (Checking && PlayerInPlace)
+                else if (Checking)
                 {
                     spotLight.SetActive(true);
-                    myTurn = true;
+                    if(player1SpotLight)player1SpotLight.SetActive(false);
                 }            
             }
             else
             {
                 spotLight.SetActive(false);
+                if(player1SpotLight)player1SpotLight.SetActive(false);
             }
 
         }

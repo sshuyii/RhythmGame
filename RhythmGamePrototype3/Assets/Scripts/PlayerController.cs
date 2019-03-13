@@ -228,7 +228,7 @@ public class PlayerController : MonoBehaviour
         }
         
         //聚光灯
-        if (furnitureInteractor != null)
+/*        if (furnitureInteractor != null)
         {
             if (furnitureInteractor.yourTurn)
             {
@@ -242,7 +242,7 @@ public class PlayerController : MonoBehaviour
                 spotLight.SetActive(false);
                 furnitureInteractor.myTurn = false;
             }        
-        }
+        }*/
 
     }
     
