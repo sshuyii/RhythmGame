@@ -30,7 +30,10 @@ public class FurnitureInteractor : MonoBehaviour
     //public Material CheckingMat;
     public bool Activated;
     //public Material ActivatedMat;
-    private GameObject spotLight;
+    public GameObject spotLight;
+    public bool yourTurn;
+    public bool myTurn;
+    public bool playerSpotLightOn;
 
     //以下是新加的
     //public GameObject _light;
@@ -60,7 +63,7 @@ public class FurnitureInteractor : MonoBehaviour
        
         //rd = Furniture.GetComponent<MeshRenderer>();
         //新加
-        _audioSource = Furniture.GetComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();
         _anim = Furniture.GetComponent<Animator>();
         spotLight = transform.Find("SpotLight").gameObject;
         
@@ -98,6 +101,11 @@ public class FurnitureInteractor : MonoBehaviour
             _anim.SetBool("IsMoving", false);
 
             other.GetComponent<PlayerController>().furnitureInteractor = null;
+            
+            if (playerSpotLightOn)//如果玩家头上的聚光灯是亮的
+            {
+                other.transform.Find("SpotLight").gameObject.SetActive(false);//关掉玩家头上的聚光灯
+            }
 
             //_light.SetActive(false);
         }
@@ -111,18 +119,29 @@ public class FurnitureInteractor : MonoBehaviour
         //聚光灯效果
         if (BeatCount == 7)
         {
-            if (Demonstrating && PlayerInPlace)
+            if (PlayerInPlace)
+            {
+                if (Demonstrating && PlayerInPlace)
+                {
+                    spotLight.SetActive(false);
+                    yourTurn = true;
+                }
+                else if (Resting && PlayerInPlace)
+                {
+                    spotLight.SetActive(true);
+                    myTurn = true;
+                }
+                else if (Checking && PlayerInPlace)
+                {
+                    spotLight.SetActive(true);
+                    myTurn = true;
+                }            
+            }
+            else
             {
                 spotLight.SetActive(false);
             }
-            else if (Resting && PlayerInPlace)
-            {
-                spotLight.SetActive(true);
-            }
-            else if (Checking && PlayerInPlace)
-            {
-                spotLight.SetActive(true);
-            }
+
         }
         
         //Status check
