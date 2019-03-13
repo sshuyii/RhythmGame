@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using SonicBloom.Koreo;
+using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -17,11 +18,11 @@ public class PlayerController : MonoBehaviour
     public GameObject UI;
     
     [Header("Animation")]
-    public float ShrinkDepth;
-    public float RecoverRate;
-    public Material NormalMat;
-    public Material PerfectMat;
-    public Material MissMat;
+    //public float ShrinkDepth;
+    //public float RecoverRate;
+    //public Material NormalMat;
+    //public Material PerfectMat;
+    //public Material MissMat;
 
     [Header("Koreo")] 
     public string EventIDOpen;
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
     public Sprite Chopping;
     public Sprite ChoppingWrong;
     public Sprite ChoppingRight;
+    public GameObject spotLight;
     
 
     [FormerlySerializedAs("furniture")] [Header("In Game Stat")] 
@@ -64,6 +66,7 @@ public class PlayerController : MonoBehaviour
         originalScale = transform.localScale;
         rd = GetComponent<MeshRenderer>();
         _audioSource = GetComponent<AudioSource>();
+        spotLight = transform.Find("SpotLight").gameObject;
     }
 
     // Start is called before the first frame update
@@ -183,8 +186,8 @@ public class PlayerController : MonoBehaviour
 
             if (beatable && !alreadybeat)
             {
-               transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
-               rd.material = PerfectMat;
+               //transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
+               //rd.material = PerfectMat;
                alreadybeat = true;
                _audioSource.Play();//后加的
                
@@ -200,15 +203,14 @@ public class PlayerController : MonoBehaviour
                    {
                        furnitureInteractor.miss++;
                        furnitureInteractor.missText.text = "Miss: " + furnitureInteractor.miss;
-                       rd.material = MissMat;
+                       //rd.material = MissMat;
                        imageUI.sprite = ChoppingWrong;
-
                    }
                }
             }
             else
             {
-               rd.material = MissMat;
+               //rd.material = MissMat;
                if (furnitureInteractor != null && furnitureInteractor.Checking)
                {
                    furnitureInteractor.miss++;
@@ -217,18 +219,36 @@ public class PlayerController : MonoBehaviour
 
                }
             }
-            Invoke("Recover", RecoverRate);    
+            //Invoke("Recover", RecoverRate);    
         }
         
         if (!beatable && alreadybeat)
         {
             alreadybeat = false;
-        }                 
+        }
+        
+        //聚光灯
+/*        if (furnitureInteractor != null)
+        {
+            if (furnitureInteractor.yourTurn)
+            {
+                spotLight.SetActive(true);
+                furnitureInteractor.yourTurn = false;
+                furnitureInteractor.playerSpotLightOn = true;
+            }
+    
+            if (furnitureInteractor.myTurn)
+            {
+                spotLight.SetActive(false);
+                furnitureInteractor.myTurn = false;
+            }        
+        }*/
+
     }
     
     void Recover()
     {
         transform.localScale = originalScale;
-        rd.material = NormalMat;
+        //rd.material = NormalMat;
     }    
 }
