@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SonicBloom.Koreo;
@@ -29,6 +30,7 @@ public class FurnitureInteractor : MonoBehaviour
     public Material CheckingMat;
     public bool Activated;
     public Material ActivatedMat;
+    public GameObject spotLight;
 
     //以下是新加的
     //public GameObject _light;
@@ -46,6 +48,7 @@ public class FurnitureInteractor : MonoBehaviour
     private MeshRenderer rd;
     private Vector3 originalScale;
     private GameObject scoring;
+    
     //public GameObject _collider;//设为通用的，在awake function里自行寻找
     
     // Start is called before the first frame update
@@ -59,7 +62,7 @@ public class FurnitureInteractor : MonoBehaviour
         //新加
         _audioSource = transform.Find("Substance").GetComponent<AudioSource>();
         _anim = Furniture.GetComponent<Animator>();
-        
+        spotLight = transform.Find("SpotLight").gameObject;
         
 
             
@@ -103,6 +106,24 @@ public class FurnitureInteractor : MonoBehaviour
     void BeatAnime(KoreographyEvent evt)
     {
         //print("Beat " + BeatCount + " " + BeatLoop[BeatCount]);
+        
+        
+        //聚光灯效果
+        if (BeatCount == 7)
+        {
+            if (Demonstrating && PlayerInPlace)
+            {
+                spotLight.SetActive(false);
+            }
+            else if (Resting && PlayerInPlace)
+            {
+                spotLight.SetActive(true);
+            }
+            else if (Checking && PlayerInPlace)
+            {
+                spotLight.SetActive(true);
+            }
+        }
         
         //Status check
         if (BeatCount == 0)

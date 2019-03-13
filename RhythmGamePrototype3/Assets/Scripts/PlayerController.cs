@@ -202,7 +202,6 @@ public class PlayerController : MonoBehaviour
                        furnitureInteractor.missText.text = "Miss: " + furnitureInteractor.miss;
                        rd.material = MissMat;
                        imageUI.sprite = ChoppingWrong;
-
                    }
                }
             }
@@ -223,7 +222,9 @@ public class PlayerController : MonoBehaviour
         if (!beatable && alreadybeat)
         {
             alreadybeat = false;
-        }                 
+        }
+        
+        //聚光灯
     }
     
     void Recover()
