@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SonicBloom.Koreo;
@@ -12,23 +13,24 @@ public class FurnitureInteractor : MonoBehaviour
     public List<bool> BeatLoop;
     
     [Header("Animation")]
-    public float ShrinkDepth;
-    public float RecoverRate;
+    //public float ShrinkDepth;
+   // public float RecoverRate;
     public GameObject Furniture;
     private Animator _anim;
     
     [Header("In Game Situation")] 
     public bool PlayerInPlace;
     public bool Resting = true;
-    public Material RestingMat;
+    //public Material RestingMat;
     public bool Waiting;
-    public Material WaitingMat;
+    //public Material WaitingMat;
     public bool Demonstrating;
-    public Material DemonstratingMat;
+    //public Material DemonstratingMat;
     public bool Checking;
-    public Material CheckingMat;
+    //public Material CheckingMat;
     public bool Activated;
-    public Material ActivatedMat;
+    //public Material ActivatedMat;
+    private GameObject spotLight;
 
     //以下是新加的
     //public GameObject _light;
@@ -46,6 +48,7 @@ public class FurnitureInteractor : MonoBehaviour
     private MeshRenderer rd;
     private Vector3 originalScale;
     private GameObject scoring;
+    
     //public GameObject _collider;//设为通用的，在awake function里自行寻找
     
     // Start is called before the first frame update
@@ -55,11 +58,11 @@ public class FurnitureInteractor : MonoBehaviour
 
         //rd = Furniture.GetComponent<MeshRenderer>();
        
-        rd = transform.Find("Substance").GetComponent<MeshRenderer>();
+        //rd = Furniture.GetComponent<MeshRenderer>();
         //新加
-        _audioSource = transform.Find("Substance").GetComponent<AudioSource>();
+        _audioSource = Furniture.GetComponent<AudioSource>();
         _anim = Furniture.GetComponent<Animator>();
-        
+        spotLight = transform.Find("SpotLight").gameObject;
         
 
             
@@ -82,7 +85,7 @@ public class FurnitureInteractor : MonoBehaviour
 
             if (Resting)
             {
-                rd.material = WaitingMat;                
+                //rd.material = WaitingMat;                
             }
         }
     }
@@ -104,6 +107,24 @@ public class FurnitureInteractor : MonoBehaviour
     {
         //print("Beat " + BeatCount + " " + BeatLoop[BeatCount]);
         
+        
+        //聚光灯效果
+        if (BeatCount == 7)
+        {
+            if (Demonstrating && PlayerInPlace)
+            {
+                spotLight.SetActive(false);
+            }
+            else if (Resting && PlayerInPlace)
+            {
+                spotLight.SetActive(true);
+            }
+            else if (Checking && PlayerInPlace)
+            {
+                spotLight.SetActive(true);
+            }
+        }
+        
         //Status check
         if (BeatCount == 0)
         {
@@ -113,13 +134,13 @@ public class FurnitureInteractor : MonoBehaviour
                 {
                     Resting = false;
                     Demonstrating = true;
-                    rd.material = DemonstratingMat;
+                    //rd.material = DemonstratingMat;
                     _anim.SetBool("IsMoving", true);
                     
                 }
                 else
                 {
-                    rd.material = RestingMat;
+                    //rd.material = RestingMat;
                 }
             }
             else if (Demonstrating)
@@ -128,14 +149,14 @@ public class FurnitureInteractor : MonoBehaviour
                 if (PlayerInPlace)
                 {
                     Checking = true;
-                    rd.material = CheckingMat;
+                    //rd.material = CheckingMat;
                     scoring.SetActive(true);
 
                 }
                 else
                 {
                     Resting = true;
-                    rd.material = RestingMat;
+                    //rd.material = RestingMat;
                 }
             }
             else if (Checking)
@@ -148,7 +169,7 @@ public class FurnitureInteractor : MonoBehaviour
                     if (perfect == RequiredPerfect && miss == 0)
                     {
                         Activated = true;
-                        rd.material = ActivatedMat;    
+                        //rd.material = ActivatedMat;    
                         
                     }
                     else
@@ -158,13 +179,13 @@ public class FurnitureInteractor : MonoBehaviour
                         miss = 0;
                         perfectText.text = "Perfect: ";
                         missText.text = "Miss: ";
-                        rd.material = DemonstratingMat;
+                        //rd.material = DemonstratingMat;
                     }
                 }
                 else
                 {
                     Resting = true;
-                    rd.material = RestingMat;
+                    //rd.material = RestingMat;
                 }
             }
         }
@@ -180,7 +201,7 @@ public class FurnitureInteractor : MonoBehaviour
             
             _audioSource.Play();
 
-            Invoke("Recover", RecoverRate);
+            //Invoke("Recover", RecoverRate);
         }
         
         //To next beat

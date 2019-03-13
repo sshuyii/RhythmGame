@@ -17,11 +17,11 @@ public class PlayerController : MonoBehaviour
     public GameObject UI;
     
     [Header("Animation")]
-    public float ShrinkDepth;
-    public float RecoverRate;
-    public Material NormalMat;
-    public Material PerfectMat;
-    public Material MissMat;
+    //public float ShrinkDepth;
+    //public float RecoverRate;
+    //public Material NormalMat;
+    //public Material PerfectMat;
+    //public Material MissMat;
 
     [Header("Koreo")] 
     public string EventIDOpen;
@@ -183,8 +183,8 @@ public class PlayerController : MonoBehaviour
 
             if (beatable && !alreadybeat)
             {
-               transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
-               rd.material = PerfectMat;
+               //transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
+               //rd.material = PerfectMat;
                alreadybeat = true;
                _audioSource.Play();//后加的
                
@@ -200,15 +200,14 @@ public class PlayerController : MonoBehaviour
                    {
                        furnitureInteractor.miss++;
                        furnitureInteractor.missText.text = "Miss: " + furnitureInteractor.miss;
-                       rd.material = MissMat;
+                       //rd.material = MissMat;
                        imageUI.sprite = ChoppingWrong;
-
                    }
                }
             }
             else
             {
-               rd.material = MissMat;
+               //rd.material = MissMat;
                if (furnitureInteractor != null && furnitureInteractor.Checking)
                {
                    furnitureInteractor.miss++;
@@ -217,18 +216,20 @@ public class PlayerController : MonoBehaviour
 
                }
             }
-            Invoke("Recover", RecoverRate);    
+            //Invoke("Recover", RecoverRate);    
         }
         
         if (!beatable && alreadybeat)
         {
             alreadybeat = false;
-        }                 
+        }
+        
+        //聚光灯
     }
     
     void Recover()
     {
         transform.localScale = originalScale;
-        rd.material = NormalMat;
+        //rd.material = NormalMat;
     }    
 }
