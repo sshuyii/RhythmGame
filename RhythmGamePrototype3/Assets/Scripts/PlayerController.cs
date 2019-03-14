@@ -16,8 +16,9 @@ public class PlayerController : MonoBehaviour
     public int playerNum;
     public KeyCode interaction;
     public GameObject UI;
-    
-    [Header("Animation")]
+
+    [Header("Animation")] 
+    public GameObject perfectParticle;
     //public float ShrinkDepth;
     //public float RecoverRate;
     //public Material NormalMat;
@@ -199,6 +200,9 @@ public class PlayerController : MonoBehaviour
                        furnitureInteractor.perfect++;
                        furnitureInteractor.perfectText.text = "Perfect: " + furnitureInteractor.perfect;
                        imageUI.sprite = ChoppingRight;
+                       //Generate Particles
+                       GameObject particles = Instantiate(perfectParticle);
+                       particles.transform.position = transform.position + new Vector3(0, 1, 0);
                    }
                    else
                    {
