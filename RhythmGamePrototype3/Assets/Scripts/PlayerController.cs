@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
         originalScale = transform.localScale;
         rd = GetComponent<MeshRenderer>();
         _audioSource = GetComponent<AudioSource>();
-        spotLight = transform.Find("SpotLight").gameObject;
+        //spotLight = transform.Find("SpotLight").gameObject;
     }
 
     // Start is called before the first frame update
@@ -117,6 +117,7 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal" + playerNum) * speed;
         float z = Input.GetAxisRaw("Vertical" + playerNum) * speed;
         //playerRb.velocity = new Vector3(x, 0, -z);
+        print("player is moving =" + movement);
         
         // Set the movement vector based on the axis input.
         movement.Set (x, 0f, z);
