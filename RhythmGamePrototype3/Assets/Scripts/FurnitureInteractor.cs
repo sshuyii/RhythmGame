@@ -59,13 +59,11 @@ public class FurnitureInteractor : MonoBehaviour
 
         //rd = Furniture.GetComponent<MeshRenderer>();
        
-        //rd = Furniture.GetComponent<MeshRenderer>();
         //新加
         _audioSource = GetComponent<AudioSource>();
         _anim = Furniture.GetComponent<Animator>();
         spotLight = transform.Find("SpotLight").gameObject;
         
-
             
         //originalScale = transform.localScale;
         scoring = transform.Find("Scoring").gameObject;
