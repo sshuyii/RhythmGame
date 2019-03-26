@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
     {
         Koreographer.Instance.RegisterForEvents(EventIDOpen,BeatReady);
         Koreographer.Instance.RegisterForEvents(EventIDClose,BeatExpire);
-        imageUI = UI.GetComponent<Image>();
+        //imageUI = UI.GetComponent<Image>();
         
        
     }
@@ -199,7 +199,7 @@ public class PlayerController : MonoBehaviour
                    {
                        furnitureInteractor.perfect++;
                        furnitureInteractor.perfectText.text = "Perfect: " + furnitureInteractor.perfect;
-                       imageUI.sprite = ChoppingRight;
+                       //imageUI.sprite = ChoppingRight;
                        //Generate Particles
                        GameObject particles = Instantiate(perfectParticle);
                        particles.transform.position = transform.position + new Vector3(0, 1, 0);
@@ -209,7 +209,7 @@ public class PlayerController : MonoBehaviour
                        furnitureInteractor.miss++;
                        furnitureInteractor.missText.text = "Miss: " + furnitureInteractor.miss;
                        //rd.material = MissMat;
-                       imageUI.sprite = ChoppingWrong;
+                       //imageUI.sprite = ChoppingWrong;
                    }
                }
             }
@@ -220,7 +220,7 @@ public class PlayerController : MonoBehaviour
                {
                    furnitureInteractor.miss++;
                    furnitureInteractor.missText.text = "Miss: " + furnitureInteractor.miss;
-                   imageUI.sprite = ChoppingWrong;
+                   //imageUI.sprite = ChoppingWrong;
 
                }
             }
