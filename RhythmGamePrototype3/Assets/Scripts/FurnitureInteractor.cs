@@ -160,6 +160,7 @@ public class FurnitureInteractor : MonoBehaviour
                     {
                         Activated = true;
                         _anim.SetBool("IsActivated", true);
+                        LevelAdvancing.advancing = true;
                         //rd.material = ActivatedMat;                        
                     }
                     else
