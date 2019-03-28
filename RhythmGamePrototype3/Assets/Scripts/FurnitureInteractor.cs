@@ -155,11 +155,11 @@ public class FurnitureInteractor : MonoBehaviour
                 if (PlayerInPlace)
                 {
                     //打开家具聚光灯并开始动画
-                    spotLight.SetActive(true);
-                    _anim.SetBool("IsMoving", true);
+                    spotLight.SetActive(true);                    
                     if (perfect == RequiredPerfect && miss == 0)
                     {
                         Activated = true;
+                        _anim.SetBool("IsActivated", true);
                         //rd.material = ActivatedMat;                        
                     }
                     else
@@ -170,6 +170,7 @@ public class FurnitureInteractor : MonoBehaviour
                         perfectText.text = "Perfect: ";
                         missText.text = "Miss: ";
                         //rd.material = DemonstratingMat;
+                        _anim.SetBool("IsMoving", true);
                     }
                 }
                 else
@@ -180,7 +181,7 @@ public class FurnitureInteractor : MonoBehaviour
             }
             else if (Activated)
             {
-                _anim.SetBool("IsMoving", true);//播放家具动画
+                _anim.SetBool("IsActivated", true);//播放家具动画
             }
         }
         
