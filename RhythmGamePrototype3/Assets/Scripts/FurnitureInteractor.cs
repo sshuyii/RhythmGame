@@ -16,6 +16,8 @@ public class FurnitureInteractor : MonoBehaviour
     //public float ShrinkDepth;
    // public float RecoverRate;
     public GameObject Furniture;
+    public GameObject Furniture2;
+
     private Animator _anim;
     
     [Header("In Game Situation")] 
@@ -120,8 +122,11 @@ public class FurnitureInteractor : MonoBehaviour
                     Demonstrating = true;                                        
                     //打开家具聚光灯并开始动画
                     spotLight.SetActive(true);
+                    _anim.SetBool("IsMoving", true); 
+
                     //rd.material = DemonstratingMat;
-                    _anim.SetBool("IsMoving", true);                    
+                                
+
                 }
                 else
                 {
@@ -133,12 +138,16 @@ public class FurnitureInteractor : MonoBehaviour
                 Demonstrating = false;
                 //关闭家具聚光灯并停止动画
                 spotLight.SetActive(false);                
-                _anim.SetBool("IsMoving", false);                
+                //_anim.SetBool("IsMoving", false);                
                 if (PlayerInPlace)
                 {
                     Checking = true;                    
                     scoring.SetActive(true);                    
                     player1SpotLight.SetActive(true);//打开玩家聚光灯
+                    _anim.SetBool("IsMoving", false); 
+
+                    _anim.SetBool("IsPlayer", true);     
+
                     //rd.material = CheckingMat;
                 }
                 else
@@ -160,6 +169,10 @@ public class FurnitureInteractor : MonoBehaviour
                     {
                         Activated = true;
                         _anim.SetBool("IsActivated", true);
+                        //上面一行改成下面激活第二个冰箱
+                        Furniture2.SetActive(true);
+                        Furniture.SetActive(false);
+
                         //rd.material = ActivatedMat;                        
                     }
                     else
@@ -170,7 +183,8 @@ public class FurnitureInteractor : MonoBehaviour
                         perfectText.text = "Perfect: ";
                         missText.text = "Miss: ";
                         //rd.material = DemonstratingMat;
-                        _anim.SetBool("IsMoving", true);
+                        _anim.SetBool("IsMoving", true); 
+                        _anim.SetBool("IsPlayer", false);    
                     }
                 }
                 else
@@ -182,6 +196,9 @@ public class FurnitureInteractor : MonoBehaviour
             else if (Activated)
             {
                 _anim.SetBool("IsActivated", true);//播放家具动画
+                //上面一行改成下面激活第二个冰箱
+                Furniture2.SetActive(true);
+                Furniture.SetActive(false);
             }
         }
         

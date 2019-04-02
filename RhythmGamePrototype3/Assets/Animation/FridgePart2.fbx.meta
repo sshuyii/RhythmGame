@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ea9e92669234649c8a44203da4b49c43
+guid: a7d37d6b0d7b148939068f2682ae6ab1
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -49,10 +49,8 @@ ModelImporter:
     100086: pasted__SM_Prop_Kitchen_Fridge_01_Door_01
     100088: pasted__SM_Prop_Kitchen_Fridge_01_Door_02
     100090: pasted__SM_Prop_Kitchen_Fridge_03
-    100092: SM_Prop_Kitchen_Fridge_01_Door_01
-    100094: SM_Prop_Kitchen_Fridge_01_Door_02
-    100096: SM_Prop_Kitchen_Fridge_03
-    100098: Upper
+    100092: SM_Prop_Kitchen_Fridge_03
+    100094: Upper
     400000: Doors
     400002: Food
     400004: //RootNode
@@ -99,10 +97,8 @@ ModelImporter:
     400086: pasted__SM_Prop_Kitchen_Fridge_01_Door_01
     400088: pasted__SM_Prop_Kitchen_Fridge_01_Door_02
     400090: pasted__SM_Prop_Kitchen_Fridge_03
-    400092: SM_Prop_Kitchen_Fridge_01_Door_01
-    400094: SM_Prop_Kitchen_Fridge_01_Door_02
-    400096: SM_Prop_Kitchen_Fridge_03
-    400098: Upper
+    400092: SM_Prop_Kitchen_Fridge_03
+    400094: Upper
     2100000: lambert2
     2100002: pasted__lambert2
     2100004: FridgeWithFoodInside_lambert6
@@ -195,54 +191,48 @@ ModelImporter:
     3300074: pasted__SM_Prop_Kitchen_Fridge_01_Door_01
     3300076: pasted__SM_Prop_Kitchen_Fridge_01_Door_02
     4300000: SM_Prop_Kitchen_Fridge_03
-    4300002: SM_Prop_Kitchen_Fridge_01_Door_01
-    4300004: SM_Prop_Kitchen_Fridge_01_Door_02
-    4300006: pasted__SM_Prop_Kitchen_Fridge_01_Door_01
-    4300008: pasted__SM_Prop_Kitchen_Fridge_01_Door_02
-    4300010: FridgeWithFoodInside:SM_Item_Corn_01
-    4300012: FridgeWithFoodInside:SM_Item_Onion_01
-    4300014: FridgeWithFoodInside:SM_Item_Pizza_Box_01
-    4300016: FridgeWithFoodInside:SM_Item_Pizza_Slice_01
-    4300018: FridgeWithFoodInside:SM_Item_Pizza_01
-    4300020: FridgeWithFoodInside:SM_Item_Pizza_Lid_e01
-    4300022: FridgeWithFoodInside:SM_Item_Pumpkin_01
-    4300024: FridgeWithFoodInside:SM_Item_Sausage_Bun_01
-    4300026: FridgeWithFoodInside:SM_Item_Sausage_Cooked_01
-    4300028: FridgeWithFoodInside:SM_Item_Tomato_01
-    4300030: FridgeWithFoodInside:SM_Item_Tomato_02
-    4300032: FridgeWithFoodInside:SM_Item_Sausage_Cooked_02
-    4300034: FridgeWithFoodInside:SM_Item_Tomato_03
-    4300036: FridgeWithFoodInside:SM_Item_Corn_02
-    4300038: FridgeWithFoodInside:FMGP_MOD_Banana
-    4300040: FridgeWithFoodInside:FMGP_MOD_Banana1
-    4300042: FridgeWithFoodInside:SM_Item_Pizza_Box_02
-    4300044: FridgeWithFoodInside:SM_Item_Pizza_Slice_01
-    4300046: FridgeWithFoodInside:SM_Item_Pizza_01
-    4300048: FridgeWithFoodInside:SM_Item_Pizza_Lid_e01
-    4300050: FridgeWithFoodInside:SM_Item_Can_02
-    4300052: FridgeWithFoodInside:SM_Item_Can_03
-    4300054: FridgeWithFoodInside:SM_Item_Can_04
-    4300056: FridgeWithFoodInside:SM_Item_Can_05
-    4300058: FridgeWithFoodInside:SM_Item_Can_06
-    4300060: FridgeWithFoodInside:SM_Item_Can_07
-    4300062: FridgeWithFoodInside:SM_Item_Can_08
-    4300064: FridgeWithFoodInside:SM_Item_Can_09
-    4300066: FridgeWithFoodInside:SM_Item_Can_010
-    4300068: FridgeWithFoodInside:SM_Item_Can_011
-    4300070: FridgeWithFoodInside:SM_Item_Can_012
-    4300072: FridgeWithFoodInside:SM_Item_Alcohol_02
-    4300074: FridgeWithFoodInside:SM_Item_Alcohol_03
-    4300076: FridgeWithFoodInside:SM_Item_Alcohol_04
-    4300078: FridgeWithFoodInside:SM_Item_Alcohol_05
-    4300080: FridgeWithFoodInside:SM_Item_Alcohol_06
-    4300082: FridgeWithFoodInside:SM_Prop_Cake_01
-    7400000: Wait
-    7400002: Activated
-    7400004: ForPlayer
+    4300002: pasted__SM_Prop_Kitchen_Fridge_01_Door_01
+    4300004: pasted__SM_Prop_Kitchen_Fridge_01_Door_02
+    4300006: FridgeWithFoodInside:SM_Item_Corn_01
+    4300008: FridgeWithFoodInside:SM_Item_Onion_01
+    4300010: FridgeWithFoodInside:SM_Item_Pizza_Box_01
+    4300012: FridgeWithFoodInside:SM_Item_Pizza_Slice_01
+    4300014: FridgeWithFoodInside:SM_Item_Pizza_01
+    4300016: FridgeWithFoodInside:SM_Item_Pizza_Lid_e01
+    4300018: FridgeWithFoodInside:SM_Item_Pumpkin_01
+    4300020: FridgeWithFoodInside:SM_Item_Sausage_Bun_01
+    4300022: FridgeWithFoodInside:SM_Item_Sausage_Cooked_01
+    4300024: FridgeWithFoodInside:SM_Item_Tomato_01
+    4300026: FridgeWithFoodInside:SM_Item_Tomato_02
+    4300028: FridgeWithFoodInside:SM_Item_Sausage_Cooked_02
+    4300030: FridgeWithFoodInside:SM_Item_Tomato_03
+    4300032: FridgeWithFoodInside:SM_Item_Corn_02
+    4300034: FridgeWithFoodInside:FMGP_MOD_Banana
+    4300036: FridgeWithFoodInside:FMGP_MOD_Banana1
+    4300038: FridgeWithFoodInside:SM_Item_Pizza_Box_02
+    4300040: FridgeWithFoodInside:SM_Item_Pizza_Slice_01
+    4300042: FridgeWithFoodInside:SM_Item_Pizza_01
+    4300044: FridgeWithFoodInside:SM_Item_Pizza_Lid_e01
+    4300046: FridgeWithFoodInside:SM_Item_Can_02
+    4300048: FridgeWithFoodInside:SM_Item_Can_03
+    4300050: FridgeWithFoodInside:SM_Item_Can_04
+    4300052: FridgeWithFoodInside:SM_Item_Can_05
+    4300054: FridgeWithFoodInside:SM_Item_Can_06
+    4300056: FridgeWithFoodInside:SM_Item_Can_07
+    4300058: FridgeWithFoodInside:SM_Item_Can_08
+    4300060: FridgeWithFoodInside:SM_Item_Can_09
+    4300062: FridgeWithFoodInside:SM_Item_Can_010
+    4300064: FridgeWithFoodInside:SM_Item_Can_011
+    4300066: FridgeWithFoodInside:SM_Item_Can_012
+    4300068: FridgeWithFoodInside:SM_Item_Alcohol_02
+    4300070: FridgeWithFoodInside:SM_Item_Alcohol_03
+    4300072: FridgeWithFoodInside:SM_Item_Alcohol_04
+    4300074: FridgeWithFoodInside:SM_Item_Alcohol_05
+    4300076: FridgeWithFoodInside:SM_Item_Alcohol_06
+    4300078: FridgeWithFoodInside:SM_Prop_Cake_01
+    7400000: FridgeActivated
     9500000: //RootNode
-    13700000: SM_Prop_Kitchen_Fridge_01_Door_01
-    13700002: SM_Prop_Kitchen_Fridge_01_Door_02
-    13700004: SM_Prop_Kitchen_Fridge_03
+    13700000: SM_Prop_Kitchen_Fridge_03
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -272,10 +262,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Wait
+      name: FridgeActivated
       takeName: Take 001
-      firstFrame: 4
-      lastFrame: 68
+      firstFrame: 30
+      lastFrame: 50
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -283,35 +273,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: ForPlayer
-      takeName: Take 001
-      firstFrame: 72
-      lastFrame: 80
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
