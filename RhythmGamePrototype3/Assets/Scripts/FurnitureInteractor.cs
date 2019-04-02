@@ -16,6 +16,8 @@ public class FurnitureInteractor : MonoBehaviour
     //public float ShrinkDepth;
    // public float RecoverRate;
     public GameObject Furniture;
+    public GameObject Furniture2;
+
     private Animator _anim;
     
     [Header("In Game Situation")] 
@@ -96,6 +98,8 @@ public class FurnitureInteractor : MonoBehaviour
         {
             PlayerInPlace = false;
             _anim.SetBool("IsMoving", false);
+//            _anim.SetBool("IsPlayer", true);
+
             other.GetComponent<PlayerController>().furnitureInteractor = null;
 
             //_light.SetActive(false);
@@ -121,7 +125,9 @@ public class FurnitureInteractor : MonoBehaviour
                     //打开家具聚光灯并开始动画
                     spotLight.SetActive(true);
                     //rd.material = DemonstratingMat;
-                    _anim.SetBool("IsMoving", true);                    
+                    _anim.SetBool("IsMoving", true);           
+                    _anim.SetBool("IsPlayer", false);
+
                 }
                 else
                 {
@@ -133,7 +139,9 @@ public class FurnitureInteractor : MonoBehaviour
                 Demonstrating = false;
                 //关闭家具聚光灯并停止动画
                 spotLight.SetActive(false);                
-                _anim.SetBool("IsMoving", false);                
+                _anim.SetBool("IsMoving", false);      
+                _anim.SetBool("IsPlayer", true);
+
                 if (PlayerInPlace)
                 {
                     Checking = true;                    
@@ -159,7 +167,10 @@ public class FurnitureInteractor : MonoBehaviour
                     if (perfect == RequiredPerfect && miss == 0)
                     {
                         Activated = true;
-                        _anim.SetBool("IsActivated", true);
+                        //_anim.SetBool("IsActivated", true);
+                        Furniture.SetActive(false);
+                        Furniture2.SetActive(true);
+
                         //rd.material = ActivatedMat;                        
                     }
                     else
@@ -171,6 +182,8 @@ public class FurnitureInteractor : MonoBehaviour
                         missText.text = "Miss: ";
                         //rd.material = DemonstratingMat;
                         _anim.SetBool("IsMoving", true);
+                        _anim.SetBool("IsPlayer", false);
+
                     }
                 }
                 else

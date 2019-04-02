@@ -10844,6 +10844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rooms: []
+  roomIndex: 0
 --- !u!4 &1699654739
 Transform:
   m_ObjectHideFlags: 0
@@ -18829,12 +18830,12 @@ PrefabInstance:
     - target: {fileID: 5574493493278090136, guid: 8062fddf166c742a89f28e9dc64028b4,
         type: 3}
       propertyPath: BeatLoop.Array.data[0]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5574493493278090136, guid: 8062fddf166c742a89f28e9dc64028b4,
         type: 3}
       propertyPath: BeatLoop.Array.data[5]
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5574493493278090136, guid: 8062fddf166c742a89f28e9dc64028b4,
         type: 3}
@@ -18859,11 +18860,16 @@ PrefabInstance:
     - target: {fileID: 5574493493278090136, guid: 8062fddf166c742a89f28e9dc64028b4,
         type: 3}
       propertyPath: BeatLoop.Array.data[1]
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5574493493278090136, guid: 8062fddf166c742a89f28e9dc64028b4,
         type: 3}
       propertyPath: BeatLoop.Array.data[2]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5574493493278090136, guid: 8062fddf166c742a89f28e9dc64028b4,
+        type: 3}
+      propertyPath: BeatCount
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5574493494980949483, guid: 8062fddf166c742a89f28e9dc64028b4,
