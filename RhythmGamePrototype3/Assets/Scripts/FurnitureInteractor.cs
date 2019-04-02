@@ -139,6 +139,7 @@ public class FurnitureInteractor : MonoBehaviour
                     Checking = true;                    
                     scoring.SetActive(true);                    
                     player1SpotLight.SetActive(true);//打开玩家聚光灯
+                    _anim.SetBool("IsPlayer", true);
                     //rd.material = CheckingMat;
                 }
                 else
@@ -159,7 +160,9 @@ public class FurnitureInteractor : MonoBehaviour
                     if (perfect == RequiredPerfect && miss == 0)
                     {
                         Activated = true;
+                        LevelAdvancing.advancing = true;
                         _anim.SetBool("IsActivated", true);
+                        _anim.SetBool("IsPlayer", false);
                         //rd.material = ActivatedMat;                        
                     }
                     else
@@ -171,6 +174,7 @@ public class FurnitureInteractor : MonoBehaviour
                         missText.text = "Miss: ";
                         //rd.material = DemonstratingMat;
                         _anim.SetBool("IsMoving", true);
+                        _anim.SetBool("IsPlayer", false);
                     }
                 }
                 else
