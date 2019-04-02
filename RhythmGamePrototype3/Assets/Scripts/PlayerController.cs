@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Animation")] 
     public GameObject perfectParticle;
+    public GameObject errorParticle;
     //public float ShrinkDepth;
     //public float RecoverRate;
     //public Material NormalMat;
@@ -183,35 +184,22 @@ public class PlayerController : MonoBehaviour
 
         //Interaction
         if (Input.GetKeyDown(interaction))
-        {
-            
-
+        {            
             if (beatable && !alreadybeat)
             {
                //transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
                //rd.material = PerfectMat;
                alreadybeat = true;
 
-               
                if (furnitureInteractor != null && furnitureInteractor.Checking)
                {
                    if (furnitureInteractor.BeatLoop[(furnitureInteractor.BeatCount + furnitureInteractor.BeatLoop.Count - 1) % furnitureInteractor.BeatLoop.Count])
                    {
-                       furnitureInteractor.perfect++;
-                       furnitureInteractor.perfectText.text = "Perfect: " + furnitureInteractor.perfect;
-                       //imageUI.sprite = ChoppingRight;
-                       //Generate Particles
-                       GameObject particles = Instantiate(perfectParticle);
-                       particles.transform.position = transform.position + new Vector3(0, 1, 0);
-                       _audioSource[1].Play();//后加的                   
+                       Perfect();                   
                    }
                    else
                    {
-                       furnitureInteractor.miss++;
-                       furnitureInteractor.missText.text = "Miss: " + furnitureInteractor.miss;
-                       _audioSource[2].Play();//后加的 
-                       //rd.material = MissMat;
-                       //imageUI.sprite = ChoppingWrong;
+                       Miss();
                    }
                }
                else
@@ -221,16 +209,11 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-               //rd.material = MissMat;
                if (furnitureInteractor != null && furnitureInteractor.Checking)
                {
-                   furnitureInteractor.miss++;
-                   furnitureInteractor.missText.text = "Miss: " + furnitureInteractor.miss;
-                   //imageUI.sprite = ChoppingWrong;
-
+                  Miss();
                }
-            }
-            //Invoke("Recover", RecoverRate);    
+            }   
         }
         
         if (!beatable && alreadybeat)
@@ -238,10 +221,22 @@ public class PlayerController : MonoBehaviour
             alreadybeat = false;
         }
     }
-    
-    /*void Recover()
+
+    void Perfect()
     {
-        transform.localScale = originalScale;
-        //rd.material = NormalMat;
-    }*/    
+        furnitureInteractor.perfect++;
+        furnitureInteractor.perfectText.text = "Perfect: " + furnitureInteractor.perfect;
+        GameObject particles = Instantiate(perfectParticle);
+        particles.transform.position = transform.position + new Vector3(0, 1, 0);
+        _audioSource[2].Play();
+    }
+
+    void Miss()
+    {
+       furnitureInteractor.miss++;
+       furnitureInteractor.missText.text = "Miss: " + furnitureInteractor.miss;
+       GameObject particles = Instantiate(errorParticle);
+       particles.transform.position = transform.position + new Vector3(0, 1, 0);
+       _audioSource[1].Play();        
+    }   
 }
