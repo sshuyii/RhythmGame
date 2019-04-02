@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
     private bool beatable;
     private bool alreadybeat;
     private MeshRenderer rd;
-    private AudioSource _audioSource;
+    private AudioSource[] _audioSource;
     private Image imageUI;
     
     // Reference to the animator component
@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
         playerRb = GetComponent<Rigidbody>();
         originalScale = transform.localScale;
         rd = GetComponent<MeshRenderer>();
-        _audioSource = GetComponent<AudioSource>();
+        _audioSource = GetComponents<AudioSource>();
         //spotLight = transform.Find("SpotLight").gameObject;
     }
 
@@ -191,7 +191,7 @@ public class PlayerController : MonoBehaviour
                //transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
                //rd.material = PerfectMat;
                alreadybeat = true;
-               _audioSource.Play();//后加的
+
                
                if (furnitureInteractor != null && furnitureInteractor.Checking)
                {
@@ -203,14 +203,20 @@ public class PlayerController : MonoBehaviour
                        //Generate Particles
                        GameObject particles = Instantiate(perfectParticle);
                        particles.transform.position = transform.position + new Vector3(0, 1, 0);
+                       _audioSource[1].Play();//后加的                   
                    }
                    else
                    {
                        furnitureInteractor.miss++;
                        furnitureInteractor.missText.text = "Miss: " + furnitureInteractor.miss;
+                       _audioSource[2].Play();//后加的 
                        //rd.material = MissMat;
                        //imageUI.sprite = ChoppingWrong;
                    }
+               }
+               else
+               {
+                   _audioSource[0].Play();
                }
             }
             else
