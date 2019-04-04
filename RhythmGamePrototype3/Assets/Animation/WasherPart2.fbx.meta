@@ -1,36 +1,44 @@
 fileFormatVersion: 2
-guid: fecfec09f767347f5ba1835094c8b3b4
+guid: 621626367227f4941b6669f63785f5f6
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: joint1
-    100002: joint2
-    100004: joint3
-    100006: joint4
-    100008: joint5
-    100010: SM_Prop_Laundry_WasherTop_01
-    100012: SM_Prop_Laundry_WasherTop_Clothes_01
-    100014: SM_Prop_Laundry_WasherTop_Lid_01
-    100016: //RootNode
-    400000: joint1
-    400002: joint2
-    400004: joint3
-    400006: joint4
-    400008: joint5
-    400010: SM_Prop_Laundry_WasherTop_01
-    400012: SM_Prop_Laundry_WasherTop_Clothes_01
-    400014: SM_Prop_Laundry_WasherTop_Lid_01
-    400016: //RootNode
+    100000: group1
+    100002: joint1
+    100004: joint2
+    100006: joint3
+    100008: SM_Prop_Laundry_WasherTop_01
+    100010: SM_Prop_Laundry_WasherTop_Lid_01
+    100012: SM_Prop_LaundryBin_01_Clothes
+    100014: //RootNode
+    100016: group2
+    100018: SM_Prop_Laundry_WasherTop_01 1
+    400000: group1
+    400002: joint1
+    400004: joint2
+    400006: joint3
+    400008: SM_Prop_Laundry_WasherTop_01
+    400010: SM_Prop_Laundry_WasherTop_Lid_01
+    400012: SM_Prop_LaundryBin_01_Clothes
+    400014: //RootNode
+    400016: group2
+    400018: SM_Prop_Laundry_WasherTop_01 1
     2100000: lambert2
-    4300000: SM_Prop_Laundry_WasherTop_01
-    4300002: SM_Prop_Laundry_WasherTop_Clothes_01
-    4300004: SM_Prop_Laundry_WasherTop_Lid_01
-    7400000: Washer
-    7400002: WasherStand
+    2100002: lambert3
+    2300000: SM_Prop_Laundry_WasherTop_Lid_01
+    2300002: SM_Prop_LaundryBin_01_Clothes
+    2300004: SM_Prop_Laundry_WasherTop_01 1
+    3300000: SM_Prop_Laundry_WasherTop_Lid_01
+    3300002: SM_Prop_LaundryBin_01_Clothes
+    3300004: SM_Prop_Laundry_WasherTop_01 1
+    4300000: SM_Prop_Laundry_WasherTop_Lid_01
+    4300002: SM_Prop_LaundryBin_01_Clothes
+    4300004: SM_Prop_Laundry_WasherTop_01
+    4300006: SM_Prop_Laundry_WasherTop_01
+    7400000: WasherActivated
+    7400002: WasherDefault
     9500000: //RootNode
     13700000: SM_Prop_Laundry_WasherTop_01
-    13700002: SM_Prop_Laundry_WasherTop_Clothes_01
-    13700004: SM_Prop_Laundry_WasherTop_Lid_01
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -60,17 +68,17 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Washer
+      name: WasherActivated
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 48
+      lastFrame: 64
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -88,10 +96,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: WasherStand
+      name: WasherDefault
       takeName: Take 001
-      firstFrame: 24
-      lastFrame: 40
+      firstFrame: 16
+      lastFrame: 16
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -139,7 +147,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
+    previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60

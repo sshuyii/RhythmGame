@@ -87,11 +87,12 @@ public class FurnitureInteractor : MonoBehaviour
             other.GetComponent<PlayerController>().furnitureInteractor = this;
             if(other.name == "Player1")player1SpotLight = other.transform.Find("SpotLight").gameObject;
             //_light.SetActive(true);
-
+            
             if (Resting)
             {
                 //rd.material = WaitingMat;                
             }
+
         }
     }
 
