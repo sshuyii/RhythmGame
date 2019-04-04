@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     [Header("Animation")] 
     public GameObject perfectParticle;
     public GameObject errorParticle;
+
+    private int AnimationCount = 0;
     //public float ShrinkDepth;
     //public float RecoverRate;
     //public Material NormalMat;
@@ -107,6 +109,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        
         //Reset Interaction signal
         //transform.Rotate(0, _rotate, 0,Space.World);
         //Vector3 target = new Vector3(0, _rotation, 0);
@@ -119,7 +123,7 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal" + playerNum) * speed;
         float z = Input.GetAxisRaw("Vertical" + playerNum) * speed;
         //playerRb.velocity = new Vector3(x, 0, -z);
-        print("player is moving =" + movement);
+        //print("player is moving =" + movement);
         
         // Set the movement vector based on the axis input.
         movement.Set (x, 0f, z);
@@ -220,6 +224,18 @@ public class PlayerController : MonoBehaviour
         {
             alreadybeat = false;
         }
+        
+        //第零拍的时候重设AnimationCount
+        if (furnitureInteractor.BeatCount == 1)
+        {
+            AnimationCount = 0;
+            anim.SetBool("Dancing1", false);
+            anim.SetBool("Dancing3", false);
+
+            anim.SetBool("Dancing2", false);
+            anim.SetBool("Dancing4", false);
+
+        }
     }
 
     void Perfect()
@@ -228,7 +244,42 @@ public class PlayerController : MonoBehaviour
         furnitureInteractor.perfectText.text = "Perfect: " + furnitureInteractor.perfect;
         GameObject particles = Instantiate(perfectParticle);
         particles.transform.position = transform.position + new Vector3(0, 1, 0);
-        _audioSource[2].Play();
+        //_audioSource[2].Play();
+        
+        AnimationCount += 1;
+
+        if (AnimationCount == 1)
+        {
+            anim.SetBool("Dancing1", true);
+           
+            print("Dancing11111111");
+        }
+        else if (AnimationCount == 2)
+        {
+            anim.SetBool("Dancing1", false);
+            anim.SetBool("Dancing2", true);
+
+            print("Dancing222222");
+
+        }
+        else if (AnimationCount == 3)
+        {
+            anim.SetBool("Dancing2", false);
+            anim.SetBool("Dancing1", false);
+            anim.SetBool("Dancing3",true);
+            
+        }
+        else if (AnimationCount == 4)
+        {
+            anim.SetBool("Dancing2", false);
+            anim.SetBool("Dancing1", false);
+            anim.SetBool("Dancing3",false);
+            anim.SetBool("Dancing4",true);
+            
+        }
+        
+
+        
     }
 
     void Miss()
@@ -237,6 +288,9 @@ public class PlayerController : MonoBehaviour
        furnitureInteractor.missText.text = "Miss: " + furnitureInteractor.miss;
        GameObject particles = Instantiate(errorParticle);
        particles.transform.position = transform.position + new Vector3(0, 1, 0);
-       _audioSource[1].Play();        
+       //_audioSource[1].Play();   
+       
+
+       
     }   
 }

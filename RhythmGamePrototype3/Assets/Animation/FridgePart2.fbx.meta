@@ -51,6 +51,7 @@ ModelImporter:
     100090: pasted__SM_Prop_Kitchen_Fridge_03
     100092: SM_Prop_Kitchen_Fridge_03
     100094: Upper
+    100096: SM_Item_Pumpkin_01
     400000: Doors
     400002: Food
     400004: //RootNode
@@ -99,6 +100,7 @@ ModelImporter:
     400090: pasted__SM_Prop_Kitchen_Fridge_03
     400092: SM_Prop_Kitchen_Fridge_03
     400094: Upper
+    400096: SM_Item_Pumpkin_01
     2100000: lambert2
     2100002: pasted__lambert2
     2100004: FridgeWithFoodInside_lambert6
@@ -112,6 +114,7 @@ ModelImporter:
     2100020: FridgeWithFoodInside_lambert5
     2100022: FridgeWithFoodInside_lambert2
     2100024: FridgeWithFoodInside_lambert18
+    2100026: lambert3
     2300000: FridgeWithFoodInside:FMGP_MOD_Banana
     2300002: FridgeWithFoodInside:FMGP_MOD_Banana1
     2300004: FridgeWithFoodInside:SM_Item_Alcohol_02
@@ -151,6 +154,7 @@ ModelImporter:
     2300072: FridgeWithFoodInside:SM_Prop_Cake_01
     2300074: pasted__SM_Prop_Kitchen_Fridge_01_Door_01
     2300076: pasted__SM_Prop_Kitchen_Fridge_01_Door_02
+    2300078: SM_Item_Pumpkin_01
     3300000: FridgeWithFoodInside:FMGP_MOD_Banana
     3300002: FridgeWithFoodInside:FMGP_MOD_Banana1
     3300004: FridgeWithFoodInside:SM_Item_Alcohol_02
@@ -190,6 +194,7 @@ ModelImporter:
     3300072: FridgeWithFoodInside:SM_Prop_Cake_01
     3300074: pasted__SM_Prop_Kitchen_Fridge_01_Door_01
     3300076: pasted__SM_Prop_Kitchen_Fridge_01_Door_02
+    3300078: SM_Item_Pumpkin_01
     4300000: SM_Prop_Kitchen_Fridge_03
     4300002: pasted__SM_Prop_Kitchen_Fridge_01_Door_01
     4300004: pasted__SM_Prop_Kitchen_Fridge_01_Door_02
@@ -230,7 +235,9 @@ ModelImporter:
     4300074: FridgeWithFoodInside:SM_Item_Alcohol_05
     4300076: FridgeWithFoodInside:SM_Item_Alcohol_06
     4300078: FridgeWithFoodInside:SM_Prop_Cake_01
+    4300080: SM_Item_Pumpkin_01
     7400000: FridgeActivated
+    7400002: Fridge01
     9500000: //RootNode
     13700000: SM_Prop_Kitchen_Fridge_03
   externalObjects: {}
@@ -265,7 +272,35 @@ ModelImporter:
       name: FridgeActivated
       takeName: Take 001
       firstFrame: 30
-      lastFrame: 50
+      lastFrame: 94
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Fridge01
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

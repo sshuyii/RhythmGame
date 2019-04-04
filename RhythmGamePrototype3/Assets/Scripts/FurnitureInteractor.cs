@@ -19,6 +19,8 @@ public class FurnitureInteractor : MonoBehaviour
     public GameObject Furniture2;
 
     private Animator _anim;
+    private Animator _animNew;
+
     
     [Header("In Game Situation")] 
     public bool PlayerInPlace;
@@ -64,6 +66,7 @@ public class FurnitureInteractor : MonoBehaviour
         //新加
         _audioSource = GetComponent<AudioSource>();
         _anim = Furniture.GetComponent<Animator>();
+        _animNew = Furniture2.GetComponent<Animator>();
         spotLight = transform.Find("SpotLight").gameObject;
         
             
@@ -116,6 +119,9 @@ public class FurnitureInteractor : MonoBehaviour
         //Status check
         if (BeatCount == 0)
         {
+            _animNew.SetTrigger("IsBack");
+            _animNew.SetTrigger("IsRepeat");
+
             if (Resting)
             {
                 if (PlayerInPlace)
@@ -223,7 +229,6 @@ public class FurnitureInteractor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
     
 }
