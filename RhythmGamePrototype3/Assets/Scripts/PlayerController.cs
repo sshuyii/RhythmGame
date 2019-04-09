@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     public float speed = 6;
     public int playerNum;
     public KeyCode interaction;
-    public GameObject UI;
 
     [Header("Animation")] 
     public GameObject perfectParticle;
@@ -39,8 +38,12 @@ public class PlayerController : MonoBehaviour
     public GameObject spotLight;
     
 
-    [FormerlySerializedAs("furniture")] [Header("In Game Stat")] 
+    [Header("In Game Stat")] 
     public FurnitureInteractor furnitureInteractor;
+    public int localPerfect;
+    public int localMiss;
+    public Text localPerfectText;
+    public Text localMissText;
     //public GameObject furniture;//后加的,但是现在player发出的声音是一样的
     
     
@@ -226,7 +229,7 @@ public class PlayerController : MonoBehaviour
         }
         
         //第零拍的时候重设AnimationCount
-        if (furnitureInteractor.BeatCount == 1)
+        if (furnitureInteractor != null && furnitureInteractor.BeatCount == 1)
         {
             AnimationCount = 0;
             anim.SetBool("Dancing1", false);
@@ -274,8 +277,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Dancing2", false);
             anim.SetBool("Dancing1", false);
             anim.SetBool("Dancing3",false);
-            anim.SetBool("Dancing4",true);
-            
+            anim.SetBool("Dancing4",true);            
         }
         
 
@@ -288,9 +290,6 @@ public class PlayerController : MonoBehaviour
        furnitureInteractor.missText.text = "Miss: " + furnitureInteractor.miss;
        GameObject particles = Instantiate(errorParticle);
        particles.transform.position = transform.position + new Vector3(0, 1, 0);
-       _audioSource[1].Play();   
-       
-
-       
+       _audioSource[1].Play();       
     }   
 }

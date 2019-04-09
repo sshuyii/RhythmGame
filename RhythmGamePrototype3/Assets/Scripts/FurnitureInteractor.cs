@@ -35,7 +35,7 @@ public class FurnitureInteractor : MonoBehaviour
     public bool Activated;
     //public Material ActivatedMat;
     public GameObject spotLight;
-    public GameObject player1SpotLight;
+    public List<PlayerController> playersInvolved;
 
     //以下是新加的
     //public GameObject _light;
@@ -85,13 +85,14 @@ public class FurnitureInteractor : MonoBehaviour
         {
             PlayerInPlace = true;
             other.GetComponent<PlayerController>().furnitureInteractor = this;
-            if(other.name == "Player1")player1SpotLight = other.transform.Find("SpotLight").gameObject;
+            playersInvolved.Add(other.GetComponent<PlayerController>());
+            
             //_light.SetActive(true);
             
-            if (Resting)
+            /*if (Resting)
             {
                 //rd.material = WaitingMat;                
-            }
+            }*/
 
         }
     }
@@ -103,8 +104,9 @@ public class FurnitureInteractor : MonoBehaviour
             PlayerInPlace = false;
             _anim.SetBool("IsMoving", false);
 //            _anim.SetBool("IsPlayer", true);
-
+            
             other.GetComponent<PlayerController>().furnitureInteractor = null;
+            playersInvolved.Remove(other.GetComponent<PlayerController>());
 
             //_light.SetActive(false);
         }
@@ -152,8 +154,12 @@ public class FurnitureInteractor : MonoBehaviour
                 if (PlayerInPlace)
                 {
                     Checking = true;                    
-                    scoring.SetActive(true);                    
-                    player1SpotLight.SetActive(true);//打开玩家聚光灯
+                    //scoring.SetActive(true);
+                    foreach (var player in playersInvolved)
+                    {
+                        player.spotLight.SetActive(true);    
+                    }
+                    //打开玩家聚光灯
                     //rd.material = CheckingMat;
                 }
                 else
@@ -164,8 +170,12 @@ public class FurnitureInteractor : MonoBehaviour
             }
             else if (Checking)
             {
-                scoring.SetActive(false);
-                player1SpotLight.SetActive(false);//关闭玩家聚光灯
+                //scoring.SetActive(false);
+                foreach (var player in playersInvolved)
+                {
+                    player.spotLight.SetActive(false);    
+                }
+                //关闭玩家聚光灯
                 Checking = false;
                 if (PlayerInPlace)
                 {
