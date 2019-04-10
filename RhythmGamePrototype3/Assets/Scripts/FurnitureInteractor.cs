@@ -24,7 +24,7 @@ public class FurnitureInteractor : MonoBehaviour
 
     
     [Header("In Game Situation")] 
-    public bool PlayerInPlace;
+    //public bool PlayerInPlace;
     public bool Resting = true;
     //public Material RestingMat;
     public bool Waiting;
@@ -85,7 +85,7 @@ public class FurnitureInteractor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerInPlace = true;
+            //PlayerInPlace = true;
             
             //将该玩家(的脚本）加入互动中的玩家列表
             PlayerController script = other.GetComponent<PlayerController>();
@@ -106,7 +106,7 @@ public class FurnitureInteractor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerInPlace = false;
+            //PlayerInPlace = false;
             _anim.SetBool("IsMoving", false);
 //            _anim.SetBool("IsPlayer", true);
             
@@ -135,7 +135,7 @@ public class FurnitureInteractor : MonoBehaviour
 
             if (Resting)
             {
-                if (PlayerInPlace)
+                if (playersInvolved.Count > 0)
                 {
                     Resting = false;
                     Demonstrating = true;
@@ -161,7 +161,7 @@ public class FurnitureInteractor : MonoBehaviour
                 _anim.SetBool("IsMoving", false);      
                 _anim.SetBool("IsPlayer", true);
 
-                if (PlayerInPlace)
+                if (playersInvolved.Count > 0)
                 {
                     Checking = true;                    
                     //scoring.SetActive(true);
@@ -184,7 +184,7 @@ public class FurnitureInteractor : MonoBehaviour
             {                
                 Checking = false;
                 
-                if (PlayerInPlace)
+                if (playersInvolved.Count > 0)
                 {
                     //打开家具聚光灯
                     spotLight.SetActive(true);
