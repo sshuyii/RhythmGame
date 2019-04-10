@@ -11,6 +11,7 @@ public class FurnitureInteractor : MonoBehaviour
     [Header("Beat Control")]
     public string EventID;
     public List<bool> BeatLoop;
+    public int BeatCount;
     
     [Header("Animation")]
     //public float ShrinkDepth;
@@ -43,12 +44,13 @@ public class FurnitureInteractor : MonoBehaviour
     
 
     [Header("Checking")] 
-    public int perfect;
-    public int miss;
-    public Text perfectText;
-    public Text missText;
-    public int RequiredPerfect;
-    public int BeatCount;
+    //public int perfect;
+    //public int miss;
+    //public Text perfectText;
+    //public Text missText;
+    public int requiredPerfect;
+    public int requiredCorrectPlayers;
+    public int correctPlayers;
     
     private MeshRenderer rd;
     //private Vector3 originalScale;
@@ -75,7 +77,7 @@ public class FurnitureInteractor : MonoBehaviour
 
         foreach (var Beat in BeatLoop)
         {
-            if (Beat) RequiredPerfect++;
+            if (Beat) requiredPerfect++;
         }
     }
 
@@ -84,8 +86,11 @@ public class FurnitureInteractor : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerInPlace = true;
-            other.GetComponent<PlayerController>().furnitureInteractor = this;
-            playersInvolved.Add(other.GetComponent<PlayerController>());
+            
+            //将该玩家(的脚本）加入互动中的玩家列表
+            PlayerController script = other.GetComponent<PlayerController>();
+            script.furnitureInteractor = this;
+            playersInvolved.Add(script);
             
             //_light.SetActive(true);
             
@@ -105,8 +110,11 @@ public class FurnitureInteractor : MonoBehaviour
             _anim.SetBool("IsMoving", false);
 //            _anim.SetBool("IsPlayer", true);
             
-            other.GetComponent<PlayerController>().furnitureInteractor = null;
-            playersInvolved.Remove(other.GetComponent<PlayerController>());
+            //将该玩家（的脚本）移出互动中玩家列表
+            PlayerController script = other.GetComponent<PlayerController>();
+            script.furnitureInteractor = null;
+            playersInvolved.Remove(script);
+            ResetPlayerScore(script);
 
             //_light.SetActive(false);
         }
@@ -130,7 +138,8 @@ public class FurnitureInteractor : MonoBehaviour
                 if (PlayerInPlace)
                 {
                     Resting = false;
-                    Demonstrating = true;                                        
+                    Demonstrating = true;
+                    
                     //打开家具聚光灯并开始动画
                     spotLight.SetActive(true);
                     //rd.material = DemonstratingMat;
@@ -146,6 +155,7 @@ public class FurnitureInteractor : MonoBehaviour
             else if (Demonstrating)
             {
                 Demonstrating = false;
+                
                 //关闭家具聚光灯并停止动画
                 spotLight.SetActive(false);                
                 _anim.SetBool("IsMoving", false);      
@@ -155,11 +165,13 @@ public class FurnitureInteractor : MonoBehaviour
                 {
                     Checking = true;                    
                     //scoring.SetActive(true);
+                    
+                    //打开所有互动中玩家聚光灯及分数板
                     foreach (var player in playersInvolved)
                     {
                         player.spotLight.SetActive(true);    
                     }
-                    //打开玩家聚光灯
+                    
                     //rd.material = CheckingMat;
                 }
                 else
@@ -169,39 +181,50 @@ public class FurnitureInteractor : MonoBehaviour
                 }
             }
             else if (Checking)
-            {
-                //scoring.SetActive(false);
-                foreach (var player in playersInvolved)
-                {
-                    player.spotLight.SetActive(false);    
-                }
-                //关闭玩家聚光灯
+            {                
                 Checking = false;
+                
                 if (PlayerInPlace)
                 {
-                    //打开家具聚光灯并开始动画
-                    spotLight.SetActive(true);                    
-                    if (perfect == RequiredPerfect && miss == 0)
+                    //打开家具聚光灯
+                    spotLight.SetActive(true);
+                    
+                    //检测每个玩家的分数并统计打对的玩家个数
+                    foreach (var player in playersInvolved)
                     {
+                        if (player.localPerfect == requiredPerfect && player.localMiss == 0)
+                        {
+                            correctPlayers++;
+                        }
+                        
+                        //检测完后重置分数
+                        ResetPlayerScore(player);                                              
+                    }
+
+                    if (correctPlayers >= requiredCorrectPlayers)
+                    {
+                        //激活
                         Activated = true;
                         //_anim.SetBool("IsActivated", true);
                         Furniture.SetActive(false);
                         Furniture2.SetActive(true);
-
                         //rd.material = ActivatedMat;                        
                     }
                     else
                     {
-                        Demonstrating = true;
-                        perfect = 0;
+                        /*perfect = 0;
                         miss = 0;
                         perfectText.text = "Perfect: ";
-                        missText.text = "Miss: ";
+                        missText.text = "Miss: ";*/
                         //rd.material = DemonstratingMat;
+                        
+                        //回到演示状态
+                        Demonstrating = true;
                         _anim.SetBool("IsMoving", true);
                         _anim.SetBool("IsPlayer", false);
-
                     }
+
+                    correctPlayers = 0;
                 }
                 else
                 {
@@ -238,8 +261,13 @@ public class FurnitureInteractor : MonoBehaviour
     }*/
     
     // Update is called once per frame
-    void Update()
+    void ResetPlayerScore(PlayerController player)
     {
+        player.localPerfect = 0;
+        player.localMiss = 0;
+        player.localPerfectText.text = "Perfect:";
+        player.localMissText.text = "Miss:";
+        player.spotLight.SetActive(false);
     }
     
 }

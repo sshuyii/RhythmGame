@@ -243,10 +243,9 @@ public class PlayerController : MonoBehaviour
 
     void Perfect()
     {
-        furnitureInteractor.perfect++;
-        furnitureInteractor.perfectText.text = "Perfect: " + furnitureInteractor.perfect;
-        GameObject particles = Instantiate(perfectParticle);
-        particles.transform.position = transform.position + new Vector3(0, 1, 0);
+        localPerfect++;
+        localPerfectText.text = "Perfect: " + localPerfect;
+        Instantiate(perfectParticle, transform.position + Vector3.up, Quaternion.identity);
         _audioSource[2].Play();
         
         AnimationCount += 1;
@@ -286,10 +285,9 @@ public class PlayerController : MonoBehaviour
 
     void Miss()
     {
-       furnitureInteractor.miss++;
-       furnitureInteractor.missText.text = "Miss: " + furnitureInteractor.miss;
-       GameObject particles = Instantiate(errorParticle);
-       particles.transform.position = transform.position + new Vector3(0, 1, 0);
+       localMiss++;
+       localMissText.text = "Miss: " + localMiss;
+       Instantiate(errorParticle, transform.position + 2 * Vector3.up, Quaternion.identity);
        _audioSource[1].Play();       
     }   
 }
