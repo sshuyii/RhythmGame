@@ -20,9 +20,12 @@ public class FurnitureInteractor : MonoBehaviour
     public GameObject Furniture2;
     public GameObject UI;
     
+    private HeartBeating HeartBeating;
+
     private Animator _anim;
     private Animator _animNew;
     private Animator _animUI;
+    private int punchUI = 0;
 
     
     [Header("In Game Situation")] 
@@ -77,7 +80,8 @@ public class FurnitureInteractor : MonoBehaviour
         _animUI = UI.GetComponent<Animator>();
 
         spotLight = transform.Find("SpotLight").gameObject;
-        
+
+        HeartBeating = UI.GetComponent<HeartBeating>();
             
         //originalScale = transform.localScale;
         scoring = transform.Find("Scoring").gameObject;
@@ -139,10 +143,12 @@ public class FurnitureInteractor : MonoBehaviour
         {
             _animNew.SetTrigger("IsBack");
             _animNew.SetTrigger("IsRepeat");
+
+            
             
             //针对UI
-            _animUI.SetTrigger("Beat0");
-            _animUI.SetTrigger("Beat1");   
+//            _animUI.SetTrigger("Beat0");
+//            _animUI.SetTrigger("Beat1");   
 
 
             if (Resting)
@@ -220,19 +226,19 @@ public class FurnitureInteractor : MonoBehaviour
                         {
                             correctPlayers++;
                         }
-                        //给动画设置trigger
-                        if (localPerfectTimes == 1)
-                        {
-                            _animUI.SetTrigger("IsOne");
-                        }
-                        else if (localPerfectTimes == 2)
-                        {
-                            _animUI.SetTrigger("IsTwo");
-                        }
-                        else if (localPerfectTimes == 3)
-                        {
-                            _animUI.SetTrigger("IsFull");
-                        }
+//                        //给动画设置trigger
+//                        if (localPerfectTimes == 1)
+//                        {
+//                            _animUI.SetTrigger("IsOne");
+//                        }
+//                        else if (localPerfectTimes == 2)
+//                        {
+//                            _animUI.SetTrigger("IsTwo");
+//                        }
+//                        else if (localPerfectTimes == 3)
+//                        {
+//                            _animUI.SetTrigger("IsFull");
+//                        }
                         
                         
                         //检测完后重置分数
@@ -310,6 +316,29 @@ public class FurnitureInteractor : MonoBehaviour
         player.localPerfectText.text = "Perfect:";
         player.localMissText.text = "Miss:";
         player.spotLight.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (BeatLoop[BeatCount] == true)
+        {
+            //发声的这一拍，传给furnitureInteractor,UI可以开始震动
+            punchUI ++;
+        }
+        else
+        {
+            punchUI = 0;
+
+        }
+        
+        if (punchUI == 10)
+        {
+            print("punchUI " + punchUI);
+            
+             HeartBeating._readyPunch = true;
+             //print("_readyPunch = " + HeartBeating._readyPunch);
+
+        }
     }
     
 }

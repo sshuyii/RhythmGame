@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
     private bool alreadybeat;
     private MeshRenderer rd;
     private AudioSource[] _audioSource;
-    private Image imageUI;
+    //private Image imageUI;
     
     // Reference to the animator component
     private Animator anim;                     
