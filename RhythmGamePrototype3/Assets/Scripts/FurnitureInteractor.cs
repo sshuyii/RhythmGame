@@ -18,9 +18,11 @@ public class FurnitureInteractor : MonoBehaviour
    // public float RecoverRate;
     public GameObject Furniture;
     public GameObject Furniture2;
-
+    public GameObject UI;
+    
     private Animator _anim;
     private Animator _animNew;
+    private Animator _animUI;
 
     
     [Header("In Game Situation")] 
@@ -51,6 +53,9 @@ public class FurnitureInteractor : MonoBehaviour
     public int requiredPerfect;
     public int requiredCorrectPlayers;
     public int correctPlayers;
+    public int perfectTimes;
+    private int localPerfectTimes = 0;
+
     
     private MeshRenderer rd;
     //private Vector3 originalScale;
@@ -69,6 +74,8 @@ public class FurnitureInteractor : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         _anim = Furniture.GetComponent<Animator>();
         _animNew = Furniture2.GetComponent<Animator>();
+        _animUI = UI.GetComponent<Animator>();
+
         spotLight = transform.Find("SpotLight").gameObject;
         
             
@@ -91,7 +98,6 @@ public class FurnitureInteractor : MonoBehaviour
             PlayerController script = other.GetComponent<PlayerController>();
             script.furnitureInteractor = this;
             playersInvolved.Add(script);
-            
             //_light.SetActive(true);
             
             /*if (Resting)
@@ -115,6 +121,7 @@ public class FurnitureInteractor : MonoBehaviour
             script.furnitureInteractor = null;
             playersInvolved.Remove(script);
             ResetPlayerScore(script);
+            UI.SetActive(false);
 
             //_light.SetActive(false);
         }
@@ -132,6 +139,11 @@ public class FurnitureInteractor : MonoBehaviour
         {
             _animNew.SetTrigger("IsBack");
             _animNew.SetTrigger("IsRepeat");
+            
+            //针对UI
+            _animUI.SetTrigger("Beat0");
+            _animUI.SetTrigger("Beat1");   
+
 
             if (Resting)
             {
@@ -140,11 +152,13 @@ public class FurnitureInteractor : MonoBehaviour
                     Resting = false;
                     Demonstrating = true;
                     
-                    //打开家具聚光灯并开始动画
+                    //打开家具聚光灯并开始动画，并开始UI
                     spotLight.SetActive(true);
                     //rd.material = DemonstratingMat;
                     _anim.SetBool("IsMoving", true);           
                     _anim.SetBool("IsPlayer", false);
+                    UI.SetActive(true);
+
 
                 }
                 else
@@ -194,8 +208,32 @@ public class FurnitureInteractor : MonoBehaviour
                     {
                         if (player.localPerfect == requiredPerfect && player.localMiss == 0)
                         {
+                            //correctPlayers++;//用在每个玩家打一次就对的时候
+                            
+                            //以下用在打多次才能对的时候
+                            localPerfectTimes++;
+                            
+                        }
+                        
+                        //单独一个人有没有达到多次perfect的标准
+                        if (localPerfectTimes == perfectTimes)
+                        {
                             correctPlayers++;
                         }
+                        //给动画设置trigger
+                        if (localPerfectTimes == 1)
+                        {
+                            _animUI.SetTrigger("IsOne");
+                        }
+                        else if (localPerfectTimes == 2)
+                        {
+                            _animUI.SetTrigger("IsTwo");
+                        }
+                        else if (localPerfectTimes == 3)
+                        {
+                            _animUI.SetTrigger("IsFull");
+                        }
+                        
                         
                         //检测完后重置分数
                         ResetPlayerScore(player);                                              
@@ -208,7 +246,11 @@ public class FurnitureInteractor : MonoBehaviour
                         //_anim.SetBool("IsActivated", true);
                         Furniture.SetActive(false);
                         Furniture2.SetActive(true);
-                        //rd.material = ActivatedMat;                        
+                        //rd.material = ActivatedMat;     
+                        
+                        
+                        //更换UI
+                        //_animUI.SetTrigger("IsFull");
                     }
                     else
                     {
