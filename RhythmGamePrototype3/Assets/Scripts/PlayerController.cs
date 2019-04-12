@@ -5,6 +5,7 @@ using SonicBloom.Koreo;
 using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using Rewired;
 
 //Usage: Control players that uses Unity Input manager.
 //Intent: The controller can be used on multiple players.
@@ -13,8 +14,11 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Player Setting")]
     public float speed = 6;
-    public int playerNum;
-    public KeyCode interaction;
+    //player Id from Rewire
+    public int playerId = 0;
+    //the rewire player
+    private Player RewirePlayer;
+    //public KeyCode interaction;
 
     [Header("Animation")] 
     public GameObject perfectParticle;
@@ -66,6 +70,8 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
+        //Get the Rewired Player object for this player and keep it for the duration of the character's lifetime
+        RewirePlayer = ReInput.players.GetPlayer(playerId);
         // Set up references.
         anim = GetComponent <Animator> ();
         
@@ -127,8 +133,10 @@ public class PlayerController : MonoBehaviour
         //transform.rotation = new Quaternion (0,  0, 0, 0);
         
         //Movement
-        float x = Input.GetAxisRaw("Horizontal" + playerNum) * speed;
-        float z = Input.GetAxisRaw("Vertical" + playerNum) * speed;
+        float x = RewirePlayer.GetAxisRaw("Move Horizontal") * speed;
+        float z = RewirePlayer.GetAxisRaw("Move Vertical") * speed;
+        //float x = Input.GetAxisRaw("Horizontal" + playerNum) * speed;
+        //float z = Input.GetAxisRaw("Vertical" + playerNum) * speed;
         //playerRb.velocity = new Vector3(x, 0, -z);
         //print("player is moving =" + movement);
         
@@ -145,43 +153,49 @@ public class PlayerController : MonoBehaviour
         // Smoothly tilts a transform towards a target rotation.
 //        float tiltAroundZ = Input.GetAxis("Horizontal" + playerNum) * tiltAngle;
 //        float tiltAroundX = Input.GetAxis("Vertical" + playerNum) * tiltAngle;
-  
+        print("x=" + x);
+        print("z=" + z);
         
-        if(x > 0)
-        {
-            /*transform.Rotate(0, 45, 0,Space.World);
-            _rotation = transform.rotation.y;*/
+        // if(x > 0)
+        // {
+        //     /*transform.Rotate(0, 45, 0,Space.World);
+        //     _rotation = transform.rotation.y;*/
             
-            transform.localEulerAngles = new Vector3(0,45,0);
+        //     transform.localEulerAngles = new Vector3(0,45,0);
 
 
-        }
-        else if (x < 0)
-        {
-            /*transform.Rotate(0, -125, 0,Space.World);
-            _rotation = transform.rotation.y;*/
+        // }
+        // else if (x < 0)
+        // {
+        //     /*transform.Rotate(0, -125, 0,Space.World);
+        //     _rotation = transform.rotation.y;*/
             
-            transform.localEulerAngles = new Vector3(0,-135,0);
+        //     transform.localEulerAngles = new Vector3(0,-135,0);
 
-        }
+        // }
         
-        if(z > 0)
-        { 
-            /*transform.Rotate(0, -45, 0,Space.World);
-            _rotation = transform.rotation.y;*/
+        // if(z > 0)
+        // { 
+        //     /*transform.Rotate(0, -45, 0,Space.World);
+        //     _rotation = transform.rotation.y;*/
             
-            transform.localEulerAngles = new Vector3(0, -45, 0);
+        //     transform.localEulerAngles = new Vector3(0, -45, 0);
 
            
-        }
-        else if (z < 0)
-        {
-            /*transform.Rotate(0, 125, 0,Space.World);
-            _rotation = transform.rotation.y;*/
+        // }
+        // else if (z < 0)
+        // {
+        //     /*transform.Rotate(0, 125, 0,Space.World);
+        //     _rotation = transform.rotation.y;*/
             
-            transform.localEulerAngles = new Vector3(0, 135, 0);
+        //     transform.localEulerAngles = new Vector3(0, 135, 0);
 
+        // }
+        if (!(x == 0 && z == 0))
+        {
+            transform.rotation = Quaternion.LookRotation(movement);
         }
+        
        
 
         // Dampen towards the target rotation
@@ -194,7 +208,7 @@ public class PlayerController : MonoBehaviour
         //imageUI.sprite = Chopping;
 
         //Interaction
-        if (Input.GetKeyDown(interaction))
+        if (RewirePlayer.GetButtonDown("Interact"))
         {            
             if (beatable && !alreadybeat)
             {
