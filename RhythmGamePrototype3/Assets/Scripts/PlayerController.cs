@@ -89,11 +89,15 @@ public class PlayerController : MonoBehaviour
     void BeatReady(KoreographyEvent evt)
     {
         beatable = true;
+        furnitureInteractor.beatable = true;
+
     }
 
     void BeatExpire(KoreographyEvent evt)
     {
         beatable = false;
+        furnitureInteractor.beatable = false;
+
     }
 
     private void _animating(float h, float v)

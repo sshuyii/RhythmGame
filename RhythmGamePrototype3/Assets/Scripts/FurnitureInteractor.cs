@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SonicBloom.Koreo;
-using UnityEditor;
+using UnityEngine.Experimental.GlobalIllumination;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class FurnitureInteractor : MonoBehaviour
@@ -13,19 +13,29 @@ public class FurnitureInteractor : MonoBehaviour
     public List<bool> BeatLoop;
     public int BeatCount;
     
+    
     [Header("Animation")]
     //public float ShrinkDepth;
    // public float RecoverRate;
     public GameObject Furniture;
     public GameObject Furniture2;
     public GameObject UI;
+    private GameObject FullUI;
+    private GameObject StrokeUI;
+    private CanvasRenderer rdFull;
+    private CanvasRenderer rdStroke;
+    
     
     private HeartBeating HeartBeating;
+    private Image _imageUI;
 
     private Animator _anim;
     private Animator _animNew;
     private Animator _animUI;
-    private int punchUI = 0;
+    public int punchUI = 0;
+
+
+    public string FurnitureName;
 
     
     [Header("In Game Situation")] 
@@ -58,6 +68,7 @@ public class FurnitureInteractor : MonoBehaviour
     public int correctPlayers;
     public int perfectTimes;
     private int localPerfectTimes = 0;
+    public bool beatable = false;
 
     
     private MeshRenderer rd;
@@ -67,17 +78,33 @@ public class FurnitureInteractor : MonoBehaviour
     //public GameObject _collider;//设为通用的，在awake function里自行寻找
     
     // Start is called before the first frame update
+    
+    
+    
     void Start()
     {
         Koreographer.Instance.RegisterForEvents(EventID,BeatAnime);
 
+        
+        
         //rd = Furniture.GetComponent<MeshRenderer>();
        
         //新加
         _audioSource = GetComponent<AudioSource>();
         _anim = Furniture.GetComponent<Animator>();
         _animNew = Furniture2.GetComponent<Animator>();
-        _animUI = UI.GetComponent<Animator>();
+        //_animUI = UI.GetComponent<Animator>();
+
+        //找到填充的UI
+        FullUI = GameObject.Find(FurnitureName + "UI/Full");
+        StrokeUI = GameObject.Find(FurnitureName + "UI/Stroke");
+        rdStroke = StrokeUI.GetComponent<CanvasRenderer>();
+        rdFull = FullUI.GetComponent<CanvasRenderer>();
+
+        
+
+        _imageUI = FullUI.GetComponent<Image>();
+        _imageUI.fillAmount = 0;
 
         spotLight = transform.Find("SpotLight").gameObject;
 
@@ -125,7 +152,8 @@ public class FurnitureInteractor : MonoBehaviour
             script.furnitureInteractor = null;
             playersInvolved.Remove(script);
             ResetPlayerScore(script);
-            UI.SetActive(false);
+            rdFull.SetAlpha(0);
+            rdStroke.SetAlpha(0);
 
             //_light.SetActive(false);
         }
@@ -163,7 +191,9 @@ public class FurnitureInteractor : MonoBehaviour
                     //rd.material = DemonstratingMat;
                     _anim.SetBool("IsMoving", true);           
                     _anim.SetBool("IsPlayer", false);
-                    UI.SetActive(true);
+                    rdFull.SetAlpha(1);
+                    rdStroke.SetAlpha(1);
+
 
 
                 }
@@ -226,19 +256,19 @@ public class FurnitureInteractor : MonoBehaviour
                         {
                             correctPlayers++;
                         }
-//                        //给动画设置trigger
-//                        if (localPerfectTimes == 1)
-//                        {
-//                            _animUI.SetTrigger("IsOne");
-//                        }
-//                        else if (localPerfectTimes == 2)
-//                        {
-//                            _animUI.SetTrigger("IsTwo");
-//                        }
-//                        else if (localPerfectTimes == 3)
-//                        {
-//                            _animUI.SetTrigger("IsFull");
-//                        }
+                        //给动画设置trigger
+                        if (localPerfectTimes == 1)
+                        {
+                            _imageUI.fillAmount = 0.305f;
+                        }
+                        else if (localPerfectTimes == 2)
+                        {
+                            _imageUI.fillAmount = 0.7f;
+                        }
+                        else if (localPerfectTimes == 3)
+                        {
+                            _imageUI.fillAmount = 1f;
+                        }
                         
                         
                         //检测完后重置分数
@@ -318,26 +348,28 @@ public class FurnitureInteractor : MonoBehaviour
         player.spotLight.SetActive(false);
     }
 
+    private bool toZero = false;
     void Update()
     {
         if (BeatLoop[BeatCount] == true)
         {
             //发声的这一拍，传给furnitureInteractor,UI可以开始震动
-            punchUI ++;
+            punchUI++;
+ 
         }
         else
         {
             punchUI = 0;
-
         }
-        
-        if (punchUI == 10)
-        {
-            print("punchUI " + punchUI);
-            
-             HeartBeating._readyPunch = true;
-             //print("_readyPunch = " + HeartBeating._readyPunch);
 
+           
+        if (punchUI == 1)
+        {
+            HeartBeating._readyPunch = true;     
+        }
+        else if (punchUI > 17)
+        {
+            punchUI = 0;
         }
     }
     
