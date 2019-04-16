@@ -252,7 +252,7 @@ public class PlayerController : MonoBehaviour
             AnimationCount = 0;
             anim.SetBool("Dancing1", false);
             anim.SetBool("Dancing3", false);
-
+            anim.SetBool("Failed",false);
             anim.SetBool("Dancing2", false);
             anim.SetBool("Dancing4", false);
 
@@ -271,6 +271,8 @@ public class PlayerController : MonoBehaviour
         if (AnimationCount == 1)
         {
             anim.SetBool("Dancing1", true);
+            anim.SetBool("Failed",false);
+
            
             print("Dancing11111111");
         }
@@ -278,6 +280,8 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("Dancing1", false);
             anim.SetBool("Dancing2", true);
+            anim.SetBool("Failed",false);
+
 
             print("Dancing222222");
 
@@ -287,6 +291,8 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Dancing2", false);
             anim.SetBool("Dancing1", false);
             anim.SetBool("Dancing3",true);
+            anim.SetBool("Failed",false);
+
             
         }
         else if (AnimationCount == 4)
@@ -294,9 +300,11 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Dancing2", false);
             anim.SetBool("Dancing1", false);
             anim.SetBool("Dancing3",false);
-            anim.SetBool("Dancing4",true);            
+            anim.SetBool("Dancing4",true);  
+            anim.SetBool("Failed",false);
+
         }
-        
+       
 
         
     }
@@ -307,5 +315,7 @@ public class PlayerController : MonoBehaviour
        localMissText.text = "Miss: " + localMiss;
        Instantiate(errorParticle, transform.position + 2 * Vector3.up, Quaternion.identity);
        _audioSource[1].Play();       
+       anim.SetBool("Failed",true);
+
     }   
 }
