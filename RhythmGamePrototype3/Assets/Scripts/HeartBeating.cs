@@ -51,10 +51,10 @@ public class HeartBeating : MonoBehaviour
 
         if (_readyPunch == true)
         {
-
+            _readyPunch = false;
             _StrokeTransform.DOPunchScale(punch, duration, vibrato, elasticity);
             _FullTransform.DOPunchScale(punch, duration, vibrato, elasticity);
-            _readyPunch = false;
+            
         }
     }
 }

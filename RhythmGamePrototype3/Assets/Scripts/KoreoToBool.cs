@@ -9,23 +9,28 @@ public class KoreoToBool : MonoBehaviour
     public static bool GlassEnable;
     public static bool ChoppingEnable;
 
+    private AudioSource _audio;
+
 
     //public static KoreoToBool instance;
     
     // Start is called before the first frame update
     void Start()
     {
-        Koreographer.Instance.RegisterForEvents("NewspaperEventID", NewspaperStart);
-        Koreographer.Instance.RegisterForEvents("NewspaperEndEventID", NewspaperEnd);
-        Koreographer.Instance.RegisterForEvents("GlassEventID", GlassStart);
-        Koreographer.Instance.RegisterForEvents("GlassEndEventID", GlassEnd);
-        Koreographer.Instance.RegisterForEvents("ChoppingEventID", ChoppingStart);
-        Koreographer.Instance.RegisterForEvents("ChoppingEndEventID", ChoppingEnd);
+        _audio = GetComponent<AudioSource>();    
+            
+        Koreographer.Instance.RegisterForEvents("AllBeats", AllBeats);
+        //Koreographer.Instance.RegisterForEvents("NewspaperEndEventID", NewspaperEnd);
+        Koreographer.Instance.RegisterForEvents("WindowOpen", WindowOpen);
+        //Koreographer.Instance.RegisterForEvents("GlassEndEventID", GlassEnd);
+        Koreographer.Instance.RegisterForEvents("WindowClose", WindowClose);
+        //Koreographer.Instance.RegisterForEvents("ChoppingEndEventID", ChoppingEnd);
     }
     
-    void NewspaperStart(KoreographyEvent evt)
+    void AllBeats(KoreographyEvent evt)
     {
             NewspaperEnable = true;
+            _audio.Play();
             print("NewspaperStart");
     }
 	
@@ -35,9 +40,10 @@ public class KoreoToBool : MonoBehaviour
             print("NewspaperEnd");
     }
 
-    void GlassStart(KoreographyEvent evt)
+    void WindowOpen(KoreographyEvent evt)
     {
             GlassEnable = true;
+            //_audio[0].Play();
             print("GlassStart");
     }
 	
@@ -47,9 +53,10 @@ public class KoreoToBool : MonoBehaviour
             print("GlassEnd");
     }
 
-    void ChoppingStart(KoreographyEvent evt)
+    void WindowClose(KoreographyEvent evt)
     {
             ChoppingEnable = true;
+            //_audio[2].Play();
             print("ChoppingStart");
     }
 	
