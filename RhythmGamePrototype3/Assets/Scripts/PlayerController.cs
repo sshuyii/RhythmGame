@@ -355,7 +355,7 @@ public class PlayerController : MonoBehaviour
     {
 
         RaycastHit hit;
-        Debug.DrawRay(transform.position, bodyTran.forward * 2f, Color.yellow);
+        Debug.DrawRay(transform.position + Vector3.up, transform.forward * 4f, Color.yellow);
 
 
         if (IsLeft == true)
@@ -369,12 +369,12 @@ public class PlayerController : MonoBehaviour
         {
             BottomLocator = RightBottomLocator;
             UpperLocator = RightUpperLocator;
-            BottomAngle = 45;
+            BottomAngle = -45;
             UpperAngle = -45;
         }
         
         
-        if (Physics.Raycast(transform.position, bodyTran.forward * 2f, out hit, 1f))
+        if (Physics.Raycast(transform.position + Vector3.up, transform.forward * 4f, out hit, 4f))
         {
             
            
@@ -423,6 +423,7 @@ public class PlayerController : MonoBehaviour
 
         if (stateinfo.IsName("Jump") && (stateinfo.normalizedTime > 1.0f))
         {
+            _myCollider.isTrigger = false;
             if (anim.GetBool("Jump"))
             {
                 transform.position = UpperLocator.transform.position;
@@ -435,6 +436,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (stateinfo.IsName("Fall") && (stateinfo.normalizedTime > 1.0f))
         {
+            _myCollider.isTrigger = false;
             if (anim.GetBool("Fall"))
             {
                 transform.position = BottomLocator.transform.position;
