@@ -18,14 +18,24 @@ public class PlayerController : MonoBehaviour
     public int playerId = 0;
     //the rewire player
     private Player RewirePlayer;
+    public bool IsLeft;
+
+    public GameObject LadderUI;
     //public KeyCode interaction;
 
     [Header("Animation")] 
     public GameObject perfectParticle;
     public GameObject errorParticle;
 
-    public GameObject BottomLocator;
-    public GameObject UpperLocator;
+    private GameObject BottomLocator;
+    private GameObject UpperLocator;
+    
+    public GameObject LeftBottomLocator;
+    public GameObject LeftUpperLocator;
+    public GameObject RightBottomLocator;
+    public GameObject RightUpperLocator;
+    
+        
     private int AnimationCount = 0;
     private Collider _myCollider;
     private Transform bodyTran;
@@ -130,7 +140,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+       
         LadderControl();
         //Reset Interaction signal
         //transform.Rotate(0, _rotate, 0,Space.World);
@@ -336,32 +346,78 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    //判断到底是左边的梯子还是右边的梯子
+
+    private float UpperAngle;
+    private float BottomAngle;
+    
     void LadderControl()
     {
 
         RaycastHit hit;
         Debug.DrawRay(transform.position, bodyTran.forward * 2f, Color.yellow);
 
+
+        if (IsLeft == true)
+        {
+            BottomLocator = LeftBottomLocator;
+            UpperLocator = LeftUpperLocator;
+            BottomAngle = 45;
+            UpperAngle = 45;
+        }
+        else
+        {
+            BottomLocator = RightBottomLocator;
+            UpperLocator = RightUpperLocator;
+            BottomAngle = 45;
+            UpperAngle = -45;
+        }
+        
+        
         if (Physics.Raycast(transform.position, bodyTran.forward * 2f, out hit, 1f))
         {
             
+           
             if (hit.collider.CompareTag("DownStairs"))
             {
+                LadderUI.SetActive(true);
+
                 if (RewirePlayer.GetButtonDown("Interact"))
                 {
                     transform.position = BottomLocator.transform.position;
-                    //print("hittttttLadder");
-                    transform.rotation = Quaternion.AngleAxis(-45, Vector3.up);
+                    transform.rotation = Quaternion.AngleAxis(BottomAngle, Vector3.up);
                     _myCollider.isTrigger = true;
                     anim.SetBool("Jump",true);
+                    
                     PlayerEnabled = false;
+                    LadderUI.SetActive(false);
                 }
                 
             }
+            else if(hit.collider.CompareTag("UpStairs"))
+            {
+                LadderUI.SetActive(true);
+
+                if (RewirePlayer.GetButtonDown("Interact"))
+                {
+                    transform.position = UpperLocator.transform.position;
+                    //print("hittttttLadder");
+                    transform.rotation = Quaternion.AngleAxis(UpperAngle, Vector3.up);
+                    _myCollider.isTrigger = true;
+                    anim.SetBool("Fall",true);
+                    
+                    PlayerEnabled = false;
+                    LadderUI.SetActive(false);
+                }   
+            }
+        }
+        else
+        {
+            LadderUI.SetActive(false);
+
         }
         
         AnimatorStateInfo stateinfo = anim.GetCurrentAnimatorStateInfo(0);
-        print("rootPosition = " + anim.rootPosition);
         //transform.position = _myAnim.rootPosition;
 
 
@@ -376,6 +432,28 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("Jump",false);
             }
                
+        }
+        else if (stateinfo.IsName("Fall") && (stateinfo.normalizedTime > 1.0f))
+        {
+            if (anim.GetBool("Fall"))
+            {
+                transform.position = BottomLocator.transform.position;
+                _myCollider.transform.position = BottomLocator.transform.position;
+
+                PlayerEnabled = true;
+                anim.SetBool("Fall",false);
+            }
+               
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("LeftOrRight"))
+        {
+            IsLeft = !IsLeft;
+            print("!!!!!!!!!!");
+
         }
     }
 }
