@@ -24,7 +24,13 @@ public class PlayerController : MonoBehaviour
     public GameObject perfectParticle;
     public GameObject errorParticle;
 
+    public GameObject BottomLocator;
+    public GameObject UpperLocator;
     private int AnimationCount = 0;
+    private Collider _myCollider;
+    private Transform bodyTran;
+
+    private bool PlayerEnabled = true;//用来判断此时能不能让玩家控制角色
     //public float ShrinkDepth;
     //public float RecoverRate;
     //public Material NormalMat;
@@ -74,6 +80,8 @@ public class PlayerController : MonoBehaviour
         RewirePlayer = ReInput.players.GetPlayer(playerId);
         // Set up references.
         anim = GetComponent <Animator> ();
+        _myCollider = GetComponent<Collider>();
+        bodyTran = this.gameObject.transform.GetChild(0);
         
         playerRb = GetComponent<Rigidbody>();
         originalScale = transform.localScale;
@@ -95,14 +103,14 @@ public class PlayerController : MonoBehaviour
     void BeatReady(KoreographyEvent evt)
     {
         beatable = true;
-        furnitureInteractor.beatable = true;
+        //furnitureInteractor.beatable = true;
 
     }
 
     void BeatExpire(KoreographyEvent evt)
     {
         beatable = false;
-        furnitureInteractor.beatable = false;
+        //furnitureInteractor.beatable = false;
 
     }
 
@@ -122,8 +130,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
+
+        LadderControl();
         //Reset Interaction signal
         //transform.Rotate(0, _rotate, 0,Space.World);
         //Vector3 target = new Vector3(0, _rotation, 0);
@@ -138,23 +146,35 @@ public class PlayerController : MonoBehaviour
         //float x = Input.GetAxisRaw("Horizontal" + playerNum) * speed;
         //float z = Input.GetAxisRaw("Vertical" + playerNum) * speed;
         //playerRb.velocity = new Vector3(x, 0, -z);
-        //print("player is moving =" + movement);
         
         // Set the movement vector based on the axis input.
         movement.Set (x, 0f, z);
         
-        // Normalise the movement vector and make it proportional to the speed per second.
+        // Normalise the movement vector and make it proportional to speed per second.
         movement = movement.normalized * speed * Time.deltaTime;
+        //print("player is moving =" + movement);
 
-        // Move the player to it's current position plus the movement.
-        playerRb.MovePosition (transform.position + movement);
+
+        // Move the player
+        if (PlayerEnabled == true)
+        {
+            playerRb.MovePosition (transform.position + movement);
+            
+            if (!(x == 0 && z == 0))
+            {
+                transform.rotation = Quaternion.LookRotation(movement);
+            }
+        }
+        
+        
+      
 
         //控制player的朝向
         // Smoothly tilts a transform towards a target rotation.
 //        float tiltAroundZ = Input.GetAxis("Horizontal" + playerNum) * tiltAngle;
 //        float tiltAroundX = Input.GetAxis("Vertical" + playerNum) * tiltAngle;
-        print("x=" + x);
-        print("z=" + z);
+//        print("x=" + x);
+//        print("z=" + z);
         
         // if(x > 0)
         // {
@@ -191,10 +211,7 @@ public class PlayerController : MonoBehaviour
         //     transform.localEulerAngles = new Vector3(0, 135, 0);
 
         // }
-        if (!(x == 0 && z == 0))
-        {
-            transform.rotation = Quaternion.LookRotation(movement);
-        }
+        
         
        
 
@@ -317,5 +334,48 @@ public class PlayerController : MonoBehaviour
        _audioSource[1].Play();       
        anim.SetBool("Failed",true);
 
-    }   
+    }
+
+    void LadderControl()
+    {
+
+        RaycastHit hit;
+        Debug.DrawRay(transform.position, bodyTran.forward * 2f, Color.yellow);
+
+        if (Physics.Raycast(transform.position, bodyTran.forward * 2f, out hit, 1f))
+        {
+            
+            if (hit.collider.CompareTag("DownStairs"))
+            {
+                if (RewirePlayer.GetButtonDown("Interact"))
+                {
+                    transform.position = BottomLocator.transform.position;
+                    //print("hittttttLadder");
+                    transform.rotation = Quaternion.AngleAxis(-45, Vector3.up);
+                    _myCollider.isTrigger = true;
+                    anim.SetBool("Jump",true);
+                    PlayerEnabled = false;
+                }
+                
+            }
+        }
+        
+        AnimatorStateInfo stateinfo = anim.GetCurrentAnimatorStateInfo(0);
+        print("rootPosition = " + anim.rootPosition);
+        //transform.position = _myAnim.rootPosition;
+
+
+        if (stateinfo.IsName("Jump") && (stateinfo.normalizedTime > 1.0f))
+        {
+            if (anim.GetBool("Jump"))
+            {
+                transform.position = UpperLocator.transform.position;
+                _myCollider.transform.position = UpperLocator.transform.position;
+
+                PlayerEnabled = true;
+                anim.SetBool("Jump",false);
+            }
+               
+        }
+    }
 }

@@ -68,7 +68,7 @@ public class FurnitureInteractor : MonoBehaviour
     public int correctPlayers;
     public int perfectTimes;
     private int localPerfectTimes = 0;
-    public bool beatable = false;
+    //public bool beatable = false;
 
     
     private MeshRenderer rd;
@@ -351,16 +351,27 @@ public class FurnitureInteractor : MonoBehaviour
     private bool toZero = false;
     void Update()
     {
+        HeartBeatUI();
+    }
+
+    void HeartBeatUI()
+    {
         if (BeatLoop[BeatCount] == true)
         {
-            //发声的这一拍，传给furnitureInteractor,UI可以开始震动
+            
             punchUI++;
+         
+            //发声的这一拍，传给furnitureInteractor,UI可以开始震动
+          
+            print("punchUI = " + punchUI);
  
         }
         else
         {
             punchUI = 0;
         }
+
+      
 
            
         if (punchUI == 1)
@@ -372,5 +383,7 @@ public class FurnitureInteractor : MonoBehaviour
             punchUI = 0;
         }
     }
+    
+    
     
 }
