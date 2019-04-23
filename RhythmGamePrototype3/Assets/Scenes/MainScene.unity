@@ -4727,6 +4727,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7875143056146560032}
     m_Modifications:
+    - target: {fileID: 100050, guid: 0219550f6784648269574cd98393f70c, type: 3}
+      propertyPath: m_Name
+      value: Player2
+      objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 0219550f6784648269574cd98393f70c, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
@@ -4743,10 +4747,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: e2bdfdf3950fc42829e91d44355296fc, type: 2}
-    - target: {fileID: 100050, guid: 0219550f6784648269574cd98393f70c, type: 3}
-      propertyPath: m_Name
-      value: Player2
-      objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: 0219550f6784648269574cd98393f70c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7657,6 +7657,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 107e7b419e04a1d41b9d9a8248258efd, type: 2}
+    - target: {fileID: 9500000, guid: 00c66c6930ab02349b7e7bc17f917440, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: 00c66c6930ab02349b7e7bc17f917440, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -14406,7 +14410,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f56fe150149bc40e49e40ea94ff4389c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 93f10cc6871b5492398b3c7529a6c0fb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -14540,8 +14544,8 @@ MonoBehaviour:
   requiredPerfect: 0
   requiredCorrectPlayers: 1
   correctPlayers: 0
-  perfectTimes: 3
-  _colliderForPlayer: {fileID: 0}
+  perfectTimes: 1
+  _colliderForPlayer: {fileID: 2094111072}
 --- !u!1001 &1492014415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14680,6 +14684,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 6a91f24817318444c90d12e611da34b7, type: 2}
+    - target: {fileID: 9500000, guid: e6d12702b7dff47ed94558df43c5292a, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: e6d12702b7dff47ed94558df43c5292a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -18068,6 +18076,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b770c5ef2ab06eb49b34bc00211f467c, type: 3}
+--- !u!65 &1868429014 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 6500912616694139267, guid: c8581fa22a449d74e94490386dee7616,
+    type: 3}
+  m_PrefabInstance: {fileID: 6500912617180502048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1874437050
 GameObject:
   m_ObjectHideFlags: 0
@@ -25960,7 +25974,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f56fe150149bc40e49e40ea94ff4389c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0415d12e5120c48c9829cf59fefd050e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -26098,7 +26112,7 @@ MonoBehaviour:
   requiredCorrectPlayers: 1
   correctPlayers: 0
   perfectTimes: 3
-  _colliderForPlayer: {fileID: 0}
+  _colliderForPlayer: {fileID: 2486236127968172579}
 --- !u!1 &2625523146053428441
 GameObject:
   m_ObjectHideFlags: 0
@@ -26228,7 +26242,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 213ba9cfd1b413640a0c81aadf71d2e9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cdf3fa048b7da42f6900d6474e782fca, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -26708,8 +26722,8 @@ MonoBehaviour:
   requiredPerfect: 0
   requiredCorrectPlayers: 1
   correctPlayers: 0
-  perfectTimes: 3
-  _colliderForPlayer: {fileID: 0}
+  perfectTimes: 1
+  _colliderForPlayer: {fileID: 2625523146053428447}
 --- !u!1 &2625523147706020527
 GameObject:
   m_ObjectHideFlags: 0
@@ -46457,6 +46471,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoxInteractor
       objectReference: {fileID: 0}
+    - target: {fileID: 6500912616046661808, guid: c8581fa22a449d74e94490386dee7616,
+        type: 3}
+      propertyPath: _colliderForPlayer
+      value: 
+      objectReference: {fileID: 1868429014}
     - target: {fileID: 6500912615794241103, guid: c8581fa22a449d74e94490386dee7616,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -46517,6 +46536,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c3eeabedac2873343882c7b778f89513, type: 2}
+    - target: {fileID: 6500912616046661809, guid: c8581fa22a449d74e94490386dee7616,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4289e2f11705448d5808b8c9cd59e98c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8581fa22a449d74e94490386dee7616, type: 3}
 --- !u!1001 &6854811958992818304
