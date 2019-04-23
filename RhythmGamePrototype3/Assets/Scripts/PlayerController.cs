@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
     //the rewire player
     private Player RewirePlayer;
     public bool IsLeft;
+    
+    public int numGroup = 1;
+
 
     public GameObject LadderUI;
     //public KeyCode interaction;

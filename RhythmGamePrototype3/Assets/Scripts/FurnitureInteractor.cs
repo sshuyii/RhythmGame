@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using SonicBloom.Koreo;
 using UnityEngine.Experimental.GlobalIllumination;
@@ -52,7 +53,8 @@ public class FurnitureInteractor : MonoBehaviour
     public bool Activated;
     //public Material ActivatedMat;
     public GameObject spotLight;
-    public List<PlayerController> playersInvolved;
+    public List<PlayerController> playersInvolved; 
+    public int numGroup = 1;
 
     //以下是新加的
     //public GameObject _light;
@@ -102,6 +104,8 @@ public class FurnitureInteractor : MonoBehaviour
         rdStroke = StrokeUI.GetComponent<CanvasRenderer>();
         rdFull = FullUI.GetComponent<CanvasRenderer>();
 
+        rdFull.SetAlpha(0);
+        rdStroke.SetAlpha(0);
         
 
         _imageUI = FullUI.GetComponent<Image>();
@@ -146,15 +150,15 @@ public class FurnitureInteractor : MonoBehaviour
         {
             //PlayerInPlace = false;
             _anim.SetBool("IsMoving", false);
-//            _anim.SetBool("IsPlayer", true);
             
             //将该玩家（的脚本）移出互动中玩家列表
             PlayerController script = other.GetComponent<PlayerController>();
             script.furnitureInteractor = null;
             playersInvolved.Remove(script);
             ResetPlayerScore(script);
-            //rdFull.SetAlpha(0);
-            //rdStroke.SetAlpha(0);
+            
+            rdFull.SetAlpha(0);
+            rdStroke.SetAlpha(0);
 
             //_light.SetActive(false);
         }
@@ -186,14 +190,23 @@ public class FurnitureInteractor : MonoBehaviour
                 {
                     Resting = false;
                     Demonstrating = true;
-                    
-                    //打开家具聚光灯并开始动画，并开始UI
-                    spotLight.SetActive(true);
-                    //rd.material = DemonstratingMat;
-                    _anim.SetBool("IsMoving", true);           
+
                     _anim.SetBool("IsPlayer", false);
-                    //rdFull.SetAlpha(1);
-                    //rdStroke.SetAlpha(1);
+
+
+                    if (DoCategorize() == true)
+                    {
+                        //打开家具聚光灯并开始动画，并开始UI
+                        spotLight.SetActive(true);
+                        _anim.SetBool("IsMoving", true);
+
+                        print(")))))))))))))))))");
+
+                        rdFull.SetAlpha(1);
+                        rdStroke.SetAlpha(1);
+                    }
+                  
+
 
 
 
@@ -208,9 +221,17 @@ public class FurnitureInteractor : MonoBehaviour
                 Demonstrating = false;
                 
                 //关闭家具聚光灯并停止动画
-                spotLight.SetActive(false);                
-                _anim.SetBool("IsMoving", false);      
-                _anim.SetBool("IsPlayer", true);
+               
+                    _anim.SetBool("IsMoving", false);
+                    if (DoCategorize() == true)
+                    {
+                        _anim.SetBool("IsPlayer", true);
+
+                    }
+                    spotLight.SetActive(false);
+
+                
+               
 
                 if (playersInvolved.Count > 0)
                 {
@@ -299,9 +320,18 @@ public class FurnitureInteractor : MonoBehaviour
                         
                         //回到演示状态
                         Demonstrating = true;
-                        _anim.SetBool("IsMoving", true);
                         _anim.SetBool("IsPlayer", false);
-                    }
+
+                        if (DoCategorize() == true)
+                        {
+                            //打开家具聚光灯并开始动画，并开始UI
+                            spotLight.SetActive(true);
+                            _anim.SetBool("IsMoving", true);
+
+
+                            rdFull.SetAlpha(1);
+                            rdStroke.SetAlpha(1);
+                        }                    }
 
                     correctPlayers = 0;
                 }
@@ -397,6 +427,55 @@ public class FurnitureInteractor : MonoBehaviour
         }
     }*/
     
-    
-    
+    //判断现在到底进行到了哪一组
+    bool DoCategorize()
+    {
+        bool temp = false;
+        
+        if(FurnitureName == "Clock"
+           || FurnitureName == "Table"
+           || FurnitureName == "Bath"
+           || FurnitureName == "Box")
+        {
+            if (numGroup == 1)
+            {
+//                //打开家具聚光灯并开始动画，并开始UI
+//                spotLight.SetActive(true);
+//                //rd.material = DemonstratingMat;
+//                _anim.SetBool("IsMoving", true);
+//                _anim.SetBool("IsPlayer", false);
+//                                 
+//                rdFull.SetAlpha(1);
+//                rdStroke.SetAlpha(1);
+
+                temp = true;
+            }
+        }
+                        
+        else if(FurnitureName == "Fridge"
+                || FurnitureName == "Washer"
+        )
+        {
+            if (numGroup == 2)
+            {
+                print("fridgeeeeeeeeeeeee");
+
+                temp = true;
+//                //打开家具聚光灯并开始动画，并开始UI
+//                spotLight.SetActive(true);
+//                //rd.material = DemonstratingMat;
+//                _anim.SetBool("IsMoving", true);
+//                _anim.SetBool("IsPlayer", false);
+//                                
+//                                 
+//                rdFull.SetAlpha(1);
+//                rdStroke.SetAlpha(1);
+
+            }
+        }
+
+        return temp;
+
+    }
+
 }
