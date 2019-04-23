@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Rewired.Utils.Platforms.OSX;
 using SonicBloom.Koreo;
 
 
@@ -26,6 +27,7 @@ public class HeartBeating : MonoBehaviour
 
     private CanvasRenderer rdFull;
     private CanvasRenderer rdStroke;
+    private Vector3 CameraLookDirection;
 
 
     //public bool _readyPunch;
@@ -44,6 +46,8 @@ public class HeartBeating : MonoBehaviour
         //rdStroke.SetAlpha(0);
         //rdFull.SetAlpha(0);
 
+        CameraLookDirection = Camera.main.transform.forward;
+
         
         _StrokeTransform = Stroke.GetComponent<Transform>();
         _FullTransform = Full.GetComponent<Transform>();
@@ -52,6 +56,20 @@ public class HeartBeating : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CameraLookDirection = Camera.main.transform.forward;
+
+        
+        //让UI面向镜头
+//        Full.transform.LookAt(Camera.main.transform.position);	
+//        Stroke.transform.LookAt(Camera.main.transform.position);	
+
+        Quaternion rotation = Quaternion.LookRotation(CameraLookDirection, Vector3.up);
+
+        Stroke.transform.rotation = rotation;
+        Full.transform.rotation = rotation;
+
+
+        
         punch = new Vector3 (0.5f, 0.5f, 0.5f);
 
         if (furnitureInteractor.readyPunch)
@@ -61,5 +79,6 @@ public class HeartBeating : MonoBehaviour
             _FullTransform.DOPunchScale(punch, duration, vibrato, elasticity);
             
         }
+        
     }
 }
