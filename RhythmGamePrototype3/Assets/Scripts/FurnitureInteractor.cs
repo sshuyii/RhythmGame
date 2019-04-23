@@ -77,7 +77,8 @@ public class FurnitureInteractor : MonoBehaviour
     private MeshRenderer rd;
     //private Vector3 originalScale;
     private GameObject scoring;
-    
+
+    public Collider _colliderForPlayer;    
     //public GameObject _collider;//设为通用的，在awake function里自行寻找
     
     // Start is called before the first frame update
@@ -89,8 +90,6 @@ public class FurnitureInteractor : MonoBehaviour
         Koreographer.Instance.RegisterForEvents(EventID,BeatAnime);
 
         
-        
-        //rd = Furniture.GetComponent<MeshRenderer>();
        
         //新加
         _audioSource = GetComponent<AudioSource>();
@@ -168,9 +167,6 @@ public class FurnitureInteractor : MonoBehaviour
     {
         //print("Beat " + BeatCount + " " + BeatLoop[BeatCount]);
         
-        
-        
-        
         //Status check
         if (BeatCount == 0)
         {
@@ -194,8 +190,8 @@ public class FurnitureInteractor : MonoBehaviour
                     _anim.SetBool("IsPlayer", false);
 
 
-                    if (DoCategorize() == true)
-                    {
+                    //if (DoCategorize() == true)
+                    //{
                         //打开家具聚光灯并开始动画，并开始UI
                         spotLight.SetActive(true);
                         _anim.SetBool("IsMoving", true);
@@ -204,7 +200,7 @@ public class FurnitureInteractor : MonoBehaviour
 
                         rdFull.SetAlpha(1);
                         rdStroke.SetAlpha(1);
-                    }
+                    //}
                   
 
 
@@ -223,11 +219,11 @@ public class FurnitureInteractor : MonoBehaviour
                 //关闭家具聚光灯并停止动画
                
                     _anim.SetBool("IsMoving", false);
-                    if (DoCategorize() == true)
-                    {
+                    //if (DoCategorize() == true)
+                    //{
                         _anim.SetBool("IsPlayer", true);
 
-                    }
+                    //}
                     spotLight.SetActive(false);
 
                 
@@ -322,8 +318,8 @@ public class FurnitureInteractor : MonoBehaviour
                         Demonstrating = true;
                         _anim.SetBool("IsPlayer", false);
 
-                        if (DoCategorize() == true)
-                        {
+                        //if (DoCategorize() == true)
+                        //{
                             //打开家具聚光灯并开始动画，并开始UI
                             spotLight.SetActive(true);
                             _anim.SetBool("IsMoving", true);
@@ -331,7 +327,8 @@ public class FurnitureInteractor : MonoBehaviour
 
                             rdFull.SetAlpha(1);
                             rdStroke.SetAlpha(1);
-                        }                    }
+                        //    }                    
+                    }
 
                     correctPlayers = 0;
                 }
@@ -391,7 +388,19 @@ public class FurnitureInteractor : MonoBehaviour
     }
 
     //private bool toZero = false;
-    
+
+    void Update()
+    {
+        if (DoCategorize() == true)
+        {
+            _colliderForPlayer.enabled = true;
+        }
+        else
+        {
+            _colliderForPlayer.enabled = false;
+
+        }
+    }
     /*void Update()
     {
         HeartBeatUI();
