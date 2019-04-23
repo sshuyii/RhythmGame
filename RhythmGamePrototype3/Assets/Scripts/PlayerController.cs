@@ -18,13 +18,29 @@ public class PlayerController : MonoBehaviour
     public int playerId = 0;
     //the rewire player
     private Player RewirePlayer;
+    public bool IsLeft;
+
+    public GameObject LadderUI;
     //public KeyCode interaction;
 
     [Header("Animation")] 
     public GameObject perfectParticle;
     public GameObject errorParticle;
 
+    private GameObject BottomLocator;
+    private GameObject UpperLocator;
+    
+    public GameObject LeftBottomLocator;
+    public GameObject LeftUpperLocator;
+    public GameObject RightBottomLocator;
+    public GameObject RightUpperLocator;
+    
+        
     private int AnimationCount = 0;
+    private Collider _myCollider;
+    private Transform bodyTran;
+
+    private bool PlayerEnabled = true;//用来判断此时能不能让玩家控制角色
     //public float ShrinkDepth;
     //public float RecoverRate;
     //public Material NormalMat;
@@ -74,6 +90,8 @@ public class PlayerController : MonoBehaviour
         RewirePlayer = ReInput.players.GetPlayer(playerId);
         // Set up references.
         anim = GetComponent <Animator> ();
+        _myCollider = GetComponent<Collider>();
+        bodyTran = this.gameObject.transform.GetChild(0);
         
         playerRb = GetComponent<Rigidbody>();
         originalScale = transform.localScale;
@@ -95,14 +113,14 @@ public class PlayerController : MonoBehaviour
     void BeatReady(KoreographyEvent evt)
     {
         beatable = true;
-        furnitureInteractor.beatable = true;
+        //furnitureInteractor.beatable = true;
 
     }
 
     void BeatExpire(KoreographyEvent evt)
     {
         beatable = false;
-        furnitureInteractor.beatable = false;
+        //furnitureInteractor.beatable = false;
 
     }
 
@@ -122,8 +140,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
+       
+        LadderControl();
         //Reset Interaction signal
         //transform.Rotate(0, _rotate, 0,Space.World);
         //Vector3 target = new Vector3(0, _rotation, 0);
@@ -138,23 +156,35 @@ public class PlayerController : MonoBehaviour
         //float x = Input.GetAxisRaw("Horizontal" + playerNum) * speed;
         //float z = Input.GetAxisRaw("Vertical" + playerNum) * speed;
         //playerRb.velocity = new Vector3(x, 0, -z);
-        //print("player is moving =" + movement);
         
         // Set the movement vector based on the axis input.
         movement.Set (x, 0f, z);
         
-        // Normalise the movement vector and make it proportional to the speed per second.
+        // Normalise the movement vector and make it proportional to speed per second.
         movement = movement.normalized * speed * Time.deltaTime;
+        //print("player is moving =" + movement);
 
-        // Move the player to it's current position plus the movement.
-        playerRb.MovePosition (transform.position + movement);
+
+        // Move the player
+        if (PlayerEnabled == true)
+        {
+            playerRb.MovePosition (transform.position + movement);
+            
+            if (!(x == 0 && z == 0))
+            {
+                transform.rotation = Quaternion.LookRotation(movement);
+            }
+        }
+        
+        
+      
 
         //控制player的朝向
         // Smoothly tilts a transform towards a target rotation.
 //        float tiltAroundZ = Input.GetAxis("Horizontal" + playerNum) * tiltAngle;
 //        float tiltAroundX = Input.GetAxis("Vertical" + playerNum) * tiltAngle;
-        print("x=" + x);
-        print("z=" + z);
+//        print("x=" + x);
+//        print("z=" + z);
         
         // if(x > 0)
         // {
@@ -191,10 +221,7 @@ public class PlayerController : MonoBehaviour
         //     transform.localEulerAngles = new Vector3(0, 135, 0);
 
         // }
-        if (!(x == 0 && z == 0))
-        {
-            transform.rotation = Quaternion.LookRotation(movement);
-        }
+        
         
        
 
@@ -317,5 +344,118 @@ public class PlayerController : MonoBehaviour
        _audioSource[1].Play();       
        anim.SetBool("Failed",true);
 
-    }   
+    }
+
+    //判断到底是左边的梯子还是右边的梯子
+
+    private float UpperAngle;
+    private float BottomAngle;
+    
+    void LadderControl()
+    {
+
+        RaycastHit hit;
+        Debug.DrawRay(transform.position + Vector3.up, transform.forward * 4f, Color.yellow);
+
+
+        if (IsLeft == true)
+        {
+            BottomLocator = LeftBottomLocator;
+            UpperLocator = LeftUpperLocator;
+            BottomAngle = 45;
+            UpperAngle = 45;
+        }
+        else
+        {
+            BottomLocator = RightBottomLocator;
+            UpperLocator = RightUpperLocator;
+            BottomAngle = -45;
+            UpperAngle = -45;
+        }
+        
+        
+        if (Physics.Raycast(transform.position + Vector3.up, transform.forward * 4f, out hit, 4f))
+        {
+            
+           
+            if (hit.collider.CompareTag("DownStairs"))
+            {
+                LadderUI.SetActive(true);
+
+                if (RewirePlayer.GetButtonDown("Interact"))
+                {
+                    transform.position = BottomLocator.transform.position;
+                    transform.rotation = Quaternion.AngleAxis(BottomAngle, Vector3.up);
+                    _myCollider.isTrigger = true;
+                    anim.SetBool("Jump",true);
+                    
+                    PlayerEnabled = false;
+                    LadderUI.SetActive(false);
+                }
+                
+            }
+            else if(hit.collider.CompareTag("UpStairs"))
+            {
+                LadderUI.SetActive(true);
+
+                if (RewirePlayer.GetButtonDown("Interact"))
+                {
+                    transform.position = UpperLocator.transform.position;
+                    //print("hittttttLadder");
+                    transform.rotation = Quaternion.AngleAxis(UpperAngle, Vector3.up);
+                    _myCollider.isTrigger = true;
+                    anim.SetBool("Fall",true);
+                    
+                    PlayerEnabled = false;
+                    LadderUI.SetActive(false);
+                }   
+            }
+        }
+        else
+        {
+            LadderUI.SetActive(false);
+
+        }
+        
+        AnimatorStateInfo stateinfo = anim.GetCurrentAnimatorStateInfo(0);
+        //transform.position = _myAnim.rootPosition;
+
+
+        if (stateinfo.IsName("Jump") && (stateinfo.normalizedTime > 1.0f))
+        {
+            _myCollider.isTrigger = false;
+            if (anim.GetBool("Jump"))
+            {
+                transform.position = UpperLocator.transform.position;
+                _myCollider.transform.position = UpperLocator.transform.position;
+
+                PlayerEnabled = true;
+                anim.SetBool("Jump",false);
+            }
+               
+        }
+        else if (stateinfo.IsName("Fall") && (stateinfo.normalizedTime > 1.0f))
+        {
+            _myCollider.isTrigger = false;
+            if (anim.GetBool("Fall"))
+            {
+                transform.position = BottomLocator.transform.position;
+                _myCollider.transform.position = BottomLocator.transform.position;
+
+                PlayerEnabled = true;
+                anim.SetBool("Fall",false);
+            }
+               
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("LeftOrRight"))
+        {
+            IsLeft = !IsLeft;
+            print("!!!!!!!!!!");
+
+        }
+    }
 }

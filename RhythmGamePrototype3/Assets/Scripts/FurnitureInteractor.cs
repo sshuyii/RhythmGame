@@ -19,6 +19,7 @@ public class FurnitureInteractor : MonoBehaviour
    // public float RecoverRate;
     public GameObject Furniture;
     public GameObject Furniture2;
+    public bool readyPunch;
     public GameObject UI;
     private GameObject FullUI;
     private GameObject StrokeUI;
@@ -68,7 +69,7 @@ public class FurnitureInteractor : MonoBehaviour
     public int correctPlayers;
     public int perfectTimes;
     private int localPerfectTimes = 0;
-    public bool beatable = false;
+    //public bool beatable = false;
 
     
     private MeshRenderer rd;
@@ -108,7 +109,7 @@ public class FurnitureInteractor : MonoBehaviour
 
         spotLight = transform.Find("SpotLight").gameObject;
 
-        HeartBeating = UI.GetComponent<HeartBeating>();
+        //HeartBeating = UI.GetComponent<HeartBeating>();
             
         //originalScale = transform.localScale;
         scoring = transform.Find("Scoring").gameObject;
@@ -152,8 +153,8 @@ public class FurnitureInteractor : MonoBehaviour
             script.furnitureInteractor = null;
             playersInvolved.Remove(script);
             ResetPlayerScore(script);
-            rdFull.SetAlpha(0);
-            rdStroke.SetAlpha(0);
+            //rdFull.SetAlpha(0);
+            //rdStroke.SetAlpha(0);
 
             //_light.SetActive(false);
         }
@@ -191,8 +192,8 @@ public class FurnitureInteractor : MonoBehaviour
                     //rd.material = DemonstratingMat;
                     _anim.SetBool("IsMoving", true);           
                     _anim.SetBool("IsPlayer", false);
-                    rdFull.SetAlpha(1);
-                    rdStroke.SetAlpha(1);
+                    //rdFull.SetAlpha(1);
+                    //rdStroke.SetAlpha(1);
 
 
 
@@ -320,14 +321,25 @@ public class FurnitureInteractor : MonoBehaviour
         
         
         //Beat Demonstration
-        if (BeatLoop[BeatCount] && (Demonstrating || Activated))
+        if (BeatLoop[BeatCount])
         {
-            //transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
-            //Invoke("Recover", RecoverRate);            
-            //以上用animation取代
+            if (Demonstrating || Checking)
+            {
+                readyPunch = true;   
+            }
+           
             
-            _audioSource.Play();
+            if (Demonstrating || Activated)
+            {
+                
+                //transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
+                //Invoke("Recover", RecoverRate);            
+                //以上用animation取代
+                _audioSource.Play();
+                
+            } 
         }
+        
         
         //To next beat
         BeatCount = (BeatCount + 1) % BeatLoop.Count;
@@ -348,19 +360,31 @@ public class FurnitureInteractor : MonoBehaviour
         player.spotLight.SetActive(false);
     }
 
-    private bool toZero = false;
-    void Update()
+    //private bool toZero = false;
+    
+    /*void Update()
+    {
+        HeartBeatUI();
+    }
+
+    void HeartBeatUI()
     {
         if (BeatLoop[BeatCount] == true)
         {
-            //发声的这一拍，传给furnitureInteractor,UI可以开始震动
+            
             punchUI++;
+         
+            //发声的这一拍，传给furnitureInteractor,UI可以开始震动
+          
+            print("punchUI = " + punchUI);
  
         }
         else
         {
             punchUI = 0;
         }
+
+      
 
            
         if (punchUI == 1)
@@ -371,6 +395,8 @@ public class FurnitureInteractor : MonoBehaviour
         {
             punchUI = 0;
         }
-    }
+    }*/
+    
+    
     
 }
