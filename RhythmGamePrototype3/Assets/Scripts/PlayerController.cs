@@ -358,7 +358,7 @@ public class PlayerController : MonoBehaviour
     {
 
         RaycastHit hit;
-        Debug.DrawRay(transform.position + Vector3.up, transform.forward * 4f, Color.yellow);
+        Debug.DrawRay(transform.position + Vector3.up, transform.forward * 2f, Color.yellow);
 
 
         if (IsLeft == true)
@@ -377,7 +377,7 @@ public class PlayerController : MonoBehaviour
         }
         
         
-        if (Physics.Raycast(transform.position + Vector3.up, transform.forward * 4f, out hit, 4f))
+        if (Physics.Raycast(transform.position + Vector3.up, transform.forward * 2f, out hit, 2f))
         {
             
            
