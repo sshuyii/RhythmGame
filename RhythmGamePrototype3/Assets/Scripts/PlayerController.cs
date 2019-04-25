@@ -145,6 +145,11 @@ public class PlayerController : MonoBehaviour
     {
        
         LadderControl();
+
+        if (!PlayerEnabled)
+        {
+            return;
+        }
         //Reset Interaction signal
         //transform.Rotate(0, _rotate, 0,Space.World);
         //Vector3 target = new Vector3(0, _rotation, 0);
@@ -169,15 +174,14 @@ public class PlayerController : MonoBehaviour
 
 
         // Move the player
-        if (PlayerEnabled == true)
-        {
-            playerRb.MovePosition (transform.position + movement);
+
+        playerRb.MovePosition (transform.position + movement);
             
-            if (!(x == 0 && z == 0))
-            {
-                transform.rotation = Quaternion.LookRotation(movement);
-            }
+        if (!(x == 0 && z == 0))
+        {
+            transform.rotation = Quaternion.LookRotation(movement);
         }
+
         
         
       
@@ -397,7 +401,7 @@ public class PlayerController : MonoBehaviour
                 }
                 
             }
-            else if(hit.collider.CompareTag("UpStairs"))
+            else if (hit.collider.CompareTag("UpStairs"))
             {
                 LadderUI.SetActive(true);
 
@@ -452,12 +456,21 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("LeftOrRight"))
+        {
+            IsLeft = false;
+            print("IsRight");
+        }
+    }
+
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("LeftOrRight"))
         {
-            IsLeft = !IsLeft;
-            print("!!!!!!!!!!");
+            IsLeft = true;
+            print("IsLeft");
 
         }
     }
