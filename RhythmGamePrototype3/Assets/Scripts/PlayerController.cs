@@ -244,6 +244,8 @@ public class PlayerController : MonoBehaviour
         //Interaction
         if (RewirePlayer.GetButtonDown("Interact"))
         {            
+            
+            Tinylytics.AnalyticsManager.LogCustomMetric("PlayerHitButtonBeatCount",furnitureInteractor.BeatCount.ToString());
             if (beatable && !alreadybeat)
             {
                //transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
