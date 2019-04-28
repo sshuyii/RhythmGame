@@ -201,15 +201,7 @@ public class FurnitureInteractor : MonoBehaviour
                         rdFull.SetAlpha(1);
                         rdStroke.SetAlpha(1);
                     //}
-                  
-
-
-
-
-                }
-                else
-                {
-                    //rd.material = RestingMat;
+                  print("is Resting!!!!!!!!" + Demonstrating);
                 }
             }
             else if (Demonstrating)
