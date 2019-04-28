@@ -1441,7 +1441,7 @@ GameObject:
   - component: {fileID: 125044698}
   - component: {fileID: 125044700}
   - component: {fileID: 125044699}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Straight_01 (82)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2162,6 +2162,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnitureInteractor: {fileID: 1169623184}
   FurnitureName: Box
+--- !u!1 &221957012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 221957013}
+  - component: {fileID: 221957014}
+  m_Layer: 0
+  m_Name: room6 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &221957013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221957012}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6, y: -4.95, z: -2.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1547068089}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &221957014
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221957012}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 0.8384269, g: 0.6096476, b: 0.9433962, a: 1}
+  m_Intensity: 2
+  m_Range: 2.5916023
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 311
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &228223022
 GameObject:
   m_ObjectHideFlags: 0
@@ -3215,7 +3284,7 @@ GameObject:
   - component: {fileID: 378329461}
   - component: {fileID: 378329463}
   - component: {fileID: 378329462}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_FlowerPatch_01 (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3745,6 +3814,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7884338294829880361}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &459346158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 459346159}
+  - component: {fileID: 459346160}
+  m_Layer: 0
+  m_Name: room7 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &459346159
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459346158}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.43, y: -4.83, z: -3.71}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1547068089}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &459346160
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459346158}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 0.95759976, b: 0.5137255, a: 1}
+  m_Intensity: 8
+  m_Range: 4.263077
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 0.45
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 311
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &473796262
 GameObject:
   m_ObjectHideFlags: 0
@@ -3756,7 +3894,7 @@ GameObject:
   - component: {fileID: 473796263}
   - component: {fileID: 473796265}
   - component: {fileID: 473796264}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_Patch_04 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4418,7 +4556,7 @@ GameObject:
   - component: {fileID: 494833894}
   - component: {fileID: 494833896}
   - component: {fileID: 494833895}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4801,22 +4939,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: 0219550f6784648269574cd98393f70c, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: 0219550f6784648269574cd98393f70c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 13700000, guid: 0219550f6784648269574cd98393f70c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e2bdfdf3950fc42829e91d44355296fc, type: 2}
-    - target: {fileID: 13700000, guid: 0219550f6784648269574cd98393f70c, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: e2bdfdf3950fc42829e91d44355296fc, type: 2}
     - target: {fileID: 400050, guid: 0219550f6784648269574cd98393f70c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4861,6 +4983,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 0219550f6784648269574cd98393f70c, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 0219550f6784648269574cd98393f70c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 0219550f6784648269574cd98393f70c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e2bdfdf3950fc42829e91d44355296fc, type: 2}
+    - target: {fileID: 13700000, guid: 0219550f6784648269574cd98393f70c, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e2bdfdf3950fc42829e91d44355296fc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0219550f6784648269574cd98393f70c, type: 3}
 --- !u!4 &518052360 stripped
@@ -4892,7 +5030,7 @@ GameObject:
   - component: {fileID: 530674448}
   - component: {fileID: 530674450}
   - component: {fileID: 530674449}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Driveway_Wide_01 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5120,6 +5258,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544318354}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &565440801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565440802}
+  - component: {fileID: 565440803}
+  m_Layer: 0
+  m_Name: room5 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &565440802
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565440801}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.229, y: -6.072, z: -2.24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1547068089}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &565440803
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565440801}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 0.85330176, b: 0.5990566, a: 1}
+  m_Intensity: 4
+  m_Range: 1.6830387
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 311
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0.1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &565989103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5939,6 +6146,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 641718348}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &646728194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 646728195}
+  - component: {fileID: 646728196}
+  m_Layer: 0
+  m_Name: room5 (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &646728195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646728194}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.26, y: -6.76, z: -9.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1547068089}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &646728196
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646728194}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 0.76161444, g: 0.8628058, b: 0.990566, a: 1}
+  m_Intensity: 2
+  m_Range: 9.830316
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 311
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0.1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &648927486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6195,7 +6471,7 @@ GameObject:
   - component: {fileID: 660461312}
   - component: {fileID: 660461314}
   - component: {fileID: 660461313}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_FlowerPatch_03 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6347,9 +6623,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 6db1cae809cfa4d49aa557887c926282, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 6db1cae809cfa4d49aa557887c926282, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6db1cae809cfa4d49aa557887c926282, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 6db1cae809cfa4d49aa557887c926282, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 6db1cae809cfa4d49aa557887c926282, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 6db1cae809cfa4d49aa557887c926282, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6867,7 +7159,7 @@ GameObject:
   - component: {fileID: 687195703}
   - component: {fileID: 687195704}
   m_Layer: 0
-  m_Name: Room2Light
+  m_Name: room2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6881,11 +7173,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687195702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.75, y: 1.15, z: 0}
+  m_LocalPosition: {x: 1.94, y: 1.17, z: -1.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1547068089}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &687195704
 Light:
@@ -6898,25 +7190,25 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 0.90363693, b: 0.514151, a: 1}
-  m_Intensity: 2.5
-  m_Range: 10
+  m_Intensity: 6
+  m_Range: 7.271641
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.45
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 311
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
@@ -7207,6 +7499,75 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &737580309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 737580310}
+  - component: {fileID: 737580311}
+  m_Layer: 0
+  m_Name: room5 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &737580310
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737580309}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.35, y: -6.42, z: -6.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1547068089}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &737580311
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737580309}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 0.76161444, g: 0.8628058, b: 0.990566, a: 1}
+  m_Intensity: 5
+  m_Range: 1.4440765
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 311
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0.1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &745110579
 GameObject:
   m_ObjectHideFlags: 0
@@ -9007,6 +9368,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 859512173}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &859512198
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859512174}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 35.892567, y: 111.42985, z: 9.440291}
+  m_Center: {x: -136.62943, y: 49.28518, z: -98.01252}
 --- !u!65 &859512199
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9664,7 +10038,7 @@ Transform:
   m_LocalScale: {x: 0.39194, y: 0.39194, z: 0.39194}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &898559206
 PrefabInstance:
@@ -9844,7 +10218,7 @@ GameObject:
   - component: {fileID: 907274490}
   - component: {fileID: 907274491}
   m_Layer: 0
-  m_Name: Room2Light (2)
+  m_Name: room1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9858,11 +10232,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907274489}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.9, y: 2.2, z: 0}
+  m_LocalPosition: {x: -7.74, y: 0.12, z: -0.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1547068089}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &907274491
 Light:
@@ -9874,26 +10248,26 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.9716981, g: 0.85618705, b: 0.3987629, a: 1}
-  m_Intensity: 2.5
-  m_Range: 12.800204
+  m_Color: {r: 0.972549, g: 0.7489222, b: 0.40000004, a: 1}
+  m_Intensity: 2
+  m_Range: 8.424959
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.45
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 311
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
@@ -9934,117 +10308,6 @@ Transform:
   - {fileID: 1015371334}
   m_Father: {fileID: 1973579332}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &917690088
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 917690092}
-  - component: {fileID: 917690091}
-  - component: {fileID: 917690090}
-  - component: {fileID: 917690089}
-  m_Layer: 0
-  m_Name: Light Probe Group debug
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!108 &917690089
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917690088}
-  m_Enabled: 1
-  serializedVersion: 8
-  m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
-  m_Range: 15.237716
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!259 &917690090
-LightProbeProxyVolume:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917690088}
-  m_Enabled: 1
-  m_BoundingBoxMode: 0
-  m_ResolutionX: 2
-  m_ResolutionY: 2
-  m_ResolutionZ: 2
-  m_ResolutionProbesPerUnit: 0.25
-  m_BoundingBoxSize: {x: Infinity, y: Infinity, z: Infinity}
-  m_BoundingBoxOrigin: {x: 0, y: 0, z: 0}
-  m_ResolutionMode: 0
-  m_ProbePositionMode: 0
-  m_RefreshMode: 0
-  m_QualityMode: 1
---- !u!220 &917690091
-LightProbeGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917690088}
-  m_Enabled: 1
-  m_SourcePositions:
-  - {x: 1, y: 1, z: 2.409443}
-  - {x: 7.7527924, y: 1, z: -0.38078117}
-  - {x: 8.000053, y: 0.8548374, z: 0.30257988}
-  - {x: 8.451204, y: 0.82775116, z: -1}
-  - {x: -1.5371838, y: 1, z: 0.0013656616}
-  - {x: -10.541441, y: 1, z: 0.11387062}
-  - {x: -0.37864208, y: -1, z: -2.008213}
-  - {x: -11.028706, y: 0.8710346, z: -0.86610985}
-  - {x: -14.86, y: -4.09, z: 14.747122}
-  - {x: -14.86, y: -4.09, z: 2.6490955}
-  - {x: 5.3035116, y: -4.09, z: 3.5712585}
-  m_Dering: 0
---- !u!4 &917690092
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917690088}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.86, y: 4.09, z: -26.38}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &928187561
 PrefabInstance:
@@ -10487,6 +10750,75 @@ Transform:
   m_Father: {fileID: 1973579332}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &956441874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 956441875}
+  - component: {fileID: 956441876}
+  m_Layer: 0
+  m_Name: room3 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &956441875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956441874}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.65, y: -1, z: 2.41}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1547068089}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &956441876
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956441874}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 3.4878407
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 311
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &964782595
 GameObject:
   m_ObjectHideFlags: 0
@@ -10627,7 +10959,7 @@ GameObject:
   - component: {fileID: 973160891}
   - component: {fileID: 973160892}
   m_Layer: 0
-  m_Name: Room2Light (5)
+  m_Name: room6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10641,11 +10973,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973160890}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.9, y: -4.3, z: -2}
+  m_LocalPosition: {x: 5.76, y: -4.83, z: -4.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1547068089}
-  m_RootOrder: 5
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &973160892
 Light:
@@ -10657,9 +10989,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 1, g: 0.90363693, b: 0.514151, a: 1}
-  m_Intensity: 2.5
-  m_Range: 10
+  m_Color: {r: 0.85805064, g: 0.6309185, b: 0.9622642, a: 1}
+  m_Intensity: 5
+  m_Range: 6.9509487
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -10673,10 +11005,10 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 311
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
@@ -10836,6 +11168,10 @@ PrefabInstance:
     - target: {fileID: 1815738350452144, guid: 62c25fd7e40fe9c43b52f6419a16e41e, type: 3}
       propertyPath: m_Name
       value: SM_Env_Tree_Tall_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815738350452144, guid: 62c25fd7e40fe9c43b52f6419a16e41e, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4759760504599730, guid: 62c25fd7e40fe9c43b52f6419a16e41e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11099,7 +11435,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.9622642, g: 0.94592386, b: 0.83971167, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 0.5
   m_Range: 47
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -11117,7 +11453,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 512
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 3.65, y: 3.58}
@@ -11280,6 +11616,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1022581469}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1032509632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1032509633}
+  - component: {fileID: 1032509634}
+  m_Layer: 0
+  m_Name: room7 (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1032509633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032509632}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.96, y: -6.08, z: -1.66}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1547068089}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &1032509634
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032509632}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 0.95759976, b: 0.5137255, a: 1}
+  m_Intensity: 6
+  m_Range: 3.1922855
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 0.45
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 311
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &1036160075
 GameObject:
   m_ObjectHideFlags: 0
@@ -11668,7 +12073,7 @@ GameObject:
   - component: {fileID: 1079815258}
   - component: {fileID: 1079815259}
   m_Layer: 0
-  m_Name: Room2Light (6)
+  m_Name: room7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11682,11 +12087,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079815257}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.1, y: -5.2, z: -5.9}
+  m_LocalPosition: {x: 13.32, y: -4.02, z: -7.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1547068089}
-  m_RootOrder: 6
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1079815259
 Light:
@@ -11698,16 +12103,16 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 1, g: 0.90363693, b: 0.514151, a: 1}
-  m_Intensity: 2.5
-  m_Range: 20.806114
+  m_Color: {r: 1, g: 0.95759976, b: 0.5137255, a: 1}
+  m_Intensity: 8
+  m_Range: 9.336208
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.45
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -11717,7 +12122,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 311
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
@@ -11970,6 +12375,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Fence_Wood_Gate_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1195577681424524, guid: f7b5a8a75c5a0d14498d2fcb102d7a91, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4806483955316456, guid: f7b5a8a75c5a0d14498d2fcb102d7a91, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.26
@@ -12026,6 +12435,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1325938307613828, guid: f7b5a8a75c5a0d14498d2fcb102d7a91, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7b5a8a75c5a0d14498d2fcb102d7a91, type: 3}
 --- !u!4 &1113627402 stripped
@@ -12076,7 +12489,7 @@ GameObject:
   - component: {fileID: 1150276498}
   - component: {fileID: 1150276500}
   - component: {fileID: 1150276499}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Driveway_Wide_01 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12165,7 +12578,7 @@ GameObject:
   - component: {fileID: 1173288668}
   - component: {fileID: 1173288669}
   m_Layer: 0
-  m_Name: Room2Light (4)
+  m_Name: room4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12179,11 +12592,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173288667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11, y: -2.6, z: -5.8}
+  m_LocalPosition: {x: -10.4, y: -2.48, z: -6.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1547068089}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1173288669
 Light:
@@ -12196,25 +12609,25 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.9811321, g: 0.66180134, b: 0.80347633, a: 1}
-  m_Intensity: 8
-  m_Range: 10
+  m_Intensity: 4
+  m_Range: 12.857082
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.45
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 311
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
@@ -12242,6 +12655,75 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0000011, y: 2.1047068, z: 0.78489524}
   m_Center: {x: 0.000005722687, y: 0.9819258, z: -2.1426334}
+--- !u!1 &1180713476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1180713477}
+  - component: {fileID: 1180713478}
+  m_Layer: 0
+  m_Name: lamp (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1180713477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180713476}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 16.767284, y: -2.81, z: 15.55}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1547068089}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!108 &1180713478
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180713476}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 0.9433962, g: 0.7199865, b: 0.29814878, a: 1}
+  m_Intensity: 5
+  m_Range: 5.403755
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &1207293603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12466,7 +12948,7 @@ GameObject:
   - component: {fileID: 1221606435}
   - component: {fileID: 1221606437}
   - component: {fileID: 1221606436}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12543,7 +13025,7 @@ GameObject:
   - component: {fileID: 1229329844}
   - component: {fileID: 1229329845}
   m_Layer: 0
-  m_Name: Room2Light (3)
+  m_Name: room5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12557,11 +13039,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229329843}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1, y: -3.3, z: -5.6}
+  m_LocalPosition: {x: -2.14, y: -3.81, z: -5.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1547068089}
-  m_RootOrder: 3
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1229329845
 Light:
@@ -12575,24 +13057,24 @@ Light:
   m_Type: 2
   m_Color: {r: 0.76161444, g: 0.8628058, b: 0.990566, a: 1}
   m_Intensity: 4
-  m_Range: 10
+  m_Range: 8.015125
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.45
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 311
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
@@ -12651,7 +13133,7 @@ PrefabInstance:
     - target: {fileID: 1221666762182438043, guid: a14bc122cf280054aa40de46bc93c00a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1221666762182438043, guid: a14bc122cf280054aa40de46bc93c00a,
         type: 3}
@@ -13627,6 +14109,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1316568085}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1319834544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1319834545}
+  - component: {fileID: 1319834546}
+  m_Layer: 0
+  m_Name: lamp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1319834545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319834544}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 15.73, y: -3.03, z: 17.55}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1547068089}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!108 &1319834546
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319834544}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 0
+  m_Color: {r: 0.9433962, g: 0.7199865, b: 0.29814878, a: 1}
+  m_Intensity: 20
+  m_Range: 7.841659
+  m_SpotAngle: 42.398582
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!95 &1320450750
 Animator:
   serializedVersion: 3
@@ -14756,7 +15307,7 @@ GameObject:
   - component: {fileID: 1419694872}
   - component: {fileID: 1419694874}
   - component: {fileID: 1419694873}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_01 (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14832,6 +15383,10 @@ PrefabInstance:
     - target: {fileID: 1785893213695900, guid: 116907b4f7d295f4fa7e1791ecabd34d, type: 3}
       propertyPath: m_Name
       value: SM_Env_Bush_04 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1785893213695900, guid: 116907b4f7d295f4fa7e1791ecabd34d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4012260304094068, guid: 116907b4f7d295f4fa7e1791ecabd34d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15952,7 +16507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1547068089}
   m_Layer: 0
-  m_Name: RoomLights
+  m_Name: Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15969,15 +16524,28 @@ Transform:
   m_LocalPosition: {x: 13.252717, y: 1.95059, z: -22.77954}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 687195703}
-  - {fileID: 1659593571}
   - {fileID: 907274490}
-  - {fileID: 1229329844}
+  - {fileID: 1972904975}
+  - {fileID: 687195703}
+  - {fileID: 1771152326}
+  - {fileID: 1659593571}
+  - {fileID: 956441875}
   - {fileID: 1173288668}
+  - {fileID: 1971257465}
+  - {fileID: 1752936870}
+  - {fileID: 1229329844}
+  - {fileID: 565440802}
+  - {fileID: 737580310}
+  - {fileID: 646728195}
   - {fileID: 973160891}
+  - {fileID: 221957013}
   - {fileID: 1079815258}
+  - {fileID: 1319834545}
+  - {fileID: 1180713477}
+  - {fileID: 459346159}
+  - {fileID: 1032509633}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1549256112
 GameObject:
@@ -17103,7 +17671,7 @@ GameObject:
   - component: {fileID: 1659593571}
   - component: {fileID: 1659593572}
   m_Layer: 0
-  m_Name: Room2Light (1)
+  m_Name: room3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17117,11 +17685,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659593570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.94, y: 1.15, z: 0}
+  m_LocalPosition: {x: 9.39, y: 2.64, z: -2.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1547068089}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1659593572
 Light:
@@ -17134,25 +17702,25 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3
-  m_Range: 10
+  m_Intensity: 10
+  m_Range: 7.9098263
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.45
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 311
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
@@ -17372,7 +17940,7 @@ GameObject:
   - component: {fileID: 1681776926}
   - component: {fileID: 1681776928}
   - component: {fileID: 1681776927}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18361,6 +18929,75 @@ Transform:
   m_Father: {fileID: 1046188148}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1752936869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1752936870}
+  - component: {fileID: 1752936871}
+  m_Layer: 0
+  m_Name: room4 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1752936870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752936869}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.82, y: -5.61, z: -3.31}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1547068089}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &1752936871
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752936869}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 0.9811321, g: 0.66180134, b: 0.80347633, a: 1}
+  m_Intensity: 2
+  m_Range: 7.037384
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 311
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &1754028487 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1024412646188886, guid: 970ca55d54ebea74497a921026514966,
@@ -18528,6 +19165,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768746049}
   m_CullTransparentMesh: 0
+--- !u!1 &1771152325
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1771152326}
+  - component: {fileID: 1771152327}
+  m_Layer: 0
+  m_Name: room2 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1771152326
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771152325}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.94, y: 0.58, z: 0.84}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1547068089}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &1771152327
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771152325}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 0.90363693, b: 0.514151, a: 1}
+  m_Intensity: 2
+  m_Range: 4.5820045
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 0.45
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 311
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &1774135901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18707,7 +19413,7 @@ GameObject:
   - component: {fileID: 1782709600}
   - component: {fileID: 1782709602}
   - component: {fileID: 1782709601}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_FlowerPatch_01 (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18954,6 +19660,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 781decb4dbb4972459f26ddcb0488b5d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 781decb4dbb4972459f26ddcb0488b5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 49.8
@@ -19093,6 +19803,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1832558966}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1840338735
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1771758747868782, guid: d75df63a95f35384ab17add13dd7e3f0, type: 3}
+      propertyPath: m_Name
+      value: SM_Prop_Lamp_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843091572788790, guid: d75df63a95f35384ab17add13dd7e3f0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843091572788790, guid: d75df63a95f35384ab17add13dd7e3f0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843091572788790, guid: d75df63a95f35384ab17add13dd7e3f0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -22.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843091572788790, guid: d75df63a95f35384ab17add13dd7e3f0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843091572788790, guid: d75df63a95f35384ab17add13dd7e3f0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843091572788790, guid: d75df63a95f35384ab17add13dd7e3f0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843091572788790, guid: d75df63a95f35384ab17add13dd7e3f0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843091572788790, guid: d75df63a95f35384ab17add13dd7e3f0, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843091572788790, guid: d75df63a95f35384ab17add13dd7e3f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843091572788790, guid: d75df63a95f35384ab17add13dd7e3f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843091572788790, guid: d75df63a95f35384ab17add13dd7e3f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843091572788790, guid: d75df63a95f35384ab17add13dd7e3f0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843091572788790, guid: d75df63a95f35384ab17add13dd7e3f0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843091572788790, guid: d75df63a95f35384ab17add13dd7e3f0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 23751742802129878, guid: d75df63a95f35384ab17add13dd7e3f0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 465b43787f0dc5a4f8692f074f54c897, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d75df63a95f35384ab17add13dd7e3f0, type: 3}
 --- !u!65 &1868429014 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 6500912616694139267, guid: c8581fa22a449d74e94490386dee7616,
@@ -19766,7 +20550,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917227729}
   m_LocalRotation: {x: 0.7051448, y: 0.05263741, z: 0.052637476, w: 0.705145}
-  m_LocalPosition: {x: 19.93, y: 11.23, z: -38.4}
+  m_LocalPosition: {x: 20.19, y: 9.34, z: -38.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1489869086}
@@ -19784,8 +20568,8 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 0.98188716, b: 0.4198113, a: 1}
   m_Intensity: 20
-  m_Range: 6.7415137
-  m_SpotAngle: 45.531303
+  m_Range: 5.6066995
+  m_SpotAngle: 57.07809
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -19798,7 +20582,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -20272,6 +21056,144 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7480205394733985843}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1971257464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1971257465}
+  - component: {fileID: 1971257466}
+  m_Layer: 0
+  m_Name: room4 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1971257465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971257464}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.36, y: -5.74, z: -7.49}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1547068089}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &1971257466
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971257464}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 0.9811321, g: 0.66180134, b: 0.80347633, a: 1}
+  m_Intensity: 3
+  m_Range: 1.5565529
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 311
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!1 &1972904974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1972904975}
+  - component: {fileID: 1972904976}
+  m_Layer: 0
+  m_Name: room1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1972904975
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972904974}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.98, y: 0.12, z: 0.24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1547068089}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &1972904976
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972904974}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 0.972549, g: 0.8156971, b: 0.40000004, a: 1}
+  m_Intensity: 2
+  m_Range: 3.8672047
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 311
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &1973579331
 GameObject:
   m_ObjectHideFlags: 0
@@ -21541,7 +22463,7 @@ GameObject:
   - component: {fileID: 2098454720}
   - component: {fileID: 2098454722}
   - component: {fileID: 2098454721}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_SpeedBump_01 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22279,7 +23201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1013460772928151284}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: house_environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22297,7 +23219,7 @@ GameObject:
   - component: {fileID: 1017754591361977039}
   - component: {fileID: 1038323284432842027}
   - component: {fileID: 1028178245111634971}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Streetlamp_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22315,7 +23237,7 @@ GameObject:
   - component: {fileID: 1017483822859619054}
   - component: {fileID: 1037888382236741368}
   - component: {fileID: 1027795954144545390}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Streetlamp_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22333,7 +23255,7 @@ GameObject:
   - component: {fileID: 1017498614378796389}
   - component: {fileID: 1037695966884591095}
   - component: {fileID: 1027793502965549231}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22351,7 +23273,7 @@ GameObject:
   - component: {fileID: 1017498615205581200}
   - component: {fileID: 1037695966570164482}
   - component: {fileID: 1027793503220960346}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22369,7 +23291,7 @@ GameObject:
   - component: {fileID: 1017498613106163692}
   - component: {fileID: 1037695966014594942}
   - component: {fileID: 1027793501956497958}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22387,7 +23309,7 @@ GameObject:
   - component: {fileID: 1017498613151473451}
   - component: {fileID: 1037695965942415289}
   - component: {fileID: 1027793502038115041}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22405,7 +23327,7 @@ GameObject:
   - component: {fileID: 1017603560041909501}
   - component: {fileID: 1037978626989119273}
   - component: {fileID: 1027483139229197675}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_Crossing_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22423,7 +23345,7 @@ GameObject:
   - component: {fileID: 1017603560151901126}
   - component: {fileID: 1037978627378788370}
   - component: {fileID: 1027483139071265360}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_Crossing_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22441,7 +23363,7 @@ GameObject:
   - component: {fileID: 1017336897676804259}
   - component: {fileID: 1037553643847096641}
   - component: {fileID: 1027180693516600657}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Gerneric_Grass_Patch_02 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22459,7 +23381,7 @@ GameObject:
   - component: {fileID: 1017336897115438741}
   - component: {fileID: 1037553643352565623}
   - component: {fileID: 1027180694077995879}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Gerneric_Grass_Patch_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22477,7 +23399,7 @@ GameObject:
   - component: {fileID: 1017727010872452917}
   - component: {fileID: 1037711997097548639}
   - component: {fileID: 1027211326922955015}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_Patch_04 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22495,7 +23417,7 @@ GameObject:
   - component: {fileID: 1017727011536612555}
   - component: {fileID: 1037711996717617313}
   - component: {fileID: 1027211326263055097}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_Patch_04 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22538,7 +23460,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014680733274734676}
   m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 37.2, y: 4.9, z: 1.1}
+  m_LocalPosition: {x: 35.39, y: 4.9, z: 2.91}
   m_LocalScale: {x: 4, y: 3, z: 4}
   m_Children: []
   m_Father: {fileID: 1013460772928151284}
@@ -26024,7 +26946,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2486236126046197367}
   m_LocalRotation: {x: 0.7010574, y: 0.09229592, z: 0.09229592, w: 0.7010574}
-  m_LocalPosition: {x: 8.55, y: 18.02, z: -23.69}
+  m_LocalPosition: {x: 10.21, y: 11.9, z: -23.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2486236126102231465}
@@ -26041,9 +26963,9 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 0.98188716, b: 0.4198113, a: 1}
-  m_Intensity: 20
-  m_Range: 12.325052
-  m_SpotAngle: 28.064074
+  m_Intensity: 7
+  m_Range: 4.866023
+  m_SpotAngle: 70.85849
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -26056,7 +26978,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -27196,7 +28118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2625523146434938889}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 6.87, y: 1.1, z: -19.57}
+  m_LocalPosition: {x: 6.46, y: -2.34, z: -19.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2625523147581652949}
@@ -27213,9 +28135,9 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 0.9811321, b: 0.41960785, a: 1}
-  m_Intensity: 30
-  m_Range: 6.7709365
-  m_SpotAngle: 40.12108
+  m_Intensity: 14
+  m_Range: 5.3914065
+  m_SpotAngle: 47.254654
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -27228,7 +28150,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -28748,7 +29670,7 @@ GameObject:
   - component: {fileID: 2994991482566317284}
   - component: {fileID: 2994991482566317287}
   - component: {fileID: 2994991482566317286}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28766,7 +29688,7 @@ GameObject:
   - component: {fileID: 2990797753140815192}
   - component: {fileID: 3019669691227566472}
   - component: {fileID: 3008937558277397252}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_FlowerPatch_03 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28784,7 +29706,7 @@ GameObject:
   - component: {fileID: 2990797753494049594}
   - component: {fileID: 3019669691121780714}
   - component: {fileID: 3008937558446353766}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_FlowerPatch_03 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28802,7 +29724,7 @@ GameObject:
   - component: {fileID: 2990797751519022635}
   - component: {fileID: 3019669690680826619}
   - component: {fileID: 3008937556673704055}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_FlowerPatch_03 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28820,7 +29742,7 @@ GameObject:
   - component: {fileID: 2999284488184244982}
   - component: {fileID: 3019318816337017222}
   - component: {fileID: 3009112611098742304}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Bus_SteeringW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28838,7 +29760,7 @@ GameObject:
   - component: {fileID: 2999230626648126001}
   - component: {fileID: 3019353100260671679}
   - component: {fileID: 3009809109243851711}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Phone_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28856,7 +29778,7 @@ GameObject:
   - component: {fileID: 2990457106210035679}
   - component: {fileID: 3019941087661825093}
   - component: {fileID: 3009267147261727697}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_LetterBox_01_Flag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28874,7 +29796,7 @@ GameObject:
   - component: {fileID: 2990738139623372874}
   - component: {fileID: 3019105443524526146}
   - component: {fileID: 3009327650251047080}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Tree_Tall_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28892,7 +29814,7 @@ GameObject:
   - component: {fileID: 2999254813860575004}
   - component: {fileID: 3019592882583249908}
   - component: {fileID: 3009280419500227656}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Bus_Door_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28910,7 +29832,7 @@ GameObject:
   - component: {fileID: 2990753994987213503}
   - component: {fileID: 3019580916268576061}
   - component: {fileID: 3009598193059113289}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Convertable_Wheel_fr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28928,7 +29850,7 @@ GameObject:
   - component: {fileID: 2999304495656421432}
   - component: {fileID: 3019766652876280686}
   - component: {fileID: 3009353335865510424}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Bus_Door_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28946,7 +29868,7 @@ GameObject:
   - component: {fileID: 2999094568588729567}
   - component: {fileID: 3019266787950538149}
   - component: {fileID: 3009522176244572787}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Corner_03 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28964,7 +29886,7 @@ GameObject:
   - component: {fileID: 2999094568128302780}
   - component: {fileID: 3019266789603459014}
   - component: {fileID: 3009522174708445200}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Corner_03 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28982,7 +29904,7 @@ GameObject:
   - component: {fileID: 2999094567891276303}
   - component: {fileID: 3019266788850623349}
   - component: {fileID: 3009522175473986723}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Corner_03 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29000,7 +29922,7 @@ GameObject:
   - component: {fileID: 2999146381514532843}
   - component: {fileID: 3019677089492615183}
   - component: {fileID: 3009534283789168959}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Streetlamp_02 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29018,7 +29940,7 @@ GameObject:
   - component: {fileID: 2999146381358668013}
   - component: {fileID: 3019677089336770313}
   - component: {fileID: 3009534283934502457}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Streetlamp_02 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29036,7 +29958,7 @@ GameObject:
   - component: {fileID: 2999146381432790186}
   - component: {fileID: 3019677089276541774}
   - component: {fileID: 3009534283875191422}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Streetlamp_02 (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29054,7 +29976,7 @@ GameObject:
   - component: {fileID: 2999146381776891649}
   - component: {fileID: 3019677089217382629}
   - component: {fileID: 3009534284051200469}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Streetlamp_02 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29072,7 +29994,7 @@ GameObject:
   - component: {fileID: 2999146381658057977}
   - component: {fileID: 3019677088965053213}
   - component: {fileID: 3009534284167838253}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Streetlamp_02 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29090,7 +30012,7 @@ GameObject:
   - component: {fileID: 2999146381155870141}
   - component: {fileID: 3019677089536410201}
   - component: {fileID: 3009534283598476137}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Streetlamp_02 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29108,7 +30030,7 @@ GameObject:
   - component: {fileID: 2999146380261446242}
   - component: {fileID: 3019677088239351174}
   - component: {fileID: 3009534282905371830}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Streetlamp_02 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29126,7 +30048,7 @@ GameObject:
   - component: {fileID: 2999146380549431778}
   - component: {fileID: 3019677087990121990}
   - component: {fileID: 3009534283124750134}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Streetlamp_02 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29144,7 +30066,7 @@ GameObject:
   - component: {fileID: 2999146379967594268}
   - component: {fileID: 3019677088884480248}
   - component: {fileID: 3009534282106628552}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Streetlamp_02 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29162,7 +30084,7 @@ GameObject:
   - component: {fileID: 2999146380193414614}
   - component: {fileID: 3019677088573954610}
   - component: {fileID: 3009534282434423554}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Streetlamp_02 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29180,7 +30102,7 @@ GameObject:
   - component: {fileID: 2999146380000478179}
   - component: {fileID: 3019677088515253255}
   - component: {fileID: 3009534282610595127}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Streetlamp_02 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29198,7 +30120,7 @@ GameObject:
   - component: {fileID: 2998840946467010420}
   - component: {fileID: 3019522996172174178}
   - component: {fileID: 3009432796957538292}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Streetlamp_01 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29216,7 +30138,7 @@ GameObject:
   - component: {fileID: 2998840947208458767}
   - component: {fileID: 3019522995295704601}
   - component: {fileID: 3009432796761297551}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Streetlamp_01 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29234,7 +30156,7 @@ GameObject:
   - component: {fileID: 2999069333667271194}
   - component: {fileID: 3019284963530772614}
   - component: {fileID: 3009439692420660030}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Bus_Wheel_fl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29252,7 +30174,7 @@ GameObject:
   - component: {fileID: 2990776346560346287}
   - component: {fileID: 3019491008131165301}
   - component: {fileID: 3008840733103800783}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Convertable_SteeringW
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29270,7 +30192,7 @@ GameObject:
   - component: {fileID: 2990794692565829594}
   - component: {fileID: 3019286191593865612}
   - component: {fileID: 3008975887187264138}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_LetterBox_02_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29288,7 +30210,7 @@ GameObject:
   - component: {fileID: 2999243388957398971}
   - component: {fileID: 3019301250249723289}
   - component: {fileID: 3009251118702413729}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Generic_TreeStump_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29306,7 +30228,7 @@ GameObject:
   - component: {fileID: 2999012757868872085}
   - component: {fileID: 3019224430167286447}
   - component: {fileID: 3009806753104234025}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Convertable_Wheel_rr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29324,7 +30246,7 @@ GameObject:
   - component: {fileID: 2990799787658246996}
   - component: {fileID: 3019309112411705304}
   - component: {fileID: 3009740525825383374}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Bus_Door_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29342,7 +30264,7 @@ GameObject:
   - component: {fileID: 2999137943403051533}
   - component: {fileID: 3019282541112239185}
   - component: {fileID: 3009305570182679077}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Driveway_Wide_01 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29360,7 +30282,7 @@ GameObject:
   - component: {fileID: 2999367738077584524}
   - component: {fileID: 3019570702238218748}
   - component: {fileID: 3009498440330045010}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Bus_Door_03_Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29378,7 +30300,7 @@ GameObject:
   - component: {fileID: 2990782515199083321}
   - component: {fileID: 3019931752243829071}
   - component: {fileID: 3009584721135539903}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_LetterBox_01_Door_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29396,7 +30318,7 @@ GameObject:
   - component: {fileID: 2990666824228042489}
   - component: {fileID: 3019535545456995793}
   - component: {fileID: 3009046770821025667}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_FlowerPatch_01 (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29414,7 +30336,7 @@ GameObject:
   - component: {fileID: 2990666824317065145}
   - component: {fileID: 3019535545614175377}
   - component: {fileID: 3009046770631864003}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_FlowerPatch_01 (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29432,7 +30354,7 @@ GameObject:
   - component: {fileID: 2990666825041697180}
   - component: {fileID: 3019535546741326516}
   - component: {fileID: 3009046769370489062}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_FlowerPatch_01 (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29450,7 +30372,7 @@ GameObject:
   - component: {fileID: 2990666825169691560}
   - component: {fileID: 3019535546935523456}
   - component: {fileID: 3009046769342503634}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_FlowerPatch_01 (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29468,7 +30390,7 @@ GameObject:
   - component: {fileID: 2999051783070005717}
   - component: {fileID: 3019753438667115909}
   - component: {fileID: 3008830105410537561}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Tree_02 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29486,7 +30408,7 @@ GameObject:
   - component: {fileID: 2999051785090846713}
   - component: {fileID: 3019753438258953129}
   - component: {fileID: 3008830106908753525}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Tree_02 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29504,7 +30426,7 @@ GameObject:
   - component: {fileID: 2990524257561937806}
   - component: {fileID: 3019157018936548306}
   - component: {fileID: 3009887879209523308}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Bus_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29522,7 +30444,7 @@ GameObject:
   - component: {fileID: 2998855089911178824}
   - component: {fileID: 3019755269738698726}
   - component: {fileID: 3008885441552954746}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Tree_01 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29540,7 +30462,7 @@ GameObject:
   - component: {fileID: 2998855090463449321}
   - component: {fileID: 3019755269205168455}
   - component: {fileID: 3008885442086876123}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Tree_01 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29558,7 +30480,7 @@ GameObject:
   - component: {fileID: 2999323088893074101}
   - component: {fileID: 3018865979715971663}
   - component: {fileID: 3008869858675156979}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Bush_03 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29576,7 +30498,7 @@ GameObject:
   - component: {fileID: 2999323089360862444}
   - component: {fileID: 3018865979332037654}
   - component: {fileID: 3008869858819703210}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Bush_03 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29594,7 +30516,7 @@ GameObject:
   - component: {fileID: 2999323087727777610}
   - component: {fileID: 3018865980962400176}
   - component: {fileID: 3008869857221110284}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Bush_03 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29612,7 +30534,7 @@ GameObject:
   - component: {fileID: 2999323087773330757}
   - component: {fileID: 3018865980969934271}
   - component: {fileID: 3008869857118932995}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Bush_03 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29630,7 +30552,7 @@ GameObject:
   - component: {fileID: 2999323088091994748}
   - component: {fileID: 3018865980517116550}
   - component: {fileID: 3008869857874077498}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Bush_03 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29648,7 +30570,7 @@ GameObject:
   - component: {fileID: 2999323088095763358}
   - component: {fileID: 3018865980529011556}
   - component: {fileID: 3008869857861854936}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Bush_03 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29666,7 +30588,7 @@ GameObject:
   - component: {fileID: 2999323088442303395}
   - component: {fileID: 3018865980300923737}
   - component: {fileID: 3008869858052153061}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Bush_03 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29684,7 +30606,7 @@ GameObject:
   - component: {fileID: 2999323088448335186}
   - component: {fileID: 3018865980311149992}
   - component: {fileID: 3008869858046119956}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Bush_03 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29702,7 +30624,7 @@ GameObject:
   - component: {fileID: 2990699065250479996}
   - component: {fileID: 3019030399383689826}
   - component: {fileID: 3009072825180203728}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Post_01 (67)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29720,7 +30642,7 @@ GameObject:
   - component: {fileID: 2990699065335773772}
   - component: {fileID: 3019030399300427602}
   - component: {fileID: 3009072825397096416}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Post_01 (78)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29738,7 +30660,7 @@ GameObject:
   - component: {fileID: 2990699065338590763}
   - component: {fileID: 3019030399304028981}
   - component: {fileID: 3009072825410790279}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Post_01 (75)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29756,7 +30678,7 @@ GameObject:
   - component: {fileID: 2990699065325389387}
   - component: {fileID: 3019030399324398421}
   - component: {fileID: 3009072825390420967}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Post_01 (72)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29774,7 +30696,7 @@ GameObject:
   - component: {fileID: 2990699065366098184}
   - component: {fileID: 3019030399263904790}
   - component: {fileID: 3009072825366504612}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Post_01 (77)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29792,7 +30714,7 @@ GameObject:
   - component: {fileID: 2990699064096057136}
   - component: {fileID: 3019030400544522798}
   - component: {fileID: 3009072826384954012}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Post_01 (68)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29810,7 +30732,7 @@ GameObject:
   - component: {fileID: 2990699064193999887}
   - component: {fileID: 3019030400441139473}
   - component: {fileID: 3009072826270167459}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Post_01 (71)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29828,7 +30750,7 @@ GameObject:
   - component: {fileID: 2990699064265478675}
   - component: {fileID: 3019030400378156813}
   - component: {fileID: 3009072826484148159}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Post_01 (76)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29846,7 +30768,7 @@ GameObject:
   - component: {fileID: 2990699064755509177}
   - component: {fileID: 3019030400969110183}
   - component: {fileID: 3009072825960301077}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Post_01 (70)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29864,7 +30786,7 @@ GameObject:
   - component: {fileID: 2990699064845234581}
   - component: {fileID: 3019030400857494667}
   - component: {fileID: 3009072825853813817}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Post_01 (69)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29882,7 +30804,7 @@ GameObject:
   - component: {fileID: 2990699064847475889}
   - component: {fileID: 3019030400859472303}
   - component: {fileID: 3009072825851900189}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Post_01 (73)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29900,7 +30822,7 @@ GameObject:
   - component: {fileID: 2990699064461266020}
   - component: {fileID: 3019030400707635578}
   - component: {fileID: 3009072825466345928}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Post_01 (65)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29918,7 +30840,7 @@ GameObject:
   - component: {fileID: 2990657674622119154}
   - component: {fileID: 3019770023849158604}
   - component: {fileID: 3009839027651106894}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Driveway_Wide_01 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29936,7 +30858,7 @@ GameObject:
   - component: {fileID: 2990684376976624151}
   - component: {fileID: 3019494224217036199}
   - component: {fileID: 3009429890362129685}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_SpeedBump_01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29954,7 +30876,7 @@ GameObject:
   - component: {fileID: 2999329654739054574}
   - component: {fileID: 3019250031955672014}
   - component: {fileID: 3008985196172805978}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Bus_Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29972,7 +30894,7 @@ GameObject:
   - component: {fileID: 2990615581741811956}
   - component: {fileID: 3018870396499853344}
   - component: {fileID: 3009377072377655134}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_LetterBox_02 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29990,7 +30912,7 @@ GameObject:
   - component: {fileID: 2999045853694857643}
   - component: {fileID: 3019159606814902629}
   - component: {fileID: 3009312097572264615}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Convertable_Wheel_fl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30008,7 +30930,7 @@ GameObject:
   - component: {fileID: 2999233133427035910}
   - component: {fileID: 3019267876324495666}
   - component: {fileID: 3009673051188709038}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_Crossing_02 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30026,7 +30948,7 @@ GameObject:
   - component: {fileID: 2999233132895636894}
   - component: {fileID: 3019267876864545706}
   - component: {fileID: 3009673050656916534}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_Crossing_02 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30044,7 +30966,7 @@ GameObject:
   - component: {fileID: 2999233132445467030}
   - component: {fileID: 3019267877890908066}
   - component: {fileID: 3009673052214904894}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_Crossing_02 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30062,7 +30984,7 @@ GameObject:
   - component: {fileID: 2999233131943780428}
   - component: {fileID: 3019267878345424504}
   - component: {fileID: 3009673051600857572}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_Crossing_02 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30080,7 +31002,7 @@ GameObject:
   - component: {fileID: 2999233132012456171}
   - component: {fileID: 3019267878281975519}
   - component: {fileID: 3009673051530068291}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_Crossing_02 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30098,7 +31020,7 @@ GameObject:
   - component: {fileID: 2999082354741534940}
   - component: {fileID: 3019364918452835898}
   - component: {fileID: 3009800445984181544}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Bus_Door_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30116,7 +31038,7 @@ GameObject:
   - component: {fileID: 2999335344684999482}
   - component: {fileID: 3019444779998575860}
   - component: {fileID: 3009646006625543530}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Sign_Stop_01 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30134,7 +31056,7 @@ GameObject:
   - component: {fileID: 2999335344441864397}
   - component: {fileID: 3019444779738656515}
   - component: {fileID: 3009646006902240925}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_Sign_Stop_01 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30152,7 +31074,7 @@ GameObject:
   - component: {fileID: 2998887521158786809}
   - component: {fileID: 3019227238962269803}
   - component: {fileID: 3009430843571712819}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (153)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30170,7 +31092,7 @@ GameObject:
   - component: {fileID: 2998887521222762116}
   - component: {fileID: 3019227238942342678}
   - component: {fileID: 3009430843532952398}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (240)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30188,7 +31110,7 @@ GameObject:
   - component: {fileID: 2998887520974793278}
   - component: {fileID: 3019227239180864172}
   - component: {fileID: 3009430843622602740}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (243)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30206,7 +31128,7 @@ GameObject:
   - component: {fileID: 2998887521037220884}
   - component: {fileID: 3019227239092100230}
   - component: {fileID: 3009430843718443486}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (156)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30224,7 +31146,7 @@ GameObject:
   - component: {fileID: 2998887521416109382}
   - component: {fileID: 3019227239286390228}
   - component: {fileID: 3009430843189657740}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (188)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30242,7 +31164,7 @@ GameObject:
   - component: {fileID: 2998887521250987811}
   - component: {fileID: 3019227239440363441}
   - component: {fileID: 3009430843362054889}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (189)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30260,7 +31182,7 @@ GameObject:
   - component: {fileID: 2998887521756138155}
   - component: {fileID: 3019227238402009657}
   - component: {fileID: 3009430844064864097}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (157)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30278,7 +31200,7 @@ GameObject:
   - component: {fileID: 2998887522019770244}
   - component: {fileID: 3019227238682074902}
   - component: {fileID: 3009430843792925262}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (199)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30296,7 +31218,7 @@ GameObject:
   - component: {fileID: 2998887521779262920}
   - component: {fileID: 3019227238911690074}
   - component: {fileID: 3009430843890759682}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (62)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30314,7 +31236,7 @@ GameObject:
   - component: {fileID: 2998887520110532711}
   - component: {fileID: 3019227237896993013}
   - component: {fileID: 3009430842490291629}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (197)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30332,7 +31254,7 @@ GameObject:
   - component: {fileID: 2998887519900835747}
   - component: {fileID: 3019227238106693425}
   - component: {fileID: 3009430842549060201}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (81)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30350,7 +31272,7 @@ GameObject:
   - component: {fileID: 2998887519898833648}
   - component: {fileID: 3019227238088241762}
   - component: {fileID: 3009430842576162618}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (152)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30368,7 +31290,7 @@ GameObject:
   - component: {fileID: 2998887519984549886}
   - component: {fileID: 3019227237989031788}
   - component: {fileID: 3009430842598531636}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (80)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30386,7 +31308,7 @@ GameObject:
   - component: {fileID: 2998887520326089793}
   - component: {fileID: 3019227238196419795}
   - component: {fileID: 3009430842131095947}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (190)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30404,7 +31326,7 @@ GameObject:
   - component: {fileID: 2998887520382150956}
   - component: {fileID: 3019227238168529342}
   - component: {fileID: 3009430842218755302}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (160)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30422,7 +31344,7 @@ GameObject:
   - component: {fileID: 2998887520265827321}
   - component: {fileID: 3019227238253532011}
   - component: {fileID: 3009430842343468595}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (196)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30440,7 +31362,7 @@ GameObject:
   - component: {fileID: 2998887520580229334}
   - component: {fileID: 3019227237427427396}
   - component: {fileID: 3009430842960119068}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (191)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30458,7 +31380,7 @@ GameObject:
   - component: {fileID: 2998887520509843974}
   - component: {fileID: 3019227237507775124}
   - component: {fileID: 3009430843155285964}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (161)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30476,7 +31398,7 @@ GameObject:
   - component: {fileID: 2998887520731965994}
   - component: {fileID: 3019227237780441784}
   - component: {fileID: 3009430842807416800}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Road_01 (154)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30494,7 +31416,7 @@ GameObject:
   - component: {fileID: 2998944510387300316}
   - component: {fileID: 3019511967331211910}
   - component: {fileID: 3009516624546467418}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Bus_Door_02_Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30512,7 +31434,7 @@ GameObject:
   - component: {fileID: 2990554165437743160}
   - component: {fileID: 3019524003189855866}
   - component: {fileID: 3009134578257987388}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Bush_02 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30530,7 +31452,7 @@ GameObject:
   - component: {fileID: 2990554166377667144}
   - component: {fileID: 3019524004384836618}
   - component: {fileID: 3009134579468705100}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Bush_02 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30548,7 +31470,7 @@ GameObject:
   - component: {fileID: 2990677547241875206}
   - component: {fileID: 3019888247361503336}
   - component: {fileID: 3009730199669500546}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Bus_Door_04_Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30566,7 +31488,7 @@ GameObject:
   - component: {fileID: 2990480936924266053}
   - component: {fileID: 3019886397266523983}
   - component: {fileID: 3009614158408338543}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Gerneric_Grass_Patch_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30584,7 +31506,7 @@ GameObject:
   - component: {fileID: 2999128055911271306}
   - component: {fileID: 3019588428283926852}
   - component: {fileID: 3009292970400933526}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Bus_Wheel_rl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30602,7 +31524,7 @@ GameObject:
   - component: {fileID: 2999106625088888958}
   - component: {fileID: 3019386334370846480}
   - component: {fileID: 3009060297221567756}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Bus_Wheel_rr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30620,7 +31542,7 @@ GameObject:
   - component: {fileID: 2998862729866119384}
   - component: {fileID: 3018971837263757116}
   - component: {fileID: 3009771231987729680}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Bush_04 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30638,7 +31560,7 @@ GameObject:
   - component: {fileID: 2998862730286020261}
   - component: {fileID: 3018971837817979201}
   - component: {fileID: 3009771231535610733}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Bush_04 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30656,7 +31578,7 @@ GameObject:
   - component: {fileID: 2998862730719733382}
   - component: {fileID: 3018971838259827042}
   - component: {fileID: 3009771233243867982}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Bush_04 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30674,7 +31596,7 @@ GameObject:
   - component: {fileID: 2998878293624090909}
   - component: {fileID: 3019448338112913671}
   - component: {fileID: 3009250748891179783}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Prop_LetterBox_01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30692,7 +31614,7 @@ GameObject:
   - component: {fileID: 2990583773501119888}
   - component: {fileID: 3019146967316279244}
   - component: {fileID: 3009565923237416824}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Tree_Tall_01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30710,7 +31632,7 @@ GameObject:
   - component: {fileID: 2990716669940047364}
   - component: {fileID: 3018859881945663970}
   - component: {fileID: 3009614554637514094}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Bus_Wheel_fr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30728,7 +31650,7 @@ GameObject:
   - component: {fileID: 2998841839399047075}
   - component: {fileID: 3019795239658886405}
   - component: {fileID: 3009482067079132497}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Straight_01 (76)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30746,7 +31668,7 @@ GameObject:
   - component: {fileID: 2998841839161293175}
   - component: {fileID: 3019795239561110481}
   - component: {fileID: 3009482066842928005}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Straight_01 (80)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30764,7 +31686,7 @@ GameObject:
   - component: {fileID: 2998841839541784107}
   - component: {fileID: 3019795239281529997}
   - component: {fileID: 3009482066701776089}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Straight_01 (74)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30782,7 +31704,7 @@ GameObject:
   - component: {fileID: 2998841838755617634}
   - component: {fileID: 3019795240227078596}
   - component: {fileID: 3009482066443559312}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Straight_01 (77)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30800,7 +31722,7 @@ GameObject:
   - component: {fileID: 2998841838717051861}
   - component: {fileID: 3019795240072657267}
   - component: {fileID: 3009482066414950695}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Straight_01 (79)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30818,7 +31740,7 @@ GameObject:
   - component: {fileID: 2998841839043182900}
   - component: {fileID: 3019795239973067666}
   - component: {fileID: 3009482066193742790}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Straight_01 (71)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30836,7 +31758,7 @@ GameObject:
   - component: {fileID: 2998841838904352300}
   - component: {fileID: 3019795239851525258}
   - component: {fileID: 3009482066063811806}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Straight_01 (69)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30854,7 +31776,7 @@ GameObject:
   - component: {fileID: 2998841840718110497}
   - component: {fileID: 3019795238297912711}
   - component: {fileID: 3009482067869803987}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Straight_01 (73)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30872,7 +31794,7 @@ GameObject:
   - component: {fileID: 2998841840532133416}
   - component: {fileID: 3019795238257560718}
   - component: {fileID: 3009482067691072730}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Straight_01 (81)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30890,7 +31812,7 @@ GameObject:
   - component: {fileID: 2998841840154139783}
   - component: {fileID: 3019795238937576993}
   - component: {fileID: 3009482067297314421}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Straight_01 (78)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30908,7 +31830,7 @@ GameObject:
   - component: {fileID: 2998841840072418262}
   - component: {fileID: 3019795238742227312}
   - component: {fileID: 3009482067240360228}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Fence_Wood_Straight_01 (75)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30926,7 +31848,7 @@ GameObject:
   - component: {fileID: 2990458878015467573}
   - component: {fileID: 3019163895584946281}
   - component: {fileID: 3009168000551547103}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Convertable_Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30944,7 +31866,7 @@ GameObject:
   - component: {fileID: 2990718160877917612}
   - component: {fileID: 3019393526169453432}
   - component: {fileID: 3009705461866531730}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_02 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30962,7 +31884,7 @@ GameObject:
   - component: {fileID: 2999009578073384829}
   - component: {fileID: 3019364879888383647}
   - component: {fileID: 3008851712289022607}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Gerneric_Grass_Patch_02 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30980,7 +31902,7 @@ GameObject:
   - component: {fileID: 2999009577501925783}
   - component: {fileID: 3019364879383967861}
   - component: {fileID: 3008851712864805989}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Gerneric_Grass_Patch_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30998,7 +31920,7 @@ GameObject:
   - component: {fileID: 2990495775427849917}
   - component: {fileID: 3019045694494375493}
   - component: {fileID: 3008938482930623153}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Convertable_Wheel_rl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31016,7 +31938,7 @@ GameObject:
   - component: {fileID: 2999245491041798299}
   - component: {fileID: 3019318583595640921}
   - component: {fileID: 3009764352529512503}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_01 (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31034,7 +31956,7 @@ GameObject:
   - component: {fileID: 2999245490946514539}
   - component: {fileID: 3019318583533911721}
   - component: {fileID: 3009764352620605127}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_01 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31052,7 +31974,7 @@ GameObject:
   - component: {fileID: 2999245491310997278}
   - component: {fileID: 3019318583319695324}
   - component: {fileID: 3009764352263856050}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_01 (154)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31070,7 +31992,7 @@ GameObject:
   - component: {fileID: 2999245491286475956}
   - component: {fileID: 3019318583329793142}
   - component: {fileID: 3009764352288371736}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_01 (124)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31088,7 +32010,7 @@ GameObject:
   - component: {fileID: 2999245491184197814}
   - component: {fileID: 3019318583234707572}
   - component: {fileID: 3009764352319508506}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_01 (64)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31106,7 +32028,7 @@ GameObject:
   - component: {fileID: 2999245491233658480}
   - component: {fileID: 3019318583250761394}
   - component: {fileID: 3009764352337520348}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_01 (209)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31124,7 +32046,7 @@ GameObject:
   - component: {fileID: 2999245490570009703}
   - component: {fileID: 3019318583123983525}
   - component: {fileID: 3009764352191671499}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_01 (123)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31142,7 +32064,7 @@ GameObject:
   - component: {fileID: 2999245490410229686}
   - component: {fileID: 3019318582997757812}
   - component: {fileID: 3009764352082493210}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_01 (162)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31160,7 +32082,7 @@ GameObject:
   - component: {fileID: 2999245490908438158}
   - component: {fileID: 3019318582917152332}
   - component: {fileID: 3009764351861108258}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_01 (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31178,7 +32100,7 @@ GameObject:
   - component: {fileID: 2999245490893399719}
   - component: {fileID: 3019318582936700517}
   - component: {fileID: 3009764351880861195}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_01 (157)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31196,7 +32118,7 @@ GameObject:
   - component: {fileID: 2999245490734362599}
   - component: {fileID: 3019318582742929189}
   - component: {fileID: 3009764351703998283}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_01 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31214,7 +32136,7 @@ GameObject:
   - component: {fileID: 2999245490713797897}
   - component: {fileID: 3019318582765487563}
   - component: {fileID: 3009764351716005285}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_01 (206)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31232,7 +32154,7 @@ GameObject:
   - component: {fileID: 2999245490748421877}
   - component: {fileID: 3019318582791722551}
   - component: {fileID: 3009764351752717913}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_01 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31250,7 +32172,7 @@ GameObject:
   - component: {fileID: 2999245491987627467}
   - component: {fileID: 3019318584575008009}
   - component: {fileID: 3009764351512382823}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_01 (76)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31268,7 +32190,7 @@ GameObject:
   - component: {fileID: 2999245492048832508}
   - component: {fileID: 3019318584595318590}
   - component: {fileID: 3009764351526147920}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_01 (125)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31286,7 +32208,7 @@ GameObject:
   - component: {fileID: 2999245491519225461}
   - component: {fileID: 3019318584107654839}
   - component: {fileID: 3009764350910746329}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_01 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31304,7 +32226,7 @@ GameObject:
   - component: {fileID: 2999245491983724775}
   - component: {fileID: 3019318583993339941}
   - component: {fileID: 3009764350790139979}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_01 (165)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31322,7 +32244,7 @@ GameObject:
   - component: {fileID: 2999245491876852284}
   - component: {fileID: 3019318583894987518}
   - component: {fileID: 3009764350817223312}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_01 (79)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31340,7 +32262,7 @@ GameObject:
   - component: {fileID: 2999245491912774598}
   - component: {fileID: 3019318583930794756}
   - component: {fileID: 3009764350853227370}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_01 (75)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31358,7 +32280,7 @@ GameObject:
   - component: {fileID: 2999245491801112011}
   - component: {fileID: 3019318583843233033}
   - component: {fileID: 3009764350637739367}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Sidewalk_Straight_01 (77)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31376,7 +32298,7 @@ GameObject:
   - component: {fileID: 2990910816891421886}
   - component: {fileID: 3019100341303015386}
   - component: {fileID: 3009250694375431788}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Bus_Door_01_Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31394,7 +32316,7 @@ GameObject:
   - component: {fileID: 2999332238830744001}
   - component: {fileID: 3018982161912482775}
   - component: {fileID: 3009591695225520103}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Veh_Convertable_01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31412,7 +32334,7 @@ GameObject:
   - component: {fileID: 2990794835462109766}
   - component: {fileID: 3019139708925741192}
   - component: {fileID: 3009463133698932788}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Bush_01 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31430,7 +32352,7 @@ GameObject:
   - component: {fileID: 2990794835417475157}
   - component: {fileID: 3019139708948093595}
   - component: {fileID: 3009463133722464807}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Bush_01 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31448,7 +32370,7 @@ GameObject:
   - component: {fileID: 2999172401054352652}
   - component: {fileID: 3019692519731690522}
   - component: {fileID: 3009276933052179418}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Tree_03_Framed (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31466,7 +32388,7 @@ GameObject:
   - component: {fileID: 2990784494905066143}
   - component: {fileID: 3019605763860823067}
   - component: {fileID: 3009169665268176501}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_FlowerPatch_02 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31484,7 +32406,7 @@ GameObject:
   - component: {fileID: 2990784493785605358}
   - component: {fileID: 3019605765022489194}
   - component: {fileID: 3009169666396827652}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_FlowerPatch_02 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31502,7 +32424,7 @@ GameObject:
   - component: {fileID: 2990784493346806249}
   - component: {fileID: 3019605765454014317}
   - component: {fileID: 3009169666759068931}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_FlowerPatch_02 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31520,7 +32442,7 @@ GameObject:
   - component: {fileID: 2990483777926400763}
   - component: {fileID: 3019535208687906335}
   - component: {fileID: 3009525962966045719}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_01 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31538,7 +32460,7 @@ GameObject:
   - component: {fileID: 2990483777911139061}
   - component: {fileID: 3019535208703168017}
   - component: {fileID: 3009525962980275225}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_01 (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31574,7 +32496,7 @@ GameObject:
   - component: {fileID: 2990483777795789868}
   - component: {fileID: 3019535208600416456}
   - component: {fileID: 3009525962869115584}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_01 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31628,7 +32550,7 @@ GameObject:
   - component: {fileID: 2990483777741426476}
   - component: {fileID: 3019535208939989960}
   - component: {fileID: 3009525963218194880}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_01 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31646,7 +32568,7 @@ GameObject:
   - component: {fileID: 2990483778437755000}
   - component: {fileID: 3019535208159777948}
   - component: {fileID: 3009525963511738004}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_01 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31664,7 +32586,7 @@ GameObject:
   - component: {fileID: 2990483778539525549}
   - component: {fileID: 3019535208125116745}
   - component: {fileID: 3009525963477060417}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_01 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31682,7 +32604,7 @@ GameObject:
   - component: {fileID: 2990483778357366252}
   - component: {fileID: 3019535208055613704}
   - component: {fileID: 3009525963399107328}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31700,7 +32622,7 @@ GameObject:
   - component: {fileID: 2990483778404196356}
   - component: {fileID: 3019535207992001760}
   - component: {fileID: 3009525963343970024}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_01 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31718,7 +32640,7 @@ GameObject:
   - component: {fileID: 2990483778216199088}
   - component: {fileID: 3019535208448436052}
   - component: {fileID: 3009525963790884188}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_01 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31736,7 +32658,7 @@ GameObject:
   - component: {fileID: 2990483776657328900}
   - component: {fileID: 3019535210007310304}
   - component: {fileID: 3009525964277126632}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_01 (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31772,7 +32694,7 @@ GameObject:
   - component: {fileID: 2990483776459007527}
   - component: {fileID: 3019535209937224387}
   - component: {fileID: 3009525964215384267}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_01 (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31790,7 +32712,7 @@ GameObject:
   - component: {fileID: 2990483777379223772}
   - component: {fileID: 3019535209218337848}
   - component: {fileID: 3009525964569237040}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_01 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31808,7 +32730,7 @@ GameObject:
   - component: {fileID: 2990483777383143952}
   - component: {fileID: 3019535209214394100}
   - component: {fileID: 3009525964566332668}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_01 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31826,7 +32748,7 @@ GameObject:
   - component: {fileID: 2990483777278970202}
   - component: {fileID: 3019535209117232574}
   - component: {fileID: 3009525964469114806}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_01 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31844,7 +32766,7 @@ GameObject:
   - component: {fileID: 2990483777354146081}
   - component: {fileID: 3019535209058829765}
   - component: {fileID: 3009525964409683917}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_01 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31862,7 +32784,7 @@ GameObject:
   - component: {fileID: 2990483777147425254}
   - component: {fileID: 3019535209517249794}
   - component: {fileID: 3009525964868144906}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_01 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31880,7 +32802,7 @@ GameObject:
   - component: {fileID: 2990483777169632796}
   - component: {fileID: 3019535209444674296}
   - component: {fileID: 3009525964795588848}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_01 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31898,7 +32820,7 @@ GameObject:
   - component: {fileID: 2990483777037976323}
   - component: {fileID: 3019535209307924455}
   - component: {fileID: 3009525964659875311}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_01 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31916,7 +32838,7 @@ GameObject:
   - component: {fileID: 2990734704553472796}
   - component: {fileID: 3019429840160327298}
   - component: {fileID: 3009432655348354082}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Gerneric_Grass_Patch_03 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31934,7 +32856,7 @@ GameObject:
   - component: {fileID: 2999222004749216242}
   - component: {fileID: 3019206457803068824}
   - component: {fileID: 3008882377876559808}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_Patch_04 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31952,7 +32874,7 @@ GameObject:
   - component: {fileID: 2999222005393092578}
   - component: {fileID: 3019206457427694472}
   - component: {fileID: 3008882377236812240}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_Patch_04 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31970,7 +32892,7 @@ GameObject:
   - component: {fileID: 2999222003770456606}
   - component: {fileID: 3019206456885085812}
   - component: {fileID: 3008882378855318572}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_Patch_04 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31988,7 +32910,7 @@ GameObject:
   - component: {fileID: 2999222003932341778}
   - component: {fileID: 3019206456472394360}
   - component: {fileID: 3008882378160691232}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SM_Env_Grass_Patch_04 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42574,7 +43496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4528044186783206, guid: 719f4e411de555545a26b81a3dbd9717, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.049498033
+      value: -0.233
       objectReference: {fileID: 0}
     - target: {fileID: 4528044186783206, guid: 719f4e411de555545a26b81a3dbd9717, type: 3}
       propertyPath: m_LocalPosition.y
@@ -42582,7 +43504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4528044186783206, guid: 719f4e411de555545a26b81a3dbd9717, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.55390084
+      value: -0.554
       objectReference: {fileID: 0}
     - target: {fileID: 4528044186783206, guid: 719f4e411de555545a26b81a3dbd9717, type: 3}
       propertyPath: m_LocalRotation.x
@@ -42882,20 +43804,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.117000006
       objectReference: {fileID: 0}
-    - target: {fileID: 4075493289773342488, guid: b863152e4e9fb4f4fb23e44ad7affd20,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 465b43787f0dc5a4f8692f074f54c897, type: 2}
-    - target: {fileID: 4075493289773342490, guid: b863152e4e9fb4f4fb23e44ad7affd20,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 465b43787f0dc5a4f8692f074f54c897, type: 2}
     - target: {fileID: 4075493289661664898, guid: b863152e4e9fb4f4fb23e44ad7affd20,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4075493289661664898, guid: b863152e4e9fb4f4fb23e44ad7affd20,
         type: 3}
@@ -42917,6 +43829,21 @@ PrefabInstance:
       propertyPath: m_SpotAngle
       value: 55.31354
       objectReference: {fileID: 0}
+    - target: {fileID: 4075493289661664899, guid: b863152e4e9fb4f4fb23e44ad7affd20,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075493289773342488, guid: b863152e4e9fb4f4fb23e44ad7affd20,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 465b43787f0dc5a4f8692f074f54c897, type: 2}
+    - target: {fileID: 4075493289773342490, guid: b863152e4e9fb4f4fb23e44ad7affd20,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 465b43787f0dc5a4f8692f074f54c897, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b863152e4e9fb4f4fb23e44ad7affd20, type: 3}
 --- !u!33 &4342489585234376334
@@ -43346,7 +44273,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3350265658189703953}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DemoPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43800,11 +44727,56 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 4289e2f11705448d5808b8c9cd59e98c, type: 3}
-    - target: {fileID: 6500912615366734449, guid: c8581fa22a449d74e94490386dee7616,
+    - target: {fileID: 6500912616695159111, guid: c8581fa22a449d74e94490386dee7616,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 465b43787f0dc5a4f8692f074f54c897, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500912616695159111, guid: c8581fa22a449d74e94490386dee7616,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.126
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500912616695159111, guid: c8581fa22a449d74e94490386dee7616,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500912616695159111, guid: c8581fa22a449d74e94490386dee7616,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500912616695159111, guid: c8581fa22a449d74e94490386dee7616,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500912616695159111, guid: c8581fa22a449d74e94490386dee7616,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500912616695159111, guid: c8581fa22a449d74e94490386dee7616,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500912616695159111, guid: c8581fa22a449d74e94490386dee7616,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500912616695159111, guid: c8581fa22a449d74e94490386dee7616,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500912616695159111, guid: c8581fa22a449d74e94490386dee7616,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.004
+      objectReference: {fileID: 0}
     - target: {fileID: 6500912616695159110, guid: c8581fa22a449d74e94490386dee7616,
         type: 3}
       propertyPath: m_IsActive
@@ -43818,8 +44790,23 @@ PrefabInstance:
     - target: {fileID: 6500912616695159112, guid: c8581fa22a449d74e94490386dee7616,
         type: 3}
       propertyPath: m_Intensity
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6500912616695159112, guid: c8581fa22a449d74e94490386dee7616,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500912616695159112, guid: c8581fa22a449d74e94490386dee7616,
+        type: 3}
+      propertyPath: m_SpotAngle
+      value: 39.79222
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500912615366734449, guid: c8581fa22a449d74e94490386dee7616,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 465b43787f0dc5a4f8692f074f54c897, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8581fa22a449d74e94490386dee7616, type: 3}
 --- !u!1001 &6854811958992818304
@@ -44412,7 +45399,7 @@ PrefabInstance:
     - target: {fileID: 7480205395242284915, guid: 40d25ee0d41d48c4087914de0027b694,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7480205395242284915, guid: 40d25ee0d41d48c4087914de0027b694,
         type: 3}
@@ -44497,7 +45484,12 @@ PrefabInstance:
     - target: {fileID: 7480205395242284812, guid: 40d25ee0d41d48c4087914de0027b694,
         type: 3}
       propertyPath: m_Intensity
-      value: 20
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480205395242284812, guid: 40d25ee0d41d48c4087914de0027b694,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40d25ee0d41d48c4087914de0027b694, type: 3}
@@ -47027,7 +48019,7 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 0.4545455, b: 0, a: 1}
-  m_Intensity: 25
+  m_Intensity: 17
   m_Range: 7.0121903
   m_SpotAngle: 24.13977
   m_CookieSize: 10
@@ -47042,7 +48034,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -47062,7 +48054,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7875143056599439660}
   m_LocalRotation: {x: 0.020502264, y: -0.7068095, z: 0.7068095, w: 0.020502264}
-  m_LocalPosition: {x: -0.03, y: 11.5, z: 0.05}
+  m_LocalPosition: {x: -0.03, y: 10, z: 0.05}
   m_LocalScale: {x: 0.12499999, y: 0.12500003, z: 0.12500006}
   m_Children:
   - {fileID: 1632419242534446732}
@@ -47146,16 +48138,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7884338293918850761, guid: d81352817977f07429f8dc0099743f58,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 465b43787f0dc5a4f8692f074f54c897, type: 2}
-    - target: {fileID: 7884338293918850763, guid: d81352817977f07429f8dc0099743f58,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 465b43787f0dc5a4f8692f074f54c897, type: 2}
     - target: {fileID: 7884338293265043125, guid: d81352817977f07429f8dc0099743f58,
         type: 3}
       propertyPath: _colliderForPlayer
@@ -47181,6 +48163,21 @@ PrefabInstance:
       propertyPath: m_SpotAngle
       value: 44.47141
       objectReference: {fileID: 0}
+    - target: {fileID: 7884338294524664454, guid: d81352817977f07429f8dc0099743f58,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884338293918850761, guid: d81352817977f07429f8dc0099743f58,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 465b43787f0dc5a4f8692f074f54c897, type: 2}
+    - target: {fileID: 7884338293918850763, guid: d81352817977f07429f8dc0099743f58,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 465b43787f0dc5a4f8692f074f54c897, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d81352817977f07429f8dc0099743f58, type: 3}
 --- !u!4 &7937954054533015487
