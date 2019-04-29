@@ -6,6 +6,7 @@ using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Rewired;
+using UnityEngine.Analytics;
 
 //Usage: Control players that uses Unity Input manager.
 //Intent: The controller can be used on multiple players.
@@ -19,7 +20,7 @@ public class PlayerController : MonoBehaviour
     //the rewire player
     private Player RewirePlayer;
     public bool IsLeft;
-    
+    public bool IsTutorial;
     public int numGroup = 1;
 
 
@@ -285,12 +286,17 @@ public class PlayerController : MonoBehaviour
         //第零拍的时候重设AnimationCount
         if (furnitureInteractor != null && furnitureInteractor.BeatCount == 1)
         {
-            AnimationCount = 0;
+            if (IsTutorial == false)
+            {
+                AnimationCount = 0;
+
+            }
             anim.SetBool("Dancing1", false);
             anim.SetBool("Dancing3", false);
             anim.SetBool("Failed",false);
             anim.SetBool("Dancing2", false);
             anim.SetBool("Dancing4", false);
+
 
         }
     }
@@ -304,41 +310,89 @@ public class PlayerController : MonoBehaviour
         
         AnimationCount += 1;
 
-        if (AnimationCount == 1)
+        if(IsTutorial == false)
         {
-            anim.SetBool("Dancing1", true);
-            anim.SetBool("Failed",false);
+            if (AnimationCount == 1)
+            {
+                anim.SetBool("Dancing1", true);
+                anim.SetBool("Failed", false);
 
-           
-            print("Dancing11111111");
+
+                print("Dancing11111111");
+            }
+            else if (AnimationCount == 2)
+            {
+                anim.SetBool("Dancing1", false);
+                anim.SetBool("Dancing2", true);
+                anim.SetBool("Failed", false);
+
+
+                print("Dancing222222");
+
+            }
+            else if (AnimationCount == 3)
+            {
+                anim.SetBool("Dancing2", false);
+                anim.SetBool("Dancing1", false);
+                anim.SetBool("Dancing3", true);
+                anim.SetBool("Failed", false);
+
+
+            }
+            else if (AnimationCount == 4)
+            {
+                anim.SetBool("Dancing2", false);
+                anim.SetBool("Dancing1", false);
+                anim.SetBool("Dancing3", false);
+                anim.SetBool("Dancing4", true);
+                anim.SetBool("Failed", false);
+
+            }
         }
-        else if (AnimationCount == 2)
+        else if (IsTutorial == true)
         {
-            anim.SetBool("Dancing1", false);
-            anim.SetBool("Dancing2", true);
-            anim.SetBool("Failed",false);
+            if (AnimationCount % 4 == 1)
+            {
+                anim.SetBool("BabyToRight2",false);
+                anim.SetBool("BabyToRight1", false);
+                anim.SetBool("BabyToLeft1", true);
+                
+                anim.SetBool("Failed", false);
+                print("1111111111111");
 
+            }
+            else if (AnimationCount % 4 == 2)
+            {
+                anim.SetBool("BabyToRight2",false);
+                anim.SetBool("BabyToRight1", false);
+                anim.SetBool("BabyToLeft1", false);
 
-            print("Dancing222222");
+                anim.SetBool("BabyToLeft2", true);
+                anim.SetBool("Failed", false);
+                print("2222222222222222222");
 
-        }
-        else if (AnimationCount == 3)
-        {
-            anim.SetBool("Dancing2", false);
-            anim.SetBool("Dancing1", false);
-            anim.SetBool("Dancing3",true);
-            anim.SetBool("Failed",false);
+            }
+            else if (AnimationCount % 4 == 3)
+            {
+                anim.SetBool("BabyToRight2",false);
 
-            
-        }
-        else if (AnimationCount == 4)
-        {
-            anim.SetBool("Dancing2", false);
-            anim.SetBool("Dancing1", false);
-            anim.SetBool("Dancing3",false);
-            anim.SetBool("Dancing4",true);  
-            anim.SetBool("Failed",false);
+                anim.SetBool("BabyToLeft1", false);
+                anim.SetBool("BabyToLeft2", false);
 
+                anim.SetBool("BabyToRight1", true);
+                anim.SetBool("Failed", false);
+                print("433333333333333333");
+
+            }
+            else if (AnimationCount % 4 == 0)
+            {
+                anim.SetBool("BabyToLeft1", false);
+                anim.SetBool("BabyToLeft2", false);
+                anim.SetBool("BabyToRight1", false);
+                anim.SetBool("BabyToRight2", true);
+                anim.SetBool("Failed", false);
+                print("444444444444444444444");
+            }
         }
        
 
@@ -350,8 +404,12 @@ public class PlayerController : MonoBehaviour
        localMiss++;
        localMissText.text = "Miss: " + localMiss;
        Instantiate(errorParticle, transform.position + 2 * Vector3.up, Quaternion.identity);
-       _audioSource[1].Play();       
-       anim.SetBool("Failed",true);
+       _audioSource[1].Play();
+       if (IsTutorial == false)
+       {
+           anim.SetBool("Failed",true);
+
+       }
 
     }
 
