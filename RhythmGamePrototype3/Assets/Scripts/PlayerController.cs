@@ -38,7 +38,8 @@ public class PlayerController : MonoBehaviour
     public GameObject LeftUpperLocator;
     public GameObject RightBottomLocator;
     public GameObject RightUpperLocator;
-    
+    public GameObject BabyModel;
+    private Animator animBaby;
         
     private int AnimationCount = 0;
     private Collider _myCollider;
@@ -92,6 +93,7 @@ public class PlayerController : MonoBehaviour
     {
         //Get the Rewired Player object for this player and keep it for the duration of the character's lifetime
         RewirePlayer = ReInput.players.GetPlayer(playerId);
+        animBaby = BabyModel.GetComponent<Animator>();
         // Set up references.
         anim = GetComponent <Animator> ();
         _myCollider = GetComponent<Collider>();
@@ -135,6 +137,8 @@ public class PlayerController : MonoBehaviour
 
         // Tell the animator whether or not the player is walking.
         anim.SetBool ("IsWalking", walking);
+        animBaby.SetBool ("IsWalking", walking);
+
     }
 
 
@@ -171,7 +175,7 @@ public class PlayerController : MonoBehaviour
         
         // Normalise the movement vector and make it proportional to speed per second.
         movement = movement.normalized * speed * Time.deltaTime;
-        //print("player is moving =" + movement);
+        print("player is moving =" + movement);
 
 
         // Move the player
@@ -358,6 +362,12 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("BabyToLeft1", true);
                 
                 anim.SetBool("Failed", false);
+                
+                animBaby.SetBool("BabyToRight2",false);
+                animBaby.SetBool("BabyToRight1", false);
+                animBaby.SetBool("BabyToLeft1", true);
+                
+                animBaby.SetBool("Failed", false);
                 print("1111111111111");
 
             }
@@ -368,19 +378,32 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("BabyToLeft1", false);
 
                 anim.SetBool("BabyToLeft2", true);
-                anim.SetBool("Failed", false);
+                
+                animBaby.SetBool("BabyToRight2",false);
+                animBaby.SetBool("BabyToRight1", false);
+                animBaby.SetBool("BabyToLeft1", false);
+                animBaby.SetBool("BabyToLeft2", true);
+
+
+                animBaby.SetBool("BabyToLeft2", true);
                 print("2222222222222222222");
 
             }
             else if (AnimationCount % 4 == 3)
             {
                 anim.SetBool("BabyToRight2",false);
-
                 anim.SetBool("BabyToLeft1", false);
                 anim.SetBool("BabyToLeft2", false);
+                
+                animBaby.SetBool("BabyToRight2",false);
+                animBaby.SetBool("BabyToLeft1", false);
+                animBaby.SetBool("BabyToLeft2", false);
+                
+                animBaby.SetBool("BabyToRight1", true);
+
 
                 anim.SetBool("BabyToRight1", true);
-                anim.SetBool("Failed", false);
+                //anim.SetBool("Failed", false);
                 print("433333333333333333");
 
             }
@@ -389,6 +412,14 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("BabyToLeft1", false);
                 anim.SetBool("BabyToLeft2", false);
                 anim.SetBool("BabyToRight1", false);
+                
+                
+                animBaby.SetBool("BabyToLeft1", false);
+                animBaby.SetBool("BabyToLeft2", false);
+                animBaby.SetBool("BabyToRight1", false);
+                
+                animBaby.SetBool("BabyToRight2", true);
+
                 anim.SetBool("BabyToRight2", true);
                 anim.SetBool("Failed", false);
                 print("444444444444444444444");
