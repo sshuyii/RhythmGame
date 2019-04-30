@@ -74,22 +74,22 @@ public class FurnitureInteractor : MonoBehaviour
     //public bool beatable = false;
 
     
-    private MeshRenderer rd;
-    //private Vector3 originalScale;
-    private GameObject scoring;
-
+    [Header("Functional")]
+    public LevelProcessor levelProcessor;
     public Collider _colliderForPlayer;    
     //public GameObject _collider;//设为通用的，在awake function里自行寻找
     
     // Start is called before the first frame update
-    
+    private MeshRenderer rd;
+    //private Vector3 originalScale;
+    private GameObject scoring;    
     
     
     void Start()
     {
         Koreographer.Instance.RegisterForEvents(EventID,BeatAnime);
 
-        
+        levelProcessor = GameObject.Find("GameManager").GetComponent<LevelProcessor>();
        
         //新加
         _audioSource = GetComponent<AudioSource>();
@@ -289,6 +289,7 @@ public class FurnitureInteractor : MonoBehaviour
                     {
                         //激活
                         Activated = true;
+                        levelProcessor.FinishCheck();
                         //_anim.SetBool("IsActivated", true);
                         Furniture.SetActive(false);
                         Furniture2.SetActive(true);
