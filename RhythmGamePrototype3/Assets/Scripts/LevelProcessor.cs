@@ -7,11 +7,20 @@ public class LevelProcessor : MonoBehaviour
     public FurnitureInteractor[] furnitureInteractors;
     public GameObject finishCanvas;
     public int activatedFurniture;
+
+    public bool testMode;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (testMode)
+        {
+            foreach (var furniture in furnitureInteractors)
+            {
+                furniture.requiredPerfect = 0;
+                furniture.requiredCorrectPlayers = 0;
+            }
+        }
     }
 
     // Update is called once per frame

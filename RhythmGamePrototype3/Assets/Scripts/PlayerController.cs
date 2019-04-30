@@ -148,7 +148,50 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+
+        if (furnitureInteractor.Activated == true)
+        {
+            
+//            anim.SetBool("BabyToLeft1",false);
+//            anim.SetBool("BabyToLeft2",false);
+//            anim.SetBool("BabyToRight1",false);
+//            anim.SetBool("BabyToRight2",false);
+//
+//            animBaby.SetBool("BabyToLeft1",false);
+//            animBaby.SetBool("BabyToLeft2",false);
+//            animBaby.SetBool("BabyToRight1",false);
+//            animBaby.SetBool("BabyToRight2",false);
+
+            //anim.SetTrigger("Activated");
+
+
+
+            if (furnitureInteractor.BeatCount == 1)
+            {
+                anim.SetBool("BabyToRight2",false);
+                anim.SetBool("BabyToLeft1",true);
+            }
+            else if (furnitureInteractor.BeatCount == 3)
+            {
+                anim.SetBool("BabyToLeft2",true);
+                anim.SetBool("BabyToLeft1",false);
+
+            }
+            else if (furnitureInteractor.BeatCount == 5)
+            {
+                anim.SetBool("BabyToRight1",true);
+                anim.SetBool("BabyToLeft2",false);
+
+            }
+            else if (furnitureInteractor.BeatCount == 7)
+            {
+                anim.SetBool("BabyToRight1",false);
+
+                anim.SetBool("BabyToRight2",true);
+            }
+          
+            
+        }
         LadderControl();
 
         if (!PlayerEnabled)
@@ -355,6 +398,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (IsTutorial == true)
         {
+            
             if (AnimationCount % 4 == 1)
             {
                 anim.SetBool("BabyToRight2",false);
@@ -368,7 +412,7 @@ public class PlayerController : MonoBehaviour
                 animBaby.SetBool("BabyToLeft1", true);
                 
                 animBaby.SetBool("Failed", false);
-                print("1111111111111");
+                
 
             }
             else if (AnimationCount % 4 == 2)
@@ -386,8 +430,7 @@ public class PlayerController : MonoBehaviour
 
 
                 animBaby.SetBool("BabyToLeft2", true);
-                print("2222222222222222222");
-
+              
             }
             else if (AnimationCount % 4 == 3)
             {
@@ -403,8 +446,7 @@ public class PlayerController : MonoBehaviour
 
 
                 anim.SetBool("BabyToRight1", true);
-                //anim.SetBool("Failed", false);
-                print("433333333333333333");
+                
 
             }
             else if (AnimationCount % 4 == 0)
@@ -422,7 +464,7 @@ public class PlayerController : MonoBehaviour
 
                 anim.SetBool("BabyToRight2", true);
                 anim.SetBool("Failed", false);
-                print("444444444444444444444");
+              
             }
         }
        

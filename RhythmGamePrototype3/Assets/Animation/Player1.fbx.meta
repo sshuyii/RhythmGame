@@ -203,6 +203,7 @@ ModelImporter:
     7400262: BabyToRight2
     7400264: BabyIdle1
     7400266: BabyWalk
+    7400268: BabyActivated
     9500000: //RootNode
     11100000: //RootNode
     11100002: Character1_Head
@@ -602,8 +603,8 @@ ModelImporter:
     - serializedVersion: 16
       name: BabyIdle1
       takeName: Take 001
-      firstFrame: 320
-      lastFrame: 340
+      firstFrame: 330
+      lastFrame: 350
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -626,12 +627,12 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 0.96
     - serializedVersion: 16
       name: BabyWalk
       takeName: Take 001
-      firstFrame: 340
-      lastFrame: 360
+      firstFrame: 350
+      lastFrame: 370
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -654,7 +655,35 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 0.96
+    - serializedVersion: 16
+      name: BabyActivated
+      takeName: Take 001
+      firstFrame: 250
+      lastFrame: 330
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0.96
     isReadable: 1
   meshes:
     lODScreenPercentages: []
