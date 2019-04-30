@@ -109,14 +109,19 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Koreographer.Instance.RegisterForEvents(EventIDOpen,BeatReady);
-        Koreographer.Instance.RegisterForEvents(EventIDClose,BeatExpire);
+        //Koreographer.Instance.RegisterForEvents(EventIDOpen,BeatReady);
+        //Koreographer.Instance.RegisterForEvents(EventIDClose,BeatExpire);
+        Koreographer.Instance.RegisterForEvents("AllBeats", Rebeatable);
         //imageUI = UI.GetComponent<Image>();
         
        
     }
 
-    void BeatReady(KoreographyEvent evt)
+    void Rebeatable(KoreographyEvent evt)
+    {
+        alreadybeat = false;
+    }
+    /*void BeatReady(KoreographyEvent evt)
     {
         beatable = true;
         //furnitureInteractor.beatable = true;
@@ -125,10 +130,10 @@ public class PlayerController : MonoBehaviour
 
     void BeatExpire(KoreographyEvent evt)
     {
-        beatable = false;
+        beatable = true;
         //furnitureInteractor.beatable = false;
 
-    }
+    }*/
 
     private void _animating(float h, float v)
     {
@@ -294,7 +299,7 @@ public class PlayerController : MonoBehaviour
         {            
             
             Tinylytics.AnalyticsManager.LogCustomMetric("PlayerHitButtonBeatCount",furnitureInteractor.BeatCount.ToString());
-            if (beatable && !alreadybeat)
+            if (/*beatable && */!alreadybeat)
             {
                //transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
                //rd.material = PerfectMat;
@@ -325,10 +330,10 @@ public class PlayerController : MonoBehaviour
             }   
         }
         
-        if (!beatable && alreadybeat)
+        /*if (!beatable && alreadybeat)
         {
             alreadybeat = false;
-        }
+        }*/
         
         //第零拍的时候重设AnimationCount
         if (furnitureInteractor != null && furnitureInteractor.BeatCount == 1)
