@@ -70,8 +70,8 @@ public class FurnitureInteractor : MonoBehaviour
     public int requiredPerfect;
     public int requiredCorrectPlayers;
     public int correctPlayers;
-    public int perfectTimes;
-    private int localPerfectTimes = 0;
+    public int requiredPerfectTimes;
+    public int localPerfectTimes = 0;
     //public bool beatable = false;
 
     
@@ -255,63 +255,55 @@ public class FurnitureInteractor : MonoBehaviour
                     {
                         if (player.localPerfect == requiredPerfect && player.localMiss == 0)
                         {
-                            //correctPlayers++;//用在每个玩家打一次就对的时候
+                            correctPlayers++;//用在每个玩家打一次就对的时候
                             
                             //以下用在打多次才能对的时候
-                            localPerfectTimes++;
+                            //localPerfectTimes++;
                             
                         }
-                        
-                        //单独一个人有没有达到多次perfect的标准
-                        if (localPerfectTimes == perfectTimes)
-                        {
-                            correctPlayers++;
-                        }
-                        //给动画设置trigger
-                        if(perfectTimes == 3)
-                        {
-                            if (localPerfectTimes == 1)
-                            {
-                                _imageUI.fillAmount = 0.305f;
-                            }
-                            else if (localPerfectTimes == 2)
-                            {
-                                _imageUI.fillAmount = 0.7f;
-                            }
-                            else if (localPerfectTimes == 3)
-                            {
-                                _imageUI.fillAmount = 1f;
-                            }
-                        }
-                        else if(perfectTimes == 2)
-                        {
-                            if (localPerfectTimes == 1)
-                            {
-                                _imageUI.fillAmount = 0.5f;
-                            }
-                            else if (localPerfectTimes == 2)
-                            {
-                                _imageUI.fillAmount = 1f;
-                            }
-                        }
+                                               
                         
                         //检测完后重置分数
                         ResetPlayerScore(player);                                              
                     }
-
+                    
                     if (correctPlayers >= requiredCorrectPlayers)
                     {
+
+                        localPerfectTimes++;
+
+                        //更换UI
+                        //_animUI.SetTrigger("IsFull");
+                    }
+
+                    correctPlayers = 0;                    
+                    
+                    
+                    //给动画设置trigger
+                    if (localPerfectTimes == 1)
+                    {
+                        _imageUI.fillAmount = 0.305f;
+                    }
+                    else if (localPerfectTimes == 2)
+                    {
+                        _imageUI.fillAmount = 0.7f;
+                    }
+                    else if (localPerfectTimes == 3)
+                    {
+                        _imageUI.fillAmount = 1f;
+                    }                    
+                    
+                    //单独一个人有没有达到多次perfect的标准
+                    if (localPerfectTimes == requiredPerfectTimes)
+                    {
+                        //correctPlayers++;
                         //激活
                         Activated = true;
                         levelProcessor.FinishCheck();
                         //_anim.SetBool("IsActivated", true);
                         Furniture.SetActive(false);
                         Furniture2.SetActive(true);
-                        //rd.material = ActivatedMat;     
-                        
-                        
-                        //更换UI
-                        //_animUI.SetTrigger("IsFull");
+                        //rd.material = ActivatedMat;                        
                     }
                     else
                     {
@@ -328,16 +320,17 @@ public class FurnitureInteractor : MonoBehaviour
                         //if (DoCategorize() == true)
                         //{
                             //打开家具聚光灯并开始动画，并开始UI
-                            spotLight.SetActive(true);
-                            _anim.SetBool("IsMoving", true);
+                        spotLight.SetActive(true);
+                        _anim.SetBool("IsMoving", true);
 
 
-                            rdFull.SetAlpha(1);
-                            rdStroke.SetAlpha(1);
+                        rdFull.SetAlpha(1);
+                        rdStroke.SetAlpha(1);
                         //    }                    
-                    }
+                    }   
 
-                    correctPlayers = 0;
+                    
+
                 }
                 else
                 {

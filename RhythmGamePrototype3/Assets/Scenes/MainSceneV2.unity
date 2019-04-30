@@ -625,7 +625,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -890.26, y: -449.97}
+  m_AnchoredPosition: {x: -890.26, y: -450.13}
   m_SizeDelta: {x: 3, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &52128324
@@ -648,7 +648,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4aaab63f9b2ae4de39f7c04331c40ac1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a742679e29a464932a7c8890dc06d602, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12486,7 +12486,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 2b37744ce9aa74e90a4e55c9876ae5b3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7dba191b6ad4f4353855cc7e3fbdcf21, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17980,7 +17980,8 @@ MonoBehaviour:
   requiredPerfect: 0
   requiredCorrectPlayers: 1
   correctPlayers: 0
-  perfectTimes: 1
+  requiredPerfectTimes: 0
+  localPerfectTimes: 0
   levelProcessor: {fileID: 606959263}
   _colliderForPlayer: {fileID: 2094111072}
 --- !u!1001 &1492014415
@@ -31753,7 +31754,8 @@ MonoBehaviour:
   requiredPerfect: 0
   requiredCorrectPlayers: 3
   correctPlayers: 0
-  perfectTimes: 2
+  requiredPerfectTimes: 3
+  localPerfectTimes: 0
   levelProcessor: {fileID: 606959263}
   _colliderForPlayer: {fileID: 2486236127968172579}
 --- !u!1 &2625523146053428441
@@ -32338,7 +32340,8 @@ MonoBehaviour:
   requiredPerfect: 0
   requiredCorrectPlayers: 1
   correctPlayers: 0
-  perfectTimes: 1
+  requiredPerfectTimes: 0
+  localPerfectTimes: 0
   levelProcessor: {fileID: 606959263}
   _colliderForPlayer: {fileID: 2625523146053428447}
 --- !u!1 &2625523147706020527
