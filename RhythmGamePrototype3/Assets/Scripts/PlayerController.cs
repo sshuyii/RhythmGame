@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        if (furnitureInteractor.Activated == true)
+        if (IsTutorial && furnitureInteractor.Activated)
         {
             
 //            anim.SetBool("BabyToLeft1",false);
