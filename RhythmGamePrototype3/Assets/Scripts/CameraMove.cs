@@ -19,6 +19,8 @@ public class CameraMove : MonoBehaviour
 
     public FurnitureInteractor clockFI;
 
+    public GameObject ladder;
+
     void Start()
     {
         originalPosition = Camera.main.transform.localPosition;
@@ -37,6 +39,9 @@ public class CameraMove : MonoBehaviour
             Camera.main.transform.localPosition =
                 Vector3.LerpUnclamped(originalPosition, maxPosition, moving.Evaluate(timer / duration));
             Camera.main.orthographicSize = Mathf.LerpUnclamped(originalSize, maxSize, moving.Evaluate(timer / duration));
+            
+            //Activate the ladder too
+            ladder.SetActive(true);
         }
     }
 

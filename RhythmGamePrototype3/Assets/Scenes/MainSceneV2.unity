@@ -6060,7 +6060,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &544318355
 Transform:
   m_ObjectHideFlags: 0
@@ -24866,6 +24866,11 @@ PrefabInstance:
       propertyPath: clockFI
       value: 
       objectReference: {fileID: 2486236128140476998}
+    - target: {fileID: 4930701146915290132, guid: 39ef4eceff954d844a89911b84698295,
+        type: 3}
+      propertyPath: ladder
+      value: 
+      objectReference: {fileID: 544318354}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39ef4eceff954d844a89911b84698295, type: 3}
 --- !u!4 &2094609510 stripped
@@ -31735,7 +31740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EventID: AllBeats
   BeatLoop: 0001000000010000
-  BeatCount: 1
+  BeatCount: 2
   Furniture: {fileID: 1615979348}
   Furniture2: {fileID: 1724972673}
   readyPunch: 0
