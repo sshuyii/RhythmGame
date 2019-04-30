@@ -268,19 +268,32 @@ public class FurnitureInteractor : MonoBehaviour
                             correctPlayers++;
                         }
                         //给动画设置trigger
-                        if (localPerfectTimes == 1)
+                        if(perfectTimes == 3)
                         {
-                            _imageUI.fillAmount = 0.305f;
+                            if (localPerfectTimes == 1)
+                            {
+                                _imageUI.fillAmount = 0.305f;
+                            }
+                            else if (localPerfectTimes == 2)
+                            {
+                                _imageUI.fillAmount = 0.7f;
+                            }
+                            else if (localPerfectTimes == 3)
+                            {
+                                _imageUI.fillAmount = 1f;
+                            }
                         }
-                        else if (localPerfectTimes == 2)
+                        else if(perfectTimes == 2)
                         {
-                            _imageUI.fillAmount = 0.7f;
+                            if (localPerfectTimes == 1)
+                            {
+                                _imageUI.fillAmount = 0.5f;
+                            }
+                            else if (localPerfectTimes == 2)
+                            {
+                                _imageUI.fillAmount = 1f;
+                            }
                         }
-                        else if (localPerfectTimes == 3)
-                        {
-                            _imageUI.fillAmount = 1f;
-                        }
-                        
                         
                         //检测完后重置分数
                         ResetPlayerScore(player);                                              
