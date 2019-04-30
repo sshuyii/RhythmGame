@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657743, g: 0.4964118, b: 0.57481754, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465773, g: 0.49641174, b: 0.5748174, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1249,6 +1249,7 @@ MonoBehaviour:
   spotLight: {fileID: 887128662}
   playersInvolved: []
   numGroup: 1
+  _audioSource: {fileID: 0}
   requiredPerfect: 0
   requiredCorrectPlayers: 1
   correctPlayers: 0
@@ -3611,15 +3612,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: dc9bd077d9cf648159e369823408b530, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 100046, guid: dc9bd077d9cf648159e369823408b530, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100048, guid: dc9bd077d9cf648159e369823408b530, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -3696,6 +3689,14 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: dc9bd077d9cf648159e369823408b530, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: dc9bd077d9cf648159e369823408b530, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100048, guid: dc9bd077d9cf648159e369823408b530, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: dc9bd077d9cf648159e369823408b530, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3986,6 +3987,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1701731100}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1701731103
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701731102}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9999998, y: 1.1433957, z: 0.9999998}
+  m_Center: {x: 0, y: 0.5709244, z: 0}
 --- !u!1001 &1722561217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4932,6 +4946,7 @@ MonoBehaviour:
   spotLight: {fileID: 1876974666}
   playersInvolved: []
   numGroup: 1
+  _audioSource: {fileID: 0}
   requiredPerfect: 0
   requiredCorrectPlayers: 1
   correctPlayers: 0
@@ -5463,6 +5478,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1893371431}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1893371434
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893371433}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.1591722, z: 1}
+  m_Center: {x: 0, y: 0.53929603, z: 0}
 --- !u!1001 &1904305329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10451,10 +10479,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
-    - target: {fileID: 400022, guid: 0219550f6784648269574cd98393f70c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: 0219550f6784648269574cd98393f70c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10515,6 +10539,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: e2bdfdf3950fc42829e91d44355296fc, type: 2}
+    - target: {fileID: 400022, guid: 0219550f6784648269574cd98393f70c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 0219550f6784648269574cd98393f70c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0219550f6784648269574cd98393f70c, type: 3}
@@ -10756,6 +10784,7 @@ MonoBehaviour:
   spotLight: {fileID: 5987958996861074496}
   playersInvolved: []
   numGroup: 1
+  _audioSource: {fileID: 0}
   requiredPerfect: 0
   requiredCorrectPlayers: 1
   correctPlayers: 0

@@ -175,7 +175,7 @@ public class PlayerController : MonoBehaviour
         
         // Normalise the movement vector and make it proportional to speed per second.
         movement = movement.normalized * speed * Time.deltaTime;
-        print("player is moving =" + movement);
+//        print("player is moving =" + movement);
 
 
         // Move the player
@@ -310,7 +310,7 @@ public class PlayerController : MonoBehaviour
         localPerfect++;
         localPerfectText.text = "Perfect: " + localPerfect;
         Instantiate(perfectParticle, transform.position + Vector3.up, Quaternion.identity);
-        _audioSource[2].Play();
+        furnitureInteractor._audioSource.Play();
         
         AnimationCount += 1;
 

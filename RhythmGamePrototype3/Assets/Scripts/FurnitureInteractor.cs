@@ -55,10 +55,11 @@ public class FurnitureInteractor : MonoBehaviour
     public GameObject spotLight;
     public List<PlayerController> playersInvolved; 
     public int numGroup = 1;
-
+   
+    
     //以下是新加的
     //public GameObject _light;
-    private AudioSource _audioSource;
+    public AudioSource _audioSource;
     
 
     [Header("Checking")] 
