@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465773, g: 0.49641174, b: 0.5748174, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657743, g: 0.4964118, b: 0.57481754, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1176,7 +1176,8 @@ MonoBehaviour:
   requiredPerfect: 0
   requiredCorrectPlayers: 1
   correctPlayers: 0
-  perfectTimes: 3
+  requiredPerfectTimes: 3
+  localPerfectTimes: 0
   levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 1298692128}
 --- !u!4 &533071438 stripped
@@ -3122,7 +3123,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5bb4ff226d900384d992a0714d32c253, type: 3}
+    m_Font: {fileID: 12800000, guid: 845dc36a966d1d7498ca46d86fb5abbd, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
@@ -3584,6 +3585,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.2
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: dc9bd077d9cf648159e369823408b530, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100048, guid: dc9bd077d9cf648159e369823408b530, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: dc9bd077d9cf648159e369823408b530, type: 3}
       propertyPath: m_Controller
       value: 
@@ -3605,14 +3614,6 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: dc9bd077d9cf648159e369823408b530, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: dc9bd077d9cf648159e369823408b530, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100048, guid: dc9bd077d9cf648159e369823408b530, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: dc9bd077d9cf648159e369823408b530, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4795,7 +4796,8 @@ MonoBehaviour:
   requiredPerfect: 0
   requiredCorrectPlayers: 1
   correctPlayers: 0
-  perfectTimes: 3
+  requiredPerfectTimes: 3
+  localPerfectTimes: 0
   levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 1399817374}
 --- !u!4 &1787879195 stripped
@@ -4938,7 +4940,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -125}
+  m_AnchoredPosition: {x: 0, y: -117.25}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1824470015
@@ -4963,7 +4965,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5bb4ff226d900384d992a0714d32c253, type: 3}
-    m_FontSize: 17
+    m_FontSize: 19
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -7247,7 +7249,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 648d1fc989a12fd4ba4d6c4a5614a98c, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -7731,7 +7733,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 648d1fc989a12fd4ba4d6c4a5614a98c, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -10367,6 +10369,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400022, guid: 0219550f6784648269574cd98393f70c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 0219550f6784648269574cd98393f70c, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
@@ -10383,10 +10389,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: e2bdfdf3950fc42829e91d44355296fc, type: 2}
-    - target: {fileID: 400022, guid: 0219550f6784648269574cd98393f70c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 0219550f6784648269574cd98393f70c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0219550f6784648269574cd98393f70c, type: 3}
@@ -10632,7 +10634,8 @@ MonoBehaviour:
   requiredPerfect: 0
   requiredCorrectPlayers: 1
   correctPlayers: 0
-  perfectTimes: 3
+  requiredPerfectTimes: 3
+  localPerfectTimes: 0
   levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 5987958996862151813}
 --- !u!82 &5987958995949417911
@@ -11835,7 +11838,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 648d1fc989a12fd4ba4d6c4a5614a98c, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
