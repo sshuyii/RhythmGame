@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465773, g: 0.49641174, b: 0.5748174, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657707, g: 0.4964112, b: 0.57481635, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1173,11 +1173,10 @@ MonoBehaviour:
   playersInvolved: []
   numGroup: 1
   _audioSource: {fileID: 0}
-  requiredPerfect: 3
+  requiredPerfect: 0
   requiredCorrectPlayers: 1
   correctPlayers: 0
-  requiredPerfectTimes: 0
-  localPerfectTimes: 0
+  perfectTimes: 3
   levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 1298692128}
 --- !u!4 &533071438 stripped
@@ -3607,6 +3606,14 @@ PrefabInstance:
       propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: dc9bd077d9cf648159e369823408b530, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100048, guid: dc9bd077d9cf648159e369823408b530, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: dc9bd077d9cf648159e369823408b530, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3619,14 +3626,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dbaf3881ac6cbf143b244d94eb698370, type: 2}
-    - target: {fileID: 100002, guid: dc9bd077d9cf648159e369823408b530, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100048, guid: dc9bd077d9cf648159e369823408b530, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc9bd077d9cf648159e369823408b530, type: 3}
 --- !u!1 &1399817372
@@ -4793,11 +4792,10 @@ MonoBehaviour:
   playersInvolved: []
   numGroup: 1
   _audioSource: {fileID: 0}
-  requiredPerfect: 3
+  requiredPerfect: 0
   requiredCorrectPlayers: 1
   correctPlayers: 0
-  requiredPerfectTimes: 0
-  localPerfectTimes: 0
+  perfectTimes: 3
   levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 1399817374}
 --- !u!4 &1787879195 stripped
@@ -5004,7 +5002,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1833376267
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10325,6 +10323,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 0219550f6784648269574cd98393f70c, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 0219550f6784648269574cd98393f70c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 0219550f6784648269574cd98393f70c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e2bdfdf3950fc42829e91d44355296fc, type: 2}
+    - target: {fileID: 13700000, guid: 0219550f6784648269574cd98393f70c, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e2bdfdf3950fc42829e91d44355296fc, type: 2}
     - target: {fileID: 400050, guid: 0219550f6784648269574cd98393f70c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10369,22 +10383,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: 0219550f6784648269574cd98393f70c, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: 0219550f6784648269574cd98393f70c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 13700000, guid: 0219550f6784648269574cd98393f70c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e2bdfdf3950fc42829e91d44355296fc, type: 2}
-    - target: {fileID: 13700000, guid: 0219550f6784648269574cd98393f70c, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: e2bdfdf3950fc42829e91d44355296fc, type: 2}
     - target: {fileID: 400022, guid: 0219550f6784648269574cd98393f70c, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -10631,11 +10629,10 @@ MonoBehaviour:
   playersInvolved: []
   numGroup: 1
   _audioSource: {fileID: 0}
-  requiredPerfect: 3
+  requiredPerfect: 0
   requiredCorrectPlayers: 1
   correctPlayers: 0
-  requiredPerfectTimes: 0
-  localPerfectTimes: 0
+  perfectTimes: 3
   levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 5987958996862151813}
 --- !u!82 &5987958995949417911
