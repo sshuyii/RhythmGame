@@ -4381,6 +4381,7 @@ MonoBehaviour:
   localMiss: 0
   localPerfectText: {fileID: 1139300212}
   localMissText: {fileID: 1501118128}
+  windowCount: 0
 --- !u!82 &391000328
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7513,6 +7514,16 @@ PrefabInstance:
       propertyPath: testMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4762881825127519063, guid: 85c9353eefefc2b4a87b0eddfabec5c4,
+        type: 3}
+      propertyPath: furniture
+      value: 
+      objectReference: {fileID: 2486236128140476998}
+    - target: {fileID: 4762881825127519063, guid: 85c9353eefefc2b4a87b0eddfabec5c4,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1709083801}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85c9353eefefc2b4a87b0eddfabec5c4, type: 3}
 --- !u!114 &606959263 stripped
@@ -21991,6 +22002,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1709083801 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7480205395106199713, guid: 40d25ee0d41d48c4087914de0027b694,
+    type: 3}
+  m_PrefabInstance: {fileID: 7480205394733985843}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ae1fd09f2114ee681c9c05f972e9d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1717572158
 GameObject:
   m_ObjectHideFlags: 0
@@ -32090,6 +32113,7 @@ MonoBehaviour:
   localMiss: 0
   localPerfectText: {fileID: 3875423171873055631}
   localMissText: {fileID: 8967728712683717691}
+  windowCount: 0
 --- !u!136 &2311894476207691532
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -53248,6 +53272,7 @@ MonoBehaviour:
   localMiss: 0
   localPerfectText: {fileID: 8689444740260585988}
   localMissText: {fileID: 3543377311393138096}
+  windowCount: 0
 --- !u!82 &7875143056194655873
 AudioSource:
   m_ObjectHideFlags: 0

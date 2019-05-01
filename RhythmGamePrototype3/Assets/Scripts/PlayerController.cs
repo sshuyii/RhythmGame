@@ -69,6 +69,7 @@ public class PlayerController : MonoBehaviour
     public int localMiss;
     public Text localPerfectText;
     public Text localMissText;
+    public int windowCount;
     //public GameObject furniture;//后加的,但是现在player发出的声音是一样的
     
     
@@ -109,26 +110,28 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Koreographer.Instance.RegisterForEvents(EventIDOpen,BeatReady);
+        Koreographer.Instance.RegisterForEvents(EventIDOpen,BeatReady);
         //Koreographer.Instance.RegisterForEvents(EventIDClose,BeatExpire);
-        Koreographer.Instance.RegisterForEvents("AllBeats", Rebeatable);
+        //Koreographer.Instance.RegisterForEvents("AllBeats", Rebeatable);
         //imageUI = UI.GetComponent<Image>();
         
        
     }
 
-    void Rebeatable(KoreographyEvent evt)
+    /*void Rebeatable(KoreographyEvent evt)
     {
         alreadybeat = false;
-    }
-    /*void BeatReady(KoreographyEvent evt)
+    }*/
+    void BeatReady(KoreographyEvent evt)
     {
-        beatable = true;
+        //beatable = true;
         //furnitureInteractor.beatable = true;
+        alreadybeat = false;
+        windowCount = (windowCount + 1) % 8;
 
     }
 
-    void BeatExpire(KoreographyEvent evt)
+    /*void BeatExpire(KoreographyEvent evt)
     {
         beatable = true;
         //furnitureInteractor.beatable = false;
@@ -307,7 +310,7 @@ public class PlayerController : MonoBehaviour
 
                if (furnitureInteractor != null && furnitureInteractor.Checking)
                {
-                   if (furnitureInteractor.BeatLoop[(furnitureInteractor.BeatCount + furnitureInteractor.BeatLoop.Count - 1) % furnitureInteractor.BeatLoop.Count])
+                   if (furnitureInteractor.BeatLoop[(windowCount + 1) % 8])
                    {
                        Perfect();                   
                    }
