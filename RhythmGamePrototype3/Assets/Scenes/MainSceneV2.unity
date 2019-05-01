@@ -33302,7 +33302,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 60cb08e0012b4426681cf669bc2beb45, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0d2fdcc27e6ef461bb4cec46ed79d8fb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -50322,6 +50322,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoxInteractor
       objectReference: {fileID: 0}
+    - target: {fileID: 6500912616695159110, guid: c8581fa22a449d74e94490386dee7616,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6500912616046661808, guid: c8581fa22a449d74e94490386dee7616,
         type: 3}
       propertyPath: _colliderForPlayer
@@ -50456,11 +50461,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -5.004
-      objectReference: {fileID: 0}
-    - target: {fileID: 6500912616695159110, guid: c8581fa22a449d74e94490386dee7616,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6500912616695159112, guid: c8581fa22a449d74e94490386dee7616,
         type: 3}
@@ -50983,6 +50983,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 7480205395106199713, guid: 40d25ee0d41d48c4087914de0027b694,
+        type: 3}
+      propertyPath: LeftBottomLocator
+      value: 
+      objectReference: {fileID: 1717572158}
+    - target: {fileID: 7480205395106199713, guid: 40d25ee0d41d48c4087914de0027b694,
+        type: 3}
+      propertyPath: LeftUpperLocator
+      value: 
+      objectReference: {fileID: 478499062}
+    - target: {fileID: 7480205395106199713, guid: 40d25ee0d41d48c4087914de0027b694,
+        type: 3}
+      propertyPath: RightBottomLocator
+      value: 
+      objectReference: {fileID: 1570290516}
+    - target: {fileID: 7480205395106199713, guid: 40d25ee0d41d48c4087914de0027b694,
+        type: 3}
+      propertyPath: RightUpperLocator
+      value: 
+      objectReference: {fileID: 1486342261}
+    - target: {fileID: 7480205395106199713, guid: 40d25ee0d41d48c4087914de0027b694,
+        type: 3}
+      propertyPath: furnitureInteractor
+      value: 
+      objectReference: {fileID: 437727199}
+    - target: {fileID: 7480205395106199713, guid: 40d25ee0d41d48c4087914de0027b694,
+        type: 3}
+      propertyPath: BabyModel
+      value: 
+      objectReference: {fileID: 1063036121}
     - target: {fileID: 7480205395091380737, guid: 40d25ee0d41d48c4087914de0027b694,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -51038,36 +51068,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7480205395106199713, guid: 40d25ee0d41d48c4087914de0027b694,
-        type: 3}
-      propertyPath: LeftBottomLocator
-      value: 
-      objectReference: {fileID: 1717572158}
-    - target: {fileID: 7480205395106199713, guid: 40d25ee0d41d48c4087914de0027b694,
-        type: 3}
-      propertyPath: LeftUpperLocator
-      value: 
-      objectReference: {fileID: 478499062}
-    - target: {fileID: 7480205395106199713, guid: 40d25ee0d41d48c4087914de0027b694,
-        type: 3}
-      propertyPath: RightBottomLocator
-      value: 
-      objectReference: {fileID: 1570290516}
-    - target: {fileID: 7480205395106199713, guid: 40d25ee0d41d48c4087914de0027b694,
-        type: 3}
-      propertyPath: RightUpperLocator
-      value: 
-      objectReference: {fileID: 1486342261}
-    - target: {fileID: 7480205395106199713, guid: 40d25ee0d41d48c4087914de0027b694,
-        type: 3}
-      propertyPath: furnitureInteractor
-      value: 
-      objectReference: {fileID: 437727199}
-    - target: {fileID: 7480205395106199713, guid: 40d25ee0d41d48c4087914de0027b694,
-        type: 3}
-      propertyPath: BabyModel
-      value: 
-      objectReference: {fileID: 1063036121}
     - target: {fileID: 7480205395106199716, guid: 40d25ee0d41d48c4087914de0027b694,
         type: 3}
       propertyPath: TopTrigger1
