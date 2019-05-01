@@ -14345,6 +14345,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1065563238 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6500912616695159110, guid: c8581fa22a449d74e94490386dee7616,
+    type: 3}
+  m_PrefabInstance: {fileID: 6500912617180502048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1078732251
 GameObject:
   m_ObjectHideFlags: 0
@@ -19317,7 +19323,7 @@ MonoBehaviour:
   requiredPerfect: 0
   requiredCorrectPlayers: 1
   correctPlayers: 0
-  requiredPerfectTimes: 0
+  requiredPerfectTimes: 3
   localPerfectTimes: 0
   levelProcessor: {fileID: 606959263}
   _colliderForPlayer: {fileID: 2094111072}
@@ -33761,7 +33767,7 @@ MonoBehaviour:
   BeatCount: 1
   beatIndicator: {fileID: 0}
   section: 0
-  spotLight: {fileID: 0}
+  spotLight: {fileID: 2625523146434938889}
   numGroup: 1
   Furniture: {fileID: 446698357}
   Furniture2: {fileID: 1492234421}
@@ -33779,7 +33785,7 @@ MonoBehaviour:
   requiredPerfect: 0
   requiredCorrectPlayers: 1
   correctPlayers: 0
-  requiredPerfectTimes: 0
+  requiredPerfectTimes: 3
   localPerfectTimes: 0
   levelProcessor: {fileID: 606959263}
   _colliderForPlayer: {fileID: 2625523146053428447}
@@ -49282,6 +49288,11 @@ PrefabInstance:
       propertyPath: levelProcessor
       value: 
       objectReference: {fileID: 606959263}
+    - target: {fileID: 4075493288784868385, guid: b863152e4e9fb4f4fb23e44ad7affd20,
+        type: 3}
+      propertyPath: requiredPerfectTimes
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4075493289481151056, guid: b863152e4e9fb4f4fb23e44ad7affd20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -50321,6 +50332,16 @@ PrefabInstance:
       propertyPath: levelProcessor
       value: 
       objectReference: {fileID: 606959263}
+    - target: {fileID: 6500912616046661808, guid: c8581fa22a449d74e94490386dee7616,
+        type: 3}
+      propertyPath: spotLight
+      value: 
+      objectReference: {fileID: 1065563238}
+    - target: {fileID: 6500912616046661808, guid: c8581fa22a449d74e94490386dee7616,
+        type: 3}
+      propertyPath: requiredPerfectTimes
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6500912615794241103, guid: c8581fa22a449d74e94490386dee7616,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -53827,6 +53848,11 @@ PrefabInstance:
       propertyPath: levelProcessor
       value: 
       objectReference: {fileID: 606959263}
+    - target: {fileID: 7884338293265043125, guid: d81352817977f07429f8dc0099743f58,
+        type: 3}
+      propertyPath: requiredPerfectTimes
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7884338294524664452, guid: d81352817977f07429f8dc0099743f58,
         type: 3}
       propertyPath: m_IsActive
