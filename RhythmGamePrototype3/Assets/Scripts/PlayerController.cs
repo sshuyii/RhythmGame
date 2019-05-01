@@ -69,6 +69,7 @@ public class PlayerController : MonoBehaviour
     public int localMiss;
     public Text localPerfectText;
     public Text localMissText;
+    public int windowCount;
     //public GameObject furniture;//后加的,但是现在player发出的声音是一样的
     
     
@@ -110,25 +111,32 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Koreographer.Instance.RegisterForEvents(EventIDOpen,BeatReady);
-        Koreographer.Instance.RegisterForEvents(EventIDClose,BeatExpire);
+        //Koreographer.Instance.RegisterForEvents(EventIDClose,BeatExpire);
+        //Koreographer.Instance.RegisterForEvents("AllBeats", Rebeatable);
         //imageUI = UI.GetComponent<Image>();
         
        
     }
 
+    /*void Rebeatable(KoreographyEvent evt)
+    {
+        alreadybeat = false;
+    }*/
     void BeatReady(KoreographyEvent evt)
     {
-        beatable = true;
+        //beatable = true;
         //furnitureInteractor.beatable = true;
+        alreadybeat = false;
+        windowCount = (windowCount + 1) % 8;
 
     }
 
-    void BeatExpire(KoreographyEvent evt)
+    /*void BeatExpire(KoreographyEvent evt)
     {
-        beatable = false;
+        beatable = true;
         //furnitureInteractor.beatable = false;
 
-    }
+    }*/
 
     private void _animating(float h, float v)
     {
@@ -294,7 +302,7 @@ public class PlayerController : MonoBehaviour
         {            
             
             Tinylytics.AnalyticsManager.LogCustomMetric("PlayerHitButtonBeatCount",furnitureInteractor.BeatCount.ToString());
-            if (beatable && !alreadybeat)
+            if (/*beatable && */!alreadybeat)
             {
                //transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
                //rd.material = PerfectMat;
@@ -302,7 +310,7 @@ public class PlayerController : MonoBehaviour
 
                if (furnitureInteractor != null && furnitureInteractor.Checking)
                {
-                   if (furnitureInteractor.BeatLoop[(furnitureInteractor.BeatCount + furnitureInteractor.BeatLoop.Count - 1) % furnitureInteractor.BeatLoop.Count])
+                   if (furnitureInteractor.BeatLoop[(windowCount + 1) % 8])
                    {
                        Perfect();                   
                    }
@@ -325,10 +333,10 @@ public class PlayerController : MonoBehaviour
             }   
         }
         
-        if (!beatable && alreadybeat)
+        /*if (!beatable && alreadybeat)
         {
             alreadybeat = false;
-        }
+        }*/
         
         //第零拍的时候重设AnimationCount
         if (furnitureInteractor != null && furnitureInteractor.BeatCount == 1)

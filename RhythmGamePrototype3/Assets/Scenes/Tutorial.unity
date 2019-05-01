@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657707, g: 0.4964112, b: 0.57481635, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465773, g: 0.49641174, b: 0.5748174, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1041,7 +1041,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9d8630fc5eabfe44b88cf87420f57b86, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b831f56d29b2746b9afd860bc9f45d7d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.22
   m_Pitch: 1
@@ -1158,6 +1158,10 @@ MonoBehaviour:
   EventID: AllBeats
   BeatLoop: 0001000000010000
   BeatCount: 1
+  beatIndicator: {fileID: 0}
+  section: 0
+  spotLight: {fileID: 887128662}
+  numGroup: 1
   Furniture: {fileID: 740795865}
   Furniture2: {fileID: 59384875}
   readyPunch: 0
@@ -1169,14 +1173,13 @@ MonoBehaviour:
   Demonstrating: 0
   Checking: 0
   Activated: 0
-  spotLight: {fileID: 887128662}
   playersInvolved: []
-  numGroup: 1
   _audioSource: {fileID: 0}
   requiredPerfect: 0
   requiredCorrectPlayers: 1
   correctPlayers: 0
-  perfectTimes: 3
+  requiredPerfectTimes: 3
+  localPerfectTimes: 0
   levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 1298692128}
 --- !u!4 &533071438 stripped
@@ -3205,6 +3208,10 @@ MonoBehaviour:
   finishCanvas: {fileID: 1833376266}
   activatedFurniture: 0
   testMode: 0
+  beatCount: 0
+  windowCount: 0
+  furniture: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &1186717166
 GameObject:
   m_ObjectHideFlags: 0
@@ -3606,14 +3613,6 @@ PrefabInstance:
       propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: dc9bd077d9cf648159e369823408b530, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100048, guid: dc9bd077d9cf648159e369823408b530, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: dc9bd077d9cf648159e369823408b530, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3626,6 +3625,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dbaf3881ac6cbf143b244d94eb698370, type: 2}
+    - target: {fileID: 100002, guid: dc9bd077d9cf648159e369823408b530, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100048, guid: dc9bd077d9cf648159e369823408b530, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc9bd077d9cf648159e369823408b530, type: 3}
 --- !u!1 &1399817372
@@ -4513,7 +4520,7 @@ MonoBehaviour:
         _axisRange: 0
         _invert: 0
         _axisContribution: 0
-        _keyboardKeyCode: 303
+        _keyboardKeyCode: 32
         _modifierKey1: 0
         _modifierKey2: 0
         _modifierKey3: 0
@@ -4660,7 +4667,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9d8630fc5eabfe44b88cf87420f57b86, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4890c41a1def8488e951ef34b9b2f1dc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.22
   m_Pitch: 1
@@ -4777,6 +4784,10 @@ MonoBehaviour:
   EventID: AllBeats
   BeatLoop: 0001000000010000
   BeatCount: 1
+  beatIndicator: {fileID: 0}
+  section: 0
+  spotLight: {fileID: 1876974666}
+  numGroup: 1
   Furniture: {fileID: 1893371433}
   Furniture2: {fileID: 1701731102}
   readyPunch: 0
@@ -4788,14 +4799,13 @@ MonoBehaviour:
   Demonstrating: 0
   Checking: 0
   Activated: 0
-  spotLight: {fileID: 1876974666}
   playersInvolved: []
-  numGroup: 1
   _audioSource: {fileID: 0}
   requiredPerfect: 0
   requiredCorrectPlayers: 1
   correctPlayers: 0
-  perfectTimes: 3
+  requiredPerfectTimes: 3
+  localPerfectTimes: 0
   levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 1399817374}
 --- !u!4 &1787879195 stripped
@@ -5002,7 +5012,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1833376267
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7237,6 +7247,7 @@ MonoBehaviour:
   localMiss: 0
   localPerfectText: {fileID: 542625791379209042}
   localMissText: {fileID: 5637462607679282406}
+  windowCount: 0
 --- !u!82 &1322633706575024087
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7247,7 +7258,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 648d1fc989a12fd4ba4d6c4a5614a98c, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -7731,7 +7742,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 648d1fc989a12fd4ba4d6c4a5614a98c, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -7855,6 +7866,7 @@ MonoBehaviour:
   localMiss: 0
   localPerfectText: {fileID: 3722888261752132045}
   localMissText: {fileID: 8796051455454688889}
+  windowCount: 0
 --- !u!82 &2771789886107592013
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10323,22 +10335,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: 0219550f6784648269574cd98393f70c, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: 0219550f6784648269574cd98393f70c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 13700000, guid: 0219550f6784648269574cd98393f70c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e2bdfdf3950fc42829e91d44355296fc, type: 2}
-    - target: {fileID: 13700000, guid: 0219550f6784648269574cd98393f70c, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: e2bdfdf3950fc42829e91d44355296fc, type: 2}
     - target: {fileID: 400050, guid: 0219550f6784648269574cd98393f70c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10383,6 +10379,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 0219550f6784648269574cd98393f70c, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 0219550f6784648269574cd98393f70c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 0219550f6784648269574cd98393f70c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e2bdfdf3950fc42829e91d44355296fc, type: 2}
+    - target: {fileID: 13700000, guid: 0219550f6784648269574cd98393f70c, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: e2bdfdf3950fc42829e91d44355296fc, type: 2}
     - target: {fileID: 400022, guid: 0219550f6784648269574cd98393f70c, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -10614,6 +10626,10 @@ MonoBehaviour:
   EventID: AllBeats
   BeatLoop: 0001000000010000
   BeatCount: 1
+  beatIndicator: {fileID: 0}
+  section: 0
+  spotLight: {fileID: 5987958996861074496}
+  numGroup: 1
   Furniture: {fileID: 54165310}
   Furniture2: {fileID: 752268398}
   readyPunch: 0
@@ -10625,14 +10641,13 @@ MonoBehaviour:
   Demonstrating: 0
   Checking: 0
   Activated: 0
-  spotLight: {fileID: 5987958996861074496}
   playersInvolved: []
-  numGroup: 1
   _audioSource: {fileID: 0}
   requiredPerfect: 0
   requiredCorrectPlayers: 1
   correctPlayers: 0
-  perfectTimes: 3
+  requiredPerfectTimes: 3
+  localPerfectTimes: 0
   levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 5987958996862151813}
 --- !u!82 &5987958995949417911
@@ -10645,7 +10660,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9d8630fc5eabfe44b88cf87420f57b86, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 457b13f0ccbdb4310a114c518632c968, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.22
   m_Pitch: 1
@@ -11825,6 +11840,7 @@ MonoBehaviour:
   localMiss: 0
   localPerfectText: {fileID: 8219698506412793414}
   localMissText: {fileID: 4299175307989039602}
+  windowCount: 0
 --- !u!82 &7480205394309589699
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11835,7 +11851,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 648d1fc989a12fd4ba4d6c4a5614a98c, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

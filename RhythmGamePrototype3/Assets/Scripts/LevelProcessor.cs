@@ -9,6 +9,12 @@ public class LevelProcessor : MonoBehaviour
     public int activatedFurniture;
 
     public bool testMode;
+
+    public int beatCount;
+    public int windowCount;
+
+    public FurnitureInteractor furniture;
+    public PlayerController player;
     
     // Start is called before the first frame update
     void Start()
@@ -26,7 +32,8 @@ public class LevelProcessor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        beatCount = furniture.BeatCount;
+        windowCount = player.windowCount;
     }
 
     public void FinishCheck()
