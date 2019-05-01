@@ -13,7 +13,12 @@ public class FurnitureInteractor : MonoBehaviour
     public string EventID;
     public List<bool> BeatLoop;
     public int BeatCount;
+    public GameObject beatIndicator;
+    public int section;
     
+    [Header("Preset")]
+    public GameObject spotLight;    
+    public int numGroup = 1;    
     
     [Header("Animation")]
     //public float ShrinkDepth;
@@ -52,9 +57,9 @@ public class FurnitureInteractor : MonoBehaviour
     //public Material CheckingMat;
     public bool Activated;
     //public Material ActivatedMat;
-    public GameObject spotLight;
+
     public List<PlayerController> playersInvolved; 
-    public int numGroup = 1;
+
    
     
     //以下是新加的
@@ -167,6 +172,15 @@ public class FurnitureInteractor : MonoBehaviour
     void BeatAnime(KoreographyEvent evt)
     {
         //print("Beat " + BeatCount + " " + BeatLoop[BeatCount]);
+        /*if (BeatCount == 1)
+        {
+            section = 1 - section;
+        }*/
+        
+        if (beatIndicator != null && (Demonstrating || Checking))
+        {
+            beatIndicator.transform.localPosition = new Vector3((BeatCount + 7) % BeatLoop.Count, section, beatIndicator.transform.localPosition.z);        
+        }
         
         //Status check
         if (BeatCount == 0)
@@ -187,6 +201,8 @@ public class FurnitureInteractor : MonoBehaviour
                 {
                     Resting = false;
                     Demonstrating = true;
+
+                    section = 1;
 
                     _anim.SetBool("IsPlayer", false);
 
@@ -226,6 +242,8 @@ public class FurnitureInteractor : MonoBehaviour
                 {
                     Checking = true;                    
                     //scoring.SetActive(true);
+
+                    section = 0;
                     
                     //打开所有互动中玩家聚光灯及分数板
                     foreach (var player in playersInvolved)
@@ -317,6 +335,8 @@ public class FurnitureInteractor : MonoBehaviour
                         Demonstrating = true;
                         _anim.SetBool("IsPlayer", false);
 
+                        section = 1;
+
                         //if (DoCategorize() == true)
                         //{
                             //打开家具聚光灯并开始动画，并开始UI
@@ -370,6 +390,11 @@ public class FurnitureInteractor : MonoBehaviour
         
         //To next beat
         BeatCount = (BeatCount + 1) % BeatLoop.Count;
+
+
+        
+        
+
     }
 
     /*void Recover()
