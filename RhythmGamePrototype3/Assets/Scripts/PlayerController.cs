@@ -88,10 +88,15 @@ public class PlayerController : MonoBehaviour
     float smooth = 45.0f;
     float tiltAngle = 90.0f;
     Quaternion target;
+    
+    private cakeslice.Outline[] childOutlines;
+
 
 
     void Awake()
     {
+        childOutlines = GetComponentsInChildren<cakeslice.Outline>();
+
         //Get the Rewired Player object for this player and keep it for the duration of the character's lifetime
         RewirePlayer = ReInput.players.GetPlayer(playerId);
         animBaby = BabyModel.GetComponent<Animator>();
@@ -297,6 +302,15 @@ public class PlayerController : MonoBehaviour
         
         //imageUI.sprite = Chopping;
 
+        if (furnitureInteractor.Checking)
+        {
+            outlineEnabled();
+        }
+        else if (furnitureInteractor.Demonstrating)
+        {
+            outlineDisabled();
+        }
+        
         //Interaction
         if (RewirePlayer.GetButtonDown("Interact"))
         {            
@@ -310,6 +324,7 @@ public class PlayerController : MonoBehaviour
 
                if (furnitureInteractor != null && furnitureInteractor.Checking)
                {
+                   
                    if (furnitureInteractor.BeatLoop[(windowCount + 1) % 8])
                    {
                        Perfect();                   
@@ -528,8 +543,10 @@ public class PlayerController : MonoBehaviour
            
             if (hit.collider.CompareTag("DownStairs"))
             {
+                
                 LadderUI.SetActive(true);
-
+                outlineEnabled();
+                
                 if (RewirePlayer.GetButtonDown("Interact"))
                 {
                     transform.position = BottomLocator.transform.position;
@@ -545,7 +562,7 @@ public class PlayerController : MonoBehaviour
             else if (hit.collider.CompareTag("UpStairs"))
             {
                 LadderUI.SetActive(true);
-
+                outlineEnabled();
                 if (RewirePlayer.GetButtonDown("Interact"))
                 {
                     transform.position = UpperLocator.transform.position;
@@ -562,6 +579,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             LadderUI.SetActive(false);
+            //outlineDisabled();必须任何一个人都不在
 
         }
         
@@ -615,4 +633,21 @@ public class PlayerController : MonoBehaviour
 
         }
     }
+    
+    void outlineEnabled()
+    {
+        foreach (cakeslice.Outline c in childOutlines)
+        {
+            c.eraseRenderer = true;
+        }
+    }
+    
+    void outlineDisabled()
+    {
+        foreach (cakeslice.Outline c in childOutlines)
+        {
+            c.eraseRenderer = false;
+        }
+    }
+
 }

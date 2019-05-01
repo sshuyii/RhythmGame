@@ -6,6 +6,7 @@ using SonicBloom.Koreo;
 using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using cakeslice;
 
 public class FurnitureInteractor : MonoBehaviour
 {   
@@ -90,13 +91,19 @@ public class FurnitureInteractor : MonoBehaviour
     //private Vector3 originalScale;
     private GameObject scoring;    
     
+    //找到每个有renderer能描边的物体，为了ui描边做准备
+    private cakeslice.Outline[] childOutlines;
+
+    
     
     void Start()
     {
+        
         Koreographer.Instance.RegisterForEvents(EventID,BeatAnime);
 
         levelProcessor = GameObject.Find("GameManager").GetComponent<LevelProcessor>();
        
+        childOutlines = GetComponentsInChildren<cakeslice.Outline>();
         //新加
         _audioSource = GetComponent<AudioSource>();
         _anim = Furniture.GetComponent<Animator>();
@@ -205,8 +212,8 @@ public class FurnitureInteractor : MonoBehaviour
                     section = 1;
 
                     _anim.SetBool("IsPlayer", false);
-
-
+                    outlineEnabled();
+                    
                     //if (DoCategorize() == true)
                     //{
                         //打开家具聚光灯并开始动画，并开始UI
@@ -231,7 +238,7 @@ public class FurnitureInteractor : MonoBehaviour
                     //if (DoCategorize() == true)
                     //{
                         _anim.SetBool("IsPlayer", true);
-
+                        outlineDisabled();
                     //}
                     spotLight.SetActive(false);
 
@@ -296,21 +303,36 @@ public class FurnitureInteractor : MonoBehaviour
 
                     correctPlayers = 0;                    
                     
-                    
-                    //给动画设置trigger
-                    if (localPerfectTimes == 1)
+                    if(requiredPerfectTimes == 3)
                     {
-                        _imageUI.fillAmount = 0.305f;
+                        //给动画设置trigger
+                        if (localPerfectTimes == 1)
+                        {
+                            _imageUI.fillAmount = 0.305f;
+                        }
+                        else if (localPerfectTimes == 2)
+                        {
+                            _imageUI.fillAmount = 0.7f;
+                        }
+                        else if (localPerfectTimes == 3)
+                        {
+                            _imageUI.fillAmount = 1f;
+                        }
                     }
-                    else if (localPerfectTimes == 2)
+                    else if (requiredPerfectTimes == 2)
                     {
-                        _imageUI.fillAmount = 0.7f;
+                        //给动画设置trigger
+                        if (localPerfectTimes == 1)
+                        {
+                            _imageUI.fillAmount = 0.5f;
+                        }
+                        else if (localPerfectTimes == 2)
+                        {
+                            _imageUI.fillAmount = 1f;
+                        }
+                       
                     }
-                    else if (localPerfectTimes == 3)
-                    {
-                        _imageUI.fillAmount = 1f;
-                    }                    
-                    
+
                     //单独一个人有没有达到多次perfect的标准
                     if (localPerfectTimes == requiredPerfectTimes)
                     {
@@ -334,7 +356,7 @@ public class FurnitureInteractor : MonoBehaviour
                         //回到演示状态
                         Demonstrating = true;
                         _anim.SetBool("IsPlayer", false);
-
+                        outlineEnabled();
                         section = 1;
 
                         //if (DoCategorize() == true)
@@ -510,6 +532,22 @@ public class FurnitureInteractor : MonoBehaviour
 
         return temp;
 
+    }
+
+    void outlineEnabled()
+    {
+        foreach (cakeslice.Outline c in childOutlines)
+        {
+            c.eraseRenderer = true;
+        }
+    }
+    
+    void outlineDisabled()
+    {
+        foreach (cakeslice.Outline c in childOutlines)
+        {
+            c.eraseRenderer = false;
+        }
     }
 
 }
