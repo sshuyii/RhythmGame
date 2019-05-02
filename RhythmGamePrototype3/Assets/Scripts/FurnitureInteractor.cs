@@ -180,6 +180,8 @@ public class FurnitureInteractor : MonoBehaviour
 
     void BeatAnime(KoreographyEvent evt)
     {
+        if(gameObject.name == "ClockInteractor")
+        print("beatcount " + BeatCount);
         //print("Beat " + BeatCount + " " + BeatLoop[BeatCount]);
         /*if (BeatCount == 1)
         {
@@ -220,12 +222,12 @@ public class FurnitureInteractor : MonoBehaviour
                         spotLight.SetActive(true);
                         _anim.SetBool("IsMoving", true);
 
-                        print(")))))))))))))))))");
+                        //print(")))))))))))))))))");
 
                         rdFull.SetAlpha(1);
                         rdStroke.SetAlpha(1);
                     //}
-                  print("is Resting!!!!!!!!" + Demonstrating);
+                  //print("is Resting!!!!!!!!" + Demonstrating);
                 }
             }
             else if (Demonstrating)
@@ -514,7 +516,7 @@ public class FurnitureInteractor : MonoBehaviour
         {
             if (numGroup == 2)
             {
-                print("fridgeeeeeeeeeeeee");
+                //print("fridgeeeeeeeeeeeee");
 
                 temp = true;
 //                //打开家具聚光灯并开始动画，并开始UI
