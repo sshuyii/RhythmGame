@@ -28,6 +28,7 @@ public class MelodyPlay : MonoBehaviour
             Tinylytics.AnalyticsManager.LogCustomMetric("TimeInTotal",
                     timer.ToString());
             activatedFurnitureNum = 0;
+            groupNum++;
         }
     }
 }

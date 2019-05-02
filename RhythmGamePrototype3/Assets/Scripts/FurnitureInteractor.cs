@@ -99,7 +99,8 @@ public class FurnitureInteractor : MonoBehaviour
     
     void Start()
     {
-        
+        MelodyPlay = GameObject.Find("/BGM").GetComponent<MelodyPlay>();
+
         Koreographer.Instance.RegisterForEvents(EventID,BeatAnime);
 
         levelProcessor = GameObject.Find("GameManager").GetComponent<LevelProcessor>();
