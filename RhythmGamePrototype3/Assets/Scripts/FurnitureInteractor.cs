@@ -186,7 +186,7 @@ public class FurnitureInteractor : MonoBehaviour
             section = 1 - section;
         }*/
         
-        if (beatIndicator != null && (Demonstrating || Checking))
+        if (beatIndicator != null && (Demonstrating || Checking || Activated))
         {
             beatIndicator.transform.localPosition = new Vector3((BeatCount + 7) % BeatLoop.Count, section, beatIndicator.transform.localPosition.z);        
         }
