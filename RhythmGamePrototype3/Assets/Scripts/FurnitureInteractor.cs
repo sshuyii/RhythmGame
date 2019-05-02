@@ -19,7 +19,8 @@ public class FurnitureInteractor : MonoBehaviour
     
     [Header("Preset")]
     public GameObject spotLight;    
-    public int numGroup = 1;    
+    public int numGroup = 1;
+    private int activatedFurnitureNum = 0;
     
     [Header("Animation")]
     //public float ShrinkDepth;
@@ -41,7 +42,7 @@ public class FurnitureInteractor : MonoBehaviour
     private Animator _animNew;
     private Animator _animUI;
     public int punchUI = 0;
-
+    
 
     public string FurnitureName;
 
@@ -333,12 +334,14 @@ public class FurnitureInteractor : MonoBehaviour
                        
                     }
 
-                    //单独一个人有没有达到多次perfect的标准
+                    //(单独一个人)有没有达到多次perfect的标准
                     if (localPerfectTimes == requiredPerfectTimes)
                     {
                         //correctPlayers++;
                         //激活
                         Activated = true;
+                        activatedFurnitureNum++;
+
                         levelProcessor.FinishCheck();
                         //_anim.SetBool("IsActivated", true);
                         Furniture.SetActive(false);
@@ -483,6 +486,17 @@ public class FurnitureInteractor : MonoBehaviour
         }
     }*/
     
+    //判断这一组有没有进行完
+    bool groupFinished()
+    {
+        bool temp;
+        if (numGroup == 1 && activatedFurnitureNum == 4)
+        {
+            temp = true;
+        }
+        return temp;
+    }
+
     //判断现在到底进行到了哪一组
     bool DoCategorize()
     {
@@ -495,14 +509,7 @@ public class FurnitureInteractor : MonoBehaviour
         {
             if (numGroup == 1)
             {
-//                //打开家具聚光灯并开始动画，并开始UI
-//                spotLight.SetActive(true);
-//                //rd.material = DemonstratingMat;
-//                _anim.SetBool("IsMoving", true);
-//                _anim.SetBool("IsPlayer", false);
-//                                 
-//                rdFull.SetAlpha(1);
-//                rdStroke.SetAlpha(1);
+//                
 
                 temp = true;
             }
