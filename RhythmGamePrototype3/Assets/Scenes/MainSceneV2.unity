@@ -22389,6 +22389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1666447401}
   - component: {fileID: 1666447402}
+  - component: {fileID: 1666447403}
   m_Layer: 0
   m_Name: LadderUI
   m_TagString: Untagged
@@ -22458,6 +22459,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1666447403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666447400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 800c2563c949647778003ec52f61d180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 391000325}
 --- !u!1 &1667143655
 GameObject:
   m_ObjectHideFlags: 0
@@ -52550,7 +52564,7 @@ PrefabInstance:
     - target: {fileID: 7480205395212795478, guid: 40d25ee0d41d48c4087914de0027b694,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7480205395106199716, guid: 40d25ee0d41d48c4087914de0027b694, type: 3}
@@ -55021,6 +55035,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7875143056549236852}
   - component: {fileID: 7875143056549236853}
+  - component: {fileID: 7875143056549236856}
   m_Layer: 0
   m_Name: LadderUI
   m_TagString: Untagged
@@ -55028,6 +55043,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &7875143056549236856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7875143056549236855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 800c2563c949647778003ec52f61d180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7875143056146065472}
 --- !u!1 &7875143056599439660
 GameObject:
   m_ObjectHideFlags: 0

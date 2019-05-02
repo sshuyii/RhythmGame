@@ -408,7 +408,7 @@ public class PlayerController : MonoBehaviour
     {
         localPerfect++;
         localPerfectText.text = "Perfect: " + localPerfect;
-        //Instantiate(perfectParticle, transform.position + Vector3.up, Quaternion.identity);
+        Instantiate(perfectParticle, transform.position + 3 * Vector3.up, Quaternion.identity);
         perfectParticle.SetActive(true);
         furnitureInteractor._audioSource.Play();
         
@@ -533,7 +533,7 @@ public class PlayerController : MonoBehaviour
     {
        localMiss++;
        localMissText.text = "Miss: " + localMiss;
-       Instantiate(errorParticle, transform.position + 2 * Vector3.up, Quaternion.identity);
+       Instantiate(errorParticle, transform.position + 3 * Vector3.up, Quaternion.identity);
        _audioSource[1].Play();
        if (IsTutorial == false)
        {
