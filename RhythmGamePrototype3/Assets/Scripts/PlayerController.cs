@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     public bool IsLeft;
     public bool IsTutorial;
     public int numGroup = 1;
+    public string Version;
+
     
     public GameObject LadderLeft;
     public GameObject LadderRight;
@@ -286,10 +288,32 @@ public class PlayerController : MonoBehaviour
             
             if(furnitureInteractor != null)
             {
-                Tinylytics.AnalyticsManager.LogCustomMetric("PlayerHitButtonBeatCount",
-                    furnitureInteractor.BeatCount.ToString());
-                Tinylytics.AnalyticsManager.LogCustomMetric("FurnitureName",
-                    furnitureInteractor.FurnitureName);
+                if(Version == "A")
+                {
+                    bool rightTime;
+                    if (furnitureInteractor.Demonstrating == true)
+                    {
+                        rightTime = false;
+                    }
+                    else
+                    {
+                        rightTime = true;}
+                    
+                    string _myAnalytic =
+                        furnitureInteractor.FurnitureName + " + " + "Player" + playerId.ToString() + " + " +
+                        furnitureInteractor.BeatCount.ToString() + "+" + rightTime.ToString();
+                    Tinylytics.AnalyticsManager.LogCustomMetric("VersionA + FurnitureName + Id + Hit",
+                        _myAnalytic);
+                }
+                else if(Version == "B")
+                {
+                    string _myAnalytic =
+                        furnitureInteractor.FurnitureName + " + " + "Player" + playerId.ToString() + " + " +
+                        furnitureInteractor.BeatCount.ToString();
+                    Tinylytics.AnalyticsManager.LogCustomMetric("VersionB + FurnitureName + Id + Hit",
+                        _myAnalytic);
+                }
+               
                 
             }
            
@@ -355,6 +379,7 @@ public class PlayerController : MonoBehaviour
         localPerfectText.text = "Perfect: " + localPerfect;
         Instantiate(perfectParticle, transform.position + 3 * Vector3.up, Quaternion.identity);
         perfectParticle.SetActive(true);
+        //_audioSource[2].Play();
         furnitureInteractor._audioSource.Play();
         
         AnimationCount += 1;

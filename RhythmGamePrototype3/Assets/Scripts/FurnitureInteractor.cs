@@ -196,8 +196,6 @@ public class FurnitureInteractor : MonoBehaviour
         {
             _animNew.SetTrigger("IsBack");
             _animNew.SetTrigger("IsRepeat");
-
-            
             
             //针对UI
 //            _animUI.SetTrigger("Beat0");
