@@ -21,10 +21,21 @@ public class CameraMove : MonoBehaviour
 
     public GameObject ladder;
 
+    public static bool zooming;
+
+    public bool startZoom;
+
+    private Camera _camera;
+
+    private void Awake()
+    {
+        _camera = Camera.main;
+    }
+
     void Start()
     {
-        originalPosition = Camera.main.transform.localPosition;
-        originalSize = Camera.main.orthographicSize;
+        originalPosition = _camera.transform.localPosition;
+        originalSize = _camera.orthographicSize;
         timer = 0;
         maxPosition = TargetCamera.transform.localPosition;
 //        StartCoroutine(myCameraMoveBack());
@@ -33,17 +44,29 @@ public class CameraMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (clockFI.Activated == true)
+        if (clockFI.Activated && !startZoom)
+        {
+            startZoom = true;
+            zooming = true;
+        }
+        
+        if (zooming)
         {
             timer++;
-            Camera.main.transform.localPosition =
+            _camera.transform.localPosition =
                 Vector3.LerpUnclamped(originalPosition, maxPosition, moving.Evaluate(timer / duration));
-            Camera.main.orthographicSize = Mathf.LerpUnclamped(originalSize, maxSize, moving.Evaluate(timer / duration));
+            _camera.orthographicSize = Mathf.LerpUnclamped(originalSize, maxSize, moving.Evaluate(timer / duration));
             
             //Activate the ladder too
             ladder.SetActive(true);
         }
+
+        if (timer > duration)
+        {
+            zooming = false;
+        }
     }
+/*
 
     IEnumerator myCameraMoveIn()
     {
@@ -75,5 +98,5 @@ public class CameraMove : MonoBehaviour
     public void cameraZoomOut()
         {
             StartCoroutine(myCameraMoveBack());
-        }
+        }*/
 }
