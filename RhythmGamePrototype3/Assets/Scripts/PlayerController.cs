@@ -151,6 +151,8 @@ public class PlayerController : MonoBehaviour
     }*/
     void BeatReady(KoreographyEvent evt)
     {
+        if(gameObject.name == "Player1")
+        print("windowCount " + windowCount);
         //beatable = true;
         //furnitureInteractor.beatable = true;
         alreadybeat = false;
@@ -409,7 +411,7 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("Failed", false);
 
 
-                print("Dancing11111111");
+                //print("Dancing11111111");
             }
             else if (AnimationCount == 2)
             {
@@ -418,7 +420,7 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("Failed", false);
 
 
-                print("Dancing222222");
+                //print("Dancing222222");
 
             }
             else if (AnimationCount == 3)
@@ -665,7 +667,7 @@ public class PlayerController : MonoBehaviour
             if (other.CompareTag("LeftOrRight"))
             {
                 IsLeft = false;
-                print("IsRight");
+                //(print"IsRight");
             }
         }
 
@@ -674,7 +676,7 @@ public class PlayerController : MonoBehaviour
             if (other.CompareTag("LeftOrRight"))
             {
                 IsLeft = true;
-                print("IsLeft");
+                //print("IsLeft");
 
             }
         }

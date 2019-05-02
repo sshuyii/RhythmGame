@@ -16,6 +16,7 @@ public class FurnitureInteractor : MonoBehaviour
     public int BeatCount;
     public GameObject beatIndicator;
     public int section;
+    public int totalBeats;
     
     [Header("Preset")]
     public GameObject spotLight;    
@@ -180,8 +181,13 @@ public class FurnitureInteractor : MonoBehaviour
 
     void BeatAnime(KoreographyEvent evt)
     {
-        if(gameObject.name == "ClockInteractor")
-        print("beatcount " + BeatCount);
+        if (gameObject.name == "ClockInteractor")
+        {
+            totalBeats++;
+            print("totalBeats " + totalBeats + "-----------------------------------------------------");
+            print("beatCount " + BeatCount);
+        }
+        
         //print("Beat " + BeatCount + " " + BeatLoop[BeatCount]);
         /*if (BeatCount == 1)
         {
