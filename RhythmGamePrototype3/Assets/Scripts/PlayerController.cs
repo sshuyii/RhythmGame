@@ -156,7 +156,16 @@ public class PlayerController : MonoBehaviour
         //beatable = true;
         //furnitureInteractor.beatable = true;
         alreadybeat = false;
-        windowCount = (windowCount + 1) % 8;
+
+        if (furnitureInteractor != null)
+        {
+            windowCount = furnitureInteractor.BeatCount;
+        }
+        else
+        {
+            windowCount = (windowCount + 1) % 8;
+        }
+        
 
     }
 
@@ -346,7 +355,7 @@ public class PlayerController : MonoBehaviour
                if (furnitureInteractor != null && furnitureInteractor.Checking)
                {
                    
-                   if (furnitureInteractor.BeatLoop[(windowCount + 1) % 8])
+                   if (furnitureInteractor.BeatLoop[windowCount])
                    {
                        Perfect();                   
                    }
