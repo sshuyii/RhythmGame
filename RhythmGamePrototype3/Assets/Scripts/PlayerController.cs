@@ -9,6 +9,7 @@ using Rewired;
 using UnityEngine.Analytics;
 using Outline = cakeslice.Outline;
 
+
 //Usage: Control players that uses Unity Input manager.
 //Intent: The controller can be used on multiple players.
 
@@ -25,6 +26,9 @@ public class PlayerController : MonoBehaviour
     public int numGroup = 1;
     public string Version;
 
+    //for tiny analytics
+    private int stop = 0;
+    private float timer;
     
     public GameObject LadderLeft;
     public GameObject LadderRight;
@@ -179,7 +183,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+
+        timer += Time.deltaTime;
         
         if (IsTutorial && furnitureInteractor.Activated)
         {
@@ -215,6 +220,18 @@ public class PlayerController : MonoBehaviour
         {
            outlineDisabled();
 
+           if(stop == 0)
+
+           {
+               string _myAnalyticTime =
+                   furnitureInteractor.FurnitureName + " + " + "Player" + playerId.ToString() + " + " +
+                   timer.ToString();
+               //以下用于games & players的ab test，判断打完一个家具之后到底用了多长时间
+               Tinylytics.AnalyticsManager.LogCustomMetric("FurnitureFinished", _myAnalyticTime);
+               stop = 1;
+           }
+        
+           
             
         }
         
