@@ -104,8 +104,12 @@ public class PlayerController : MonoBehaviour
     {
         childOutlines = GetComponentsInChildren<cakeslice.Outline>();
 
-        Outlinecallingleft = LadderLeft.GetComponent<OutlineCalling>();
-        OutlinecallingRight = LadderRight.GetComponent<OutlineCalling>();
+        if(IsTutorial == false)
+
+        {
+            Outlinecallingleft = LadderLeft.GetComponent<OutlineCalling>();
+            OutlinecallingRight = LadderRight.GetComponent<OutlineCalling>();
+        }
 
         
         
@@ -211,7 +215,11 @@ public class PlayerController : MonoBehaviour
 
             
         }
-        LadderControl();
+        
+        if(IsTutorial == false)
+        {
+            LadderControl();
+        }
 
         if (!PlayerEnabled)
         {

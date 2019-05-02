@@ -32,8 +32,8 @@ public class LevelProcessor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        beatCount = furniture.BeatCount;
-        windowCount = player.windowCount;
+        //beatCount = furniture.BeatCount;
+        //windowCount = player.windowCount;
     }
 
     public void FinishCheck()

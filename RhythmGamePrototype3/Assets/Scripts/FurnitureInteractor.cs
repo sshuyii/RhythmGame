@@ -340,7 +340,10 @@ public class FurnitureInteractor : MonoBehaviour
                         //correctPlayers++;
                         //激活
                         Activated = true;
-                        MelodyPlay.activatedFurnitureNum++;
+                        if(playersInvolved[0].IsTutorial == false)
+                        {
+                            MelodyPlay.activatedFurnitureNum++;
+                        }                        
                         levelProcessor.FinishCheck();
                         //_anim.SetBool("IsActivated", true);
                         Furniture.SetActive(false);
