@@ -5,21 +5,35 @@ using UnityEngine;
 
 public class OutlineCalling : MonoBehaviour
 {
-    private Outline[] childOutlines;
+    private cakeslice.Outline childOutline;
+    public bool playerOnLadder;
+    public bool player1;
+    public bool player2;
+    public bool player3;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        childOutlines = GetComponentsInChildren<Outline>();
+        childOutline = GetComponentInChildren<cakeslice.Outline>();
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        foreach (Outline c in childOutlines)
+        
+        if (playerOnLadder == true)
         {
-            c.enabled = true;
+            childOutline.Enabling();
         }
+        else if(player1 == false && player2 == false && player3 == false)
+        {
+
+            childOutline.Disabling();
+        }
+     
     }
+    
+   
 }

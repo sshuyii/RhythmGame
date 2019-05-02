@@ -538,7 +538,7 @@ public class FurnitureInteractor : MonoBehaviour
     {
         foreach (cakeslice.Outline c in childOutlines)
         {
-            c.eraseRenderer = true;
+            c.Enabling();
         }
     }
     
@@ -546,7 +546,7 @@ public class FurnitureInteractor : MonoBehaviour
     {
         foreach (cakeslice.Outline c in childOutlines)
         {
-            c.eraseRenderer = false;
+            c.Disabling();
         }
     }
 

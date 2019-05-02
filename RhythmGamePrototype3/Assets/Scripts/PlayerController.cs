@@ -7,6 +7,7 @@ using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Rewired;
 using UnityEngine.Analytics;
+using Outline = cakeslice.Outline;
 
 //Usage: Control players that uses Unity Input manager.
 //Intent: The controller can be used on multiple players.
@@ -22,7 +23,12 @@ public class PlayerController : MonoBehaviour
     public bool IsLeft;
     public bool IsTutorial;
     public int numGroup = 1;
-
+    
+    public GameObject LadderLeft;
+    public GameObject LadderRight;
+    private OutlineCalling Outlinecallingleft;
+    private OutlineCalling OutlinecallingRight;
+    private OutlineCalling _outlineCalling;
 
     public GameObject LadderUI;
     //public KeyCode interaction;
@@ -45,7 +51,7 @@ public class PlayerController : MonoBehaviour
     private Collider _myCollider;
     private Transform bodyTran;
 
-    private bool PlayerEnabled = true;//用来判断此时能不能让玩家控制角色
+    public bool PlayerEnabled = true;//用来判断此时能不能让玩家控制角色
     //public float ShrinkDepth;
     //public float RecoverRate;
     //public Material NormalMat;
@@ -97,6 +103,10 @@ public class PlayerController : MonoBehaviour
     {
         childOutlines = GetComponentsInChildren<cakeslice.Outline>();
 
+        Outlinecallingleft = LadderLeft.GetComponent<OutlineCalling>();
+        OutlinecallingRight = LadderRight.GetComponent<OutlineCalling>();
+
+        
         //Get the Rewired Player object for this player and keep it for the duration of the character's lifetime
         RewirePlayer = ReInput.players.GetPlayer(playerId);
         animBaby = BabyModel.GetComponent<Animator>();
@@ -205,6 +215,14 @@ public class PlayerController : MonoBehaviour
           
             
         }
+
+        
+        if (furnitureInteractor != null && furnitureInteractor.Activated)
+        {
+           outlineDisabled();
+
+            
+        }
         LadderControl();
 
         if (!PlayerEnabled)
@@ -302,20 +320,35 @@ public class PlayerController : MonoBehaviour
         
         //imageUI.sprite = Chopping;
 
-        if (furnitureInteractor.Checking)
-        {
-            outlineEnabled();
+        if (furnitureInteractor != null)
+        { 
+            if (furnitureInteractor.Checking)
+            {
+                outlineEnabled();
+            }
+            else if (furnitureInteractor.Demonstrating)
+            {
+                
+                outlineDisabled();
+            }
+
         }
-        else if (furnitureInteractor.Demonstrating)
+        else
         {
             outlineDisabled();
         }
-        
+       
         //Interaction
         if (RewirePlayer.GetButtonDown("Interact"))
         {            
             
-            Tinylytics.AnalyticsManager.LogCustomMetric("PlayerHitButtonBeatCount",furnitureInteractor.BeatCount.ToString());
+            if(furnitureInteractor != null)
+            {
+                Tinylytics.AnalyticsManager.LogCustomMetric("PlayerHitButtonBeatCount",
+                    furnitureInteractor.BeatCount.ToString());
+            }
+           
+            
             if (/*beatable && */!alreadybeat)
             {
                //transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
@@ -513,7 +546,7 @@ public class PlayerController : MonoBehaviour
 
     private float UpperAngle;
     private float BottomAngle;
-    
+
     void LadderControl()
     {
 
@@ -527,6 +560,7 @@ public class PlayerController : MonoBehaviour
             UpperLocator = LeftUpperLocator;
             BottomAngle = 45;
             UpperAngle = 45;
+            _outlineCalling = Outlinecallingleft;
         }
         else
         {
@@ -534,55 +568,66 @@ public class PlayerController : MonoBehaviour
             UpperLocator = RightUpperLocator;
             BottomAngle = -45;
             UpperAngle = -45;
+            _outlineCalling = OutlinecallingRight;
+
         }
-        
-        
+
+
         if (Physics.Raycast(transform.position + Vector3.up, transform.forward * 2f, out hit, 2f))
         {
-            
-           
+
+
             if (hit.collider.CompareTag("DownStairs"))
             {
-                
+
                 LadderUI.SetActive(true);
                 outlineEnabled();
-                
+
+                _outlineCalling.playerOnLadder = true;
+                PlayerNotOnLadder();
+
                 if (RewirePlayer.GetButtonDown("Interact"))
                 {
                     transform.position = BottomLocator.transform.position;
                     transform.rotation = Quaternion.AngleAxis(BottomAngle, Vector3.up);
                     _myCollider.isTrigger = true;
-                    anim.SetBool("Jump",true);
-                    
+                    anim.SetBool("Jump", true);
                     PlayerEnabled = false;
                     LadderUI.SetActive(false);
                 }
-                
+
             }
             else if (hit.collider.CompareTag("UpStairs"))
             {
                 LadderUI.SetActive(true);
+                _outlineCalling.playerOnLadder = true;
                 outlineEnabled();
+
+                PlayerNotOnLadder();
+
                 if (RewirePlayer.GetButtonDown("Interact"))
                 {
                     transform.position = UpperLocator.transform.position;
                     //print("hittttttLadder");
                     transform.rotation = Quaternion.AngleAxis(UpperAngle, Vector3.up);
                     _myCollider.isTrigger = true;
-                    anim.SetBool("Fall",true);
-                    
+                    anim.SetBool("Fall", true);
+
                     PlayerEnabled = false;
                     LadderUI.SetActive(false);
-                }   
+                }
             }
         }
         else
         {
             LadderUI.SetActive(false);
-            //outlineDisabled();必须任何一个人都不在
+            _outlineCalling.playerOnLadder = false;
+
+
+            //outlineDisabled();必须任何一个人都不在梯子上才disable
 
         }
-        
+
         AnimatorStateInfo stateinfo = anim.GetCurrentAnimatorStateInfo(0);
         //transform.position = _myAnim.rootPosition;
 
@@ -595,59 +640,88 @@ public class PlayerController : MonoBehaviour
                 transform.position = UpperLocator.transform.position;
                 _myCollider.transform.position = UpperLocator.transform.position;
 
+                outlineDisabled();
+                PlayerNotOnLadder();
+
+
+                anim.SetBool("Jump", false);
                 PlayerEnabled = true;
-                anim.SetBool("Jump",false);
+
             }
-               
         }
+
+
         else if (stateinfo.IsName("Fall") && (stateinfo.normalizedTime > 1.0f))
-        {
-            _myCollider.isTrigger = false;
-            if (anim.GetBool("Fall"))
             {
-                transform.position = BottomLocator.transform.position;
-                _myCollider.transform.position = BottomLocator.transform.position;
+                _myCollider.isTrigger = false;
+                if (anim.GetBool("Fall"))
+                {
+                    transform.position = BottomLocator.transform.position;
+                    _myCollider.transform.position = BottomLocator.transform.position;
 
-                PlayerEnabled = true;
-                anim.SetBool("Fall",false);
+                    PlayerEnabled = true;
+                    outlineDisabled();
+                    PlayerNotOnLadder();
+
+                    anim.SetBool("Fall", false);
+                    PlayerEnabled = true;
+
+                }
+
             }
-               
-        }
+       
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("LeftOrRight"))
+        void OnTriggerEnter(Collider other)
         {
-            IsLeft = false;
-            print("IsRight");
+            if (other.CompareTag("LeftOrRight"))
+            {
+                IsLeft = false;
+                print("IsRight");
+            }
         }
-    }
 
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("LeftOrRight"))
+        void OnTriggerExit(Collider other)
         {
-            IsLeft = true;
-            print("IsLeft");
+            if (other.CompareTag("LeftOrRight"))
+            {
+                IsLeft = true;
+                print("IsLeft");
 
+            }
         }
-    }
+
+        void outlineEnabled()
+        {
+            foreach (cakeslice.Outline c in childOutlines)
+            {
+                c.Enabling();
+            }
+        }
+
+        void outlineDisabled()
+        {
+            foreach (cakeslice.Outline c in childOutlines)
+            {
+                c.Disabling();
+            }
+        }
+
+        void PlayerNotOnLadder()
+        {
+            if (playerId == 0)
+            {
+                _outlineCalling.player1 = false;
+            }
+            else if (playerId == 1)
+            {
+                _outlineCalling.player2 = false;
+            }
+            else if (playerId == 2)
+            {
+                _outlineCalling.player3 = false;
+            }
+        }
     
-    void outlineEnabled()
-    {
-        foreach (cakeslice.Outline c in childOutlines)
-        {
-            c.eraseRenderer = true;
-        }
-    }
-    
-    void outlineDisabled()
-    {
-        foreach (cakeslice.Outline c in childOutlines)
-        {
-            c.eraseRenderer = false;
-        }
-    }
 
 }
