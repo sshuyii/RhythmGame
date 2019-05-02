@@ -408,7 +408,8 @@ public class PlayerController : MonoBehaviour
     {
         localPerfect++;
         localPerfectText.text = "Perfect: " + localPerfect;
-        Instantiate(perfectParticle, transform.position + Vector3.up, Quaternion.identity);
+        //Instantiate(perfectParticle, transform.position + Vector3.up, Quaternion.identity);
+        perfectParticle.SetActive(true);
         furnitureInteractor._audioSource.Play();
         
         AnimationCount += 1;

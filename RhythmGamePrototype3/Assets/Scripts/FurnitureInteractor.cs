@@ -489,7 +489,7 @@ public class FurnitureInteractor : MonoBehaviour
     //判断这一组有没有进行完
     bool groupFinished()
     {
-        bool temp;
+        bool temp = new bool();
         if (numGroup == 1 && activatedFurnitureNum == 4)
         {
             temp = true;
