@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     private OutlineCalling _outlineCalling;
 
     public GameObject LadderUI;
+
     //public KeyCode interaction;
 
     [Header("Animation")] 
@@ -107,6 +108,7 @@ public class PlayerController : MonoBehaviour
         OutlinecallingRight = LadderRight.GetComponent<OutlineCalling>();
 
         
+        
         //Get the Rewired Player object for this player and keep it for the duration of the character's lifetime
         RewirePlayer = ReInput.players.GetPlayer(playerId);
         animBaby = BabyModel.GetComponent<Animator>();
@@ -171,24 +173,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+      
+        
         if (IsTutorial && furnitureInteractor.Activated)
         {
-            
-//            anim.SetBool("BabyToLeft1",false);
-//            anim.SetBool("BabyToLeft2",false);
-//            anim.SetBool("BabyToRight1",false);
-//            anim.SetBool("BabyToRight2",false);
-//
-//            animBaby.SetBool("BabyToLeft1",false);
-//            animBaby.SetBool("BabyToLeft2",false);
-//            animBaby.SetBool("BabyToRight1",false);
-//            animBaby.SetBool("BabyToRight2",false);
-
-            //anim.SetTrigger("Activated");
-
-
-
             if (furnitureInteractor.BeatCount == 1)
             {
                 anim.SetBool("BabyToRight2",false);
@@ -260,60 +248,6 @@ public class PlayerController : MonoBehaviour
         {
             transform.rotation = Quaternion.LookRotation(movement);
         }
-
-        
-        
-      
-
-        //控制player的朝向
-        // Smoothly tilts a transform towards a target rotation.
-//        float tiltAroundZ = Input.GetAxis("Horizontal" + playerNum) * tiltAngle;
-//        float tiltAroundX = Input.GetAxis("Vertical" + playerNum) * tiltAngle;
-//        print("x=" + x);
-//        print("z=" + z);
-        
-        // if(x > 0)
-        // {
-        //     /*transform.Rotate(0, 45, 0,Space.World);
-        //     _rotation = transform.rotation.y;*/
-            
-        //     transform.localEulerAngles = new Vector3(0,45,0);
-
-
-        // }
-        // else if (x < 0)
-        // {
-        //     /*transform.Rotate(0, -125, 0,Space.World);
-        //     _rotation = transform.rotation.y;*/
-            
-        //     transform.localEulerAngles = new Vector3(0,-135,0);
-
-        // }
-        
-        // if(z > 0)
-        // { 
-        //     /*transform.Rotate(0, -45, 0,Space.World);
-        //     _rotation = transform.rotation.y;*/
-            
-        //     transform.localEulerAngles = new Vector3(0, -45, 0);
-
-           
-        // }
-        // else if (z < 0)
-        // {
-        //     /*transform.Rotate(0, 125, 0,Space.World);
-        //     _rotation = transform.rotation.y;*/
-            
-        //     transform.localEulerAngles = new Vector3(0, 135, 0);
-
-        // }
-        
-        
-       
-
-        // Dampen towards the target rotation
-        //transform.rotation = Quaternion.Slerp(transform.rotation, target,  Time.deltaTime * smooth);
-
         
         
         _animating(x, z);
@@ -346,6 +280,9 @@ public class PlayerController : MonoBehaviour
             {
                 Tinylytics.AnalyticsManager.LogCustomMetric("PlayerHitButtonBeatCount",
                     furnitureInteractor.BeatCount.ToString());
+                Tinylytics.AnalyticsManager.LogCustomMetric("FurnitureName",
+                    furnitureInteractor.FurnitureName);
+                
             }
            
             

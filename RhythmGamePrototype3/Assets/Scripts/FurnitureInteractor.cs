@@ -20,7 +20,7 @@ public class FurnitureInteractor : MonoBehaviour
     [Header("Preset")]
     public GameObject spotLight;    
     public int numGroup = 1;
-    private int activatedFurnitureNum = 0;
+    public MelodyPlay MelodyPlay;
     
     [Header("Animation")]
     //public float ShrinkDepth;
@@ -340,8 +340,7 @@ public class FurnitureInteractor : MonoBehaviour
                         //correctPlayers++;
                         //激活
                         Activated = true;
-                        activatedFurnitureNum++;
-
+                        MelodyPlay.activatedFurnitureNum++;
                         levelProcessor.FinishCheck();
                         //_anim.SetBool("IsActivated", true);
                         Furniture.SetActive(false);
@@ -487,15 +486,7 @@ public class FurnitureInteractor : MonoBehaviour
     }*/
     
     //判断这一组有没有进行完
-    bool groupFinished()
-    {
-        bool temp = new bool();
-        if (numGroup == 1 && activatedFurnitureNum == 4)
-        {
-            temp = true;
-        }
-        return temp;
-    }
+    
 
     //判断现在到底进行到了哪一组
     bool DoCategorize()
