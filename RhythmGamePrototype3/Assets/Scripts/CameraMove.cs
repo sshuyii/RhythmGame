@@ -61,7 +61,7 @@ public class CameraMove : MonoBehaviour
             ladder.SetActive(true);
         }
 
-        if (timer > duration)
+        if (timer > duration && zooming)
         {
             zooming = false;
         }
