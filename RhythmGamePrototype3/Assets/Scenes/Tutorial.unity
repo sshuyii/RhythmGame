@@ -669,9 +669,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159581278}
-  m_LocalRotation: {x: -0, y: -0.92387956, z: -0, w: 0.38268352}
-  m_LocalPosition: {x: 0.22672144, y: 3.25, z: 2.1277783}
-  m_LocalScale: {x: 1.098459, y: 1.3181503, z: 1.098459}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.84, z: 0.29}
+  m_LocalScale: {x: 0.857, y: 1.03, z: 0.867}
   m_Children:
   - {fileID: 2002165377}
   m_Father: {fileID: 1322633706627591542}
@@ -1359,9 +1359,9 @@ MonoBehaviour:
   BeatCount: 1
   beatIndicator: {fileID: 0}
   section: 0
+  totalBeats: 0
   spotLight: {fileID: 887128662}
   numGroup: 1
-  MelodyPlay: {fileID: 0}
   Furniture: {fileID: 740795865}
   Furniture2: {fileID: 59384875}
   readyPunch: 0
@@ -3061,7 +3061,7 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 28646867ddcf90a4989276acd313ea43, type: 2}
+      objectReference: {fileID: 2100000, guid: 87afcd97595cd02479bfcfd00d66fda9, type: 2}
     - target: {fileID: 9500000, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
       propertyPath: m_Controller
       value: 
@@ -3077,7 +3077,7 @@ PrefabInstance:
     - target: {fileID: 13700002, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 28646867ddcf90a4989276acd313ea43, type: 2}
+      objectReference: {fileID: 2100000, guid: 87afcd97595cd02479bfcfd00d66fda9, type: 2}
     - target: {fileID: 13700002, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
       propertyPath: m_Quality
       value: 4
@@ -3102,6 +3102,10 @@ PrefabInstance:
       propertyPath: m_Quality
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 13700004, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 87afcd97595cd02479bfcfd00d66fda9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
 --- !u!4 &752268397 stripped
@@ -3263,7 +3267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoPlayOnAwake: 1
   koreography: {fileID: 11400000, guid: fe2db452facc34246910c1b7f53068ed, type: 2}
-  targetKoreographer: {fileID: 0}
+  targetKoreographer: {fileID: 833177586}
 --- !u!82 &833177585
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5780,9 +5784,9 @@ MonoBehaviour:
   BeatCount: 1
   beatIndicator: {fileID: 0}
   section: 0
+  totalBeats: 0
   spotLight: {fileID: 1876974666}
   numGroup: 1
-  MelodyPlay: {fileID: 0}
   Furniture: {fileID: 1893371433}
   Furniture2: {fileID: 1701731102}
   readyPunch: 0
@@ -6264,7 +6268,7 @@ PrefabInstance:
     - target: {fileID: 13700002, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 465b43787f0dc5a4f8692f074f54c897, type: 2}
+      objectReference: {fileID: 2100000, guid: 87afcd97595cd02479bfcfd00d66fda9, type: 2}
     - target: {fileID: 13700002, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
       propertyPath: m_Quality
       value: 4
@@ -6272,7 +6276,7 @@ PrefabInstance:
     - target: {fileID: 13700004, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 465b43787f0dc5a4f8692f074f54c897, type: 2}
+      objectReference: {fileID: 2100000, guid: 87afcd97595cd02479bfcfd00d66fda9, type: 2}
     - target: {fileID: 13700004, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
       propertyPath: m_Quality
       value: 4
@@ -11618,9 +11622,9 @@ MonoBehaviour:
   BeatCount: 1
   beatIndicator: {fileID: 0}
   section: 0
+  totalBeats: 0
   spotLight: {fileID: 5987958996861074496}
   numGroup: 1
-  MelodyPlay: {fileID: 0}
   Furniture: {fileID: 54165310}
   Furniture2: {fileID: 752268398}
   readyPunch: 0

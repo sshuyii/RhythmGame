@@ -21,7 +21,7 @@ public class FurnitureInteractor : MonoBehaviour
     [Header("Preset")]
     public GameObject spotLight;    
     public int numGroup = 1;
-    public MelodyPlay MelodyPlay;
+    private MelodyPlay MelodyPlay;
     
     [Header("Animation")]
     //public float ShrinkDepth;
@@ -150,7 +150,7 @@ public class FurnitureInteractor : MonoBehaviour
             script.furnitureInteractor = this;
             playersInvolved.Add(script);
             //_light.SetActive(true);
-            
+            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             /*if (Resting)
             {
                 //rd.material = WaitingMat;                
@@ -517,7 +517,9 @@ public class FurnitureInteractor : MonoBehaviour
         }
                         
         else if(FurnitureName == "Fridge"
-                || FurnitureName == "Washer"
+                || FurnitureName == "Bed"
+                || FurnitureName == "Swing"
+                || FurnitureName == "Extracter"
         )
         {
             if (numGroup == 2)
