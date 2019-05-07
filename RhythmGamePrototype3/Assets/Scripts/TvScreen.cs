@@ -32,7 +32,7 @@ public class TvScreen : MonoBehaviour
         
         if (FurnitureInteractor.Activated == true)
         {
-            if (FurnitureInteractor.BeatLoop[FurnitureInteractor.BeatCount] == true)
+            if (FurnitureInteractor.BeatCount != 0)
             {
 
                 _mySecondMaterial = _tvScreenMat;
