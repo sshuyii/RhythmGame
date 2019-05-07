@@ -1361,7 +1361,6 @@ MonoBehaviour:
   section: 0
   totalBeats: 0
   spotLight: {fileID: 887128662}
-  numGroup: 1
   Furniture: {fileID: 740795865}
   Furniture2: {fileID: 59384875}
   readyPunch: 0
@@ -1382,6 +1381,7 @@ MonoBehaviour:
   localPerfectTimes: 0
   levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 1298692128}
+  SmokeParticle: {fileID: 0}
 --- !u!4 &533071438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400050, guid: dc9bd077d9cf648159e369823408b530,
@@ -4453,6 +4453,135 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc9bd077d9cf648159e369823408b530, type: 3}
+--- !u!1001 &1387403053
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5799659796269654955, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_Name
+      value: FrameRate
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659796269654959, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659795555099610, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799659795555099610, guid: 16471e543fa5d4b99962551d311f9551,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 16471e543fa5d4b99962551d311f9551, type: 3}
 --- !u!1 &1399817372
 GameObject:
   m_ObjectHideFlags: 0
@@ -5786,7 +5915,6 @@ MonoBehaviour:
   section: 0
   totalBeats: 0
   spotLight: {fileID: 1876974666}
-  numGroup: 1
   Furniture: {fileID: 1893371433}
   Furniture2: {fileID: 1701731102}
   readyPunch: 0
@@ -5807,6 +5935,7 @@ MonoBehaviour:
   localPerfectTimes: 0
   levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 1399817374}
+  SmokeParticle: {fileID: 0}
 --- !u!4 &1787879195 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3608174187453292678, guid: 1b12ec3187b5e45c9b65d5e1ac15ceb0,
@@ -11624,7 +11753,6 @@ MonoBehaviour:
   section: 0
   totalBeats: 0
   spotLight: {fileID: 5987958996861074496}
-  numGroup: 1
   Furniture: {fileID: 54165310}
   Furniture2: {fileID: 752268398}
   readyPunch: 0
@@ -11645,6 +11773,7 @@ MonoBehaviour:
   localPerfectTimes: 0
   levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 5987958996862151813}
+  SmokeParticle: {fileID: 0}
 --- !u!82 &5987958995949417911
 AudioSource:
   m_ObjectHideFlags: 0
