@@ -154,7 +154,8 @@ public class PlayerController : MonoBehaviour
     }*/
     void BeatReady(KoreographyEvent evt)
     {
-        if(gameObject.name == "Player1")
+        //print("reset");
+        //if(gameObject.name == "Player1")
         //print("windowCount " + windowCount);
         //beatable = true;
         //furnitureInteractor.beatable = true;
@@ -357,12 +358,14 @@ public class PlayerController : MonoBehaviour
             
             if (/*beatable && */!alreadybeat)
             {
+               print(windowCount);
                //transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
                //rd.material = PerfectMat;
                alreadybeat = true;
 
                if (furnitureInteractor != null && furnitureInteractor.Checking)
                {
+                   //print(windowCount);
                    
                    if (furnitureInteractor.BeatLoop[windowCount])
                    {
