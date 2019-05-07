@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     //player Id from Rewire
     public int playerId = 0;
     //the rewire player
-    private Player RewirePlayer;
+    protected Player RewirePlayer;
     public bool IsLeft;
     public bool IsTutorial;
     public int numGroup = 1;
