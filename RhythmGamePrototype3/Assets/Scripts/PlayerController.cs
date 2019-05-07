@@ -83,6 +83,9 @@ public class PlayerController : MonoBehaviour
     public Text localPerfectText;
     public Text localMissText;
     public int windowCount;
+
+    [Header("Narrative")] 
+    public ChatBarPopup dialogManager;
     //public GameObject furniture;//后加的,但是现在player发出的声音是一样的
     
     
@@ -197,7 +200,7 @@ public class PlayerController : MonoBehaviour
 
         timer += Time.deltaTime;
         
-        if (IsTutorial && furnitureInteractor.Activated)
+        if (IsTutorial && furnitureInteractor != null && furnitureInteractor.Activated)
         {
             if (furnitureInteractor.BeatCount == 1)
             {
@@ -312,7 +315,13 @@ public class PlayerController : MonoBehaviour
        
         //Interaction
         if (RewirePlayer.GetButtonDown("Interact"))
-        {            
+        {
+            //用于Narrative的Interact
+            if (dialogManager != null && dialogManager.currentInteractingPlayer == playerId)
+            {
+                print("Next");
+                dialogManager.interactionDetected = true;
+            }
             
             if(furnitureInteractor != null)
             {
