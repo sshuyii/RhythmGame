@@ -36,6 +36,7 @@ public class FurnitureInteractor : MonoBehaviour
     private CanvasRenderer rdStroke;
     
     
+    
     private HeartBeating HeartBeating;
     private Image _imageUI;
 
@@ -97,10 +98,15 @@ public class FurnitureInteractor : MonoBehaviour
     private cakeslice.Outline[] childOutlines;
 
     public GameObject SmokeParticle;
+    private Material _tvMaterial;
+    
     
     void Start()
     {
         MelodyPlay = GameObject.Find("/BGM").GetComponent<MelodyPlay>();
+        //找到电视需要替换的material
+        _tvMaterial	= Resources.Load<Material>("Materials/tvMat");
+
         
         //待修改：怎么找smokeparticle
         //SmokeParticle = GameObject.Find("Kitchen/SmokeParticle");
@@ -154,7 +160,7 @@ public class FurnitureInteractor : MonoBehaviour
             script.furnitureInteractor = this;
             playersInvolved.Add(script);
             //_light.SetActive(true);
-            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            //print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             /*if (Resting)
             {
                 //rd.material = WaitingMat;                
@@ -404,7 +410,7 @@ public class FurnitureInteractor : MonoBehaviour
                 _anim.SetBool("IsActivated", true);//播放家具动画
                 //判断成功的家具属于哪一组
                 //如果这个家具是抽烟机的话
-                print("trrrrrrrrrrrrrrrueeeeeeeeeeeeeeeee");
+                //print("trrrrrrrrrrrrrrrueeeeeeeeeeeeeeeee");
 
             }
         }
@@ -478,7 +484,7 @@ public class FurnitureInteractor : MonoBehaviour
                 if (BeatLoop[BeatCount] == true)
                 {
                     SmokeParticle.SetActive(true);
-                    print("trrrrrrrrrrrrrrrue");
+                    
                 }
                 else
                 {
