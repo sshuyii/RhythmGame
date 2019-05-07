@@ -29,6 +29,8 @@ public class HeartBeating : MonoBehaviour
     private CanvasRenderer rdStroke;
     private Vector3 CameraLookDirection;
 
+    private GameObject Smoke;
+
 
     //public bool _readyPunch;
     
@@ -43,14 +45,13 @@ public class HeartBeating : MonoBehaviour
         rdStroke = Stroke.GetComponent<CanvasRenderer>();
         rdFull = Full.GetComponent<CanvasRenderer>();
 
-        //rdStroke.SetAlpha(0);
-        //rdFull.SetAlpha(0);
-
         CameraLookDirection = Camera.main.transform.forward;
 
         
         _StrokeTransform = Stroke.GetComponent<Transform>();
         _FullTransform = Full.GetComponent<Transform>();
+        
+        Smoke = GameObject.Find("/SmokeParticle");
     }
 
     // Update is called once per frame
@@ -58,7 +59,6 @@ public class HeartBeating : MonoBehaviour
     {
         CameraLookDirection = Camera.main.transform.forward;
 
-        
         //让UI面向镜头
 //        Full.transform.LookAt(Camera.main.transform.position);	
 //        Stroke.transform.LookAt(Camera.main.transform.position);	
@@ -68,7 +68,6 @@ public class HeartBeating : MonoBehaviour
         Stroke.transform.rotation = rotation;
         Full.transform.rotation = rotation;
 
-
         
         punch = new Vector3 (0.5f, 0.5f, 0.5f);
 
@@ -77,8 +76,8 @@ public class HeartBeating : MonoBehaviour
             furnitureInteractor.readyPunch = false;
             _StrokeTransform.DOPunchScale(punch, duration, vibrato, elasticity);
             _FullTransform.DOPunchScale(punch, duration, vibrato, elasticity);
-            
         }
-        
+
+
     }
 }

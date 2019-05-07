@@ -152,7 +152,7 @@ public class PlayerController : MonoBehaviour
     void BeatReady(KoreographyEvent evt)
     {
         if(gameObject.name == "Player1")
-        print("windowCount " + windowCount);
+        //print("windowCount " + windowCount);
         //beatable = true;
         //furnitureInteractor.beatable = true;
         alreadybeat = false;

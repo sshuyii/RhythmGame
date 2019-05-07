@@ -20,7 +20,7 @@ public class FurnitureInteractor : MonoBehaviour
     
     [Header("Preset")]
     public GameObject spotLight;    
-    public int numGroup = 1;
+    //public int numGroup = 1;
     private MelodyPlay MelodyPlay;
     
     [Header("Animation")]
@@ -96,11 +96,15 @@ public class FurnitureInteractor : MonoBehaviour
     //找到每个有renderer能描边的物体，为了ui描边做准备
     private cakeslice.Outline[] childOutlines;
 
-    
+    public GameObject SmokeParticle;
     
     void Start()
     {
         MelodyPlay = GameObject.Find("/BGM").GetComponent<MelodyPlay>();
+        
+        //待修改：怎么找smokeparticle
+        //SmokeParticle = GameObject.Find("Kitchen/SmokeParticle");
+
 
         Koreographer.Instance.RegisterForEvents(EventID,BeatAnime);
 
@@ -184,8 +188,8 @@ public class FurnitureInteractor : MonoBehaviour
         if (gameObject.name == "ClockInteractor")
         {
             totalBeats++;
-            print("totalBeats " + totalBeats + "-----------------------------------------------------");
-            print("beatCount " + BeatCount);
+            //print("totalBeats " + totalBeats + "-----------------------------------------------------");
+            //print("beatCount " + BeatCount);
         }
         
         //print("Beat " + BeatCount + " " + BeatLoop[BeatCount]);
@@ -355,7 +359,10 @@ public class FurnitureInteractor : MonoBehaviour
                         //_anim.SetBool("IsActivated", true);
                         Furniture.SetActive(false);
                         Furniture2.SetActive(true);
-                        //rd.material = ActivatedMat;                        
+                        //rd.material = ActivatedMat;      
+                        
+                        
+
                     }
                     else
                     {
@@ -395,6 +402,10 @@ public class FurnitureInteractor : MonoBehaviour
             else if (Activated)
             {
                 _anim.SetBool("IsActivated", true);//播放家具动画
+                //判断成功的家具属于哪一组
+                //如果这个家具是抽烟机的话
+                print("trrrrrrrrrrrrrrrueeeeeeeeeeeeeeeee");
+
             }
         }
         
@@ -459,6 +470,23 @@ public class FurnitureInteractor : MonoBehaviour
             _colliderForPlayer.enabled = false;
 
         }
+
+        if (Activated == true)
+        {
+            if (FurnitureName == "Extractor")
+            {
+                if (BeatLoop[BeatCount] == true)
+                {
+                    SmokeParticle.SetActive(true);
+                    print("trrrrrrrrrrrrrrrue");
+                }
+                else
+                {
+                    SmokeParticle.SetActive(false);
+                }
+            }
+        }
+        
     }
     /*void Update()
     {
@@ -508,7 +536,7 @@ public class FurnitureInteractor : MonoBehaviour
            || FurnitureName == "Bath"
            || FurnitureName == "Box")
         {
-            if (numGroup == 1)
+            if (MelodyPlay.groupNum == 1)
             {
 //                
 
@@ -516,13 +544,13 @@ public class FurnitureInteractor : MonoBehaviour
             }
         }
                         
-        else if(FurnitureName == "Fridge"
-                || FurnitureName == "Bed"
-                || FurnitureName == "Swing"
-                || FurnitureName == "Extracter"
+        else if (FurnitureName == "Washer"
+                 || FurnitureName == "Bed"
+                 || FurnitureName == "Swing"
+                 || FurnitureName == "Extractor"
         )
         {
-            if (numGroup == 2)
+            if (MelodyPlay.groupNum == 2)
             {
                 //print("fridgeeeeeeeeeeeee");
 
@@ -537,6 +565,17 @@ public class FurnitureInteractor : MonoBehaviour
 //                rdFull.SetAlpha(1);
 //                rdStroke.SetAlpha(1);
 
+            }
+        }
+        else if(FurnitureName == "Piano"
+                || FurnitureName == "Painting"
+                || FurnitureName == "Fridge"
+                || FurnitureName == "Tv"
+        )
+        {
+            if (MelodyPlay.groupNum == 3)
+            {
+                temp = true;
             }
         }
 
@@ -560,4 +599,5 @@ public class FurnitureInteractor : MonoBehaviour
         }
     }
 
+    
 }
