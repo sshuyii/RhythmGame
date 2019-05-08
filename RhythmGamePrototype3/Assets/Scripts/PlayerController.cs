@@ -84,8 +84,8 @@ public class PlayerController : MonoBehaviour
     public Text localMissText;
     public int windowCount;
 
-    [Header("Narrative")] 
-    public ChatBarPopup dialogManager;
+    //[Header("Narrative")] 
+    //public NarrativeControl dialogManager;
     //public GameObject furniture;//后加的,但是现在player发出的声音是一样的
     
     
@@ -318,10 +318,10 @@ public class PlayerController : MonoBehaviour
         if (RewirePlayer.GetButtonDown("Interact"))
         {
             //用于Narrative的Interact
-            if (dialogManager != null && dialogManager.currentInteractingPlayer == playerId)
+            if (NarrativeControl.narrativeControl != null && NarrativeControl.narrativeControl.expectingInteraction && (NarrativeControl.narrativeControl.currentInteractingPlayer == playerId || NarrativeControl.narrativeControl.currentInteractingPlayer == 3))
             {
                 print("Next");
-                dialogManager.interactionDetected = true;
+                NarrativeControl.narrativeControl.interactionDetected = true;
             }
             
             if(furnitureInteractor != null)

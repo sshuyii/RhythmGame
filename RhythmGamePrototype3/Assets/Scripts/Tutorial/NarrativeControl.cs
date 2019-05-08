@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChatBarPopup : MonoBehaviour
+public class NarrativeControl : MonoBehaviour
 {
+    public static NarrativeControl narrativeControl;
+    
     public AnimationCurve popUp;
 
     public float popUpTime;
 
     public int currentInteractingPlayer = 2;
 
+    public bool expectingInteraction = true;
     public bool interactionDetected;
 
     public GameObject chatBoard;
@@ -18,6 +21,12 @@ public class ChatBarPopup : MonoBehaviour
     public List<Text> commands;
 
     public int step;
+
+    private void Awake()
+    {
+        NarrativeControl.narrativeControl = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +46,7 @@ public class ChatBarPopup : MonoBehaviour
         if (interactionDetected)
         {
             interactionDetected = false;
-            currentInteractingPlayer = 4;
+            expectingInteraction = false;
             commands[step].gameObject.SetActive(false);
             commands[step + 1].gameObject.SetActive(true);
             step++;

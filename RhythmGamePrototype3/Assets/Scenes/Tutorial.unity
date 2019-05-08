@@ -3006,6 +3006,26 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.7819939, y: 91.413956, z: -27.07251}
     m_Extent: {x: 128.4391, y: 314.21332, z: 151.56757}
   m_DirtyAABB: 0
+--- !u!1 &738821230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8806832250767574305, guid: 471d1b4e0ac498c4f9ebe21ab7ca5322,
+    type: 3}
+  m_PrefabInstance: {fileID: 557304353}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &738821231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738821230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196f5294f55279246b01ae0cc743fccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandName: StartCradleRhythm
+  targetFurniture: {fileID: 1758793154}
 --- !u!1001 &740795863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5196,18 +5216,6 @@ PrefabInstance:
       objectReference: {fileID: 2113341258}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6e8267d493c64648aa3c4ffee2c30a3, type: 3}
---- !u!114 &1580940966 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5020288214646674234, guid: d6e8267d493c64648aa3c4ffee2c30a3,
-    type: 3}
-  m_PrefabInstance: {fileID: 1580940965}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 234bbc0180932504c9cbd42443cf80d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1656323284 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6363292318100441151, guid: 564019a2607314171a0505f45bca6f6a,
@@ -8694,7 +8702,6 @@ MonoBehaviour:
   localPerfectText: {fileID: 542625791379209042}
   localMissText: {fileID: 5637462607679282406}
   windowCount: 0
-  dialogManager: {fileID: 1580940966}
 --- !u!82 &1322633706575024087
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9277,7 +9284,6 @@ MonoBehaviour:
   localPerfectText: {fileID: 3722888261752132045}
   localMissText: {fileID: 8796051455454688889}
   windowCount: 0
-  dialogManager: {fileID: 0}
 --- !u!82 &2771789886107592013
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12981,7 +12987,6 @@ MonoBehaviour:
   localPerfectText: {fileID: 8219698506412793414}
   localMissText: {fileID: 4299175307989039602}
   windowCount: 0
-  dialogManager: {fileID: 0}
 --- !u!82 &7480205394309589699
 AudioSource:
   m_ObjectHideFlags: 0
