@@ -100,6 +100,8 @@ public class FurnitureInteractor : MonoBehaviour
 
     public GameObject SmokeParticle;
     private Material _tvMaterial;
+    //如果是冰箱的话，audioSource是一个数组
+    private AudioSource[] _myAudioList;
     
     
     void Start()
@@ -108,7 +110,10 @@ public class FurnitureInteractor : MonoBehaviour
         //找到电视需要替换的material
         _tvMaterial	= Resources.Load<Material>("Materials/tvMat");
 
-        
+        if (FurnitureName == "Piano")
+        {
+            _myAudioList = GetComponents<AudioSource>();
+        }
         //待修改：怎么找smokeparticle
         //SmokeParticle = GameObject.Find("Kitchen/SmokeParticle");
 
@@ -464,7 +469,38 @@ public class FurnitureInteractor : MonoBehaviour
                 //transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
                 //Invoke("Recover", RecoverRate);            
                 //以上用animation取代
-                _audioSource.Play();
+                if (FurnitureName == "Piano")
+                {
+                    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!audio!");
+                    if (BeatCount == 1)
+                    {
+                        _myAudioList[0].Play();
+                    }
+                    else if (BeatCount == 2)
+                    {
+                        _myAudioList[1].Play();
+                        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!audio!");
+                    }
+                    else if (BeatCount == 3)
+                    {
+                        _myAudioList[2].Play();
+                    }
+                    else if (BeatCount == 4)
+                    {
+                        _myAudioList[3].Play();
+                    }
+                    else if (BeatCount == 6)
+                    {
+                        _myAudioList[4].Play();
+                    }
+                    else if (BeatCount == 7)
+                    {
+                        _myAudioList[5].Play();
+                    }
+                }
+                else{                
+                    _audioSource.Play();
+                }
                 
             } 
         }
