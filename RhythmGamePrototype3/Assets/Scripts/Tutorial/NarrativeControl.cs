@@ -47,11 +47,16 @@ public class NarrativeControl : MonoBehaviour
         {
             interactionDetected = false;
             expectingInteraction = false;
-            commands[step].gameObject.SetActive(false);
-            commands[step + 1].gameObject.SetActive(true);
-            step++;
+            NextStep();
             //print("Next");
         }
+    }
+
+    public void NextStep()
+    {
+        commands[step].gameObject.SetActive(false);
+        commands[step + 1].gameObject.SetActive(true);
+        step++;        
     }
 
     IEnumerator ChatBoardPopUp()
