@@ -6,7 +6,7 @@ using UnityEngine;
 public class OutlineCalling : MonoBehaviour
 {
     private cakeslice.Outline childOutline;
-    public bool playerOnLadder;
+    //public bool playerOnLadder;
     public bool player1;
     public bool player2;
     public bool player3;
@@ -22,14 +22,12 @@ public class OutlineCalling : MonoBehaviour
     void Update()
     {
         
-        
-        if (playerOnLadder == true)
+        if (player1 == true || player2 == true || player3 == true)
         {
             childOutline.Enabling();
         }
         else if(player1 == false && player2 == false && player3 == false)
         {
-
             childOutline.Disabling();
         }
      
