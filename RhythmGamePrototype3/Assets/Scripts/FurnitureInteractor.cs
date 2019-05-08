@@ -17,6 +17,7 @@ public class FurnitureInteractor : MonoBehaviour
     public GameObject beatIndicator;
     public int section;
     public int totalBeats;
+    //public bool enabledOrNot;
     
     [Header("Preset")]
     //public GameObject spotLight;    
@@ -160,18 +161,16 @@ public class FurnitureInteractor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //PlayerInPlace = true;
-            
-            //将该玩家(的脚本）加入互动中的玩家列表
-            PlayerController script = other.GetComponent<PlayerController>();
-            script.furnitureInteractor = this;
-            playersInvolved.Add(script);
-            //_light.SetActive(true);
-            //print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            /*if (Resting)
+            if (DoCategorize() == true)
             {
-                //rd.material = WaitingMat;                
-            }*/
+                //PlayerInPlace = true;
+            
+                //将该玩家(的脚本）加入互动中的玩家列表
+                PlayerController script = other.GetComponent<PlayerController>();
+                script.furnitureInteractor = this;
+                playersInvolved.Add(script);
+                
+            }
 
         }
     }
@@ -534,6 +533,7 @@ public class FurnitureInteractor : MonoBehaviour
 
     void Update()
     {
+        //enabledOrNot = DoCategorize();
         if (DoCategorize() == true)
         {
             _colliderForPlayer.enabled = true;

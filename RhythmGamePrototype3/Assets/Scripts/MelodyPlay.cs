@@ -29,6 +29,7 @@ public class MelodyPlay : MonoBehaviour
                     timer.ToString());
             activatedFurnitureNum = 0;
             groupNum++;
+            
         }
         else if (groupNum == 2 && activatedFurnitureNum == 4)
         {
