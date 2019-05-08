@@ -25,8 +25,17 @@ public class MelodyPlay : MonoBehaviour
         {
             //以下用于games & players的ab test，判断打完第一组家具之后到底用了多长时间
             
-            Tinylytics.AnalyticsManager.LogCustomMetric("TimeInTotal",
+            Tinylytics.AnalyticsManager.LogCustomMetric("TimeInTotal1",
                     timer.ToString());
+            activatedFurnitureNum = 0;
+            groupNum++;
+        }
+        else if (groupNum == 2 && activatedFurnitureNum == 4)
+        {
+            //以下用于games & players的ab test，判断打完第一组家具之后到底用了多长时间
+            
+            Tinylytics.AnalyticsManager.LogCustomMetric("TimeInTotal2",
+                timer.ToString());
             activatedFurnitureNum = 0;
             groupNum++;
         }
