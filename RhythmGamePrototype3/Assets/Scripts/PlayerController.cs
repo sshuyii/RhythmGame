@@ -6,6 +6,7 @@ using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Rewired;
+using Rewired.ComponentControls.Effects;
 using UnityEngine.Analytics;
 using Outline = cakeslice.Outline;
 
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
     public bool IsTutorial;
     public int numGroup = 1;
     public string Version;
+    private bool aroundLadder;
 
     //for tiny analytics
     private int stop = 0;
@@ -309,7 +311,7 @@ public class PlayerController : MonoBehaviour
             }
 
         }
-        else
+        else if(aroundLadder == false)
         {
             outlineDisabled();
         }
@@ -591,11 +593,12 @@ public class PlayerController : MonoBehaviour
             if (hit.collider.CompareTag("DownStairs"))
             {
 
+                aroundLadder = true;
                 LadderUI.SetActive(true);
                 outlineEnabled();
 
-                _outlineCalling.playerOnLadder = true;
-                PlayerNotOnLadder();
+                //_outlineCalling.playerOnLadder = true;
+                PlayerOnLadder();
 
                 if (RewirePlayer.GetButtonDown("Interact"))
                 {
@@ -610,11 +613,13 @@ public class PlayerController : MonoBehaviour
             }
             else if (hit.collider.CompareTag("UpStairs"))
             {
+                aroundLadder = true;
+
                 LadderUI.SetActive(true);
-                _outlineCalling.playerOnLadder = true;
+                //_outlineCalling.playerOnLadder = true;
                 outlineEnabled();
 
-                PlayerNotOnLadder();
+                PlayerOnLadder();
 
                 if (RewirePlayer.GetButtonDown("Interact"))
                 {
@@ -628,16 +633,18 @@ public class PlayerController : MonoBehaviour
                     LadderUI.SetActive(false);
                 }
             }
+            else
+            {
+                LadderUI.SetActive(false);
+                aroundLadder = false;
+
+                _outlineCalling.player1 = false;
+                _outlineCalling.player2 = false;
+                _outlineCalling.player3 = false;
+            
+            }
         }
-        else
-        {
-            LadderUI.SetActive(false);
-            _outlineCalling.playerOnLadder = false;
-
-
-            //outlineDisabled();必须任何一个人都不在梯子上才disable
-
-        }
+        
 
         AnimatorStateInfo stateinfo = anim.GetCurrentAnimatorStateInfo(0);
         //transform.position = _myAnim.rootPosition;
@@ -651,8 +658,8 @@ public class PlayerController : MonoBehaviour
                 transform.position = UpperLocator.transform.position;
                 _myCollider.transform.position = UpperLocator.transform.position;
 
-                outlineDisabled();
-                PlayerNotOnLadder();
+                outlineEnabled();
+                PlayerOnLadder();
 
 
                 anim.SetBool("Jump", false);
@@ -671,8 +678,8 @@ public class PlayerController : MonoBehaviour
                     _myCollider.transform.position = BottomLocator.transform.position;
 
                     PlayerEnabled = true;
-                    outlineDisabled();
-                    PlayerNotOnLadder();
+                    outlineEnabled();
+                    PlayerOnLadder();
 
                     anim.SetBool("Fall", false);
                     PlayerEnabled = true;
@@ -718,19 +725,26 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        void PlayerNotOnLadder()
+        void PlayerOnLadder()
         {
             if (playerId == 0)
             {
-                _outlineCalling.player1 = false;
+                _outlineCalling.player1 = true;
+                _outlineCalling.player2 = false;
+                _outlineCalling.player3 = false;
+                
             }
             else if (playerId == 1)
             {
-                _outlineCalling.player2 = false;
+                _outlineCalling.player2 = true;
+                _outlineCalling.player1 = false;
+                _outlineCalling.player3 = false;
             }
             else if (playerId == 2)
             {
-                _outlineCalling.player3 = false;
+                _outlineCalling.player3 = true;
+                _outlineCalling.player1 = false;
+                _outlineCalling.player2 = false;
             }
         }
     
