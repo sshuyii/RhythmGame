@@ -7,6 +7,10 @@ public class ChatBarPopup : MonoBehaviour
     public AnimationCurve popUp;
 
     public float popUpTime;
+
+    public int currentInteractingPlayer;
+
+    public bool interactionDetected;
     // Start is called before the first frame update
     void Start()
     {

@@ -113,6 +113,7 @@ public class FurnitureInteractor : MonoBehaviour
 
 
         Koreographer.Instance.RegisterForEvents(EventID,BeatAnime);
+        print("registered");
 
         levelProcessor = GameObject.Find("GameManager").GetComponent<LevelProcessor>();
        
@@ -191,6 +192,7 @@ public class FurnitureInteractor : MonoBehaviour
 
     void BeatAnime(KoreographyEvent evt)
     {
+        //print("running");
         if (gameObject.name == "ClockInteractor")
         {
             totalBeats++;
