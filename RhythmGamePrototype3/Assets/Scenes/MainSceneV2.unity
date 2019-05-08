@@ -423,38 +423,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 21005751}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &26861289
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 839
-  m_Height: 472
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 7
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &36437909 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6500912616045894728, guid: c8581fa22a449d74e94490386dee7616,
@@ -2681,6 +2649,7 @@ MonoBehaviour:
   Furniture2: {fileID: 76831388}
   readyPunch: 0
   UI: {fileID: 1010471036}
+  _anim: {fileID: 0}
   punchUI: 0
   FurnitureName: Painting
   Resting: 1
@@ -3118,7 +3087,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnitureInteractor: {fileID: 421558390}
   FurnitureName: Washer
-  starParticle: {fileID: 0}
 --- !u!1 &208559744
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,7 +3139,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnitureInteractor: {fileID: 370915687}
   FurnitureName: Bed
-  starParticle: {fileID: 0}
 --- !u!1 &209832533
 GameObject:
   m_ObjectHideFlags: 0
@@ -3562,7 +3529,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnitureInteractor: {fileID: 1169623184}
   FurnitureName: Box
-  starParticle: {fileID: 0}
 --- !u!1 &221957012
 GameObject:
   m_ObjectHideFlags: 0
@@ -5521,6 +5487,7 @@ MonoBehaviour:
   Furniture2: {fileID: 1528458280}
   readyPunch: 0
   UI: {fileID: 208559744}
+  _anim: {fileID: 0}
   punchUI: 0
   FurnitureName: Bed
   Resting: 1
@@ -6787,6 +6754,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 442362891}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &445067133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 2bce678eb28e447878915d3bdc28e13b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1292788613}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &445067134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445067133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!1001 &446698355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7585,7 +7574,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnitureInteractor: {fileID: 2486236128140476998}
   FurnitureName: Clock
-  starParticle: {fileID: 139, guid: d8cce2e8459f6d542ba4dfd43a8d0c67, type: 3}
 --- !u!1 &491634032
 GameObject:
   m_ObjectHideFlags: 0
@@ -10344,6 +10332,7 @@ MonoBehaviour:
   Furniture2: {fileID: 436792358}
   readyPunch: 0
   UI: {fileID: 2124351520}
+  _anim: {fileID: 0}
   punchUI: 0
   FurnitureName: Piano
   Resting: 1
@@ -15200,6 +15189,58 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 39.45245, y: 209.99998, z: 7.8766294}
   m_Center: {x: 70.38048, y: 0, z: -35.083424}
+--- !u!65 &859512208
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859512174}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 50.01514, y: 56.343895, z: 10.299394}
+  m_Center: {x: 69.19466, y: -76.828224, z: 65.12459}
+--- !u!65 &859512209
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859512174}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14.673233, y: 55.5715, z: 55.786106}
+  m_Center: {x: 86.86574, y: -77.21436, z: 72.48706}
+--- !u!65 &859512210
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859512174}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 49.763332, y: 74.20489, z: 16.179632}
+  m_Center: {x: -32.074654, y: -67.89772, z: -31.62367}
+--- !u!65 &859512211
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859512174}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.076494, y: 61.954163, z: 52.193356}
+  m_Center: {x: -13.7311735, y: -74.023186, z: -18.328848}
 --- !u!1 &865595889 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6500912615355236209, guid: c8581fa22a449d74e94490386dee7616,
@@ -16305,6 +16346,7 @@ MonoBehaviour:
   Furniture2: {fileID: 1831233674}
   readyPunch: 0
   UI: {fileID: 1506177305}
+  _anim: {fileID: 0}
   punchUI: 0
   FurnitureName: Tv
   Resting: 1
@@ -17084,7 +17126,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnitureInteractor: {fileID: 437727199}
   FurnitureName: Fridge
-  starParticle: {fileID: 0}
 --- !u!1 &972806556
 GameObject:
   m_ObjectHideFlags: 0
@@ -17799,7 +17840,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnitureInteractor: {fileID: 175111838}
   FurnitureName: Painting
-  starParticle: {fileID: 0}
 --- !u!1 &1015371333
 GameObject:
   m_ObjectHideFlags: 0
@@ -21074,7 +21114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnitureInteractor: {fileID: 1489869089}
   FurnitureName: Bath
-  starParticle: {fileID: 0}
 --- !u!1001 &1283217512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21207,7 +21246,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnitureInteractor: {fileID: 2625523147706020525}
   FurnitureName: Table
-  starParticle: {fileID: 0}
 --- !u!1001 &1292788613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21481,6 +21519,7 @@ MonoBehaviour:
   Furniture2: {fileID: 2037748089}
   readyPunch: 0
   UI: {fileID: 1484195103}
+  _anim: {fileID: 0}
   punchUI: 0
   FurnitureName: Swing
   Resting: 1
@@ -22684,7 +22723,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnitureInteractor: {fileID: 1534946149908523736}
   FurnitureName: Extractor
-  starParticle: {fileID: 0}
 --- !u!1 &1352229015
 GameObject:
   m_ObjectHideFlags: 0
@@ -24788,7 +24826,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnitureInteractor: {fileID: 1299512569}
   FurnitureName: Swing
-  starParticle: {fileID: 0}
 --- !u!1 &1486342261
 GameObject:
   m_ObjectHideFlags: 0
@@ -25160,6 +25197,7 @@ MonoBehaviour:
   Furniture2: {fileID: 797504279}
   readyPunch: 0
   UI: {fileID: 1275688364}
+  _anim: {fileID: 0}
   punchUI: 0
   FurnitureName: Bath
   Resting: 1
@@ -25560,7 +25598,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnitureInteractor: {fileID: 902373367}
   FurnitureName: Tv
-  starParticle: {fileID: 0}
 --- !u!1 &1513879376
 GameObject:
   m_ObjectHideFlags: 0
@@ -26072,6 +26109,38 @@ Transform:
   m_Father: {fileID: 1773089862}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!84 &1560032972
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 839
+  m_Height: 472
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 7
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &1561588120
 GameObject:
   m_ObjectHideFlags: 0
@@ -26886,38 +26955,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1618634057}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &1618741116
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 839
-  m_Height: 472
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 7
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &1621272847
 GameObject:
   m_ObjectHideFlags: 0
@@ -35765,8 +35802,8 @@ MonoBehaviour:
   sourceCamera: {fileID: 1883736899}
   outlineCamera: {fileID: 1964230552}
   outlineShaderMaterial: {fileID: 0}
-  renderTexture: {fileID: 1618741116}
-  extraRenderTexture: {fileID: 26861289}
+  renderTexture: {fileID: 2007973840}
+  extraRenderTexture: {fileID: 1560032972}
 --- !u!1 &1902360776
 GameObject:
   m_ObjectHideFlags: 0
@@ -36969,7 +37006,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 0
   m_RenderingPath: 1
-  m_TargetTexture: {fileID: 1618741116}
+  m_TargetTexture: {fileID: 2007973840}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
@@ -37761,6 +37798,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2002427944}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &2007973840
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 839
+  m_Height: 472
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 7
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &2010495529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39486,7 +39555,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnitureInteractor: {fileID: 609537700}
   FurnitureName: Piano
-  starParticle: {fileID: 0}
 --- !u!1001 &2133786925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43754,6 +43822,7 @@ MonoBehaviour:
   Furniture2: {fileID: 1020498563}
   readyPunch: 0
   UI: {fileID: 1349968235}
+  _anim: {fileID: 0}
   punchUI: 0
   FurnitureName: Extractor
   Resting: 1
@@ -46310,6 +46379,7 @@ MonoBehaviour:
   Furniture2: {fileID: 1724972673}
   readyPunch: 0
   UI: {fileID: 486616886}
+  _anim: {fileID: 0}
   punchUI: 0
   FurnitureName: Clock
   Resting: 1
@@ -46900,6 +46970,7 @@ MonoBehaviour:
   Furniture2: {fileID: 1492234421}
   readyPunch: 0
   UI: {fileID: 1287912471}
+  _anim: {fileID: 0}
   punchUI: 0
   FurnitureName: Table
   Resting: 1

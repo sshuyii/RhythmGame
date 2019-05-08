@@ -120,7 +120,7 @@ public class FurnitureInteractor : MonoBehaviour
 
 
         Koreographer.Instance.RegisterForEvents(EventID,BeatAnime);
-        print("registered");
+        //print("registered");
 
         levelProcessor = GameObject.Find("GameManager").GetComponent<LevelProcessor>();
        

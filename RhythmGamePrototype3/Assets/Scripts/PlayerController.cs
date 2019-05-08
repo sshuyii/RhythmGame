@@ -426,28 +426,28 @@ public class PlayerController : MonoBehaviour
         //_audioSource[2].Play();
         if (furnitureInteractor.FurnitureName == "Piano")
         {
-            if (furnitureInteractor.BeatCount == 1)
+            if (windowCount == 1)
             {
                 furnitureInteractor._myAudioList[0].Play();
             }
-            else if (furnitureInteractor.BeatCount == 2)
+            else if (windowCount == 2)
             {
                 furnitureInteractor._myAudioList[1].Play();
                 //print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!audio!");
             }
-            else if (furnitureInteractor.BeatCount == 3)
+            else if (windowCount == 3)
             {
                 furnitureInteractor._myAudioList[2].Play();
             }
-            else if (furnitureInteractor.BeatCount == 4)
+            else if (windowCount == 4)
             {
                 furnitureInteractor._myAudioList[3].Play();
             }
-            else if (furnitureInteractor.BeatCount == 6)
+            else if (windowCount == 6)
             {
                 furnitureInteractor._myAudioList[4].Play();
             }
-            else if (furnitureInteractor.BeatCount == 7)
+            else if (windowCount == 7)
             {
                 furnitureInteractor._myAudioList[5].Play();
             }

@@ -4,6 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 //using Rewired.Utils.Platforms.OSX;
 using SonicBloom.Koreo;
+using UnityEngine.UI;
 
 
 public class HeartBeating : MonoBehaviour
@@ -37,6 +38,8 @@ public class HeartBeating : MonoBehaviour
     private bool activatedDouble = false;
     private GameObject starParticle;
 
+    private Image _FullImage;
+    private Image _StrokeImage;
     //public bool _readyPunch;
     
     // Start is called before the first frame update
@@ -48,6 +51,9 @@ public class HeartBeating : MonoBehaviour
         Stroke = GameObject.Find(FurnitureName + "UI/Stroke");
         Full = GameObject.Find(FurnitureName + "UI/Full");
 
+//        _FullImage = Full.GetComponent<Image>();
+//        _StrokeImage = Stroke.GetComponent<Image>();
+        
         rdStroke = Stroke.GetComponent<CanvasRenderer>();
         rdFull = Full.GetComponent<CanvasRenderer>();
 
@@ -89,7 +95,7 @@ public class HeartBeating : MonoBehaviour
         if (furnitureInteractor.readyPunch && activated == false)
         {
             punch = new Vector3 (0.5f, 0.5f, 0.5f);
-            print("punch ==================true");
+            //print("punch ==================true");
 
             furnitureInteractor.readyPunch = false;
             _StrokeTransform.DOPunchScale(punch, duration, vibrato, elasticity);
@@ -110,6 +116,8 @@ public class HeartBeating : MonoBehaviour
 //            _FullTransform.DOPunchScale(punch, duration, vibrato, elasticity);
 
 
+//            _FullImage.color = Color.cyan;
+//            _StrokeImage.color = Color.cyan;
 
             timer += Time.deltaTime;
             if (timer < 1.2 && timer > 1.1)
