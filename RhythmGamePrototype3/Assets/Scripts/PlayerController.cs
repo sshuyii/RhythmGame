@@ -358,7 +358,7 @@ public class PlayerController : MonoBehaviour
             
             if (/*beatable && */!alreadybeat)
             {
-               print(windowCount);
+               //print(windowCount);
                //transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
                //rd.material = PerfectMat;
                alreadybeat = true;
