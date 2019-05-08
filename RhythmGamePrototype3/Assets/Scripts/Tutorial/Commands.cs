@@ -31,11 +31,22 @@ public class Commands : MonoBehaviour
         
     }
 
+    
+    //什么都不做：
+    void None()
+    {
+        
+    }
+    
+    
+    //允许玩家按互动键进入下一条：
     void Refresh()
     {
         NarrativeControl.narrativeControl.expectingInteraction = true;
     }
 
+    
+    //让家具不断打节奏（需要在Target Furniture里填入该家具的Interactor）：
     void StartCradleRhythm()
     {
         targetFurniture.Waiting = false;
@@ -43,6 +54,8 @@ public class Commands : MonoBehaviour
         //NarrativeControl.narrativeControl.expectingInteraction = true;
     }
 
+    
+    //等待至下一个第0拍，然后自动进入下一条：
     void Wait()
     {
         StartCoroutine(Waiting());
@@ -60,31 +73,49 @@ public class Commands : MonoBehaviour
 
     }
 
-    void Pause()
+    
+    //让家具回到静止状态（需要在Target Furniture里填入该家具的Interactor）：
+    void StopFurniture()
     {
-        Time.timeScale = 0;
-        targetAudio.Pause();
+
+        targetFurniture.Waiting = true;
+        targetFurniture.Free = false;
+        targetFurniture.Resting = false;
+        targetFurniture.Demonstrating = false;
+        targetFurniture.Checking = false;
         
+        //targetFurniture._anim.SetBool("IsMoving", false);
+
     }
 
-    void None()
-    {
-        
-    }
 
+    //让家具开始演示并允许玩家打节奏（需要在Target Furniture里填入该家具的Interactor）：
     void StartCradleDemo()
     {
         targetFurniture.Waiting = false;
         targetFurniture.Free = false;
         targetFurniture.Resting = true;
+        
+        //targetFurniture._anim.SetBool("IsMoving", true);
     }
 
+    
+    //暂停游戏（需要在Target Audio里填入BGM物件）：
+    void Pause()
+    {
+        Time.timeScale = 0;
+        targetAudio.Pause();        
+    }
+
+    
+    //继续游戏（需要在Target Audio里填入BGM物件）：
     void Resume()
     {
         Time.timeScale = 1;
         targetAudio.UnPause();
     }
 
+    //等待至玩家打对第一次，然后自动进入下一条（需要在Target Furniture里填入该家具的Interactor）：
     void WaitUntilFirstCorrect()
     {
         StartCoroutine(WaitingUntilFirstCorrect());
@@ -100,6 +131,7 @@ public class Commands : MonoBehaviour
         NarrativeControl.narrativeControl.NextStep();
     }
 
+    //等待至玩家激活家具，然后自动进入下一条（需要在Target Furniture里填入该家具的Interactor）：
     void WaitUntilActivated()
     {
         StartCoroutine(WaitingUntilActivated());
@@ -115,16 +147,19 @@ public class Commands : MonoBehaviour
         NarrativeControl.narrativeControl.NextStep();
     }
 
+    //隐藏提示（需要在Instruction里填入TEXT物件）：
     void HideInstruction()
     {
         instruction.SetActive(false);
     }
 
+    //显示提示（需要在Instruction里填入TEXT物件）：
     void ShowInstruction()
     {
         instruction.SetActive(true);
     }
 
+    //切换房间，然后自动进入下一条（需要在Room1里填入起始房间， 在Room2里填入目标房间, 在Target Furniture里填入目标房间里的家具的Interactor）：
     void ChangeRoom()
     {
         StartCoroutine(MoveCamera(Camera.main.transform.position,
