@@ -640,13 +640,20 @@ public class FurnitureInteractor : MonoBehaviour
 
             }
         }
-        else if(FurnitureName == "Piano"
-                || FurnitureName == "Painting"
+        else if(//FurnitureName == "Piano"
+                FurnitureName == "Painting"
                 || FurnitureName == "Fridge"
                 || FurnitureName == "Tv"
         )
         {
             if (MelodyPlay.groupNum == 3)
+            {
+                temp = true;
+            }
+        }
+        else if(FurnitureName == "Piano")
+        {
+            if (MelodyPlay.groupNum == 4)
             {
                 temp = true;
             }

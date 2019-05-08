@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraMove : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class CameraMove : MonoBehaviour
     public GameObject TargetCamera;
 
     public FurnitureInteractor clockFI;
+    public FurnitureInteractor pianoFI;
+
 
     public GameObject ladder;
 
@@ -43,7 +46,7 @@ public class CameraMove : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   //zoom out when game starts
         if (clockFI.Activated && !startZoom)
         {
             startZoom = true;
@@ -52,10 +55,11 @@ public class CameraMove : MonoBehaviour
         
         if (zooming)
         {
-            timer++;
-            _camera.transform.localPosition =
-                Vector3.LerpUnclamped(originalPosition, maxPosition, moving.Evaluate(timer / duration));
-            _camera.orthographicSize = Mathf.LerpUnclamped(originalSize, maxSize, moving.Evaluate(timer / duration));
+//            timer++;
+//            _camera.transform.localPosition =
+//                Vector3.LerpUnclamped(originalPosition, maxPosition, moving.Evaluate(timer / duration));
+//            _camera.orthographicSize = Mathf.LerpUnclamped(originalSize, maxSize, moving.Evaluate(timer / duration));
+            ZoomInOrOut(originalPosition, maxPosition, originalSize, maxSize);
             
             //Activate the ladder too
             ladder.SetActive(true);
@@ -64,7 +68,27 @@ public class CameraMove : MonoBehaviour
         if (timer > duration && zooming)
         {
             zooming = false;
+            timer = 0;
         }
+         
+        //zoom in when game ends
+
+        if (pianoFI.playersInvolved.Count == 3 && timer <= duration)
+        {
+            ZoomInOrOut(maxPosition, originalPosition, maxSize, originalSize);
+            ladder.SetActive(false);
+
+        }
+    }
+    
+    //把zoom in zoom out写成单独的函数
+
+    void ZoomInOrOut(Vector3 currentPosition, Vector3 targetPosition, float currentSize, float targetSize)
+    {
+        timer++;
+        _camera.transform.localPosition =
+            Vector3.LerpUnclamped(currentPosition, targetPosition, moving.Evaluate(timer / duration));
+        _camera.orthographicSize = Mathf.LerpUnclamped(currentSize, targetSize, moving.Evaluate(timer / duration));
     }
 /*
 
