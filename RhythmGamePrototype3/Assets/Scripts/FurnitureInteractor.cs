@@ -41,7 +41,7 @@ public class FurnitureInteractor : MonoBehaviour
     private HeartBeating HeartBeating;
     private Image _imageUI;
 
-    private Animator _anim;
+    public Animator _anim;
     private Animator _animNew;
     private Animator _animUI;
     public int punchUI = 0;
@@ -610,6 +610,8 @@ public class FurnitureInteractor : MonoBehaviour
     bool DoCategorize()
     {
         bool temp = false;
+
+        temp = FurnitureName.Contains("Cot");
         
         if(FurnitureName == "Clock"
            || FurnitureName == "Table"
