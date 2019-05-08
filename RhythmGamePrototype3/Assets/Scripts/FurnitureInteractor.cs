@@ -19,7 +19,7 @@ public class FurnitureInteractor : MonoBehaviour
     public int totalBeats;
     
     [Header("Preset")]
-    public GameObject spotLight;    
+    //public GameObject spotLight;    
     //public int numGroup = 1;
     private MelodyPlay MelodyPlay;
     
@@ -137,7 +137,7 @@ public class FurnitureInteractor : MonoBehaviour
         _imageUI = FullUI.GetComponent<Image>();
         _imageUI.fillAmount = 0;
 
-        spotLight = transform.Find("SpotLight").gameObject;
+        //spotLight = transform.Find("SpotLight").gameObject;
 
         //HeartBeating = UI.GetComponent<HeartBeating>();
             
@@ -237,7 +237,7 @@ public class FurnitureInteractor : MonoBehaviour
                     //if (DoCategorize() == true)
                     //{
                         //打开家具聚光灯并开始动画，并开始UI
-                        spotLight.SetActive(true);
+                        //spotLight.SetActive(true);
                         _anim.SetBool("IsMoving", true);
 
                         //print(")))))))))))))))))");
@@ -260,7 +260,7 @@ public class FurnitureInteractor : MonoBehaviour
                         _anim.SetBool("IsPlayer", true);
                         outlineDisabled();
                     //}
-                    spotLight.SetActive(false);
+                    //spotLight.SetActive(false);
 
                 
                
@@ -275,7 +275,7 @@ public class FurnitureInteractor : MonoBehaviour
                     //打开所有互动中玩家聚光灯及分数板
                     foreach (var player in playersInvolved)
                     {
-                        player.spotLight.SetActive(true);    
+                        //player.spotLight.SetActive(true);    
                     }
                     
                     //rd.material = CheckingMat;
@@ -293,7 +293,7 @@ public class FurnitureInteractor : MonoBehaviour
                 if (playersInvolved.Count > 0)
                 {
                     //打开家具聚光灯
-                    spotLight.SetActive(true);
+                    //spotLight.SetActive(true);
                     
                     //检测每个玩家的分数并统计打对的玩家个数
                     foreach (var player in playersInvolved)
@@ -389,7 +389,7 @@ public class FurnitureInteractor : MonoBehaviour
                         //if (DoCategorize() == true)
                         //{
                             //打开家具聚光灯并开始动画，并开始UI
-                        spotLight.SetActive(true);
+                        //spotLight.SetActive(true);
                         _anim.SetBool("IsMoving", true);
 
 
@@ -462,7 +462,7 @@ public class FurnitureInteractor : MonoBehaviour
         player.localMiss = 0;
         player.localPerfectText.text = "Perfect:";
         player.localMissText.text = "Miss:";
-        player.spotLight.SetActive(false);
+        //player.spotLight.SetActive(false);
     }
 
     //private bool toZero = false;
