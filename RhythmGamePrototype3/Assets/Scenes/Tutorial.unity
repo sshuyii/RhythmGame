@@ -1459,7 +1459,6 @@ MonoBehaviour:
   beatIndicator: {fileID: 0}
   section: 0
   totalBeats: 0
-  spotLight: {fileID: 887128662}
   Furniture: {fileID: 740795865}
   Furniture2: {fileID: 59384875}
   readyPunch: 0
@@ -1471,6 +1470,7 @@ MonoBehaviour:
   Demonstrating: 0
   Checking: 0
   Activated: 0
+  Free: 0
   playersInvolved: []
   _audioSource: {fileID: 0}
   requiredPerfect: 0
@@ -1558,6 +1558,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8806832250549991782, guid: 471d1b4e0ac498c4f9ebe21ab7ca5322,
+        type: 3}
+      propertyPath: m_Text
+      value: '... ...'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 471d1b4e0ac498c4f9ebe21ab7ca5322, type: 3}
@@ -3012,7 +3017,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 557304353}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &738821231
+--- !u!114 &738821234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738821230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196f5294f55279246b01ae0cc743fccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandName: Refresh
+  targetFurniture: {fileID: 0}
+--- !u!114 &738821235
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3312,6 +3331,26 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 752268396}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &812530110 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8806832250549991780, guid: 471d1b4e0ac498c4f9ebe21ab7ca5322,
+    type: 3}
+  m_PrefabInstance: {fileID: 557304353}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &812530111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812530110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196f5294f55279246b01ae0cc743fccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandName: Wait
+  targetFurniture: {fileID: 0}
 --- !u!1 &831239074
 GameObject:
   m_ObjectHideFlags: 0
@@ -3438,6 +3477,7 @@ GameObject:
   - component: {fileID: 833177586}
   - component: {fileID: 833177585}
   - component: {fileID: 833177584}
+  - component: {fileID: 833177588}
   m_Layer: 0
   m_Name: BGM
   m_TagString: Untagged
@@ -3584,6 +3624,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &833177588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833177583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4c52b30c119a44b9f3af6ce8c0cf67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BeatCount: 0
+  EventID: 
 --- !u!1 &836352399
 GameObject:
   m_ObjectHideFlags: 0
@@ -5214,6 +5268,11 @@ PrefabInstance:
       propertyPath: chatBoard
       value: 
       objectReference: {fileID: 2113341258}
+    - target: {fileID: 5020288214646674234, guid: d6e8267d493c64648aa3c4ffee2c30a3,
+        type: 3}
+      propertyPath: expectingInteraction
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6e8267d493c64648aa3c4ffee2c30a3, type: 3}
 --- !u!4 &1656323284 stripped
@@ -6676,7 +6735,6 @@ MonoBehaviour:
   beatIndicator: {fileID: 0}
   section: 0
   totalBeats: 0
-  spotLight: {fileID: 1876974666}
   Furniture: {fileID: 1893371433}
   Furniture2: {fileID: 1701731102}
   readyPunch: 0
@@ -6688,6 +6746,7 @@ MonoBehaviour:
   Demonstrating: 0
   Checking: 0
   Activated: 0
+  Free: 0
   playersInvolved: []
   _audioSource: {fileID: 0}
   requiredPerfect: 0
@@ -12120,7 +12179,6 @@ MonoBehaviour:
   beatIndicator: {fileID: 0}
   section: 0
   totalBeats: 0
-  spotLight: {fileID: 5987958996861074496}
   Furniture: {fileID: 54165310}
   Furniture2: {fileID: 752268398}
   readyPunch: 0
@@ -12132,6 +12190,7 @@ MonoBehaviour:
   Demonstrating: 0
   Checking: 0
   Activated: 0
+  Free: 0
   playersInvolved: []
   _audioSource: {fileID: 0}
   requiredPerfect: 0

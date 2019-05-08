@@ -60,6 +60,7 @@ public class FurnitureInteractor : MonoBehaviour
     public bool Checking;
     //public Material CheckingMat;
     public bool Activated;
+    public bool Free;
     //public Material ActivatedMat;
 
     public List<PlayerController> playersInvolved; 
@@ -267,18 +268,22 @@ public class FurnitureInteractor : MonoBehaviour
 
                 if (playersInvolved.Count > 0)
                 {
-                    Checking = true;                    
-                    //scoring.SetActive(true);
-
-                    section = 0;
-                    
-                    //打开所有互动中玩家聚光灯及分数板
-                    foreach (var player in playersInvolved)
+                    if (!Free)
                     {
-                        //player.spotLight.SetActive(true);    
+                        Checking = true;                    
+                        //scoring.SetActive(true);
+    
+                        section = 0;
+                        
+                        //打开所有互动中玩家聚光灯及分数板
+                        foreach (var player in playersInvolved)
+                        {
+                            //player.spotLight.SetActive(true);    
+                        }
+                        
+                        //rd.material = CheckingMat;                    
                     }
-                    
-                    //rd.material = CheckingMat;
+
                 }
                 else
                 {
@@ -415,21 +420,45 @@ public class FurnitureInteractor : MonoBehaviour
                 //print("trrrrrrrrrrrrrrrueeeeeeeeeeeeeeeee");
 
             }
+            else if (Free)
+            {
+                //Waiting = false;
+                //Free = true;
+                
+                //_anim.SetBool("IsPlayer", false);
+                //outlineEnabled();
+                    
+                //if (DoCategorize() == true)
+                //{
+                //打开家具聚光灯并开始动画，并开始UI
+                //spotLight.SetActive(true);
+                _anim.SetBool("IsMoving", true);
+
+                //print(")))))))))))))))))");
+
+                rdFull.SetAlpha(1);
+                rdStroke.SetAlpha(1);
+            }
         }
-        
-        
-        
-        
+
+        if (BeatCount == 7 && Free)
+        {
+            _anim.SetBool("IsMoving", false);
+        }
+
+
+
+
         //Beat Demonstration
         if (BeatLoop[BeatCount])
         {
-            if (Demonstrating || Checking)
+            if (Demonstrating || Checking || Free)
             {
                 readyPunch = true;   
             }
            
             
-            if (Demonstrating || Activated)
+            if (Demonstrating || Activated || Free)
             {
                 
                 //transform.localScale -= new Vector3(0, originalScale.y * ShrinkDepth, 0);
