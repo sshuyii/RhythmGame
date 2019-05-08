@@ -332,35 +332,7 @@ public class FurnitureInteractor : MonoBehaviour
 
                     correctPlayers = 0;                    
                     
-                    if(requiredPerfectTimes == 3)
-                    {
-                        //给动画设置trigger
-                        if (localPerfectTimes == 1)
-                        {
-                            _imageUI.fillAmount = 0.305f;
-                        }
-                        else if (localPerfectTimes == 2)
-                        {
-                            _imageUI.fillAmount = 0.7f;
-                        }
-                        else if (localPerfectTimes == 3)
-                        {
-                            _imageUI.fillAmount = 1f;
-                        }
-                    }
-                    else if (requiredPerfectTimes == 2)
-                    {
-                        //给动画设置trigger
-                        if (localPerfectTimes == 1)
-                        {
-                            _imageUI.fillAmount = 0.5f;
-                        }
-                        else if (localPerfectTimes == 2)
-                        {
-                            _imageUI.fillAmount = 1f;
-                        }
-                       
-                    }
+                    
 
                     //(单独一个人)有没有达到多次perfect的标准
                     if (localPerfectTimes == requiredPerfectTimes)
@@ -470,7 +442,7 @@ public class FurnitureInteractor : MonoBehaviour
                 //以上用animation取代
                 if (FurnitureName == "Piano")
                 {
-                    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!audio!");
+                    //print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!audio!");
                     if (BeatCount == 1)
                     {
                         _myAudioList[0].Play();
@@ -478,7 +450,7 @@ public class FurnitureInteractor : MonoBehaviour
                     else if (BeatCount == 2)
                     {
                         _myAudioList[1].Play();
-                        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!audio!");
+                        //print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!audio!");
                     }
                     else if (BeatCount == 3)
                     {
@@ -533,6 +505,41 @@ public class FurnitureInteractor : MonoBehaviour
 
     void Update()
     {
+        if(requiredPerfectTimes == 3)
+        {
+            //给动画设置trigger
+            if (localPerfectTimes == 1)
+            {
+                UiFill(0.333f);
+
+            }
+            else if (localPerfectTimes == 2)
+            {
+                UiFill(0.67f);
+
+            }
+            else if (localPerfectTimes == 3)
+            {
+                UiFill(1f);
+
+            }
+        }
+        else if (requiredPerfectTimes == 2)
+        {
+            //给动画设置trigger
+            if (localPerfectTimes == 1)
+            {
+                UiFill(0.5f);
+
+            }
+            else if (localPerfectTimes == 2)
+            {
+                UiFill(1f);
+
+            }
+                       
+        }
+        
         //enabledOrNot = DoCategorize();
         if (DoCategorize() == true)
         {
@@ -676,6 +683,15 @@ public class FurnitureInteractor : MonoBehaviour
         foreach (cakeslice.Outline c in childOutlines)
         {
             c.Disabling();
+        }
+    }
+
+    void UiFill(float maxValue)
+    {
+        float speed = 1f;
+        if(_imageUI.fillAmount < maxValue)
+        {
+            _imageUI.fillAmount += Time.deltaTime * speed;
         }
     }
 
