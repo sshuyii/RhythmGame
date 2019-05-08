@@ -28,7 +28,10 @@ public class CameraMove : MonoBehaviour
 
     public static bool zooming;
 
+    private int pianoZoom = 0;
+
     public bool startZoom;
+    private bool pianoEnabled = false;
 
     private Camera _camera;
 
@@ -57,10 +60,6 @@ public class CameraMove : MonoBehaviour
         
         if (zooming)
         {
-//            timer++;
-//            _camera.transform.localPosition =
-//                Vector3.LerpUnclamped(originalPosition, maxPosition, moving.Evaluate(timer / duration));
-//            _camera.orthographicSize = Mathf.LerpUnclamped(originalSize, maxSize, moving.Evaluate(timer / duration));
             ZoomInOrOut(originalPosition, maxPosition, originalSize, maxSize);
             
             //Activate the ladder too
@@ -75,15 +74,34 @@ public class CameraMove : MonoBehaviour
             //YardLight.SetActive(true);
             
         }
+        else if(timer > duration && pianoZoom == 1)
+        {
+            pianoZoom = 2;
+            timer = 0;
+        }
+        
          
         //zoom in when game ends
 
-        if (pianoFI.playersInvolved.Count == 3 && timer <= duration)
+        if (pianoFI.Activated == true && timer <= duration)
+        {
+            ZoomInOrOut(originalPosition, maxPosition, originalSize, maxSize);
+            ladder.SetActive(true);
+        }
+        else if (pianoFI.playersInvolved.Count == 3 && timer <= duration && pianoEnabled == false)
+        {
+            pianoZoom = 1;
+            pianoEnabled = true;
+
+
+        }
+
+        if (pianoZoom == 1)
         {
             ZoomInOrOut(maxPosition, originalPosition, maxSize, originalSize);
             ladder.SetActive(false);
-
         }
+        
     }
     
     //把zoom in zoom out写成单独的函数
@@ -95,6 +113,14 @@ public class CameraMove : MonoBehaviour
             Vector3.LerpUnclamped(currentPosition, targetPosition, moving.Evaluate(timer / duration));
         _camera.orthographicSize = Mathf.LerpUnclamped(currentSize, targetSize, moving.Evaluate(timer / duration));
     }
+    
+    
+    
+    
+    
+    
+    
+    
 /*
 
     IEnumerator myCameraMoveIn()
