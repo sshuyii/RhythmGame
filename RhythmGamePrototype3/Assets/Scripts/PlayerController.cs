@@ -189,8 +189,10 @@ public class PlayerController : MonoBehaviour
 
         // Tell the animator whether or not the player is walking.
         anim.SetBool ("IsWalking", walking);
-        animBaby.SetBool ("IsWalking", walking);
-
+        if(IsTutorial)
+        {
+            animBaby.SetBool("IsWalking", walking);
+        }
     }
 
 
@@ -422,8 +424,38 @@ public class PlayerController : MonoBehaviour
         Instantiate(perfectParticle, transform.position + 3 * Vector3.up, Quaternion.identity);
         perfectParticle.SetActive(true);
         //_audioSource[2].Play();
-        furnitureInteractor._audioSource.Play();
-        
+        if (furnitureInteractor.FurnitureName == "Piano")
+        {
+            if (furnitureInteractor.BeatCount == 1)
+            {
+                furnitureInteractor._myAudioList[0].Play();
+            }
+            else if (furnitureInteractor.BeatCount == 2)
+            {
+                furnitureInteractor._myAudioList[1].Play();
+                //print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!audio!");
+            }
+            else if (furnitureInteractor.BeatCount == 3)
+            {
+                furnitureInteractor._myAudioList[2].Play();
+            }
+            else if (furnitureInteractor.BeatCount == 4)
+            {
+                furnitureInteractor._myAudioList[3].Play();
+            }
+            else if (furnitureInteractor.BeatCount == 6)
+            {
+                furnitureInteractor._myAudioList[4].Play();
+            }
+            else if (furnitureInteractor.BeatCount == 7)
+            {
+                furnitureInteractor._myAudioList[5].Play();
+            }
+        }
+        else
+        {
+            furnitureInteractor._audioSource.Play();
+        }        
         AnimationCount += 1;
 
         if(IsTutorial == false)

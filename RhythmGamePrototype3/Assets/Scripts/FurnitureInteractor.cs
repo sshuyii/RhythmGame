@@ -102,7 +102,7 @@ public class FurnitureInteractor : MonoBehaviour
     public GameObject SmokeParticle;
     private Material _tvMaterial;
     //如果是冰箱的话，audioSource是一个数组
-    private AudioSource[] _myAudioList;
+    public AudioSource[] _myAudioList;
     
     
     void Start()
