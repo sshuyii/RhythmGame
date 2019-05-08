@@ -15,8 +15,8 @@ public class CameraMove : MonoBehaviour
     private float originalSize;
     public float duration;
     private float timer;
-    public GameObject EnvironmentalLight;
-    public GameObject YardLight;
+    //public GameObject EnvironmentalLight;
+    //public GameObject YardLight;
     
     public GameObject TargetCamera;
 
@@ -72,7 +72,7 @@ public class CameraMove : MonoBehaviour
             zooming = false;
             timer = 0;
             //EnvironmentalLight.SetActive(true);
-            YardLight.SetActive(true);
+            //YardLight.SetActive(true);
             
         }
          

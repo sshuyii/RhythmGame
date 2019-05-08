@@ -7,10 +7,14 @@ public class LightOverallController : MonoBehaviour
     public int LightEnabled = 0;
 
     public Light EnvironmentLight;
+
+    public GameObject Yard;
+
+    private Light[] yardLight;
     // Start is called before the first frame update
     void Start()
     {
-        
+        yardLight = Yard.GetComponentsInChildren<Light>();
     }
 
     // Update is called once per frame
@@ -19,6 +23,16 @@ public class LightOverallController : MonoBehaviour
         if (LightEnabled == 13)
         {
             EnvironmentLight.intensity = Mathf.Lerp(0, 0.5f, 7f);
+
+            foreach (Light l in yardLight)
+            {
+                if (l.enabled == false)
+                {
+                    l.enabled = true;
+                }
+            }
+
+
         }
     }
 }
