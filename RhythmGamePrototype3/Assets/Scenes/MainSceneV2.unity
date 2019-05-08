@@ -5018,7 +5018,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d314e203664644382b0f33236382d588, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 781c8f89c48d24fb3afe10e7215fb559, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
@@ -5564,7 +5564,6 @@ MonoBehaviour:
   localPerfectText: {fileID: 1139300212}
   localMissText: {fileID: 1501118128}
   windowCount: 0
-  dialogManager: {fileID: 0}
 --- !u!82 &391000328
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8642,7 +8641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activatedFurnitureNum: 0
-  groupNum: 3
+  groupNum: 1
 --- !u!114 &578168859 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1221666762182438046, guid: a14bc122cf280054aa40de46bc93c00a,
@@ -14779,7 +14778,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0d2fdcc27e6ef461bb4cec46ed79d8fb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 724eb5c6d652e4b8491c6f86228cecb8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -18886,38 +18885,6 @@ Transform:
   m_Father: {fileID: 192049383}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!84 &1209198191
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 715
-  m_Height: 402
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 7
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &1209342079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19843,7 +19810,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0d2fdcc27e6ef461bb4cec46ed79d8fb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e306f25f6717a46e2b7197386631a2a5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -23902,6 +23869,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!84 &1505805362
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 571
+  m_Height: 321
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 7
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &1506177305
 GameObject:
   m_ObjectHideFlags: 0
@@ -34279,8 +34278,8 @@ MonoBehaviour:
   sourceCamera: {fileID: 1883736899}
   outlineCamera: {fileID: 1964230552}
   outlineShaderMaterial: {fileID: 0}
-  renderTexture: {fileID: 1209198191}
-  extraRenderTexture: {fileID: 2143968930}
+  renderTexture: {fileID: 1505805362}
+  extraRenderTexture: {fileID: 1913066605}
 --- !u!1 &1902360776
 GameObject:
   m_ObjectHideFlags: 0
@@ -34510,6 +34509,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911594399}
   m_CullTransparentMesh: 0
+--- !u!84 &1913066605
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 571
+  m_Height: 321
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 7
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!43 &1914834892
 Mesh:
   m_ObjectHideFlags: 0
@@ -35482,7 +35513,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 0
   m_RenderingPath: 1
-  m_TargetTexture: {fileID: 1209198191}
+  m_TargetTexture: {fileID: 1505805362}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
@@ -37833,38 +37864,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139220260}
   m_CullTransparentMesh: 0
---- !u!84 &2143968930
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 715
-  m_Height: 402
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 7
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!114 &13782823356182312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41955,7 +41954,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b740e601f0fe24f908be242a9a6b778f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c7187c7d83b9e4ca0885bc867753b343, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -43705,7 +43704,6 @@ MonoBehaviour:
   localPerfectText: {fileID: 3875423171873055631}
   localMissText: {fileID: 8967728712683717691}
   windowCount: 0
-  dialogManager: {fileID: 0}
 --- !u!136 &2311894476207691532
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -64554,7 +64552,6 @@ MonoBehaviour:
   localPerfectText: {fileID: 8689444740260585988}
   localMissText: {fileID: 3543377311393138096}
   windowCount: 0
-  dialogManager: {fileID: 0}
 --- !u!82 &7875143056194655873
 AudioSource:
   m_ObjectHideFlags: 0
