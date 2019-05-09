@@ -33,10 +33,13 @@ public class MelodyPlay : MonoBehaviour
     private float minScore = 320;
     private float maxScore = 800;
 
+    private LevelProcessor _processor;
 
-    
+    private void Awake()
+    {
+        _processor = GetComponent<LevelProcessor>();
+    }
 
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -75,6 +78,8 @@ public class MelodyPlay : MonoBehaviour
             activatedFurnitureNum = 0;
             groupNum++;
             
+            _processor.ChangeBGM();
+            
         }
         else if (groupNum == 2 && activatedFurnitureNum == 4)
         {
@@ -84,6 +89,8 @@ public class MelodyPlay : MonoBehaviour
                 timer.ToString());
             activatedFurnitureNum = 0;
             groupNum++;
+            
+            _processor.ChangeBGM();
         }
         else if (groupNum == 3 && activatedFurnitureNum == 3)
         {
@@ -93,6 +100,8 @@ public class MelodyPlay : MonoBehaviour
                 timer.ToString());
             activatedFurnitureNum = 0;
             groupNum++;
+            
+            //_processor.ChangeBGM();
         }
         else if(groupNum == 4 && activatedFurnitureNum == 1)
         {

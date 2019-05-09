@@ -23,7 +23,7 @@ public class FurnitureInteractor : MonoBehaviour
     
     [Header("Preset")]
     //public GameObject spotLight;    
-    //public int numGroup = 1;
+    public int numGroup;
     private MelodyPlay MelodyPlay;
 
     private float timer;
