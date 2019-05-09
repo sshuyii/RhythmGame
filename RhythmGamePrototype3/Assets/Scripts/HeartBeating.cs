@@ -103,21 +103,6 @@ public class HeartBeating : MonoBehaviour
         }
         else if (activated == true && timer > 0.8f)
         {
-//            timer++;
-//            //activated = false;
-//            punch = new Vector3 (0.5f, 0.5f, 0.5f);
-//            print("activated ==================true");
-//            elasticity = 0.2f;
-//            vibrato = 50;
-//            duration = 0.2f;
-//
-//            _StrokeTransform.DOPunchScale(punch, duration, vibrato, elasticity);
-//
-//            _FullTransform.DOPunchScale(punch, duration, vibrato, elasticity);
-
-
-//            _FullImage.color = Color.cyan;
-//            _StrokeImage.color = Color.cyan;
 
             timer += Time.deltaTime;
             if (timer < 1.2 && timer > 1.1)

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MelodyPlay : MonoBehaviour
 {
@@ -8,12 +9,56 @@ public class MelodyPlay : MonoBehaviour
     public int groupNum;
     
     private float timer = 0;
+    public Text TotalTime;
+    private bool final;
+    private int minute;
+    private int second;
+    private bool doubleCheck;
+    
+    private GameObject finalScore;
+    private GameObject finalScoreText;
+    private GameObject finalScoreNumber;
+    private Image finalScoreImage;
+    private Text _finalScoreText;
+    private Text _finalScoreNumber;
+    private GameObject star1;
+    private GameObject star2;
+    private GameObject star3;
+   
+    private Image star1Image;
+    private Image star2Image;
+    private Image star3Image;
+
+    private float minScore = 300;
+    private float maxScore = 600;
+
+
+
 
     
     // Start is called before the first frame update
     void Start()
     {
+        finalScore = GameObject.Find("/FrameRate/FinalScore");
+        finalScoreText = GameObject.Find("/FrameRate/FinalScoreText");
+        finalScoreNumber = GameObject.Find("/FrameRate/FinalScoreNumber");
+        star1 = GameObject.Find("/FrameRate/Star1");
+        star2 = GameObject.Find("/FrameRate/Star2");
+        star3 = GameObject.Find("/FrameRate/Star3");
+
+
+
+
         
+        finalScoreImage = finalScore.GetComponent<Image>();
+        _finalScoreText = finalScoreText.GetComponent<Text>();
+        _finalScoreNumber = finalScoreNumber.GetComponent<Text>();
+        star1Image = star1.GetComponent<Image>();
+        star2Image = star2.GetComponent<Image>();
+        star3Image = star3.GetComponent<Image>();
+
+
+
     }
 
     // Update is called once per frame
@@ -49,5 +94,45 @@ public class MelodyPlay : MonoBehaviour
             activatedFurnitureNum = 0;
             groupNum++;
         }
+        else if(groupNum == 4 && activatedFurnitureNum == 1)
+        {
+            timer += Time.deltaTime;
+            if (timer > 5f)
+            {
+                finalScoreImage.enabled = true;
+                _finalScoreText.enabled = true;
+                _finalScoreNumber.enabled = true;
+                
+                print("timer > 5");
+                doubleCheck = true;
+            }
+            
+            if (final == false && doubleCheck == true)
+            {
+                minute = Mathf.FloorToInt(timer) - Mathf.FloorToInt(timer) % 60;
+                second = Mathf.FloorToInt(timer) % 60;
+                TotalTime.text = minute.ToString() + ":" + second.ToString();
+                final = true;
+
+                if (timer < minScore)
+                {
+                    star1Image.enabled = true;
+                    star2Image.enabled = true;
+                    star3Image.enabled = true;
+                }
+                else if (minScore < timer && maxScore > timer)
+                {
+                    star1Image.enabled = true;
+                    star2Image.enabled = true;
+                }
+                else if (timer > maxScore)
+                {
+                    star1Image.enabled = true;
+                }
+            }
+                          
+            }
+            
+        }
     }
-}
+

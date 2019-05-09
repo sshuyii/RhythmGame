@@ -17,12 +17,17 @@ public class FurnitureInteractor : MonoBehaviour
     public GameObject beatIndicator;
     public int section;
     public int totalBeats;
+
+    private CalculateCredit CalculateCredit;
     //public bool enabledOrNot;
     
     [Header("Preset")]
     //public GameObject spotLight;    
     //public int numGroup = 1;
     private MelodyPlay MelodyPlay;
+
+    private float timer;
+
     
     [Header("Animation")]
     //public float ShrinkDepth;
@@ -63,6 +68,7 @@ public class FurnitureInteractor : MonoBehaviour
     public bool Activated;
     public bool Free;
     //public Material ActivatedMat;
+    
 
     public List<PlayerController> playersInvolved; 
 
@@ -107,6 +113,11 @@ public class FurnitureInteractor : MonoBehaviour
     
     void Start()
     {
+        
+        
+        
+        
+        
         MelodyPlay = GameObject.Find("/BGM").GetComponent<MelodyPlay>();
         //找到电视需要替换的material
         _tvMaterial	= Resources.Load<Material>("Materials/tvMat");
@@ -310,7 +321,7 @@ public class FurnitureInteractor : MonoBehaviour
                         if (player.localPerfect == requiredPerfect && player.localMiss == 0)
                         {
                             correctPlayers++;//用在每个玩家打一次就对的时候
-                            
+                            print(player.gameObject.name + " activate " + FurnitureName);
                             //以下用在打多次才能对的时候
                             //localPerfectTimes++;
                             
@@ -565,9 +576,14 @@ public class FurnitureInteractor : MonoBehaviour
                     SmokeParticle.SetActive(false);
                 }
             }
+            //用于整个游戏结束的计分画面
+            
+            
         }
         
     }
+    
+    
     /*void Update()
     {
         HeartBeatUI();
