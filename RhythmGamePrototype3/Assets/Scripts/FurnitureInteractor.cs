@@ -113,11 +113,6 @@ public class FurnitureInteractor : MonoBehaviour
     
     void Start()
     {
-        
-        
-        
-        
-        
         MelodyPlay = GameObject.Find("/BGM").GetComponent<MelodyPlay>();
         //找到电视需要替换的material
         _tvMaterial	= Resources.Load<Material>("Materials/tvMat");
@@ -130,7 +125,7 @@ public class FurnitureInteractor : MonoBehaviour
         //SmokeParticle = GameObject.Find("Kitchen/SmokeParticle");
 
 
-        Koreographer.Instance.RegisterForEvents(EventID,BeatAnime);
+        Register();
         //print("registered");
 
         levelProcessor = GameObject.Find("GameManager").GetComponent<LevelProcessor>();
@@ -166,6 +161,16 @@ public class FurnitureInteractor : MonoBehaviour
         {
             if (Beat) requiredPerfect++;
         }
+    }
+
+    public void Register()
+    {
+        Koreographer.Instance.RegisterForEvents(EventID,BeatAnime);
+    }
+
+    public void Unregister()
+    {
+        Koreographer.Instance.UnregisterForEvents(EventID,BeatAnime);
     }
 
     void OnTriggerEnter(Collider other)

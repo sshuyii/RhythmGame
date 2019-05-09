@@ -138,12 +138,22 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        Register();
+       
+    }
+
+    public void Register()
+    {
         Koreographer.Instance.RegisterForEvents(EventIDOpen,BeatReady);
         //Koreographer.Instance.RegisterForEvents(EventIDClose,BeatExpire);
         //Koreographer.Instance.RegisterForEvents("AllBeats", Rebeatable);
-        //imageUI = UI.GetComponent<Image>();
-        
-       
+        //imageUI = UI.GetComponent<Image>();        
+    }
+
+    public void Unregister()
+    {
+        Koreographer.Instance.UnregisterForEvents(EventIDOpen,BeatReady);
     }
 
     /*void Rebeatable(KoreographyEvent evt)
