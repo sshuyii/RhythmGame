@@ -7,6 +7,7 @@ using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Rewired;
 using Rewired.ComponentControls.Effects;
+using UnityEditor.iOS;
 using UnityEngine.Analytics;
 using Outline = cakeslice.Outline;
 
@@ -25,7 +26,12 @@ public class PlayerController : MonoBehaviour
     public bool IsLeft;
     public bool IsTutorial;
     public string Version;
+    private SpriteRenderer _ladderRenderer;
     private bool aroundLadder;
+    private Sprite arrowUp;
+    private Sprite arrowDown;
+
+    private bool temp = false;
 
     //for tiny analytics
     private int stop = 0;
@@ -36,6 +42,7 @@ public class PlayerController : MonoBehaviour
     private OutlineCalling Outlinecallingleft;
     private OutlineCalling OutlinecallingRight;
     private OutlineCalling _outlineCalling;
+    private Sprite ladderSprite;
 
     public GameObject LadderUI;
 
@@ -105,10 +112,23 @@ public class PlayerController : MonoBehaviour
     
     private cakeslice.Outline[] childOutlines;
 
-
+    private Sprite up;
+    private Sprite down;
 
     void Awake()
     {
+        //用于梯子sprite替换
+        _ladderRenderer = LadderUI.GetComponent<SpriteRenderer>();
+        
+        
+        Texture2D ladderUp = (Texture2D)Resources.Load("LadderUp");//更换为红色主题英雄角色图片
+        up = Sprite.Create(ladderUp,_ladderRenderer.sprite.textureRect,new Vector2(0.5f,0.5f));//注意居中显示采用0.5f值
+        
+        Texture2D ladderDown = (Texture2D)Resources.Load("LadderDown");//更换为红色主题英雄角色图片
+        down = Sprite.Create(ladderDown,_ladderRenderer.sprite.textureRect,new Vector2(0.5f,0.5f));//注意居中显示采用0.5f值
+     
+            
+            
         childOutlines = GetComponentsInChildren<cakeslice.Outline>();
 
         if(IsTutorial == false)
@@ -268,6 +288,10 @@ public class PlayerController : MonoBehaviour
         if (!PlayerEnabled)
         {
             return;
+        }
+        else
+        {
+            temp = false;
         }
         //Reset Interaction signal
         //transform.Rotate(0, _rotate, 0,Space.World);
@@ -627,13 +651,18 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(transform.position + Vector3.up, transform.forward * 2f, out hit, 2f))
         {
 
-
             if (hit.collider.CompareTag("DownStairs"))
             {
 
                 aroundLadder = true;
-                LadderUI.SetActive(true);
-                outlineEnabled();
+                _ladderRenderer.sprite = up;
+                //为了避免collider直接被teleport到目标位置
+                if (temp == false)
+                {
+                    LadderUI.SetActive(true);
+                    temp = true;
+                    outlineEnabled();
+                }
 
                 //_outlineCalling.playerOnLadder = true;
                 PlayerOnLadder();
@@ -652,8 +681,17 @@ public class PlayerController : MonoBehaviour
             else if (hit.collider.CompareTag("UpStairs"))
             {
                 aroundLadder = true;
+                _ladderRenderer.sprite = down;
 
-                LadderUI.SetActive(true);
+                
+                //为了避免collider直接被teleport到目标位置
+                if (temp == false)
+                {
+                    LadderUI.SetActive(true);
+                    temp = true;
+                    outlineEnabled();
+                }         
+                
                 //_outlineCalling.playerOnLadder = true;
                 outlineEnabled();
 
@@ -682,6 +720,7 @@ public class PlayerController : MonoBehaviour
             
             }
         }
+        else { LadderUI.SetActive(false);}
         
 
         AnimatorStateInfo stateinfo = anim.GetCurrentAnimatorStateInfo(0);
