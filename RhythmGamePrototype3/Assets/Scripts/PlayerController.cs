@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     private bool aroundLadder;
     private Sprite arrowUp;
     private Sprite arrowDown;
+    private bool startBool;
 
     private bool temp = false;
 
@@ -120,13 +121,15 @@ public class PlayerController : MonoBehaviour
         //用于梯子sprite替换
         _ladderRenderer = LadderUI.GetComponent<SpriteRenderer>();
         
-        
         Texture2D ladderUp = (Texture2D)Resources.Load("LadderUp");//更换为红色主题英雄角色图片
         up = Sprite.Create(ladderUp,_ladderRenderer.sprite.textureRect,new Vector2(0.5f,0.5f));//注意居中显示采用0.5f值
         
         Texture2D ladderDown = (Texture2D)Resources.Load("LadderDown");//更换为红色主题英雄角色图片
         down = Sprite.Create(ladderDown,_ladderRenderer.sprite.textureRect,new Vector2(0.5f,0.5f));//注意居中显示采用0.5f值
      
+        
+        Tinylytics.AnalyticsManager.LogCustomMetric("GameStart", "0");
+
             
             
         childOutlines = GetComponentsInChildren<cakeslice.Outline>();
@@ -371,19 +374,35 @@ public class PlayerController : MonoBehaviour
                     {
                         rightTime = true;}
                     
+//                    string _myAnalytic =
+//                        furnitureInteractor.FurnitureName + " + " + "Player" + playerId.ToString() + " + " +
+//                        furnitureInteractor.BeatCount.ToString() + "+" + rightTime.ToString();
+//                    Tinylytics.AnalyticsManager.LogCustomMetric("VersionA + FurnitureName + Id + Hit",
+//                        _myAnalytic);
+
+
+                    if (startBool == false)
+                    {
+                        Tinylytics.AnalyticsManager.LogCustomMetric(furnitureInteractor.FurnitureName.ToString() + " Start",
+                            timer.ToString());
+                        startBool = true;
+                    }
+
                     string _myAnalytic =
                         furnitureInteractor.FurnitureName + " + " + "Player" + playerId.ToString() + " + " +
                         furnitureInteractor.BeatCount.ToString() + "+" + rightTime.ToString();
-                    Tinylytics.AnalyticsManager.LogCustomMetric("VersionA + FurnitureName + Id + Hit",
-                        _myAnalytic);
+                    
+                    Tinylytics.AnalyticsManager.LogCustomMetric(furnitureInteractor.FurnitureName.ToString() + playerId.ToString(),
+                        rightTime.ToString());
                 }
+                
                 else if(Version == "B")
                 {
                     string _myAnalytic =
                         furnitureInteractor.FurnitureName + " + " + "Player" + playerId.ToString() + " + " +
                         furnitureInteractor.BeatCount.ToString();
-                    Tinylytics.AnalyticsManager.LogCustomMetric("VersionB + FurnitureName + Id + Hit",
-                        _myAnalytic);
+//                    Tinylytics.AnalyticsManager.LogCustomMetric("VersionB + FurnitureName + Id + Hit",
+//                        _myAnalytic);
                 }
                
                 
