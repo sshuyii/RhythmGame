@@ -19,6 +19,6 @@ public class NextLevelButton : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % 3);
     }
 }
