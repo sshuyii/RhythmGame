@@ -119,16 +119,20 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         //用于梯子sprite替换
-        _ladderRenderer = LadderUI.GetComponent<SpriteRenderer>();
-        
-        Texture2D ladderUp = (Texture2D)Resources.Load("LadderUp");//更换为红色主题英雄角色图片
-        up = Sprite.Create(ladderUp,_ladderRenderer.sprite.textureRect,new Vector2(0.5f,0.5f));//注意居中显示采用0.5f值
-        
-        Texture2D ladderDown = (Texture2D)Resources.Load("LadderDown");//更换为红色主题英雄角色图片
-        down = Sprite.Create(ladderDown,_ladderRenderer.sprite.textureRect,new Vector2(0.5f,0.5f));//注意居中显示采用0.5f值
-     
-        
-        Tinylytics.AnalyticsManager.LogCustomMetric("GameStart", "0");
+        if(IsTutorial == false)
+        {
+            _ladderRenderer = LadderUI.GetComponent<SpriteRenderer>();
+
+            Texture2D ladderUp = (Texture2D) Resources.Load("LadderUp"); //更换为红色主题英雄角色图片
+            up = Sprite.Create(ladderUp, _ladderRenderer.sprite.textureRect, new Vector2(0.5f, 0.5f)); //注意居中显示采用0.5f值
+
+            Texture2D ladderDown = (Texture2D) Resources.Load("LadderDown"); //更换为红色主题英雄角色图片
+            down = Sprite.Create(ladderDown, _ladderRenderer.sprite.textureRect,
+                new Vector2(0.5f, 0.5f)); //注意居中显示采用0.5f值
+
+
+            Tinylytics.AnalyticsManager.LogCustomMetric("GameStart", "0");
+        }
 
             
             
