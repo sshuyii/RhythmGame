@@ -9,6 +9,7 @@ public class MelodyPlay : MonoBehaviour
     public int groupNum;
     
     private float timer = 0;
+    private float realTimer = 0;
     public Text TotalTime;
     private bool final;
     private int minute;
@@ -33,7 +34,7 @@ public class MelodyPlay : MonoBehaviour
     private float maxScore = 800;
 
 
-
+    
 
     
     // Start is called before the first frame update
@@ -65,7 +66,6 @@ public class MelodyPlay : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-
         if (groupNum == 1 && activatedFurnitureNum == 4)
         {
             //以下用于games & players的ab test，判断打完第一组家具之后到底用了多长时间
@@ -96,15 +96,13 @@ public class MelodyPlay : MonoBehaviour
         }
         else if(groupNum == 4 && activatedFurnitureNum == 1)
         {
-            timer += Time.deltaTime;
-            print	("timer = " + timer);
-            if (timer > 15f)
+            realTimer += Time.deltaTime;
+            if (realTimer > 3f)
             {
                 finalScoreImage.enabled = true;
                 //_finalScoreText.enabled = true;
                 _finalScoreNumber.enabled = true;
                 
-                print("timer > 5");
                 doubleCheck = true;
             }
             
