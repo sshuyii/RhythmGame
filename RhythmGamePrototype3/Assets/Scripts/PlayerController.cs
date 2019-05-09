@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour
     protected Player RewirePlayer;
     public bool IsLeft;
     public bool IsTutorial;
-    public int numGroup = 1;
     public string Version;
     private bool aroundLadder;
 
@@ -72,18 +71,15 @@ public class PlayerController : MonoBehaviour
     public string EventIDClose;
 
     [Header("UI")] 
-    public Sprite Chopping;
-    public Sprite ChoppingWrong;
-    public Sprite ChoppingRight;
-    public GameObject spotLight;
+    //public GameObject spotLight;
     
 
     [Header("In Game Stat")] 
     public FurnitureInteractor furnitureInteractor;
     public int localPerfect;
     public int localMiss;
-    public Text localPerfectText;
-    public Text localMissText;
+    //public Text localPerfectText;
+    //public Text localMissText;
     public int windowCount;
 
     //[Header("Narrative")] 
@@ -420,7 +416,7 @@ public class PlayerController : MonoBehaviour
     void Perfect()
     {
         localPerfect++;
-        localPerfectText.text = "Perfect: " + localPerfect;
+        //localPerfectText.text = "Perfect: " + localPerfect;
         Instantiate(perfectParticle, transform.position + 3 * Vector3.up, Quaternion.identity);
         perfectParticle.SetActive(true);
         //_audioSource[2].Play();
@@ -576,7 +572,7 @@ public class PlayerController : MonoBehaviour
     void Miss()
     {
        localMiss++;
-       localMissText.text = "Miss: " + localMiss;
+       //localMissText.text = "Miss: " + localMiss;
        Instantiate(errorParticle, transform.position + 3 * Vector3.up, Quaternion.identity);
        _audioSource[1].Play();
        if (IsTutorial == false)

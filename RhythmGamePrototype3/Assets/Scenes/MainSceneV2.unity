@@ -3570,7 +3570,7 @@ Light:
   m_Enabled: 0
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.8384269, g: 0.6096476, b: 0.9433962, a: 1}
+  m_Color: {r: 0.94509804, g: 0.8901961, b: 0.60784316, a: 1}
   m_Intensity: 2
   m_Range: 2.5916023
   m_SpotAngle: 30
@@ -5934,15 +5934,10 @@ MonoBehaviour:
   PlayerEnabled: 1
   EventIDOpen: WindowOpen1
   EventIDClose: WindowClose
-  Chopping: {fileID: 21300000, guid: 366fc3389963944d5a4852aea8d2cd43, type: 3}
-  ChoppingWrong: {fileID: 21300000, guid: 0a7feed51abef4151b6b457ae2a6d307, type: 3}
-  ChoppingRight: {fileID: 21300000, guid: 6da915093c8884f38b5f5771492744e5, type: 3}
-  spotLight: {fileID: 1078732251}
+  spotLight: {fileID: 0}
   furnitureInteractor: {fileID: 437727199}
   localPerfect: 0
   localMiss: 0
-  localPerfectText: {fileID: 1139300212}
-  localMissText: {fileID: 1501118128}
   windowCount: 0
 --- !u!82 &391000328
 AudioSource:
@@ -17244,7 +17239,7 @@ Light:
   m_Enabled: 0
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.85805064, g: 0.6309185, b: 0.9622642, a: 1}
+  m_Color: {r: 0.94509804, g: 0.8901961, b: 0.60784316, a: 1}
   m_Intensity: 5
   m_Range: 6.9509487
   m_SpotAngle: 30
@@ -18767,12 +18762,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &1065563238 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6500912616695159110, guid: c8581fa22a449d74e94490386dee7616,
-    type: 3}
-  m_PrefabInstance: {fileID: 6500912617180502048}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1078732251
 GameObject:
   m_ObjectHideFlags: 0
@@ -19340,6 +19329,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!84 &1125677921
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 842
+  m_Height: 474
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 7
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &1125930294
 GameObject:
   m_ObjectHideFlags: 0
@@ -26109,38 +26130,6 @@ Transform:
   m_Father: {fileID: 1773089862}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!84 &1560032972
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 839
-  m_Height: 472
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 7
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &1561588120
 GameObject:
   m_ObjectHideFlags: 0
@@ -35802,8 +35791,8 @@ MonoBehaviour:
   sourceCamera: {fileID: 1883736899}
   outlineCamera: {fileID: 1964230552}
   outlineShaderMaterial: {fileID: 0}
-  renderTexture: {fileID: 2007973840}
-  extraRenderTexture: {fileID: 1560032972}
+  renderTexture: {fileID: 1125677921}
+  extraRenderTexture: {fileID: 1986400698}
 --- !u!1 &1902360776
 GameObject:
   m_ObjectHideFlags: 0
@@ -37006,7 +36995,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 0
   m_RenderingPath: 1
-  m_TargetTexture: {fileID: 2007973840}
+  m_TargetTexture: {fileID: 1125677921}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
@@ -37302,6 +37291,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984911713}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!84 &1986400698
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 842
+  m_Height: 474
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 7
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &1987837306 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1373125935172564, guid: eeb3e4ae305605547bcfc51dd455b6e8,
@@ -37798,38 +37819,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2002427944}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &2007973840
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 839
-  m_Height: 472
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 7
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &2010495529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45592,15 +45581,10 @@ MonoBehaviour:
   PlayerEnabled: 1
   EventIDOpen: WindowOpen
   EventIDClose: WindowClose
-  Chopping: {fileID: 21300000, guid: 366fc3389963944d5a4852aea8d2cd43, type: 3}
-  ChoppingWrong: {fileID: 21300000, guid: 0a7feed51abef4151b6b457ae2a6d307, type: 3}
-  ChoppingRight: {fileID: 21300000, guid: 6da915093c8884f38b5f5771492744e5, type: 3}
   spotLight: {fileID: 2311894476075800743}
   furnitureInteractor: {fileID: 437727199}
   localPerfect: 0
   localMiss: 0
-  localPerfectText: {fileID: 3875423171873055631}
-  localMissText: {fileID: 8967728712683717691}
   windowCount: 0
 --- !u!136 &2311894476207691532
 CapsuleCollider:
@@ -63308,7 +63292,7 @@ PrefabInstance:
         type: 3}
       propertyPath: spotLight
       value: 
-      objectReference: {fileID: 1065563238}
+      objectReference: {fileID: 0}
     - target: {fileID: 6500912616046661808, guid: c8581fa22a449d74e94490386dee7616,
         type: 3}
       propertyPath: requiredPerfectTimes
@@ -66169,15 +66153,10 @@ MonoBehaviour:
   PlayerEnabled: 1
   EventIDOpen: WindowOpen1
   EventIDClose: WindowClose
-  Chopping: {fileID: 21300000, guid: 366fc3389963944d5a4852aea8d2cd43, type: 3}
-  ChoppingWrong: {fileID: 21300000, guid: 0a7feed51abef4151b6b457ae2a6d307, type: 3}
-  ChoppingRight: {fileID: 21300000, guid: 6da915093c8884f38b5f5771492744e5, type: 3}
-  spotLight: {fileID: 7875143056599439660}
+  spotLight: {fileID: 0}
   furnitureInteractor: {fileID: 437727199}
   localPerfect: 0
   localMiss: 0
-  localPerfectText: {fileID: 8689444740260585988}
-  localMissText: {fileID: 3543377311393138096}
   windowCount: 0
 --- !u!82 &7875143056194655873
 AudioSource:
