@@ -736,6 +736,7 @@ public class PlayerController : MonoBehaviour
             {
                 LadderUI.SetActive(false);
                 aroundLadder = false;
+                PlayerEnabled = true;
 
                 _outlineCalling.player1 = false;
                 _outlineCalling.player2 = false;
@@ -743,7 +744,12 @@ public class PlayerController : MonoBehaviour
             
             }
         }
-        else { LadderUI.SetActive(false);}
+        else
+        {
+            LadderUI.SetActive(false);
+            PlayerEnabled = true;
+
+        }
         
 
         AnimatorStateInfo stateinfo = anim.GetCurrentAnimatorStateInfo(0);
