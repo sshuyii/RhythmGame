@@ -17,6 +17,9 @@ public class Commands : MonoBehaviour
 
     public GameObject room1;
     public GameObject room2;
+    //public AudioSource audio;
+
+    private float volume;
 
     //public NarrativeControl narrativeManager;
     // Start is called before the first frame update
@@ -84,7 +87,7 @@ public class Commands : MonoBehaviour
         targetFurniture.Demonstrating = false;
         targetFurniture.Checking = false;
         
-        //targetFurniture._anim.SetBool("IsMoving", false);
+        targetFurniture._anim.SetBool("IsMoving", false);
 
     }
 
@@ -183,5 +186,62 @@ public class Commands : MonoBehaviour
         }
         
         NarrativeControl.narrativeControl.NextStep();
+    }
+    
+    //音效淡出（需要在targetAudio里填入目标音效）：
+    void FadeOut()
+    {
+        volume = targetAudio.volume;
+        StartCoroutine(FadingOut());
+        
+    }
+
+    IEnumerator FadingOut()
+    {
+        print("fading");
+        float timer = 0;
+        while (timer < 120f)
+        {
+            targetAudio.volume = Mathf.Lerp(volume, 0, timer / 120f);
+
+            yield return 0;
+            
+            timer++;
+        }
+    }
+    
+    //音效淡入（需要在targetAudio里填入目标音效）：
+    void FadeIn()
+    {
+        //volome = targetAudio.volume;
+        StartCoroutine(FadingIn());
+        
+    }
+
+    IEnumerator FadingIn()
+    {
+        print("fading");
+        float timer = 0;
+        while (timer < 120f)
+        {
+            targetAudio.volume = Mathf.Lerp(0, volume, timer / 120f);
+
+            yield return 0;
+            
+            timer++;
+        }
+    }
+    
+    //取消家具激活状态（需要在Target Furniture里填入该家具的Interactor）：
+    void Deactivate()
+    {
+        targetFurniture.Waiting = true;
+        targetFurniture.Activated = false;
+        targetFurniture.gameObject.SetActive(false);
+        targetFurniture.transform.parent.Find(targetFurniture.name + "Alt").gameObject.SetActive(true);
+        print(targetFurniture.name);
+        
+        targetFurniture._anim.SetBool("IsMoving", false);
+        
     }
 }
