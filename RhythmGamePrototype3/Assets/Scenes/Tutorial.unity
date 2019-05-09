@@ -553,7 +553,7 @@ GameObject:
   - component: {fileID: 115355570}
   - component: {fileID: 115355569}
   m_Layer: 5
-  m_Name: Command0 (4)
+  m_Name: Command - Wait
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -647,7 +647,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '... ...'
+  m_Text: It's easy! Just repeat the rhythm after the cradle demonstrates it.
 --- !u!222 &115355572
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -834,7 +834,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Now, try to fill all the 3 slots!
+  m_Text: Now, try to fill all the 3 slices!
 --- !u!222 &118912632
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1206,6 +1206,38 @@ MonoBehaviour:
   eraseRenderer: 0
   originalLayer: 0
   originalMaterials: []
+--- !u!84 &196747002
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 842
+  m_Height: 474
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 7
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &199714487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,7 +1365,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '... ...'
+  m_Text: Now each of you has a different rhythm. It's only 1 beat.
 --- !u!222 &199714493
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2123,7 +2155,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '... ...'
+  m_Text: Now, try to fill all the 3 slices!
 --- !u!222 &365243094
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2593,7 +2625,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '... ...'
+  m_Text: 
 --- !u!222 &459497781
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2693,7 +2725,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '... ...'
+  m_Text: 'Be patient! The cradle uses a measure to DEMOSTRATE and give you a measure
+    to REPEAT. '
 --- !u!222 &485117230
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3132,7 +3165,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '... ...'
+  m_Text: Here comes Player 2, another housewife who is trying to put her baby into
+    sleep!
 --- !u!222 &536222725
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6170,38 +6204,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BeatCount: 1
   EventID: AllBeats
---- !u!84 &835821048
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 839
-  m_Height: 472
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 7
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &836352399
 GameObject:
   m_ObjectHideFlags: 0
@@ -6376,7 +6378,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '... ...'
+  m_Text: One more friend who needs to put their baby into sleep. It's you.
 --- !u!222 &840432269
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6513,7 +6515,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '... ...'
+  m_Text: 
 --- !u!222 &853743200
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6870,7 +6872,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '... ...'
+  m_Text: One more friend who needs to put their baby into sleep. It's you.
 --- !u!222 &897210191
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7085,7 +7087,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Great! You just made the perfect rhythm. One slot of the circle is filled!
+  m_Text: Great! You just made the perfect beats. One slice of the Circle is filled!
 --- !u!222 &940761911
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7549,7 +7551,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Come on! Use what you learned just now!
+  m_Text: It's easy! Just repeat the rhythm after the cradle demonstrates it.
 --- !u!222 &1072753845
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7807,13 +7809,12 @@ MonoBehaviour:
   - {fileID: 1763509550}
   - {fileID: 654123173}
   - {fileID: 555565689}
+  players: []
   finishCanvas: {fileID: 1833376266}
   activatedFurniture: 0
   testMode: 0
   beatCount: 0
   windowCount: 0
-  furniture: {fileID: 0}
-  player: {fileID: 0}
 --- !u!1 &1117624062
 GameObject:
   m_ObjectHideFlags: 0
@@ -8104,7 +8105,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '... ...'
+  m_Text: 
 --- !u!222 &1169416564
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8540,6 +8541,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231899676}
   m_CullTransparentMesh: 0
+--- !u!84 &1273477216
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 842
+  m_Height: 474
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 7
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &1287432216 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 949d88f99abc14048ab2c2e4a30db809,
@@ -8728,8 +8761,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Couldn't remember? Don't worry. The cradle always demonstrates before it
-    asks you to repeat the beats.
+  m_Text: 'Be patient! The cradle uses a measure to DEMOSTRATE and give you a measure
+    to REPEAT. '
 --- !u!222 &1309668806
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9061,7 +9094,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Make your room's rhythm. Be sure no to confuse your rhythm with each others.
+  m_Text: Be sure not to confuse your rhythm with the other's.
 --- !u!222 &1318737322
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9913,7 +9946,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '... ...'
+  m_Text: Now, press [] to repeat the rhythm. This is the format you will follow in
+    the game.
 --- !u!222 &1425778583
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10003,7 +10037,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 0
   m_RenderingPath: 1
-  m_TargetTexture: {fileID: 835821048}
+  m_TargetTexture: {fileID: 196747002}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
@@ -10402,7 +10436,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Awesome! '
+  m_Text: Awesome job!
 --- !u!222 &1647642584
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11252,7 +11286,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '... ...'
+  m_Text: Now each of you has a different rhythm. It's only 1 beat.
 --- !u!222 &1723098399
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11428,8 +11462,8 @@ MonoBehaviour:
   sourceCamera: {fileID: 1732297135}
   outlineCamera: {fileID: 1507880405}
   outlineShaderMaterial: {fileID: 0}
-  renderTexture: {fileID: 835821048}
-  extraRenderTexture: {fileID: 1925601664}
+  renderTexture: {fileID: 196747002}
+  extraRenderTexture: {fileID: 1273477216}
 --- !u!1001 &1734191546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12312,7 +12346,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '... ...'
+  m_Text: Now each of you has a different rhythm. It's only 1 beat.
 --- !u!222 &1735119340
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12559,7 +12593,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '... ...'
+  m_Text: Now pay attention to the rhythm the cradle makes.
 --- !u!222 &1754288388
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13079,8 +13113,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: One more housewife who needs to put their baby into sleep. Listen, check,
-    and repeat.
+  m_Text: One more friend who needs to put their baby into sleep. It's you.
 --- !u!222 &1766468451
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13435,8 +13468,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: The babies are asleep. Now all of you decide to go to a friend's house for
-    have a music dream party.
+  m_Text: 'You decided to have a music dream party together. '
 --- !u!222 &1843544054
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13910,38 +13942,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905394225}
   m_CullTransparentMesh: 0
---- !u!84 &1925601664
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 839
-  m_Height: 472
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 7
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &1957142303
 GameObject:
   m_ObjectHideFlags: 0
@@ -14291,7 +14291,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Here comes another housewife who need to put her baby into sleep!
+  m_Text: Here comes Player 2, another housewife who is trying to put her baby into
+    sleep!
 --- !u!222 &1985530143
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14421,7 +14422,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Now, press [] to reapeat the rhythm right after the cradle makes it!
+  m_Text: Now, press [] to repeat the rhythm. This is the format you will follow in
+    the game.
 --- !u!222 &2014228152
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14791,7 +14793,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Now you are in different rooms and listening to different rhythms.
+  m_Text: Now each of you has a different rhythm. It's only 1 beat.
 --- !u!222 &2116562479
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22267,7 +22269,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: The circle pulsing and the furniture's movement are also telling you the
+  m_Text: The cradle wiggles with the rhythm. The yellow Circle is also telling the
     rhythm.
 --- !u!114 &8806832250026701640
 MonoBehaviour:
