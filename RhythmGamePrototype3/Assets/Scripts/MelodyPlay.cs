@@ -16,10 +16,10 @@ public class MelodyPlay : MonoBehaviour
     private bool doubleCheck;
     
     private GameObject finalScore;
-    private GameObject finalScoreText;
+   //private GameObject finalScoreText;
     private GameObject finalScoreNumber;
     private Image finalScoreImage;
-    private Text _finalScoreText;
+    //private Text _finalScoreText;
     private Text _finalScoreNumber;
     private GameObject star1;
     private GameObject star2;
@@ -29,8 +29,8 @@ public class MelodyPlay : MonoBehaviour
     private Image star2Image;
     private Image star3Image;
 
-    private float minScore = 300;
-    private float maxScore = 600;
+    private float minScore = 320;
+    private float maxScore = 800;
 
 
 
@@ -40,7 +40,7 @@ public class MelodyPlay : MonoBehaviour
     void Start()
     {
         finalScore = GameObject.Find("/FrameRate/FinalScore");
-        finalScoreText = GameObject.Find("/FrameRate/FinalScoreText");
+        //finalScoreText = GameObject.Find("/FrameRate/FinalScoreText");
         finalScoreNumber = GameObject.Find("/FrameRate/FinalScoreNumber");
         star1 = GameObject.Find("/FrameRate/Star1");
         star2 = GameObject.Find("/FrameRate/Star2");
@@ -51,7 +51,7 @@ public class MelodyPlay : MonoBehaviour
 
         
         finalScoreImage = finalScore.GetComponent<Image>();
-        _finalScoreText = finalScoreText.GetComponent<Text>();
+        //_finalScoreText = finalScoreText.GetComponent<Text>();
         _finalScoreNumber = finalScoreNumber.GetComponent<Text>();
         star1Image = star1.GetComponent<Image>();
         star2Image = star2.GetComponent<Image>();
@@ -97,10 +97,11 @@ public class MelodyPlay : MonoBehaviour
         else if(groupNum == 4 && activatedFurnitureNum == 1)
         {
             timer += Time.deltaTime;
-            if (timer > 5f)
+            print	("timer = " + timer);
+            if (timer > 15f)
             {
                 finalScoreImage.enabled = true;
-                _finalScoreText.enabled = true;
+                //_finalScoreText.enabled = true;
                 _finalScoreNumber.enabled = true;
                 
                 print("timer > 5");
@@ -109,7 +110,7 @@ public class MelodyPlay : MonoBehaviour
             
             if (final == false && doubleCheck == true)
             {
-                minute = Mathf.FloorToInt(timer) - Mathf.FloorToInt(timer) % 60;
+                minute = (Mathf.FloorToInt(timer) - Mathf.FloorToInt(timer) % 60)/60;
                 second = Mathf.FloorToInt(timer) % 60;
                 TotalTime.text = minute.ToString() + ":" + second.ToString();
                 final = true;
