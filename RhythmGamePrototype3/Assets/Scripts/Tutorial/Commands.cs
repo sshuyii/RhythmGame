@@ -20,6 +20,8 @@ public class Commands : MonoBehaviour
     //public AudioSource audio;
 
     private float volume;
+    private Vector3 room1Ori;
+    private Vector3 room2Ori;
 
     //public NarrativeControl narrativeManager;
     // Start is called before the first frame update
@@ -242,6 +244,36 @@ public class Commands : MonoBehaviour
         print(targetFurniture.name);
         
         targetFurniture._anim.SetBool("IsMoving", false);
+        targetFurniture.BeatCount = (BeatController.beatController.BeatCount + 1) % 8;
+
+    }
+    
+    //将房间聚在一起，然后自动进入下一条（需要在room1和room2里填入需要移动的两个房间）：
+    void MergeRoom()
+    {
+        room1Ori = room1.transform.localPosition;
+        room2Ori = room2.transform.localPosition;
+
+        StartCoroutine(MergingRoom());
         
+        NarrativeControl.narrativeControl.currentInteractingPlayer = 3;
+    }
+
+    IEnumerator MergingRoom()
+    {
+        print("Merging");
+        float timer = 0;
+
+        while (timer < 120f)
+        {
+            room1.transform.localPosition = Vector3.Lerp(room1Ori, new Vector3(17f, 2.8f, 10.4f), timer / 120f);
+            room2.transform.localPosition = Vector3.Lerp(room2Ori, new Vector3(-10.8f, 2.8f, -17.2f), timer / 120f);
+
+            yield return 0;
+
+            timer++;
+        }
+        
+        NarrativeControl.narrativeControl.NextStep();        
     }
 }
