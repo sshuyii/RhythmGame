@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelProcessor : MonoBehaviour
 {
     public FurnitureInteractor[] furnitureInteractors;
+    public PlayerController[] players;
     public GameObject finishCanvas;
     public int activatedFurniture;
 
@@ -13,8 +14,8 @@ public class LevelProcessor : MonoBehaviour
     public int beatCount;
     public int windowCount;
 
-    public FurnitureInteractor furniture;
-    public PlayerController player;
+    //public FurnitureInteractor furniture;
+    //public PlayerController player;
     
     // Start is called before the first frame update
     void Start()

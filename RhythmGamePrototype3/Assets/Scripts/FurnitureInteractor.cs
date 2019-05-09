@@ -113,7 +113,7 @@ public class FurnitureInteractor : MonoBehaviour
     
     void Start()
     {
-        MelodyPlay = GameObject.Find("/BGM").GetComponent<MelodyPlay>();
+        MelodyPlay = GameObject.Find("/GameManager").GetComponent<MelodyPlay>();
         //找到电视需要替换的material
         _tvMaterial	= Resources.Load<Material>("Materials/tvMat");
 
