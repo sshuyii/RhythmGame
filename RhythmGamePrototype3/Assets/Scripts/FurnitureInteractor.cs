@@ -507,8 +507,8 @@ public class FurnitureInteractor : MonoBehaviour
     {
         player.localPerfect = 0;
         player.localMiss = 0;
-        player.localPerfectText.text = "Perfect:";
-        player.localMissText.text = "Miss:";
+        //player.localPerfectText.text = "Perfect:";
+        //player.localMissText.text = "Miss:";
         //player.spotLight.SetActive(false);
     }
 
