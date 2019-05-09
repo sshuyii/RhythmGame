@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using SonicBloom.Koreo;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelProcessor : MonoBehaviour
 {
@@ -62,6 +63,11 @@ public class LevelProcessor : MonoBehaviour
     {
         //beatCount = furnitureInteractors[0].BeatCount;
         //windowCount = players[0].windowCount;
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     public void ChangeBGM()

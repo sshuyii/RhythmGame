@@ -17,8 +17,8 @@ public class NextLevelButton : MonoBehaviour
         
     }
 
-    public void NextLevel()
+    public void Restart()
     {
-        SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % 3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
