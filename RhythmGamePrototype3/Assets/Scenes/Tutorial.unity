@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1510,38 +1510,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!84 &229068052
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 822
-  m_Height: 462
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 7
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &238741659
 GameObject:
   m_ObjectHideFlags: 0
@@ -6016,6 +5984,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 465b43787f0dc5a4f8692f074f54c897, type: 2}
+    - target: {fileID: 13700000, guid: 0684f28e1b81f4a49a1157e954e11279, type: 3}
+      propertyPath: m_Quality
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: 0684f28e1b81f4a49a1157e954e11279, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6032,6 +6004,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 754249170}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &788282405
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 839
+  m_Height: 472
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 7
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &794962445
 GameObject:
   m_ObjectHideFlags: 0
@@ -6656,6 +6660,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840432265}
   m_CullTransparentMesh: 0
+--- !u!84 &845168855
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 839
+  m_Height: 472
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 7
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &853743194
 GameObject:
   m_ObjectHideFlags: 0
@@ -7615,6 +7651,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 465b43787f0dc5a4f8692f074f54c897, type: 2}
+    - target: {fileID: 13700000, guid: bca89479b46b2f04085035683f522b19, type: 3}
+      propertyPath: m_Quality
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: bca89479b46b2f04085035683f522b19, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9315,6 +9355,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 465b43787f0dc5a4f8692f074f54c897, type: 2}
+    - target: {fileID: 13700000, guid: 1e695b6ec81519e42b3830ba82b8898b, type: 3}
+      propertyPath: m_Quality
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: 1e695b6ec81519e42b3830ba82b8898b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9666,10 +9710,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 100052, guid: dc9bd077d9cf648159e369823408b530, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: dc9bd077d9cf648159e369823408b530, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.00080491
@@ -9726,10 +9766,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.2
       objectReference: {fileID: 0}
-    - target: {fileID: 100054, guid: dc9bd077d9cf648159e369823408b530, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: dc9bd077d9cf648159e369823408b530, type: 3}
       propertyPath: m_Controller
       value: 
@@ -9764,11 +9800,19 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dbaf3881ac6cbf143b244d94eb698370, type: 2}
+    - target: {fileID: 100052, guid: dc9bd077d9cf648159e369823408b530, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 100048, guid: dc9bd077d9cf648159e369823408b530, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100048, guid: dc9bd077d9cf648159e369823408b530, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100054, guid: dc9bd077d9cf648159e369823408b530, type: 3}
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
@@ -10453,38 +10497,6 @@ MonoBehaviour:
   instruction: {fileID: 10576778}
   room1: {fileID: 0}
   room2: {fileID: 0}
---- !u!84 &1451026181
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 822
-  m_Height: 462
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 7
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &1465299994 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100046, guid: 0219550f6784648269574cd98393f70c,
@@ -10570,7 +10582,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 0
   m_RenderingPath: 1
-  m_TargetTexture: {fileID: 1451026181}
+  m_TargetTexture: {fileID: 788282405}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
@@ -12000,8 +12012,8 @@ MonoBehaviour:
   sourceCamera: {fileID: 1732297135}
   outlineCamera: {fileID: 1507880405}
   outlineShaderMaterial: {fileID: 0}
-  renderTexture: {fileID: 1451026181}
-  extraRenderTexture: {fileID: 229068052}
+  renderTexture: {fileID: 788282405}
+  extraRenderTexture: {fileID: 845168855}
 --- !u!1001 &1734191546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15118,6 +15130,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 465b43787f0dc5a4f8692f074f54c897, type: 2}
+    - target: {fileID: 13700000, guid: 949d88f99abc14048ab2c2e4a30db809, type: 3}
+      propertyPath: m_Quality
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: 949d88f99abc14048ab2c2e4a30db809, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -15217,6 +15233,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 465b43787f0dc5a4f8692f074f54c897, type: 2}
+    - target: {fileID: 13700000, guid: 69192b7ea3749c54bafdfb3b7e558323, type: 3}
+      propertyPath: m_Quality
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 13700002, guid: 69192b7ea3749c54bafdfb3b7e558323, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
