@@ -68,6 +68,11 @@ public class LevelProcessor : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % 3);
+        }
     }
 
     public void ChangeBGM()
