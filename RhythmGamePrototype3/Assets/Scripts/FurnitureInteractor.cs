@@ -144,7 +144,10 @@ public class FurnitureInteractor : MonoBehaviour
         rdFull = FullUI.GetComponent<CanvasRenderer>();
 
         rdFull.SetAlpha(0);
-        rdStroke.SetAlpha(0);
+        if (!gameObject.name.Contains("Clock"))
+        {
+            rdStroke.SetAlpha(0);
+        }
         
 
         _imageUI = FullUI.GetComponent<Image>();
