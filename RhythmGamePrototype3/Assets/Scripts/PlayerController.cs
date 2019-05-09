@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Rewired;
 using Rewired.ComponentControls.Effects;
-using UnityEditor.iOS;
+//using UnityEditor.iOS;
 using UnityEngine.Analytics;
 using Outline = cakeslice.Outline;
 
