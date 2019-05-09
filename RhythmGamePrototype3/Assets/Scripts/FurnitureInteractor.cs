@@ -420,6 +420,7 @@ public class FurnitureInteractor : MonoBehaviour
                 //打开家具聚光灯并开始动画，并开始UI
                 //spotLight.SetActive(true);
                 _anim.SetBool("IsMoving", true);
+                outlineEnabled();
 
                 //print(")))))))))))))))))");
 
