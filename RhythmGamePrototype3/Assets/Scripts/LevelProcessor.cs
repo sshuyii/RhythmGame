@@ -173,6 +173,7 @@ public class LevelProcessor : MonoBehaviour
         if (activatedFurniture == furnitureInteractors.Length)
         {
             finishCanvas.SetActive(true);
+            NarrativeControl.narrativeControl.NextStep();
         }
         else
         {

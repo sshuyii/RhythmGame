@@ -5,6 +5,7 @@ using System.Timers;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Analytics;
+using UnityEngine.SceneManagement;
 
 public class Commands : MonoBehaviour
 {
@@ -275,5 +276,11 @@ public class Commands : MonoBehaviour
         }
         
         NarrativeControl.narrativeControl.NextStep();        
+    }
+    
+    //自动进入下一关：
+    void NextLevel()
+    {
+        SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % 3);
     }
 }
