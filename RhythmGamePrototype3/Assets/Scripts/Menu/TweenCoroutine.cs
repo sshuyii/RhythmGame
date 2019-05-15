@@ -20,9 +20,16 @@ public class TweenCoroutine : MonoBehaviour
     [Header("StripeRotate")] 
     public List<float> wait;
     public List<StripeRotate> Stripe;
+
+    [Header("Credit")] 
+    public float creditFadeTime;
+    public SpriteRenderer credit;
+    public bool ableToQuit;
     
     private Vector3 clockStartPos;
     private Vector3 babyStartPos;
+    
+    
 
     //public static TweenCoroutine Tween;
     
@@ -38,8 +45,10 @@ public class TweenCoroutine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(ableToQuit && In)
     }
+    
+    
 
     IEnumerator ClockFall()
     {
@@ -55,6 +64,25 @@ public class TweenCoroutine : MonoBehaviour
         StartMoving();
         StartCoroutine(BabyFall());
     }
+
+    public void ClockLift()
+    {
+        StartCoroutine(ClockLifting());
+    }
+    
+    IEnumerator ClockLifting()
+    {
+        float timer = 0;
+
+        while (timer < fallTime)
+        {
+            timer += Time.deltaTime;
+            clock.transform.position = Vector3.LerpUnclamped(clockEndPos, clockStartPos, clockFallCurve.Evaluate(timer / fallTime));
+            yield return 0;
+        }
+        
+        StartCoroutine(BabyLift());
+    }
     
     IEnumerator BabyFall()
     {
@@ -68,6 +96,37 @@ public class TweenCoroutine : MonoBehaviour
         }
         
         //StartMoving();
+    }
+    
+    IEnumerator BabyLift()
+    {
+        float timer = 0;
+
+        while (timer < babyfallTime)
+        {
+            timer += Time.deltaTime;
+            baby.transform.position = Vector3.LerpUnclamped(babyEndPos, babyStartPos, babyFallCurve.Evaluate(timer / babyfallTime));
+            yield return 0;
+        }
+        
+        //StartMoving();
+    }
+
+    IEnumerator CreditFade()
+    {
+        float timer = 0;
+
+        while (timer < creditFadeTime)
+        {
+            timer += Time.deltaTime;
+            Color color = credit.color;
+            color.a = timer / creditFadeTime;
+            credit.color = color;
+            
+            yield return 0;
+        }
+
+        ableToQuit = true;
     }
 
     public void StartMoving()
@@ -101,5 +160,10 @@ public class TweenCoroutine : MonoBehaviour
         {
             Stripe[i + 4].reverse = true;
         }
+    }
+
+    public void ToCredit()
+    {
+        StartCoroutine(CreditFade());
     }
 }
