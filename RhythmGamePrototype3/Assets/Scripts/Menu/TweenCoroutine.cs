@@ -45,7 +45,12 @@ public class TweenCoroutine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ableToQuit && In)
+        if (ableToQuit && Input.GetMouseButtonDown(0))
+        {
+            ableToQuit = false;	
+            StartCoroutine(ClockFall());
+            StartCoroutine(CreditFadeOut());
+        }
     }
     
     
@@ -127,6 +132,21 @@ public class TweenCoroutine : MonoBehaviour
         }
 
         ableToQuit = true;
+    }
+    
+    IEnumerator CreditFadeOut()
+    {
+        float timer = 0;
+
+        while (timer < creditFadeTime)
+        {
+            timer += Time.deltaTime;
+            Color color = credit.color;
+            color.a = 1 - timer / creditFadeTime;
+            credit.color = color;
+            
+            yield return 0;
+        }
     }
 
     public void StartMoving()
