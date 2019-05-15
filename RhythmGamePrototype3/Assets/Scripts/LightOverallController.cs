@@ -22,7 +22,7 @@ public class LightOverallController : MonoBehaviour
     {
         if (LightEnabled == 13)
         {
-            EnvironmentLight.intensity = Mathf.Lerp(0, 0.5f, 7f);
+            EnvironmentLight.intensity = Mathf.Lerp(0, 0.2f, 7f);
 
             foreach (Light l in yardLight)
             {
