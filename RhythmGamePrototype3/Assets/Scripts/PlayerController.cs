@@ -695,6 +695,7 @@ public class PlayerController : MonoBehaviour
                     transform.position = BottomLocator.transform.position;
                     transform.rotation = Quaternion.AngleAxis(BottomAngle, Vector3.up);
                     _myCollider.isTrigger = true;
+                    //anim.SetTrigger("Reset");
                     anim.SetBool("Jump", true);
                     PlayerEnabled = false;
                     LadderUI.SetActive(false);
@@ -726,6 +727,7 @@ public class PlayerController : MonoBehaviour
                     //print("hittttttLadder");
                     transform.rotation = Quaternion.AngleAxis(UpperAngle, Vector3.up);
                     _myCollider.isTrigger = true;
+                    //anim.SetTrigger("Reset");
                     anim.SetBool("Fall", true);
 
                     PlayerEnabled = false;
