@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NextLevelButton : MonoBehaviour
+public class SinglePlayerClicked : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,9 +16,9 @@ public class NextLevelButton : MonoBehaviour
     {
         
     }
-
-    public void Restart()
+    
+    private void OnMouseDown()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(3);
     }
 }

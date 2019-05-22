@@ -281,6 +281,6 @@ public class Commands : MonoBehaviour
     //自动进入下一关：
     void NextLevel()
     {
-        SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % 3);
+        SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1));
     }
 }

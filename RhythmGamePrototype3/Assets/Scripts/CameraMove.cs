@@ -35,6 +35,8 @@ public class CameraMove : MonoBehaviour
 
     private Camera _camera;
 
+    public int PlayerCount = 3;
+
     private void Awake()
     {
         _camera = Camera.main;
@@ -88,7 +90,7 @@ public class CameraMove : MonoBehaviour
             ZoomInOrOut(originalPosition, maxPosition, originalSize, maxSize);
             ladder.SetActive(true);
         }
-        else if (pianoFI.playersInvolved.Count == 3 && timer <= duration && pianoEnabled == false)
+        else if (pianoFI.playersInvolved.Count == PlayerCount && timer <= duration && pianoEnabled == false)
         {
             pianoZoom = 1;
             pianoEnabled = true;
