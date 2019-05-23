@@ -24,13 +24,13 @@ public class LightOverallController : MonoBehaviour
         {
             EnvironmentLight.intensity = Mathf.Lerp(0, 0.2f, 7f);
 
-            foreach (Light l in yardLight)
-            {
-                if (l.enabled == false)
-                {
-                    l.enabled = true;
-                }
-            }
+//            foreach (Light l in yardLight)
+//            {
+//                if (l.enabled == false)
+//                {
+//                    l.enabled = true;
+//                }
+//            }
 
 
         }
