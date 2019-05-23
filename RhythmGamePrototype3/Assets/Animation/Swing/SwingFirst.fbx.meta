@@ -1,39 +1,101 @@
 fileFormatVersion: 2
 guid: dbe01c1c552b648e4b776fcb2bfa1752
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: joint1
-    100002: joint2
-    100004: joint3
-    100006: SM_Prop_Playground_Swing_01
-    100008: SM_Prop_Playground_Swing_03
-    100010: SM_Prop_Playground_Swing_04
-    100012: SM_Prop_Playground_Swing_Dirt_01
-    100014: //RootNode
-    400000: joint1
-    400002: joint2
-    400004: joint3
-    400006: SM_Prop_Playground_Swing_01
-    400008: SM_Prop_Playground_Swing_03
-    400010: SM_Prop_Playground_Swing_04
-    400012: SM_Prop_Playground_Swing_Dirt_01
-    400014: //RootNode
-    2100000: lambert2
-    2300000: SM_Prop_Playground_Swing_03
-    2300002: SM_Prop_Playground_Swing_04
-    2300004: SM_Prop_Playground_Swing_Dirt_01
-    3300000: SM_Prop_Playground_Swing_03
-    3300002: SM_Prop_Playground_Swing_04
-    3300004: SM_Prop_Playground_Swing_Dirt_01
-    4300000: SM_Prop_Playground_Swing_Dirt_01
-    4300002: SM_Prop_Playground_Swing_03
-    4300004: SM_Prop_Playground_Swing_04
-    4300006: SM_Prop_Playground_Swing_01
-    7400000: SwingSelf
-    7400002: SwingPlayer
-    9500000: //RootNode
-    13700000: SM_Prop_Playground_Swing_01
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: joint1
+  - first:
+      1: 100002
+    second: joint2
+  - first:
+      1: 100004
+    second: joint3
+  - first:
+      1: 100006
+    second: SM_Prop_Playground_Swing_01
+  - first:
+      1: 100008
+    second: SM_Prop_Playground_Swing_03
+  - first:
+      1: 100010
+    second: SM_Prop_Playground_Swing_04
+  - first:
+      1: 100012
+    second: SM_Prop_Playground_Swing_Dirt_01
+  - first:
+      1: 100014
+    second: //RootNode
+  - first:
+      4: 400000
+    second: joint1
+  - first:
+      4: 400002
+    second: joint2
+  - first:
+      4: 400004
+    second: joint3
+  - first:
+      4: 400006
+    second: SM_Prop_Playground_Swing_01
+  - first:
+      4: 400008
+    second: SM_Prop_Playground_Swing_03
+  - first:
+      4: 400010
+    second: SM_Prop_Playground_Swing_04
+  - first:
+      4: 400012
+    second: SM_Prop_Playground_Swing_Dirt_01
+  - first:
+      4: 400014
+    second: //RootNode
+  - first:
+      21: 2100000
+    second: lambert2
+  - first:
+      23: 2300000
+    second: SM_Prop_Playground_Swing_03
+  - first:
+      23: 2300002
+    second: SM_Prop_Playground_Swing_04
+  - first:
+      23: 2300004
+    second: SM_Prop_Playground_Swing_Dirt_01
+  - first:
+      33: 3300000
+    second: SM_Prop_Playground_Swing_03
+  - first:
+      33: 3300002
+    second: SM_Prop_Playground_Swing_04
+  - first:
+      33: 3300004
+    second: SM_Prop_Playground_Swing_Dirt_01
+  - first:
+      43: 4300000
+    second: SM_Prop_Playground_Swing_Dirt_01
+  - first:
+      43: 4300002
+    second: SM_Prop_Playground_Swing_03
+  - first:
+      43: 4300004
+    second: SM_Prop_Playground_Swing_04
+  - first:
+      43: 4300006
+    second: SM_Prop_Playground_Swing_01
+  - first:
+      74: 7400000
+    second: SwingSelf
+  - first:
+      74: 7400002
+    second: SwingPlayer
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: SM_Prop_Playground_Swing_01
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -65,8 +127,9 @@ ModelImporter:
     - serializedVersion: 16
       name: SwingSelf
       takeName: Take 001
-      firstFrame: 1
-      lastFrame: 64
+      internalID: 7400000
+      firstFrame: 5
+      lastFrame: 68
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -93,6 +156,7 @@ ModelImporter:
     - serializedVersion: 16
       name: SwingPlayer
       takeName: Take 001
+      internalID: 7400002
       firstFrame: 70
       lastFrame: 102
       wrapMode: 0
@@ -125,6 +189,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -132,18 +197,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -152,10 +218,11 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -165,6 +232,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
