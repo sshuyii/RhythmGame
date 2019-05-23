@@ -1,9 +1,8 @@
 fileFormatVersion: 2
 guid: 7ab44e72661444ea4b3b72f155c6ecea
-timeCreated: 1543792863
-licenseType: Free
 PluginImporter:
-  serializedVersion: 1
+  externalObjects: {}
+  serializedVersion: 2
   iconMap:
     SonicBloom.Koreo.Koreographer: {fileID: 2800000, guid: 98d636590725a4755baeea4247c5a365,
       type: 3}
@@ -23,75 +22,135 @@ PluginImporter:
     SonicBloom.Koreo.Players.MultiMusicPlayer: -499
     SonicBloom.Koreo.Players.SampleSyncMusicPlayer: -496
     SonicBloom.Koreo.Players.SimpleMusicPlayer: -498
+  defineConstraints: []
   isPreloaded: 0
+  isOverridable: 0
+  isExplicitlyReferenced: 0
+  validateReferences: 1
   platformData:
-    Android:
+  - first:
+      : BlackBerry
+    second:
+      enabled: 1
+      settings: {}
+  - first:
+      : Linux
+    second:
+      enabled: 1
+      settings:
+        CPU: x86
+  - first:
+      : LinuxUniversal
+    second:
+      enabled: 1
+      settings: {}
+  - first:
+      : OSXIntel
+    second:
       enabled: 1
       settings:
         CPU: AnyCPU
-    Any:
-      enabled: 0
-      settings: {}
-    BlackBerry:
+  - first:
+      : OSXIntel64
+    second:
+      enabled: 1
+      settings:
+        CPU: AnyCPU
+  - first:
+      : SamsungTV
+    second:
+      enabled: 1
+      settings:
+        STV_MODEL: STANDARD_13
+  - first:
+      : Tizen
+    second:
       enabled: 1
       settings: {}
-    Editor:
+  - first:
+      : Web
+    second:
+      enabled: 1
+      settings: {}
+  - first:
+      : WebStreamed
+    second:
+      enabled: 1
+      settings: {}
+  - first:
+      Android: Android
+    second:
+      enabled: 1
+      settings:
+        CPU: AnyCPU
+  - first:
+      Any: 
+    second:
+      enabled: 0
+      settings: {}
+  - first:
+      Editor: Editor
+    second:
       enabled: 0
       settings:
         CPU: AnyCPU
         DefaultValueInitialized: true
         OS: AnyOS
-    Linux:
-      enabled: 1
-      settings:
-        CPU: x86
-    Linux64:
-      enabled: 1
-      settings:
-        CPU: x86_64
-    LinuxUniversal:
+  - first:
+      Facebook: WebGL
+    second:
       enabled: 1
       settings: {}
-    OSXIntel:
+  - first:
+      Facebook: Win
+    second:
       enabled: 1
       settings:
         CPU: AnyCPU
-    OSXIntel64:
+  - first:
+      Facebook: Win64
+    second:
       enabled: 1
       settings:
         CPU: AnyCPU
-    OSXUniversal:
-      enabled: 1
-      settings: {}
-    SamsungTV:
-      enabled: 1
-      settings:
-        STV_MODEL: STANDARD_13
-    Tizen:
-      enabled: 1
-      settings: {}
-    Web:
-      enabled: 1
-      settings: {}
-    WebGL:
-      enabled: 1
-      settings: {}
-    WebStreamed:
-      enabled: 1
-      settings: {}
-    Win:
+  - first:
+      Standalone: Linux64
+    second:
       enabled: 1
       settings:
         CPU: AnyCPU
-    Win64:
+  - first:
+      Standalone: OSXUniversal
+    second:
+      enabled: 1
+      settings:
+        CPU: 
+  - first:
+      Standalone: Win
+    second:
       enabled: 1
       settings:
         CPU: AnyCPU
-    WindowsStoreApps:
+  - first:
+      Standalone: Win64
+    second:
+      enabled: 1
+      settings:
+        CPU: AnyCPU
+  - first:
+      WebGL: WebGL
+    second:
+      enabled: 1
+      settings: {}
+  - first:
+      Windows Store Apps: WindowsStoreApps
+    second:
       enabled: 0
       settings:
         CPU: AnyCPU
-    iOS:
+  - first:
+      iPhone: iOS
+    second:
       enabled: 1
       settings:
         CompileFlags: 
