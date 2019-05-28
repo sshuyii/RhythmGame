@@ -7,6 +7,7 @@ public class MelodyPlay : MonoBehaviour
 {
     public int activatedFurnitureNum = 0;
     public int groupNum;
+    public GameObject finishCanvas;
     
     private float timer = 0;
     private float realTimer = 0;
@@ -121,6 +122,9 @@ public class MelodyPlay : MonoBehaviour
                 second = Mathf.FloorToInt(timer) % 60;
                 TotalTime.text = minute.ToString() + ":" + second.ToString();
                 final = true;
+                
+                finishCanvas.SetActive(true);
+                //NarrativeControl.narrativeControl.NextStep();
 
                 if (timer < minScore)
                 {
@@ -140,9 +144,8 @@ public class MelodyPlay : MonoBehaviour
                 Tinylytics.AnalyticsManager.LogCustomMetric("TimeInTotalEnd",
                     timer.ToString());
             }
-                          
-            }
-            
         }
+            
     }
+}
 

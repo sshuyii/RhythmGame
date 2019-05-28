@@ -93,7 +93,7 @@ public class FurnitureInteractor : MonoBehaviour
 
     
     [Header("Functional")]
-    public LevelProcessor levelProcessor;
+    //public LevelProcessor levelProcessor;
     public Collider _colliderForPlayer;    
     //public GameObject _collider;//设为通用的，在awake function里自行寻找
     
@@ -128,7 +128,7 @@ public class FurnitureInteractor : MonoBehaviour
         Register();
         //print("registered");
 
-        levelProcessor = GameObject.Find("GameManager").GetComponent<LevelProcessor>();
+        //levelProcessor = GameObject.Find("GameManager").GetComponent<LevelProcessor>();
        
         childOutlines = GetComponentsInChildren<cakeslice.Outline>();
         //新加
@@ -363,7 +363,7 @@ public class FurnitureInteractor : MonoBehaviour
                         {
                             MelodyPlay.activatedFurnitureNum++;
                         }                        
-                        levelProcessor.FinishCheck();
+                        //levelProcessor.FinishCheck();
                         //_anim.SetBool("IsActivated", true);
                         Furniture.SetActive(false);
                         Furniture2.SetActive(true);
@@ -589,6 +589,15 @@ public class FurnitureInteractor : MonoBehaviour
             //用于整个游戏结束的计分画面
             
             
+        }
+
+        //Debug: 如果玩家丢失了目标家具，就把该家具添上去
+        foreach (var player in playersInvolved)
+        {
+            if (!player.furnitureInteractor)
+            {
+                player.furnitureInteractor = this;
+            }
         }
         
     }

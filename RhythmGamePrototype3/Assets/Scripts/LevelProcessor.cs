@@ -9,8 +9,8 @@ public class LevelProcessor : MonoBehaviour
     public FurnitureInteractor[] furnitureInteractors;
     public PlayerController[] players;
     public AudioSource[] BGM;
-    public GameObject finishCanvas;
-    public int activatedFurniture;
+    //public GameObject finishCanvas;
+    //public int activatedFurniture;
 
 
 
@@ -171,7 +171,7 @@ public class LevelProcessor : MonoBehaviour
         print("Registered");
     }
 
-    public void FinishCheck()
+    /*public void FinishCheck()
     {
         foreach (var furniture in furnitureInteractors)
         {
@@ -190,5 +190,5 @@ public class LevelProcessor : MonoBehaviour
         {
             activatedFurniture = 0;
         }
-    }
+    }*/
 }
