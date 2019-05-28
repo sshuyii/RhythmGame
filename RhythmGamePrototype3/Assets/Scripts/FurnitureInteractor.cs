@@ -490,6 +490,7 @@ public class FurnitureInteractor : MonoBehaviour
                     }
                 }
                 else{                
+                    _audioSource.Stop();
                     _audioSource.Play();
                 }
                 
