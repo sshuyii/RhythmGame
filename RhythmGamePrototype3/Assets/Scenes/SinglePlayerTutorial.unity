@@ -94,8 +94,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
-    m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -182,7 +182,6 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -241,6 +240,22 @@ PrefabInstance:
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
@@ -331,22 +346,6 @@ PrefabInstance:
     - target: {fileID: 13700004, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
       propertyPath: m_Quality
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 100010, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 100012, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 100006, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
@@ -459,6 +458,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -39.801
@@ -539,22 +554,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 465b43787f0dc5a4f8692f074f54c897, type: 2}
-    - target: {fileID: 100004, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 100010, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 100012, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 100006, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 13700004, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1129,7 +1128,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1520,41 +1518,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!84 &300364817
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 864
-  m_Height: 486
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 1
-  m_ColorFormat: 8
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1001 &354203372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2119,7 +2082,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2224,7 +2186,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2919,7 +2880,7 @@ MonoBehaviour:
   correctPlayers: 0
   requiredPerfectTimes: 3
   localPerfectTimes: 0
-  levelProcessor: {fileID: 0}
+  levelProcessor: {fileID: 1106701390}
   _colliderForPlayer: {fileID: 1298692128}
   SmokeParticle: {fileID: 0}
   _myAudioList: []
@@ -3219,7 +3180,7 @@ MonoBehaviour:
   correctPlayers: 0
   requiredPerfectTimes: 3
   localPerfectTimes: 0
-  levelProcessor: {fileID: 0}
+  levelProcessor: {fileID: 1106701390}
   _colliderForPlayer: {fileID: 423740941}
   SmokeParticle: {fileID: 0}
   _myAudioList: []
@@ -3385,7 +3346,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -3830,7 +3790,7 @@ MonoBehaviour:
   correctPlayers: 0
   requiredPerfectTimes: 3
   localPerfectTimes: 0
-  levelProcessor: {fileID: 0}
+  levelProcessor: {fileID: 1106701390}
   _colliderForPlayer: {fileID: 1962633205}
   SmokeParticle: {fileID: 0}
   _myAudioList: []
@@ -4941,7 +4901,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -4998,7 +4957,6 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -5110,6 +5068,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
       propertyPath: m_LocalPosition.x
       value: -39.801
@@ -5197,22 +5171,6 @@ PrefabInstance:
     - target: {fileID: 13700004, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
       propertyPath: m_Quality
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 100010, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 100012, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 100006, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
-      propertyPath: m_Layer
-      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
@@ -5325,6 +5283,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -39.801
@@ -5408,22 +5382,6 @@ PrefabInstance:
     - target: {fileID: 13700002, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
       propertyPath: m_Quality
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 100010, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 100012, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 100006, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 13700004, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
       propertyPath: m_Quality
@@ -6162,6 +6120,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6087197797330303234}
     m_Modifications:
+    - target: {fileID: 495256867, guid: 71df44a99e52849659885cf3d884eb34, type: 3}
+      propertyPath: m_Name
+      value: single_room_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 495256867, guid: 71df44a99e52849659885cf3d884eb34, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 495256870, guid: 71df44a99e52849659885cf3d884eb34, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.6527776
@@ -6217,14 +6183,6 @@ PrefabInstance:
     - target: {fileID: 495256870, guid: 71df44a99e52849659885cf3d884eb34, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.011111112
-      objectReference: {fileID: 0}
-    - target: {fileID: 495256867, guid: 71df44a99e52849659885cf3d884eb34, type: 3}
-      propertyPath: m_Name
-      value: single_room_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 495256867, guid: 71df44a99e52849659885cf3d884eb34, type: 3}
-      propertyPath: m_Layer
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71df44a99e52849659885cf3d884eb34, type: 3}
@@ -6809,7 +6767,6 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -7140,7 +7097,7 @@ Transform:
   m_Father: {fileID: 6087197797330303234}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!84 &1088537477
+--- !u!84 &1095892873
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7153,10 +7110,9 @@ RenderTexture:
   m_ForcedFallbackFormat: 4
   m_DownscaleFallback: 0
   serializedVersion: 3
-  m_Width: 864
-  m_Height: 486
+  m_Width: 1024
+  m_Height: 576
   m_AntiAliasing: 1
-  m_MipCount: -1
   m_DepthFormat: 1
   m_ColorFormat: 8
   m_MipMap: 0
@@ -7219,7 +7175,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -7963,7 +7918,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -8456,7 +8410,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1322633706627591542}
     m_Modifications:
-    - target: {fileID: 100052, guid: dc9bd077d9cf648159e369823408b530, type: 3}
+    - target: {fileID: 100050, guid: dc9bd077d9cf648159e369823408b530, type: 3}
+      propertyPath: m_Name
+      value: Player3New_fixed
+      objectReference: {fileID: 0}
+    - target: {fileID: 100050, guid: dc9bd077d9cf648159e369823408b530, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100050, guid: dc9bd077d9cf648159e369823408b530, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: dc9bd077d9cf648159e369823408b530, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100046, guid: dc9bd077d9cf648159e369823408b530, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100046, guid: dc9bd077d9cf648159e369823408b530, type: 3}
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
@@ -8516,22 +8490,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.2
       objectReference: {fileID: 0}
-    - target: {fileID: 100054, guid: dc9bd077d9cf648159e369823408b530, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 100050, guid: dc9bd077d9cf648159e369823408b530, type: 3}
-      propertyPath: m_Name
-      value: Player3New_fixed
-      objectReference: {fileID: 0}
-    - target: {fileID: 100050, guid: dc9bd077d9cf648159e369823408b530, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100050, guid: dc9bd077d9cf648159e369823408b530, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: dc9bd077d9cf648159e369823408b530, type: 3}
       propertyPath: m_Controller
       value: 
@@ -8539,8 +8497,8 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: dc9bd077d9cf648159e369823408b530, type: 3}
       propertyPath: m_WarningMessage
       value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'Character1_Hips'\n\tTransform 'Character1_RightLeg'\n\tTransform
+        already bound by a Humanoid avatar. These transforms can only be changed by
+        Humanoid clips.\n\tTransform 'Character1_Hips'\n\tTransform 'Character1_RightLeg'\n\tTransform
         'Character1_RightArm'\n\tTransform 'Character1_RightShoulder'\n\tTransform
         'Character1_RightForeArm'\n\tTransform 'Character1_Neck'\n\tTransform 'Character1_Spine2'\n\tTransform
         'Character1_Hips'\n\tTransform 'Character1_Spine'\n\tTransform 'Character1_LeftArm'\n\tand
@@ -8566,6 +8524,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dbaf3881ac6cbf143b244d94eb698370, type: 2}
+    - target: {fileID: 100052, guid: dc9bd077d9cf648159e369823408b530, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 100048, guid: dc9bd077d9cf648159e369823408b530, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -8574,15 +8536,7 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 100022, guid: dc9bd077d9cf648159e369823408b530, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 100046, guid: dc9bd077d9cf648159e369823408b530, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100046, guid: dc9bd077d9cf648159e369823408b530, type: 3}
+    - target: {fileID: 100054, guid: dc9bd077d9cf648159e369823408b530, type: 3}
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
@@ -8885,7 +8839,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -9354,7 +9307,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 0
   m_RenderingPath: 1
-  m_TargetTexture: {fileID: 300364817}
+  m_TargetTexture: {fileID: 1948431194}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
@@ -9754,7 +9707,6 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -10010,6 +9962,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -39.801
@@ -10094,22 +10062,6 @@ PrefabInstance:
       propertyPath: m_Quality
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 100010, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 100012, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 100006, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 13700004, guid: a1df77cafd74642768e4084aaa183d8f, type: 3}
       propertyPath: m_Quality
       value: 4
@@ -10187,7 +10139,6 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -10523,8 +10474,8 @@ MonoBehaviour:
   sourceCamera: {fileID: 1732297135}
   outlineCamera: {fileID: 1507880405}
   outlineShaderMaterial: {fileID: 0}
-  renderTexture: {fileID: 300364817}
-  extraRenderTexture: {fileID: 1088537477}
+  renderTexture: {fileID: 1948431194}
+  extraRenderTexture: {fileID: 1095892873}
 --- !u!1001 &1734191546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10827,6 +10778,8 @@ MonoBehaviour:
       distributeJoysticksEvenly: 1
       reassignJoystickToPreviousOwnerOnReconnect: 1
       defaultJoystickAxis2DDeadZoneType: 1
+      defaultJoystickAxis2DSensitivityType: 0
+      defaultAxisSensitivityType: 0
       force4WayHats: 0
       throttleCalibrationMode: 0
       activateActionButtonsOnNegativeValue: 0
@@ -10853,6 +10806,10 @@ MonoBehaviour:
         exportConsts_customControllersClassName: CustomController
         exportConsts_customControllersAxesClassName: Axis
         exportConsts_customControllersButtonsClassName: Button
+        exportConsts_layoutManagerRuleSets: 1
+        exportConsts_layoutManagerRuleSetsClassName: LayoutManagerRuleSet
+        exportConsts_mapEnablerRuleSets: 1
+        exportConsts_mapEnablerRuleSetsClassName: MapEnablerRuleSet
         exportConsts_allCapsConstantNames: 0
     players:
     - _id: 9999999
@@ -10867,6 +10824,13 @@ MonoBehaviour:
       _assignMouseOnStart: 1
       _assignKeyboardOnStart: 1
       _excludeFromControllerAutoAssignment: 1
+      _controllerMapLayoutManagerSettings:
+        _enabled: 1
+        _loadFromUserDataStore: 1
+        _ruleSets: []
+      _controllerMapEnablerSettings:
+        _enabled: 1
+        _ruleSets: []
     - _id: 1
       _name: Player1
       _descriptiveName: Player1
@@ -10885,6 +10849,13 @@ MonoBehaviour:
       _assignMouseOnStart: 0
       _assignKeyboardOnStart: 1
       _excludeFromControllerAutoAssignment: 0
+      _controllerMapLayoutManagerSettings:
+        _enabled: 1
+        _loadFromUserDataStore: 1
+        _ruleSets: []
+      _controllerMapEnablerSettings:
+        _enabled: 1
+        _ruleSets: []
     - _id: 2
       _name: Player2
       _descriptiveName: Player2
@@ -10903,6 +10874,13 @@ MonoBehaviour:
       _assignMouseOnStart: 0
       _assignKeyboardOnStart: 1
       _excludeFromControllerAutoAssignment: 0
+      _controllerMapLayoutManagerSettings:
+        _enabled: 1
+        _loadFromUserDataStore: 1
+        _ruleSets: []
+      _controllerMapEnablerSettings:
+        _enabled: 1
+        _ruleSets: []
     - _id: 3
       _name: Player3
       _descriptiveName: Player3
@@ -10921,6 +10899,13 @@ MonoBehaviour:
       _assignMouseOnStart: 0
       _assignKeyboardOnStart: 1
       _excludeFromControllerAutoAssignment: 0
+      _controllerMapLayoutManagerSettings:
+        _enabled: 1
+        _loadFromUserDataStore: 1
+        _ruleSets: []
+      _controllerMapEnablerSettings:
+        _enabled: 1
+        _ruleSets: []
     actions:
     - _id: 0
       _name: Move Horizontal
@@ -11288,6 +11273,8 @@ MonoBehaviour:
     mouseMaps: []
     customControllerMaps: []
     customControllers: []
+    controllerMapLayoutManagerRuleSets: []
+    controllerMapEnablerRuleSets: []
     playerIdCounter: 4
     actionIdCounter: 3
     actionCategoryIdCounter: 1
@@ -11302,6 +11289,8 @@ MonoBehaviour:
     mouseMapIdCounter: 0
     customControllerMapIdCounter: 0
     customControllerIdCounter: 0
+    controllerMapLayoutManagerSetIdCounter: 0
+    controllerMapEnablerSetIdCounter: 0
   _controllerDataFiles: {fileID: 11400000, guid: d21d2b20df8369642b76aafbb2576ba7,
     type: 2}
 --- !u!4 &1734463123
@@ -11813,7 +11802,7 @@ MonoBehaviour:
   correctPlayers: 0
   requiredPerfectTimes: 3
   localPerfectTimes: 0
-  levelProcessor: {fileID: 0}
+  levelProcessor: {fileID: 1106701390}
   _colliderForPlayer: {fileID: 1399817374}
   SmokeParticle: {fileID: 0}
   _myAudioList: []
@@ -12007,7 +11996,7 @@ MonoBehaviour:
   correctPlayers: 0
   requiredPerfectTimes: 3
   localPerfectTimes: 0
-  levelProcessor: {fileID: 0}
+  levelProcessor: {fileID: 1106701390}
   _colliderForPlayer: {fileID: 135100450}
   SmokeParticle: {fileID: 0}
   _myAudioList: []
@@ -12480,6 +12469,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
       propertyPath: m_LocalPosition.x
       value: -39.801
@@ -12567,22 +12572,6 @@ PrefabInstance:
     - target: {fileID: 13700004, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
       propertyPath: m_Quality
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 100010, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 100012, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 100006, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
-      propertyPath: m_Layer
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fd1c1c41c2de4ff28906532e2509b27, type: 3}
@@ -12853,6 +12842,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905394225}
   m_CullTransparentMesh: 0
+--- !u!84 &1948431194
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 1024
+  m_Height: 576
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 8
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &1957142303
 GameObject:
   m_ObjectHideFlags: 0
@@ -12989,7 +13012,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -13031,6 +13053,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3628760258105937612}
     m_Modifications:
+    - target: {fileID: 7781498044518121251, guid: 1b12ec3187b5e45c9b65d5e1ac15ceb0,
+        type: 3}
+      propertyPath: m_Name
+      value: single_room_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781498044518121251, guid: 1b12ec3187b5e45c9b65d5e1ac15ceb0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3608174187453292678, guid: 1b12ec3187b5e45c9b65d5e1ac15ceb0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13100,16 +13132,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.011111113
-      objectReference: {fileID: 0}
-    - target: {fileID: 7781498044518121251, guid: 1b12ec3187b5e45c9b65d5e1ac15ceb0,
-        type: 3}
-      propertyPath: m_Name
-      value: single_room_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7781498044518121251, guid: 1b12ec3187b5e45c9b65d5e1ac15ceb0,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b12ec3187b5e45c9b65d5e1ac15ceb0, type: 3}
@@ -15046,12 +15068,12 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'Character1_Hips'\n\tTransform 'Character1_RightLeg'\n\tTransform
+    are already bound by a Humanoid avatar. These transforms can only be changed by
+    Humanoid clips.\n\tTransform 'Character1_Hips'\n\tTransform 'Character1_RightLeg'\n\tTransform
     'Character1_RightArm'\n\tTransform 'Character1_RightShoulder'\n\tTransform 'Character1_RightForeArm'\n\tTransform
     'Character1_Neck'\n\tTransform 'Character1_Spine2'\n\tTransform 'Character1_Hips'\n\tTransform
-    'Character1_Spine'\n\tTransform 'Character1_LeftArm'\n\tand more ...\n\tFrom
-    animation clip 'BabyToLeft2'\n\tFrom animation clip 'Idle'"
+    'Character1_Spine'\n\tTransform 'Character1_LeftArm'\n\tand more ...\n\tFrom animation
+    clip 'BabyToLeft2'\n\tFrom animation clip 'Idle'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -15065,12 +15087,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3628760258105937612}
   m_Layer: 11
-  m_Name: --------Left
+  m_Name: '--------Left'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2027362452811963086
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16388,7 +16410,6 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -16448,12 +16469,12 @@ Animator:
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'Character1_Hips'\n\tTransform 'Character1_RightLeg'\n\tTransform
+    are already bound by a Humanoid avatar. These transforms can only be changed by
+    Humanoid clips.\n\tTransform 'Character1_Hips'\n\tTransform 'Character1_RightLeg'\n\tTransform
     'Character1_RightArm'\n\tTransform 'Character1_RightShoulder'\n\tTransform 'Character1_RightForeArm'\n\tTransform
     'Character1_Neck'\n\tTransform 'Character1_Spine2'\n\tTransform 'Character1_Hips'\n\tTransform
-    'Character1_Spine'\n\tTransform 'Character1_LeftArm'\n\tand more ...\n\tFrom
-    animation clip 'BabyToLeft2'\n\tFrom animation clip 'Idle'"
+    'Character1_Spine'\n\tTransform 'Character1_LeftArm'\n\tand more ...\n\tFrom animation
+    clip 'BabyToLeft2'\n\tFrom animation clip 'Idle'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -16574,7 +16595,6 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -16654,7 +16674,6 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -17819,6 +17838,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2771789886122133481}
     m_Modifications:
+    - target: {fileID: 100050, guid: 0219550f6784648269574cd98393f70c, type: 3}
+      propertyPath: m_Name
+      value: Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100050, guid: 0219550f6784648269574cd98393f70c, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: 0219550f6784648269574cd98393f70c, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100046, guid: 0219550f6784648269574cd98393f70c, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: 0219550f6784648269574cd98393f70c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -17863,18 +17898,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 100046, guid: 0219550f6784648269574cd98393f70c, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 100050, guid: 0219550f6784648269574cd98393f70c, type: 3}
-      propertyPath: m_Name
-      value: Player2
-      objectReference: {fileID: 0}
-    - target: {fileID: 100050, guid: 0219550f6784648269574cd98393f70c, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 0219550f6784648269574cd98393f70c, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
@@ -17894,10 +17917,6 @@ PrefabInstance:
     - target: {fileID: 400022, guid: 0219550f6784648269574cd98393f70c, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100022, guid: 0219550f6784648269574cd98393f70c, type: 3}
-      propertyPath: m_Layer
-      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 0219550f6784648269574cd98393f70c, type: 3}
       propertyPath: m_Layer
@@ -18238,7 +18257,7 @@ MonoBehaviour:
   correctPlayers: 0
   requiredPerfectTimes: 3
   localPerfectTimes: 0
-  levelProcessor: {fileID: 0}
+  levelProcessor: {fileID: 1106701390}
   _colliderForPlayer: {fileID: 5987958996862151813}
   SmokeParticle: {fileID: 0}
   _myAudioList: []
@@ -18633,7 +18652,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -18738,7 +18756,7 @@ GameObject:
   - component: {fileID: 6087197797330303239}
   - component: {fileID: 6087197797330303237}
   m_Layer: 10
-  m_Name: --------Top
+  m_Name: '--------Top'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18917,7 +18935,6 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -20213,7 +20230,6 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -20407,12 +20423,12 @@ GameObject:
   - component: {fileID: 8264366876596368655}
   - component: {fileID: 8264366876596368653}
   m_Layer: 12
-  m_Name: --------Right
+  m_Name: '--------Right'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &8264366876596368648
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20755,7 +20771,6 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -21070,7 +21085,6 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
