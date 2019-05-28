@@ -9,8 +9,8 @@ public class LevelProcessor : MonoBehaviour
     public FurnitureInteractor[] furnitureInteractors;
     public PlayerController[] players;
     public AudioSource[] BGM;
-    //public GameObject finishCanvas;
-    //public int activatedFurniture;
+    public GameObject finishCanvas;
+    public int activatedFurniture;
 
 
 
@@ -171,8 +171,9 @@ public class LevelProcessor : MonoBehaviour
         print("Registered");
     }
 
-    /*public void FinishCheck()
+    public void FinishCheck()
     {
+        print("Checking Finish");
         foreach (var furniture in furnitureInteractors)
         {
             if (furniture.Activated)
@@ -183,6 +184,7 @@ public class LevelProcessor : MonoBehaviour
 
         if (activatedFurniture == furnitureInteractors.Length)
         {
+            print("Finish");
             finishCanvas.SetActive(true);
             NarrativeControl.narrativeControl.NextStep();
         }
@@ -190,5 +192,5 @@ public class LevelProcessor : MonoBehaviour
         {
             activatedFurniture = 0;
         }
-    }*/
+    }
 }

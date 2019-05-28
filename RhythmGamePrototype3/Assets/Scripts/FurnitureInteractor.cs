@@ -93,7 +93,7 @@ public class FurnitureInteractor : MonoBehaviour
 
     
     [Header("Functional")]
-    //public LevelProcessor levelProcessor;
+    public LevelProcessor levelProcessor;
     public Collider _colliderForPlayer;    
     //public GameObject _collider;//设为通用的，在awake function里自行寻找
     
@@ -362,8 +362,14 @@ public class FurnitureInteractor : MonoBehaviour
                         if(playersInvolved[0].IsTutorial == false)
                         {
                             MelodyPlay.activatedFurnitureNum++;
-                        }                        
-                        //levelProcessor.FinishCheck();
+                        }
+                        else
+                        {
+                            levelProcessor.FinishCheck();
+                        } 
+                        
+                        
+                        
                         //_anim.SetBool("IsActivated", true);
                         Furniture.SetActive(false);
                         Furniture2.SetActive(true);
