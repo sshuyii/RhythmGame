@@ -417,14 +417,25 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 400
       objectReference: {fileID: 0}
+    - target: {fileID: 814101704, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -156.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 814101704, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 814101704, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 814101703, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 814101705, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
       propertyPath: m_Text
-      value: 3 of you need to recreate the rhythm correctly at the same time to be
-        counted as correct.
+      value: See the "3" in the yellow Circle?
       objectReference: {fileID: 0}
     - target: {fileID: 814101705, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
       propertyPath: m_FontData.m_HorizontalOverflow
@@ -436,12 +447,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1624393902, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
       propertyPath: m_Text
-      value: Press              to continue...
+      value: Press              to continue
       objectReference: {fileID: 0}
     - target: {fileID: 1250874116, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
       propertyPath: m_Text
-      value: Please look at the colck, i lack of of interaction is Indicated by this
-        yellow Circle.
+      value: 'One last thing you need to know, then you''re good to go. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181933135, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181933136, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00002551031
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181933136, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181933136, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -161.60002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181933136, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181933136, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181933136, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181933136, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181933136, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000029802315
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181933136, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0000000019761468
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181933136, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0000000071837203
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181933137, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
+      propertyPath: m_Text
+      value: It asks 3 of you to make the correct rhythm at the same time.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181933137, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d85fc5a68939a684da135a43c74645e4, type: 3}
@@ -2918,6 +2980,7 @@ MonoBehaviour:
   correctPlayers: 0
   requiredPerfectTimes: 2
   localPerfectTimes: 0
+  levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 1686834057}
   SmokeParticle: {fileID: 0}
   _myAudioList: []
@@ -6029,6 +6092,7 @@ MonoBehaviour:
   correctPlayers: 0
   requiredPerfectTimes: 3
   localPerfectTimes: 0
+  levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 786122395}
   SmokeParticle: {fileID: 0}
   _myAudioList: []
@@ -11220,6 +11284,7 @@ MonoBehaviour:
   correctPlayers: 0
   requiredPerfectTimes: 3
   localPerfectTimes: 0
+  levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 184664394}
   SmokeParticle: {fileID: 0}
   _myAudioList: []
@@ -11939,6 +12004,40 @@ Transform:
   m_Father: {fileID: 581461926}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!84 &641304025
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 604
+  m_Height: 340
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 8
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &641718348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13000,40 +13099,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 701440818}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &707926781
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 1035
-  m_Height: 582
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 8
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &715697166 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100048, guid: dc9bd077d9cf648159e369823408b530,
@@ -17359,6 +17424,7 @@ MonoBehaviour:
   correctPlayers: 0
   requiredPerfectTimes: 2
   localPerfectTimes: 0
+  levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 78629276}
   SmokeParticle: {fileID: 0}
   _myAudioList: []
@@ -21047,6 +21113,40 @@ MonoBehaviour:
   eraseRenderer: 1
   originalLayer: 0
   originalMaterials: []
+--- !u!84 &1160866157
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 604
+  m_Height: 340
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 8
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &1162505934
 GameObject:
   m_ObjectHideFlags: 0
@@ -22209,8 +22309,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000061035156, y: -161.60002}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: -161.60002}
+  m_SizeDelta: {x: 400, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1246737763
 MonoBehaviour:
@@ -22278,10 +22378,10 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Yeah, let's avtivate this clock together!
+  m_Text: It asks 3 of you to make the correct rhythm at the same time.
 --- !u!222 &1246737766
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23046,6 +23146,7 @@ MonoBehaviour:
   correctPlayers: 0
   requiredPerfectTimes: 2
   localPerfectTimes: 0
+  levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 1654561630}
   SmokeParticle: {fileID: 0}
   _myAudioList: []
@@ -26100,40 +26201,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1439282674}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &1445309253
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 1035
-  m_Height: 582
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 8
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &1445820538
 GameObject:
   m_ObjectHideFlags: 0
@@ -26944,6 +27011,7 @@ MonoBehaviour:
   correctPlayers: 0
   requiredPerfectTimes: 2
   localPerfectTimes: 0
+  levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 2094111072}
   SmokeParticle: {fileID: 0}
   _myAudioList: []
@@ -37791,8 +37859,8 @@ MonoBehaviour:
   sourceCamera: {fileID: 1883736899}
   outlineCamera: {fileID: 1964230552}
   outlineShaderMaterial: {fileID: 0}
-  renderTexture: {fileID: 707926781}
-  extraRenderTexture: {fileID: 1445309253}
+  renderTexture: {fileID: 1160866157}
+  extraRenderTexture: {fileID: 641304025}
 --- !u!1 &1902360776
 GameObject:
   m_ObjectHideFlags: 0
@@ -39083,7 +39151,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 0
   m_RenderingPath: 1
-  m_TargetTexture: {fileID: 707926781}
+  m_TargetTexture: {fileID: 1160866157}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
@@ -46221,6 +46289,7 @@ MonoBehaviour:
   correctPlayers: 0
   requiredPerfectTimes: 3
   localPerfectTimes: 0
+  levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 1534946151074067435}
   SmokeParticle: {fileID: 1651849349}
   _myAudioList: []
@@ -48837,6 +48906,7 @@ MonoBehaviour:
   correctPlayers: 0
   requiredPerfectTimes: 2
   localPerfectTimes: 0
+  levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 2486236127968172579}
   SmokeParticle: {fileID: 0}
   _myAudioList: []
@@ -49450,6 +49520,7 @@ MonoBehaviour:
   correctPlayers: 0
   requiredPerfectTimes: 3
   localPerfectTimes: 0
+  levelProcessor: {fileID: 0}
   _colliderForPlayer: {fileID: 2625523146053428447}
   SmokeParticle: {fileID: 0}
   _myAudioList: []
