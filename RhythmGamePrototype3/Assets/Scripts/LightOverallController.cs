@@ -5,24 +5,25 @@ using UnityEngine;
 public class LightOverallController : MonoBehaviour
 {
     public int LightEnabled = 0;
-
+    public bool lighted;
     public Light EnvironmentLight;
 
-    public GameObject Yard;
+    public Light lightEX1;
 
-    private Light[] yardLight;
+    public Light lightEX2;
     // Start is called before the first frame update
     void Start()
     {
-        yardLight = Yard.GetComponentsInChildren<Light>();
+        //yardLight = Yard.GetComponentsInChildren<Light>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (LightEnabled == 13)
+        if (LightEnabled >= 16 && !lighted)
         {
-            EnvironmentLight.intensity = Mathf.Lerp(0, 0.2f, 7f);
+            lighted = true;
+            StartCoroutine(Lighting());
 
 //            foreach (Light l in yardLight)
 //            {
@@ -31,8 +32,20 @@ public class LightOverallController : MonoBehaviour
 //                    l.enabled = true;
 //                }
 //            }
+        }
+    }
 
+    IEnumerator Lighting()
+    {
+        float timer = 0;
 
+        while (timer < 1f)
+        {
+            EnvironmentLight.intensity = Mathf.Lerp(0, 0.5f, timer);
+            lightEX1.intensity = Mathf.Lerp(0, 20, timer);
+            lightEX2.intensity = Mathf.Lerp(0, 5, timer);
+            timer += Time.deltaTime;
+            yield return 0;
         }
     }
 }

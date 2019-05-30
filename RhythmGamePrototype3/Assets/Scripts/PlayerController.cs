@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
     private int stop = 0;
     private float timer;
     
+    [Header("Interaction")]
     public GameObject LadderLeft;
     public GameObject LadderRight;
     private OutlineCalling Outlinecallingleft;
@@ -46,6 +47,7 @@ public class PlayerController : MonoBehaviour
     private Sprite ladderSprite;
 
     public GameObject LadderUI;
+    public GameObject nextLevelButton;
 
     //public KeyCode interaction;
 
@@ -363,6 +365,11 @@ public class PlayerController : MonoBehaviour
             {
                 print("Next");
                 NarrativeControl.narrativeControl.interactionDetected = true;
+            }
+
+            if (nextLevelButton.activeSelf)
+            {
+                nextLevelButton.GetComponent<NextLevelButton>().Restart();
             }
             
             if(furnitureInteractor != null)
